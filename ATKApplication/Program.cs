@@ -1,0 +1,20 @@
+using ATKApplication.DataBase;
+using ATKApplication.Services;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+
+builder.Services.AddDbContext<DataBaseContext>();
+
+
+builder.Services.AddScoped<EventService>();
+builder.Services.AddScoped<PlanService>();
+builder.Services.AddScoped<ReportService>();
+
+var app = builder.Build();
+
+app.MapControllers();
+app.MapGet("/", () => "Hello World!");
+
+app.Run();
