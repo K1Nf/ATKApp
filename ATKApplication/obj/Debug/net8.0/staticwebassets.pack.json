@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\css\\main-DZb08T8n.css",
+      "PackagePath": "staticwebassets\\assets\\css\\main-DZb08T8n.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\html\\index.html",
+      "PackagePath": "staticwebassets\\html\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\vite.svg",
+      "PackagePath": "staticwebassets\\vite.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ATKApplication.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ATKApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ATKApplication.props",
+      "PackagePath": "build\\ATKApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ATKApplication.props",
+      "PackagePath": "buildMultiTargeting\\ATKApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ATKApplication.props",
+      "PackagePath": "buildTransitive\\ATKApplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

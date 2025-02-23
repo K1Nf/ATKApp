@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,77 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Program.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Program.cs",
-              "RelativeToolTip": "ATKApplication\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T10:36:02.766Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReportService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Services\\ReportService.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Services\\ReportService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Services\\ReportService.cs",
-              "RelativeToolTip": "ATKApplication\\Services\\ReportService.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAYwHUAAAAAAAAAAAAAAA==",
+              "Title": "PagesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\PagesController.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\PagesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\PagesController.cs",
+              "RelativeToolTip": "ATKApplication\\Controllers\\PagesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T17:03:15.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\ReportController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\ReportController.cs",
-              "RelativeToolTip": "ATKApplication\\Controllers\\ReportController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAFoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T17:00:47.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\EventController.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\EventController.cs",
-              "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T16:54:09.057Z",
+              "WhenOpened": "2025-02-23T12:22:36.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EventService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Services\\EventService.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Services\\EventService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Services\\EventService.cs",
-              "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T10:42:57.359Z",
-              "EditorCaption": ""
             }
           ]
         },

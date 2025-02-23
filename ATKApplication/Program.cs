@@ -14,7 +14,10 @@ builder.Services.AddScoped<ReportService>();
 
 var app = builder.Build();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapControllers();
-app.MapGet("/", () => "Hello World!");
+//app.MapGet("/", () => "Hello World!");
 
 app.Run();

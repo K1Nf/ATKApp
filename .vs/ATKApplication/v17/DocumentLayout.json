@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\models\\finance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\finance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\atkapplication\\wwwroot\\html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\wwwroot\\html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,103 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Program.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Program.cs",
-              "RelativeToolTip": "ATKApplication\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T10:36:02.766Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EventService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Services\\EventService.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Services\\EventService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Services\\EventService.cs",
-              "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T10:42:57.359Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataBaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\DataBase\\DataBaseContext.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\DataBase\\DataBaseContext.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\DataBase\\DataBaseContext.cs",
-              "RelativeToolTip": "ATKApplication\\DataBase\\DataBaseContext.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T05:10:26.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FeedBack.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Models\\FeedBack.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Models\\FeedBack.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Models\\FeedBack.cs",
-              "RelativeToolTip": "ATKApplication\\Models\\FeedBack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T04:52:33.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Finance.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Models\\Finance.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Models\\Finance.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Models\\Finance.cs",
-              "RelativeToolTip": "ATKApplication\\Models\\Finance.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T04:52:32.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Models\\Event.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Models\\Event.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Models\\Event.cs",
-              "RelativeToolTip": "ATKApplication\\Models\\Event.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T04:50:39.433Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\EventController.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\EventController.cs",
-              "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\html\\index.html",
+              "RelativeDocumentMoniker": "ATKApplication\\wwwroot\\html\\index.html",
+              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\html\\index.html",
+              "RelativeToolTip": "ATKApplication\\wwwroot\\html\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-23T17:24:27.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PagesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\PagesController.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\PagesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\Controllers\\PagesController.cs",
+              "RelativeToolTip": "ATKApplication\\Controllers\\PagesController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T16:54:09.057Z"
+              "WhenOpened": "2025-02-23T12:22:36.025Z",
+              "EditorCaption": ""
             }
           ]
         },

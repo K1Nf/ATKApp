@@ -1,12 +1,434 @@
 {
   "Version": 1,
-  "Hash": "KnDFcxtdlsv6fH2EHUGVaL8YdIAYZ5XdsvxrKMr0+u0=",
+  "Hash": "5TzR5C3TGAT1+fKGO1W24OumC9KYhMXQ5c7mVK36tio=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ATKApplication\\wwwroot",
+      "Source": "ATKApplication",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\",
+      "BasePath": "_content/ATKApplication",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\css\\main-DZb08T8n.css",
+      "SourceId": "ATKApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\",
+      "BasePath": "_content/ATKApplication",
+      "RelativePath": "assets/css/main-DZb08T8n#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o8gi410xki",
+      "Integrity": "uIpAtgUNG4o1nNDA7dU6muXanl9pHxnVCOoDBBgNgVM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\main-DZb08T8n.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\js\\main.js",
+      "SourceId": "ATKApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\",
+      "BasePath": "_content/ATKApplication",
+      "RelativePath": "assets/js/main#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gctlx1lkuq",
+      "Integrity": "0DzXtMxZ1T9Zjlk75qNIDhfMI5cyOLaMlhBy/ic+5Ic=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\main.js"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\html\\index.html",
+      "SourceId": "ATKApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\",
+      "BasePath": "_content/ATKApplication",
+      "RelativePath": "html/index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "36sfidptdy",
+      "Integrity": "W7LNxyolkzs4YNhZRklWUWb+/xCbTdg8vTTXVRnITP4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\vite.svg",
+      "SourceId": "ATKApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\",
+      "BasePath": "_content/ATKApplication",
+      "RelativePath": "vite#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "69kjnsiwqx",
+      "Integrity": "SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\vite.svg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "assets/css/main-DZb08T8n.css",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\css\\main-DZb08T8n.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3063"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uIpAtgUNG4o1nNDA7dU6muXanl9pHxnVCOoDBBgNgVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 17:24:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uIpAtgUNG4o1nNDA7dU6muXanl9pHxnVCOoDBBgNgVM="
+        }
+      ]
+    },
+    {
+      "Route": "assets/css/main-DZb08T8n.o8gi410xki.css",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\css\\main-DZb08T8n.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3063"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uIpAtgUNG4o1nNDA7dU6muXanl9pHxnVCOoDBBgNgVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 17:24:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o8gi410xki"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/css/main-DZb08T8n.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uIpAtgUNG4o1nNDA7dU6muXanl9pHxnVCOoDBBgNgVM="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/main.gctlx1lkuq.js",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "188933"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0DzXtMxZ1T9Zjlk75qNIDhfMI5cyOLaMlhBy/ic+5Ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 17:24:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gctlx1lkuq"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/main.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0DzXtMxZ1T9Zjlk75qNIDhfMI5cyOLaMlhBy/ic+5Ic="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/main.js",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\assets\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "188933"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0DzXtMxZ1T9Zjlk75qNIDhfMI5cyOLaMlhBy/ic+5Ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 17:24:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0DzXtMxZ1T9Zjlk75qNIDhfMI5cyOLaMlhBy/ic+5Ic="
+        }
+      ]
+    },
+    {
+      "Route": "html/index.36sfidptdy.html",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\html\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W7LNxyolkzs4YNhZRklWUWb+/xCbTdg8vTTXVRnITP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 17:24:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "36sfidptdy"
+        },
+        {
+          "Name": "label",
+          "Value": "html/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W7LNxyolkzs4YNhZRklWUWb+/xCbTdg8vTTXVRnITP4="
+        }
+      ]
+    },
+    {
+      "Route": "html/index.html",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\html\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W7LNxyolkzs4YNhZRklWUWb+/xCbTdg8vTTXVRnITP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 17:24:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W7LNxyolkzs4YNhZRklWUWb+/xCbTdg8vTTXVRnITP4="
+        }
+      ]
+    },
+    {
+      "Route": "vite.69kjnsiwqx.svg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\vite.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1497"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 05:54:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "69kjnsiwqx"
+        },
+        {
+          "Name": "label",
+          "Value": "vite.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs="
+        }
+      ]
+    },
+    {
+      "Route": "vite.svg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\ATKApplication\\wwwroot\\vite.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1497"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 05:54:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs="
+        }
+      ]
+    }
+  ]
 }

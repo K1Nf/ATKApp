@@ -27,6 +27,7 @@ namespace ATKApplication.Services
         {
             var events = await _dB.Events
                 .Include(e => e.Organizer)
+                .Include(e => e.Theme)
                 .AsNoTracking()
                 .ToListAsync();
 

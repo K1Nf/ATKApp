@@ -1,0 +1,4 @@
+wwwroot\assets\css\main-DZb08T8n.css
+wwwroot\assets\js\main.js
+wwwroot\html\index.html
+wwwroot\vite.svg

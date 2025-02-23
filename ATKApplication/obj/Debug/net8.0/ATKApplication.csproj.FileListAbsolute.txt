@@ -133,3 +133,4 @@ C:\Users\User\Desktop\DiplomProject\ATKApplication\ATKApplication\obj\Debug\net8
 C:\Users\User\Desktop\DiplomProject\ATKApplication\ATKApplication\obj\Debug\net8.0\ATKApplication.pdb
 C:\Users\User\Desktop\DiplomProject\ATKApplication\ATKApplication\obj\Debug\net8.0\ATKApplication.genruntimeconfig.cache
 C:\Users\User\Desktop\DiplomProject\ATKApplication\ATKApplication\obj\Debug\net8.0\ref\ATKApplication.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\ATKApplication\bin\Debug\net8.0\ATKApplication.staticwebassets.runtime.json

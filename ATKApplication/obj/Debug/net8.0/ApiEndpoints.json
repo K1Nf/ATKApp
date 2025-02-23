@@ -1,18 +1,16 @@
 [
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_0",
+    "ContainingType": "ATKApplication.Controllers.PagesController",
+    "Method": "GetIndexPage",
     "RelativePath": "",
     "HttpMethod": "GET",
-    "IsController": false,
+    "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain"
-        ],
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]
@@ -36,7 +34,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -68,7 +66,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -84,7 +82,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
       },
@@ -203,6 +201,27 @@
   },
   {
     "ContainingType": "ATKApplication.Controllers.ReportsController",
+    "Method": "AddEvents",
+    "RelativePath": "api/Reports/AddEvents/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "eventsId",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.ReportsController",
     "Method": "Create",
     "RelativePath": "api/Reports/Create",
     "HttpMethod": "POST",
@@ -235,9 +254,30 @@
   },
   {
     "ContainingType": "ATKApplication.Controllers.ReportsController",
+    "Method": "DeleteEvents",
+    "RelativePath": "api/Reports/DeleteEvents/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "eventsId",
+        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.ReportsController",
     "Method": "Update",
     "RelativePath": "api/Reports/Update/{Id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -253,5 +293,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.PagesController",
+    "Method": "GetEventsPage",
+    "RelativePath": "events",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.PagesController",
+    "Method": "GetEventsTablePage",
+    "RelativePath": "eventstable",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
