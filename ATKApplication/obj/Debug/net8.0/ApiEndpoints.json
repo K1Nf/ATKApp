@@ -16,85 +16,6 @@
     ]
   },
   {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Events",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "Get",
-    "RelativePath": "api/Events/{Id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "Create",
-    "RelativePath": "api/Events/Create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "createEventRequest",
-        "Type": "ATKApplication.Contracts.CreateEventRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "Delete",
-    "RelativePath": "api/Events/Delete/{Id}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "Update",
-    "RelativePath": "api/Events/Update/{Id}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "createEventRequest",
-        "Type": "ATKApplication.Contracts.UpdateEventRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "ATKApplication.Controllers.PlansController",
     "Method": "GetAll",
     "RelativePath": "api/Plans",
@@ -168,6 +89,85 @@
       {
         "Name": "updatePlanRequest",
         "Type": "ATKApplication.Contracts.UpdatePlanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "GetAll",
+    "RelativePath": "api/ref/Events",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Get",
+    "RelativePath": "api/ref/Events/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Create",
+    "RelativePath": "api/ref/Events/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEventRequest",
+        "Type": "ATKApplication.Contracts.CreateEventRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Delete",
+    "RelativePath": "api/ref/Events/Delete/{Id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Update",
+    "RelativePath": "api/ref/Events/Update/{Id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createEventRequest",
+        "Type": "ATKApplication.Contracts.UpdateEventRequest",
         "IsRequired": true
       }
     ],

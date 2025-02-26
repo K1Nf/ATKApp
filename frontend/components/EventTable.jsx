@@ -1,10 +1,13 @@
 import React from 'react';
 import '../css/upr_vkr.css';
+import Getevents from '../Api/getevents'
 
 export default function EventTable(){
   return (
     <div className="table-container">
-      <table>
+
+      <Getevents/>
+      {/* <table>
         <thead>
           <tr>
             <th>№ темы</th>
@@ -45,7 +48,7 @@ export default function EventTable(){
             <td>Описание формата</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 };

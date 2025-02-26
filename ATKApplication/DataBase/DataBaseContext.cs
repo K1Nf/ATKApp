@@ -31,7 +31,7 @@ namespace ATKApplication.DataBase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=Fnaticwinner");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=Parkina");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
