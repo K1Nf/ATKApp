@@ -14,7 +14,7 @@ export default function getevents(){
 
     const url = "/api/ref/events";
       try {
-        const response = await fetch('url'); // Пример URL
+        const response = await fetch(url); // Пример URL
         if (!response.ok) {
           throw new Error('Ошибка при загрузке данных');
         }
