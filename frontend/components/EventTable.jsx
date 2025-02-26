@@ -6,8 +6,8 @@ export default function EventTable(){
   return (
     <div className="table-container">
 
-      <Getevents/>
-      {/* <table>
+      
+       <table>
         <thead>
           <tr>
             <th>№ темы</th>
@@ -22,7 +22,8 @@ export default function EventTable(){
             <th>Формат "равный равному"</th>
           </tr>
         </thead>
-        <tbody>
+        <Getevents/>
+      {/*  <tbody>
           <tr>
             <td>1.1.1</td>
             <td>Активное</td>
@@ -47,8 +48,8 @@ export default function EventTable(){
             <td>Да</td>
             <td>Описание формата</td>
           </tr>
-        </tbody>
-      </table> */}
+        </tbody>*/}
+      </table> 
     </div>
   );
 };

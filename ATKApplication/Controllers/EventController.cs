@@ -15,6 +15,7 @@ namespace ATKApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            await Task.Delay(2000);
             //Guid planId = Guid.NewGuid();
             //Guid themeId = Guid.NewGuid();
 

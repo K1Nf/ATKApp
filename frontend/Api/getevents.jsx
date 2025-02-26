@@ -35,28 +35,45 @@ export default function getevents(){
     fetchData(); // Выполняем запрос
   }, []); // Пустой массив означает, что эффект сработает только при монтировании компонента
 
+
   // Если данные еще загружаются, показываем индикатор загрузки
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <h3> Загрузка данных c сервера...</h3>
+      </div>
+    );
   }
+
 
   // Если произошла ошибка, отображаем ее
   if (error) {
-    return <div>Error: {error}</div>;
+    return (
+      <div>
+        <h3> Error: {error}</h3>
+      </div>
+    );
   }
+
 
   // Отображаем полученные данные
   return (
     <>
-      <h1>Events</h1>
-      <ul>
-        {data.map((event) => (
-          <li key={event.id}>
-            <h2>{event.name}</h2>
-            <h2>{event.content}</h2>
-            <h2>{event.date} {event.time}</h2>
-          </li>
-        ))}
-      </ul>
-    </>
+     <tbody>
+     {data.map((event) => (
+        <tr>
+          <td>{event.theme.name}</td>
+          <td>{event.status}</td>
+          <td>{event.name}</td>
+          <td>{event.date}</td>
+          <td>80</td>
+          <td>{event.levelType}</td>
+          <td>{event.eventType}</td>
+          <td>{event.isMostValuable}</td>
+          <td>{event.isBestPractice}</td>
+          <td>*Описание формата*</td>
+        </tr>
+      ))}  
+      </tbody>
+    </> 
   )};
