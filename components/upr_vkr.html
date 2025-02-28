@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Управление мероприятиями</title>
+  <link rel="stylesheet" href="upr_vkr.css">
+</head>
+<body>
+  <!-- Боковое меню (как на главной странице) -->
+  <nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <span>Меню</span>
+      <button id="close-menu" class="close-btn">✖</button>
+    </div>
+    <ul class="menu-list">
+      <li class="menu-item active"><i class="fas fa-home"></i> Главная</li>
+      <li class="menu-item"><i class="fas fa-user"></i> Профиль</li>
+      <li class="menu-item"><i class="fas fa-cog"></i> Настройки</li>
+      <li class="menu-item"><i class="fas fa-sign-out-alt"></i> Выход</li>
+    </ul>
+  </nav>
+
+  <!-- Кнопка открытия бокового меню -->
+  <button id="menu-toggle" class="menu-toggle">☰</button>
+
+  <!-- Панель управления -->
+  <header class="control-panel">
+    <input type="text" placeholder="Поиск мероприятий...">
+    <select>
+      <option value="">Фильтрация по статусу</option>
+      <option value="active">Активные</option>
+      <option value="closed">Завершенные</option>
+    </select>
+    <button type="button">Создать мероприятие</button>
+  </header>
+  
+  
+  <!-- Таблица с мероприятиями -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>№ темы</th>
+          <th>Статус мероприятия</th>
+          <th>Наименование</th>
+          <th>Дата</th>
+          <th>Количество участников</th>
+          <th>Уровень проведения</th>
+          <th>Форма проведения</th>
+          <th>Значимое</th>
+          <th>Лучшее</th>
+          <th>Формат "равный равному"</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.1.1</td>
+          <td>Активное</td>
+          <td>Мероприятие А</td>
+          <td>2025-03-10</td>
+          <td>120</td>
+          <td>Региональный</td>
+          <td>Лекция</td>
+          <td>Да</td>
+          <td>Нет</td>
+          <td>Описание формата</td>
+        </tr>
+        <tr>
+          <td>2.3</td>
+          <td>Завершено</td>
+          <td>Мероприятие Б</td>
+          <td>2025-02-25</td>
+          <td>80</td>
+          <td>Муниципальный</td>
+          <td>Акция</td>
+          <td>Нет</td>
+          <td>Да</td>
+          <td>Описание формата</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script src="upr_vkr.js"></script>
+</html>

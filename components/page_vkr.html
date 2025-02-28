@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заполнения</title>
+    <link rel="stylesheet" href="css_vkr.css">
+</head>
+<body>
+
+    <!-- Кнопка открытия меню -->
+    <button id="menu-toggle" class="menu-toggle">☰</button>
+
+    <!-- Боковое меню -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <span>Меню</span>
+            <button id="close-menu" class="close-btn">✖</button>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item active"><i class="fas fa-home"></i> Главная</li>
+            <li class="menu-item"><i class="fas fa-user"></i> Профиль</li>
+            <li class="menu-item"><i class="fas fa-cog"></i> Настройки</li>
+            <li class="menu-item"><i class="fas fa-sign-out-alt"></i> Выход</li>
+        </ul>
+    </div>
+    <!-- Основной контейнер формы -->
+    <div class="container">
+        <div id="heraldry">
+            <img src="hanty-mansijskogo.png" alt="Герб Ханты-Мансийского автономного округа">
+            <img src="АТК.png" alt="Символика АТК" id = "atk_sim">
+        </div>
+        <!-- Выбор темы -->
+        <label for="theme_select">Создание формы по номеру темы</label>
+        <select id="theme_select" name="theme_select">
+            <option value="none">Выберите тему</option>
+            <option value="1">1.1.1, 1.2.1 </option>
+            <option value="2">2.1.1</option>
+        </select>
+
+        <!-- Форма для темы 1 -->
+        <div id="form_theme_1" class="form-block" style="display:none;">
+                <!-- Гербы -->
+            <section class="form-section">
+             
+                <h1>Форма создания мероприятия</h1>
+                <form>
+                    <!-- Добавлен селект для выбора темы -->
+                <label for="themeSelection">Выбор темы <span style="color: red;">*</span></label>
+                <select id="themeSelection" name="themeSelection" required>
+                    <option value="">Выберите тему</option>
+                    <option value="1.1.1">1.1.1</option>
+                    <option value="1.1.2">1.1.2</option>
+                    <option value="1.1.3">1.1.3</option>
+                    <option value="1.2.1">1.2.1</option>
+                    <option value="1.3.1.1">1.3.1.1</option>
+                    <option value="1.3.1.2">1.3.1.2</option>
+                    <option value="1.3.2">1.3.2</option>
+                    <option value="1.3.3.1">1.3.3.1</option>
+                    <option value="1.3.3.2">1.3.3.2</option>
+                    <option value="1.3.4">1.3.4</option>
+                    <option value="1.3.5">1.3.5</option>
+                    <option value="1.4">1.4</option>
+                    <option value="1.5.1">1.5.1</option>
+                    <option value="1.5.2">1.5.2</option>
+                    <option value="1.6">1.6</option>
+                    <option value="2.1">2.1</option>
+                    <option value="2.2">2.2</option>
+                    <option value="2.3">2.3</option>
+                    <option value="2.4">2.4</option>
+                    <option value="2.5">2.5</option>
+                    <option value="2.6">2.6</option>
+                    <option value="2.7.1">2.7.1</option>
+                    <option value="2.7.2">2.7.2</option>
+                    <option value="2.8">2.8</option>
+                    <option value="3.1.1">3.1.1</option>
+                    <option value="3.1.2">3.1.2</option>
+                    <option value="3.2.1">3.2.1</option>
+                    <option value="3.2.2">3.2.2</option>
+                    <option value="3.2.3">3.2.3</option>
+                    <option value="3.3.1">3.3.1</option>
+                    <option value="3.3.2">3.3.2</option>
+                    <option value="3.4.1">3.4.1</option>
+                    <option value="3.4.2">3.4.2</option>
+                    <option value="3.4.3">3.4.3</option>
+                    <option value="3.5">3.5</option>
+                    <option value="3.6">3.6</option>
+                    <option value="4.1.1">4.1.1</option>
+                    <option value="4.1.3">4.1.3</option>
+                    <option value="4.2">4.2</option>
+                    <option value="4.3">4.3</option>
+                    <option value="4.4">4.4</option>
+                    <option value="4.5">4.5</option>
+                    <option value="4.6">4.6</option>
+                    <option value="4.7">4.7</option>
+                    <option value="4.8">4.8</option>
+                    <option value="5.2">5.2</option>
+                    <option value="5.6">5.6</option>
+                    <option value="5.9">5.9</option>
+                </select>
+                <div id="description" class="description">
+                    <div id="description-1.1.1" class="description-content" style="display: none;">
+                        <p>"Проведение мероприятий, посвященных Дню защитника Отечества (23 февраля), Дню солидарности в борьбе с терроризмом (3 сентября), Дню Героев Отечества (9 декабря)  с привлечением военнослужащих, сотрудников правоохранительных органов и гражданских лиц, участвовавших в борьбе с терроризмом, экспертов, журналистов, общественных деятелей, 
+                            очевидцев террористических актов и пострадавших от действий террористов"
+                        </p>
+                    </div>
+                    <div id="description-1.1.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.1.2.</p>
+                    </div>
+                    <div id="description-1.1.3" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.1.3.</p>
+                    </div>
+                    <div id="description-1.2.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.2.1.</p>
+                    </div>
+                    <div id="description-1.3.1.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.3.1.1.</p>
+                    </div>
+                    <div id="description-1.3.1.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.3.1.2.</p>
+                    </div>
+                    <div id="description-1.3.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.3.2.</p>
+                    </div>
+                    <div id="description-1.3.3.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.3.3.1.</p>
+                    </div>
+                    <div id="description-1.3.3.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.3.3.2.</p>
+                    </div>
+                    <div id="description-1.3.4" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.3.4.</p>
+                    </div>
+                    <div id="description-1.3.5" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.3.5.</p>
+                    </div>
+                    <div id="description-1.4" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.4.</p>
+                    </div>
+                    <div id="description-1.5.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.5.1.</p>
+                    </div>
+                    <div id="description-1.5.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.5.2.</p>
+                    </div>
+                    <div id="description-1.6" class="description-content" style="display: none;">
+                        <p>Описание для темы 1.6.</p>
+                    </div>
+                    <div id="description-2.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.1.</p>
+                    </div>
+                    <div id="description-2.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.2.</p>
+                    </div>
+                    <div id="description-2.3" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.3.</p>
+                    </div>
+                    <div id="description-2.4" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.4.</p>
+                    </div>
+                    <div id="description-2.5" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.5.</p>
+                    </div>
+                    <div id="description-2.6" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.6.</p>
+                    </div>
+                    <div id="description-2.7.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.7.1.</p>
+                    </div>
+                    <div id="description-2.7.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.7.2.</p>
+                    </div>
+                    <div id="description-2.8" class="description-content" style="display: none;">
+                        <p>Описание для темы 2.8.</p>
+                    </div>
+                    <div id="description-3.1.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.1.1.</p>
+                    </div>
+                    <div id="description-3.1.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.1.2.</p>
+                    </div>
+                    <div id="description-3.2.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.2.1.</p>
+                    </div>
+                    <div id="description-3.2.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.2.2.</p>
+                    </div>
+                    <div id="description-3.2.3" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.2.3.</p>
+                    </div>
+                    <div id="description-3.3.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.3.1.</p>
+                    </div>
+                    <div id="description-3.3.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.3.2.</p>
+                    </div>
+                    <div id="description-3.4.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.4.1.</p>
+                    </div>
+                    <div id="description-3.4.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.4.2.</p>
+                    </div>
+                    <div id="description-3.4.3" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.4.3.</p>
+                    </div>
+                    <div id="description-3.5" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.5.</p>
+                    </div>
+                    <div id="description-3.6" class="description-content" style="display: none;">
+                        <p>Описание для темы 3.6.</p>
+                    </div>
+                    <div id="description-4.1.1" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.1.1.</p>
+                    </div>
+                    <div id="description-4.1.3" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.1.3.</p>
+                    </div>
+                    <div id="description-4.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.2.</p>
+                    </div>
+                    <div id="description-4.3" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.3.</p>
+                    </div>
+                    <div id="description-4.4" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.4.</p>
+                    </div>
+                    <div id="description-4.5" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.5.</p>
+                    </div>
+                    <div id="description-4.6" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.6.</p>
+                    </div>
+                    <div id="description-4.7" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.7.</p>
+                    </div>
+                    <div id="description-4.8" class="description-content" style="display: none;">
+                        <p>Описание для темы 4.8.</p>
+                    </div>
+                    <div id="description-5.2" class="description-content" style="display: none;">
+                        <p>Описание для темы 5.2.</p>
+                    </div>
+                    <div id="description-5.6" class="description-content" style="display: none;">
+                        <p>Описание для темы 5.6.</p>
+                    </div>
+                    <div id="description-5.9" class="description-content" style="display: none;">
+                        <p>Описание для темы 5.9.</p>
+                    </div>
+                </div>
+                
+                    <!-- Часть 1: Информация о мероприятии -->
+                    <section class="form-section">
+                        <section>
+                        <h2>Основная информация о мероприятии</h2>
+                        <!-- Наименование мероприятия -->
+                        <label for="event_name">
+                            Наименование мероприятия 
+                            <span class="required">*</span>
+                            <span class="tooltip">
+                            <span class="question-icon">?</span>
+                            <span class="tooltiptext">Это обязательное поле</span>
+                            </span>
+                        </label>
+                        <input type="text" id="event_name" name="event_name" placeholder="Введите название мероприятия" required>
+                    </section>
+
+                        <section>
+                        <!-- Дата проведения -->
+                        <label for="event_date">
+                            Дата проведения 
+                            <span class="required">*</span>
+                            <span class="tooltip">
+                            <span class="question-icon">?</span>
+                            <span class="tooltiptext">Это обязательное поле</span>
+                            </span>
+                        </label>
+                        <input type="date" id="event_date" name="event_date" placeholder="Выберите дату проведения" required>
+                         </section>
+
+                        <section>
+                        <!-- Краткое описание мероприятия -->
+                        <label for="event_description">
+                            Краткое описание мероприятия 
+                            <span class="required">*</span>
+                            <span class="tooltip">
+                            <span class="question-icon">?</span>
+                            <span class="tooltiptext">Это обязательное поле</span>
+                            </span>
+                        </label>
+                        <textarea id="event_description" name="event_description" maxlength="200" placeholder="Введите краткое описание мероприятия" required></textarea>
+                        </section>
+
+                        <section>
+                            <!-- Уровень мероприятия -->
+                            <label for="level">
+                                Уровень мероприятия 
+                                <span class="required">*</span>
+                                <span class="tooltip">
+                                <span class="question-icon">?</span>
+                                <span class="tooltiptext">Это обязательное поле</span>
+                                </span>
+                            </label>
+                            <select id="level" name="level" required>
+                                <option value="">Выберите уровень</option>
+                                <option value="institution">Учреждение</option>
+                                <option value="municipality">Муниципалитет</option>
+                                <option value="intermunicipality">Межмуниципитет</option>
+                                <option value="regional">Региональный</option>
+                                <option value="interregional">Межрегиональный</option>
+                                <option value="all_russian">Всероссийский</option>
+                                <option value="international">Международный</option>
+                            </select>
+                        </section>
+
+                        <section>
+                            <!-- Ссылка на СМИ/СМК -->
+                            <label for="link">
+                                Ссылка на СМИ/СМК 
+                                <span class="required">*</span>
+                                <span class="tooltip">
+                                <span class="question-icon">?</span>
+                                <span class="tooltiptext">Это обязательное поле</span>
+                                </span>
+                            </label>
+                            <input type="url" id="link" name="link" maxlength="200" placeholder="Введите ссылку на СМИ или СМК" required>
+                        </section>
+                        
+                        <section>
+                           <!-- Форма проведения -->
+                            <label for="formConducted">
+                                Форма проведения 
+                                <span class="required">*</span>
+                                <span class="tooltip">
+                                    <span class="question-icon">?</span>
+                                    <span class="tooltiptext">Это обязательное поле</span>                             
+                                    <span class="question-icon" id = "znak" >!</span>
+                                    <span class="tooltiptext" id = "znak">Влияет на рейтинг мероприятия</span>
+                                </span>
+                            </label>
+                            
+                            <select id="formConducted" name="formConducted" required>
+                                <option value=""> Выберите форму проведения </option>
+                                <option value="lecture">Лекция</option>
+                                <option value="action">Акция</option>
+                                <option value="quiz">Квиз</option>
+                                <option value="quest">Квест</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            
+                            <div id="otherDescriptionContainer" style="display: none;">
+                                <label for="otherDescription">Описание:</label>
+                                <textarea id="otherDescription" name="otherDescription" maxlength="300" placeholder="Введите описание формы проведения" required></textarea>
+                            </div>
+                        </section>
+                    </section>
+
+
+                    <!-- Часть 2: Уровень мероприятия -->
+                    <section class="form-section">
+                        <h2>Уровень мероприятия </h2>
+                        <label for="level">Уровень мероприятия <span class="required">*</span></label>
+                        <select id="level" name="level">
+                            <option value="">Выберите уровень</option>
+                            <option value="institution">Учреждение</option>
+                            <option value="municipality">Муниципалитет</option>
+                            <option value="intermunicipality">Межмуниципитет</option>
+                            <option value="regional">Региональный</option>
+                            <option value="interregional">Межрегиональный</option>
+                            <option value="all_russian">Всероссийский</option>
+                            <option value="international">Международный</option>
+                        </select>
+                    </section>
+                    <!-- Часть 3: Финансирование -->
+                    <section class="form-section">
+                        <h2>Финансирование</h2>
+                        <label>
+                        <input type="checkbox" id="has_financing" name="has_financing">
+                        Есть финансирование
+                        </label>
+                    
+                        <div id="financing_details" style="display: none; margin-top: 10px;">
+                            <div class="financing-row">
+                              <div class="financing-field">
+                                <label for="municipal_budget">Муниципальный бюджет:</label>
+                                <input type="number" id="municipal_budget" name="municipal_budget" placeholder="0" min="0">
+                              </div>
+                              <div class="financing-field">
+                                <label for="regional_budget">Окружной бюджет:</label>
+                                <input type="number" id="regional_budget" name="regional_budget" placeholder="0" min="0">
+                              </div>
+                            </div>
+                            
+                            <div class="financing-row">
+                              <div class="financing-field">
+                                <label for="grants">Гранты/Субсидии:</label>
+                                <input type="number" id="grants" name="grants" placeholder="0" min="0">
+                              </div>
+                              <div class="financing-field">
+                                <label for="other">Другое (сумма):</label>
+                                <input type="number" id="other" name="other" placeholder="0" min="0">
+                              </div>
+                            </div>
+                            
+                            <!-- Дополнительное поле для описания источника финансирования, которое появляется при заполнении "Другое" -->
+                            <div id="other_details" style="display: none;">
+                              <label for="other_description">Описание источника финансирования:</label>
+                              <textarea id="other_description" name="other_description" placeholder="Введите описание источника"></textarea>
+                            </div>
+                            
+                            <div id="total_amount">
+                              ИТОГО: <span id="total_sum">0.00</span>
+                            </div>
+                          </div>
+                    </section>
+                    <!-- Часть: Количество участников -->
+                    <section class="form-section">
+                        <h2>Количество участников</h2>
+                        
+                        <label for="participants_total">Общее количество участников</label>
+                        <input type="number" id="participants_total" name="participants_total" placeholder="Введите общее количество" min="0">
+                        
+                        <!-- Чекбокс для подробного ввода -->
+                        <label>
+                        <input type="checkbox" id="detailed_participants">
+                        Подробнее
+                        </label>
+                        
+                        <!-- Дополнительные поля для категорий участников, изначально скрыты -->
+                        <div id="participants_details" style="display: none; margin-top: 10px;">
+                            <div class="participants-row">
+                              <div class="participant-field">
+                                <label for="school_kids">Школьники:</label>
+                                <input type="number" id="school_kids" name="school_kids" placeholder="0" min="0">
+                              </div>
+                              <div class="participant-field">
+                                <label for="students">Студенты:</label>
+                                <input type="number" id="students" name="students" placeholder="0" min="0">
+                              </div>
+                              <div class="participant-field">
+                                <label for="registered_persons">На учёте:</label>
+                                <input type="number" id="registered_persons" name="registered_persons" placeholder="0" min="0">
+                              </div>
+                            </div>
+                            
+                            <div class="participants-row">
+                              <div class="participant-field">
+                                <label for="migrants">Мигранты:</label>
+                                <input type="number" id="migrants" name="migrants" placeholder="0" min="0">
+                              </div>
+                              <div class="participant-field">
+                                <label for="working_youth">Работающая молодежь:</label>
+                                <input type="number" id="working_youth" name="working_youth" placeholder="0" min="0">
+                              </div>
+                              <div class="participant-field">
+                                <label for="unemployed_youth">Неработающая молодежь:</label>
+                                <input type="number" id="unemployed_youth" name="unemployed_youth" placeholder="0" min="0">
+                              </div>
+                            </div>
+                            
+                            <p><strong>ИТОГО: <span id="total_participants">0</span></strong></p>
+                          </div>
+                    </section>
+
+                        <!-- Часть 6: Сотрудничество с другими организациями -->
+                    <section>
+                        <label class="card-title"> 
+                        </label><h2>Сотрудничество с другими организациями</h2> 
+                            <span>Сотрудничество с другими организациями</span>
+                            <input type="checkbox" id="cooperationCheckbox">
+                        </label>
+                        <div class="card cooperation" style="display: none;">
+                           
+                            <div id="organizationsContainer" class="organizations-list">
+                                <div class="organization">
+                                    <label>
+                                        <input type="checkbox" class="orgCheckbox"> Аппарат АТК
+                                    </label>
+                                    <select class="participationType" style="display: none;">
+                                        <option value="" disabled selected>Выберите участие</option>
+                                        <option value="участие">Приняли участие</option>
+                                        <option value="выступление">Выступили</option>
+                                    </select>
+                                    <div class="performanceDescription" style="display: none;">
+                                        <label for="atkDescription">Описание выступления:</label>
+                                        <textarea id="atkDescription" maxlength="200" placeholder="Введите описание"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="organization">
+                                    <label>
+                                        <input type="checkbox" class="orgCheckbox"> ПРАВОСЛАВИЕ
+                                    </label>
+                                    <select class="participationType" style="display: none;">
+                                        <option value="" disabled selected>Выберите участие</option>
+                                        <option value="участие">Приняли участие</option>
+                                        <option value="выступление">Выступили</option>
+                                    </select>
+                                    <div class="performanceDescription" style="display: none;">
+                                        <label for="pravDescription">Описание выступления:</label>
+                                        <textarea id="pravDescription" maxlength="200" placeholder="Введите описание"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="organization">
+                                    <label>
+                                        <input type="checkbox" class="orgCheckbox"> Мусульмане
+                                    </label>
+                                    <select class="participationType" style="display: none;">
+                                        <option value="" disabled selected>Выберите участие</option>
+                                        <option value="участие">Приняли участие</option>
+                                        <option value="выступление">Выступили</option>
+                                    </select>
+                                    <div class="performanceDescription" style="display: none;">
+                                        <label for="muslimDescription">Описание выступления:</label>
+                                        <textarea id="muslimDescription" maxlength="200" placeholder="Введите описание"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="organization">
+                                    <label>
+                                        <input type="checkbox" class="orgCheckbox"> СОНКО
+                                    </label>
+                                    <select class="participationType" style="display: none;">
+                                        <option value="" disabled selected>Выберите участие</option>
+                                        <option value="участие">Приняли участие</option>
+                                        <option value="выступление">Выступили</option>
+                                    </select>
+                                    <div class="performanceDescription" style="display: none;">
+                                        <label for="sonkoDescription">Описание выступления:</label>
+                                        <textarea id="sonkoDescription" maxlength="200" placeholder="Введите описание"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="organization">
+                                    <label>
+                                        <input type="checkbox" class="orgCheckbox"> ОМВД по ОНСУ
+                                    </label>
+                                    <select class="participationType" style="display: none;">
+                                        <option value="" disabled selected>Выберите участие</option>
+                                        <option value="участие">Приняли участие</option>
+                                        <option value="выступление">Выступили</option>
+                                    </select>
+                                    <div class="performanceDescription" style="display: none;">
+                                        <label for="omvdDescription">Описание выступления:</label>
+                                        <textarea id="omvdDescription" maxlength="200" placeholder="Введите описание"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="organization">
+                                    <label>
+                                        <input type="checkbox" class="orgCheckbox"> СВО
+                                    </label>
+                                    <select class="participationType" style="display: none;">
+                                        <option value="" disabled selected>Выберите участие</option>
+                                        <option value="участие">Приняли участие</option>
+                                        <option value="выступление">Выступили</option>
+                                    </select>
+                                    <div class="performanceDescription" style="display: none;">
+                                        <label for="svoDescription">Описание выступления:</label>
+                                        <textarea id="svoDescription" maxlength="200" placeholder="Введите описание"></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="organization">
+                                    <label>
+                                        <input type="checkbox" class="orgCheckbox"> ЛОМЫ
+                                    </label>
+                                    <select class="participationType" style="display: none;">
+                                        <option value="" disabled selected>Выберите участие</option>
+                                        <option value="участие">Приняли участие</option>
+                                        <option value="выступление">Выступили</option>
+                                    </select>
+                                    <div class="performanceDescription" style="display: none;">
+                                        <label for="lomyDescription">Описание выступления:</label>
+                                        <textarea id="lomyDescription" maxlength="200" placeholder="Введите описание"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                   
+                   <!-- Часть X: Обратная связь -->
+                    <section class="form-section">
+                        <h2>Обратная связь
+                            <span class="tooltip">                           
+                                <span class="question-icon" > ! </span>
+                                <span class="tooltiptext"> Влияет на рейтинг мероприятия </span>
+                            </span>
+                        </h2>
+                       
+                        <div class="checkbox-container">
+                            <label for="feedbackCollected">Обратная связь была собрана:</label>
+                            <input type="checkbox" id="feedbackCollected" name="feedbackCollected">
+                        </div>
+                        
+                        <div class="card feedback" id="feedbackCard" style="display: none;">
+                            <div id="feedbackTypesContainer" class="feedback-types">
+                                <div class="feedback-type">
+                                    <label>
+                                        <input type="checkbox" class="feedbackTypeCheckbox"> Анкетирование
+                                    </label>
+                                </div>
+                                <div class="feedback-type">
+                                    <label>
+                                        <input type="checkbox" class="feedbackTypeCheckbox"> Опрос
+                                    </label>
+                                </div>
+                                <div class="feedback-type">
+                                    <label>
+                                        <input type="checkbox" class="feedbackTypeCheckbox"> Онлайн-опрос
+                                    </label>
+                                </div>
+                                <div class="feedback-type">
+                                    <label>
+                                        <input type="checkbox" class="feedbackTypeCheckbox"> Интервью
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="feedbackDescription">
+                                <label for="feedbackDescriptionField">Описание результатов обратной связи:</label>
+                                <textarea id="feedbackDescriptionField" maxlength="300" placeholder="Введите описание обратной связи"></textarea>
+                            </div>
+                        </div>
+                    </section>
+
+                       
+                 <!-- Часть 7: Дополнительные характеристики -->
+                 <section class="form-section">
+                    <h2>Дополнительные характеристики</h2>
+                    
+                    <div class="checkbox-container">
+                        <label for="important_event">Отметить, как значимое мероприятие:</label>
+                        <input type="checkbox" id="important_event" name="important_event">
+                    </div>
+                
+                    <div class="checkbox-container">
+                        <label for="best_event">Включить в сборник лучших практик:</label>
+                        <input type="checkbox" id="best_event" name="best_event">
+                    </div>
+                
+                    <div class="checkbox-container">
+                        <label for="equal_format">Формат "равный равному"</label>
+                        <span class="tooltip">                        
+                            <span class="question-icon" >!</span>
+                            <span class="tooltiptext">Влияет на рейтинг мероприятия</span>
+                        </span>
+                        <input type="checkbox" id="equal_format" name="equal_format">
+                    </div>
+                    
+                    <div id="equal_format_description">
+                        <label for="equal_format_description_field">Описание:</label>
+                        <textarea id="equal_format_description_field" maxlength="200" placeholder="Введите описание формата 'равный равному'"></textarea>
+                    </div>
+                </section>
+
+                    <!-- Кнопка сохранения -->
+                    <button type="button" id="save_button">Сохранить</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Форма для темы 2 (пока пустая) -->
+        <div id="form_theme_2" class="form-block" style="display:none;">
+            <section class="form-section">
+                <h2>Тема 2.1.1</h2>
+                <label for="theme_2">№ темы</label>
+                <input type="text" id="theme_2" name="theme_2" value="2.1.1" readonly>
+            </section>
+                 <!-- Кнопка сохранения -->
+                 <button type="button" id="save_button">Сохранить</button>
+        </div>
+    </div>
+
+    <script src="script_vkr.js"></script>
+</body>
+</html>
