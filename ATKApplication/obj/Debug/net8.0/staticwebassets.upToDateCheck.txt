@@ -1,4 +1,11 @@
-wwwroot\assets\css\main-DZb08T8n.css
-wwwroot\assets\js\main.js
-wwwroot\html\index.html
+wwwroot\assets\css\create_form-Dtn62Xmo.css
+wwwroot\assets\css\events-rJvDDozg.css
+wwwroot\assets\css\Sidebar-d6_yuyUD.css
+wwwroot\assets\js\create_form.js
+wwwroot\assets\js\events.js
+wwwroot\assets\js\Sidebar-chunk.js
+wwwroot\images\hanty-mansijskogo.png
+wwwroot\images\АТК.png
+wwwroot\index.html
+wwwroot\src\table\indexTable.html
 wwwroot\vite.svg

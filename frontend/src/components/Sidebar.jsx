@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../css/upr_vkr.css';
+import './EventForm.css';
 
-export default function Sidebar() {
+const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => setIsOpen(!isOpen);
@@ -17,26 +17,25 @@ export default function Sidebar() {
       )}
       <nav id="sidebar" className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <span>Меню</span>
+          <span> Навигация </span>
           <button id="close-menu" className="close-btn" onClick={closeSidebar}>
             ✖
           </button>
         </div>
         <ul className="menu-list">
           <li className="menu-item active">
-            <i className="fas fa-home"></i> Главная
+            <i className="fas fa-home"></i> Страница мероприятий
           </li>
           <li className="menu-item">
-            <i className="fas fa-user"></i> Профиль
+            <i className="fas fa-user"></i> Создание мероприятий
           </li>
           <li className="menu-item">
-            <i className="fas fa-cog"></i> Настройки
-          </li>
-          <li className="menu-item">
-            <i className="fas fa-sign-out-alt"></i> Выход
+            <i className="fas fa-cog"></i> Статистика
           </li>
         </ul>
       </nav>
     </>
   );
 };
+
+export default Sidebar;

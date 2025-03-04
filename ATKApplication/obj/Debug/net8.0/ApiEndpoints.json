@@ -297,7 +297,7 @@
   {
     "ContainingType": "ATKApplication.Controllers.PagesController",
     "Method": "GetEventsPage",
-    "RelativePath": "events",
+    "RelativePath": "create",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -313,7 +313,7 @@
   {
     "ContainingType": "ATKApplication.Controllers.PagesController",
     "Method": "GetEventsTablePage",
-    "RelativePath": "eventstable",
+    "RelativePath": "events",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

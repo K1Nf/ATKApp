@@ -9,7 +9,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'html/index.html'),
+        create_form: path.resolve(__dirname, 'index.html'),
+        events: path.resolve(__dirname, 'src/table/indexTable.html')
       },
       output: {
         entryFileNames: 'assets/js/[name].js',

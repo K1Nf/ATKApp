@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-export default function getevents(){
+export default function GetEvents(){
   // Состояние для хранения данных и состояния загрузки
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,9 +12,10 @@ export default function getevents(){
     // Асинхронная функция для запроса
     const fetchData = async () => {
 
-    const url = "/api/ref/events";
+    const urlFront = "https://localhost:7272/api/ref/events";
+    const urlBack = "/api/ref/events";
       try {
-        const response = await fetch(url); // Пример URL
+        const response = await fetch(urlFront); // Пример URL
         if (!response.ok) {
           throw new Error('Ошибка при загрузке данных');
         }
@@ -36,7 +37,7 @@ export default function getevents(){
   }, []); // Пустой массив означает, что эффект сработает только при монтировании компонента
 
 
-  // Если данные еще загружаются, показываем индикатор загрузки
+  //Если данные еще загружаются, показываем индикатор загрузки
   if (loading) {
     return (
       <div>
@@ -59,7 +60,6 @@ export default function getevents(){
   // Отображаем полученные данные
   return (
     <>
-     <tbody>
      {data.map((event) => (
         <tr>
           <td>{event.theme.name}</td>
@@ -73,7 +73,6 @@ export default function getevents(){
           <td>{event.isBestPractice}</td>
           <td>*Описание формата*</td>
         </tr>
-      ))}  
-      </tbody>
+      ))} 
     </> 
   )};

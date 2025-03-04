@@ -118,10 +118,11 @@ body {
   
   /* Таблица мероприятий */
   .table-container {
-    margin: 20px auto;
+    margin: 50px auto;
+    /* padding-left: 80px; */
     max-width: 1200px;
-    padding: 20px;
-    margin-left: 270px; /* Для смещения с учётом бокового меню */
+
+    margin-left: 160px !important; /* Для смещения с учётом бокового меню */
   }
   table {
     width: 100%;
