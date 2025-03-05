@@ -170,7 +170,7 @@ button:hover {
 /* Активный пункт */
 .menu-item.active {
     background: #444;
-    border-left: 4px solid #FFD700; /* Золотая полоса */
+    border-left: 4px solid #3cb617; /* Золотая полоса */
 }
 
 /* Кнопка открытия */
@@ -690,9 +690,15 @@ p {
 }
 
 #description {
+  display: none; /* Скрыть описание по умолчанию */
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 15px;
   border-radius: 15px;
   border: 1px solid rgb(255, 0, 0);
+}
+
+/* Когда описание активно, показываем его */
+#description.visible {
+  display: block;
 }

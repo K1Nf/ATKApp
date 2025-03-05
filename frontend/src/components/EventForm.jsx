@@ -348,7 +348,8 @@ const handleFormSubmit = (e) => {
             </span>
             </label>
 
-            <select id="themeSelection" value={selectedSubTheme} onChange={handleSubThemeChange} required>
+            <select 
+            id="themeSelection" value={selectedSubTheme} onChange={handleSubThemeChange} required>
               <option value="">Выберите тему</option>
               <option value="1.1.1">1.1.1</option>
               <option value="1.1.2">1.1.2</option>
@@ -401,8 +402,8 @@ const handleFormSubmit = (e) => {
             </select>
 
             {/* Отображение описания выбранной темы */}
-            <div id="description" className="description">
-              <p>{getDescription(selectedSubTheme)}</p>
+            <div id="description" className={selectedSubTheme ? "description visible" : "description"}>
+              <p>{getDescription(selectedSubTheme)} </p>
             </div>
         
       <section className="form-section1">
