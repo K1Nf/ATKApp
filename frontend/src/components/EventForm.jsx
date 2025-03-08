@@ -941,11 +941,9 @@ const handleFormSubmit = (e) => {
           <button type="submit" id="save_button" >Сохранить</button>
         </div>
         )}
-
       </div>
     </div>
   );
 };
-
 
 export default Form;

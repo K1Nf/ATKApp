@@ -5,6 +5,7 @@ using ATKApplication.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace ATKApplication.Controllers
 {
@@ -16,45 +17,47 @@ namespace ATKApplication.Controllers
         public async Task<IActionResult> GetAll()
         {
             await Task.Delay(2000);
-            //Guid planId = Guid.NewGuid();
-            //Guid themeId = Guid.NewGuid();
+            Guid planId = Guid.NewGuid();
+            Guid themeId = Guid.NewGuid();
 
-            //Organization organization1 = Organization.Create("г. Ханты-Мансийск");
+            Organization organization1 = Organization.Create("г. Ханты-Мансийск");
 
             //await _db.Organizations.AddAsync(organization1);
             //await _db.SaveChangesAsync();
 
-            //Plan plan = Plan.Create("План #1", organization1.Id, 2025);
+            Plan plan = Plan.Create("План #1", organization1.Id, 2025);
 
             //await _db.Plans.AddAsync(plan);
             //await _db.SaveChangesAsync();
 
-            //Theme theme1 = new()
-            //{
-            //    Name = "23 февраля"
-            //};
+            Theme theme1 = new()
+            {
+                Name = "23 февраля"
+            };
 
-            //Theme theme2 = new()
-            //{
-            //    Name = "День борьбы с терроризмом"
-            //};
+            Theme theme2 = new()
+            {
+                Name = "день борьбы с терроризмом"
+            };
 
             //await _db.Themes.AddRangeAsync(theme1, theme2);
             //await _db.SaveChangesAsync();
 
-            //Event event1 = Event.Create("Мероприятие 1", "Содержимое и описание мероприятия #1", 
-            //    new DateOnly(2025,03,03), new TimeOnly(12,15), organization1.Id, theme1.Id, plan.Id, EventType.Game, Enums.LevelType.Municipal);
+            Event event1 = Event.Create("Мероприятие 1", "Содержимое и описание мероприятия #1", 
+                new DateOnly(2025,03,03), new TimeOnly(12,15), organization1.Id, theme1.Id, plan.Id, EventType.Game, Enums.LevelType.Municipal);
 
 
-            //Event event2 = Event.Create("Мероприятие 2", "Содержимое и описание мероприятия #2",
-            //    new DateOnly(2025, 02, 28), new TimeOnly(15, 30), organization1.Id, theme2.Id, plan.Id, EventType.Action, Enums.LevelType.Regional);
+            Event event2 = Event.Create("Мероприятие 2", "Содержимое и описание мероприятия #2",
+                new DateOnly(2025, 02, 28), new TimeOnly(15, 30), organization1.Id, theme2.Id, plan.Id, EventType.Action, Enums.LevelType.Regional);
 
 
             //await _db.Events.AddRangeAsync(event1, event2);
             //await _db.SaveChangesAsync();
 
-            var events = await _eventService.GetAll();
-            return Ok(events.Value);
+            List<Event> events = [event1, event2];
+
+            //var events = await _eventService.GetAll();
+            return Ok(events);
         }
         
 

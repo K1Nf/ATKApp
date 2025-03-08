@@ -1,5 +1,5 @@
 wwwroot\assets\css\create_form-Dtn62Xmo.css
-wwwroot\assets\css\events-rJvDDozg.css
+wwwroot\assets\css\events-ySUaIo0Z.css
 wwwroot\assets\css\Sidebar-d6_yuyUD.css
 wwwroot\assets\js\create_form.js
 wwwroot\assets\js\events.js
