@@ -2,5 +2,5 @@
 
 namespace ATKApplication.Contracts
 {
-    public record CreateFeedBackRequest(string Description, FeedBackType FeedBackType);
+    public record CreateFeedBackRequest(string Description, string FeedBackTypes);
 }

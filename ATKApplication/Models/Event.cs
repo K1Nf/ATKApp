@@ -34,8 +34,8 @@ namespace ATKApplication.Models
         public LevelType LevelType { get; set; }
         private EventStatus status;
         public bool IsEffective { get; set; } = false;
-        public bool IsMostValuable { get; set; } = false;
-        public bool IsBestPractice { get; set; } = false;
+        public bool IsValuable { get; set; }
+        public bool IsBestPractice { get; set; } 
 
         public Organization? Organizer { get; init; }
         public Guid OrganizerId { get; set; }

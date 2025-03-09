@@ -208,7 +208,74 @@ const handleFormSubmit = (e) => {
     alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
     return;
   }
-  alert("Форма успешно отправлена!");
+
+  
+
+  // console.log("==========");
+
+  // console.log("Еще описание???: " + otherDescription);
+  // console.log("Из озер дескрипшен визибл?: " + isOtherDescriptionVisible);
+  // console.log("Тема: " + selectedTheme);
+  // console.log("Подтема: " + selectedSubTheme);
+  // console.log("Равный равному?: " + equalFormat);
+  // console.log("Описание равный равному: " + equalFormatDescription);
+  // console.log("Детайлед инпут?: " + detailedInput);
+  // console.log("feedbackCollected: " + feedbackCollected);
+
+  // console.log("==========");
+
+  
+  let createEventRequest = {
+    name: eventName,
+    content: eventDescription,
+    date: eventDate,
+    level: level,
+    form: formConducted,
+    themeId: selectedSubTheme,
+    isBestPractice: bestEvent,
+    isValuable: importantEvent, 
+
+    createMediaLinkRequest: {
+      content: link
+    },
+
+    createFinanceRequest: {
+      MunicipalBudget: financing.municipal,
+      RegionalBudget: financing.regional,
+      GranteBudget: financing.grants,
+      OtherBudget: financing.other,
+      description: financingOtherDescription
+    },
+
+    createFeedBackRequest:{
+      feedBackTypes: selectedFeedbackTypes,
+      description: feedbackDescription
+    }, 
+
+    createInterAgencyCooperationRequest:{
+      //????
+    },
+
+    createParticipantsRequest:{
+      students:  participants.students,
+      schoolKids : participants.schoolKids,
+      registeredPersons:  participants.registeredPersons,
+      migrants: participants.migrants,
+      workingYouth: participants.workingYouth,
+      unemployedYouth: participants.unemployedYouth,
+      total: totalParticipants
+    },
+
+    createEqualToEqualRequest:{
+      //????
+    },
+  };
+
+  console.log("create DTO:");
+  console.log(createEventRequest);
+  console.log("create DTO:");
+
+  //alert("Форма успешно отправлена!");
 };
   const handleOtherDescriptionChange = (e) => setOtherDescription(e.target.value);
   const getDescription = (subTheme) => {
@@ -337,7 +404,10 @@ const handleFormSubmit = (e) => {
       {selectedTheme === "1" && (
         <div id="form_theme_1" className="form-block">
           <h1>Форма создания мероприятия</h1>
-          <form>
+
+
+          <form onSubmit={handleFormSubmit} >
+
             
             <label htmlFor="themeSelection"> 
               Выбор темы 
@@ -348,7 +418,8 @@ const handleFormSubmit = (e) => {
             </span>
             </label>
 
-            <select id="themeSelection" value={selectedSubTheme} onChange={handleSubThemeChange} required>
+            <select 
+            id="themeSelection" value={selectedSubTheme} onChange={handleSubThemeChange} required>
               <option value="">Выберите тему</option>
               <option value="1.1.1">1.1.1</option>
               <option value="1.1.2">1.1.2</option>
@@ -401,8 +472,8 @@ const handleFormSubmit = (e) => {
             </select>
 
             {/* Отображение описания выбранной темы */}
-            <div id="description" className="description">
-              <p>{getDescription(selectedSubTheme)}</p>
+            <div id="description" className={selectedSubTheme ? "description visible" : "description"}>
+              <p>{getDescription(selectedSubTheme)} </p>
             </div>
         
       <section className="form-section1">
@@ -925,7 +996,7 @@ const handleFormSubmit = (e) => {
     
       
             {/* Кнопка сохранения */}
-            <button type="submit" id="save_button" >Сохранить</button>
+            <button type="submit" id="save_button">Сохранить</button>
           </form>
         </div>
       )}
@@ -938,7 +1009,7 @@ const handleFormSubmit = (e) => {
               <input type="text" id="theme_2" name="theme_2" value="2.1.1" readOnly />
             </section>
           {/* Кнопка сохранения */}
-          <button type="submit" id="save_button" >Сохранить</button>
+          <button type="submit" id="save_button">Сохранить</button>
         </div>
         )}
       </div>
@@ -947,3 +1018,11 @@ const handleFormSubmit = (e) => {
 };
 
 export default Form;
+
+// document.getElementById("save_button")?.addEventListener("submit", (e) => {
+
+//   e.preventDefault();
+//   console.log("213!!!");
+//   console.log(isCooperation, selectedOrganizations);
+
+// });

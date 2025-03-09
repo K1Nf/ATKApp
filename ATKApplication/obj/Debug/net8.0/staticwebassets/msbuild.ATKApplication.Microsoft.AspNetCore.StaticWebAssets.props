@@ -18,41 +18,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\create_form-Dtn62Xmo.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-ySUaIo0Z.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-B9SqYwGu.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ATKApplication</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ATKApplication</BasePath>
-      <RelativePath>assets/css/events-ySUaIo0Z.css</RelativePath>
+      <RelativePath>assets/css/events-B9SqYwGu.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c7renntfxa</Fingerprint>
-      <Integrity>yLuvZb8pCAbrD07WkRgL4S/hcT0S+YN12Afu7VVtAco=</Integrity>
+      <Fingerprint>pcsf2oe42d</Fingerprint>
+      <Integrity>Sb9vGnxQ3+Z0jmdiIec9sw/lVRMexDbuHUL4UTT3ohE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-ySUaIo0Z.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-B9SqYwGu.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-d6_yuyUD.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-BqmDiS9b.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ATKApplication</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ATKApplication</BasePath>
-      <RelativePath>assets/css/Sidebar-d6_yuyUD.css</RelativePath>
+      <RelativePath>assets/css/Sidebar-BqmDiS9b.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jwtg1ul6od</Fingerprint>
-      <Integrity>Y6Si9DUu4Yo0fFxcllit8NypyqP2d/G1h2v7D2jmaSA=</Integrity>
+      <Fingerprint>l93y2srxow</Fingerprint>
+      <Integrity>CWcaeeJGrtRGsuB3zpahbJb8AyJpn/cz/oPsXVuWbHc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-d6_yuyUD.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-BqmDiS9b.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\create_form.js'))">
       <SourceType>Package</SourceType>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>00366qtklj</Fingerprint>
-      <Integrity>UG0aDueMJ967bzwedjfCOiGatBzgqw0GU6W2BMBbtPw=</Integrity>
+      <Fingerprint>84g0x6rf4x</Fingerprint>
+      <Integrity>aKUtwqRWnhC3qfetBGY/vxP63DqDThqSs5xCaJn/eq8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\create_form.js'))</OriginalItemSpec>
@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nvgpyn87kw</Fingerprint>
-      <Integrity>s38+/8Ioywsgxl6kXMijMALzEwZO7gsroorb4kPe9ss=</Integrity>
+      <Fingerprint>mcju9u1ha1</Fingerprint>
+      <Integrity>ihF1azNADB2YfbjepjD/0zVRWjIUSmPIAwuiAzr7YAg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\events.js'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7rrq81y8jh</Fingerprint>
-      <Integrity>A9tTUxrz7SkIVp3huixM65rxMxNIYp1mNB4ii28QOY0=</Integrity>
+      <Fingerprint>oow2vxclqs</Fingerprint>
+      <Integrity>CEsaTw/meg+7gXa54iu59TLZxEkV9LpZdkR0UVEUkjk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\Sidebar-chunk.js'))</OriginalItemSpec>
@@ -156,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2urtfmbq0u</Fingerprint>
-      <Integrity>1hZAMb7Aqi7qP/LaX8u5JsELMCBZ8SshduQdz4uqinQ=</Integrity>
+      <Fingerprint>uae03x9ivo</Fingerprint>
+      <Integrity>mqA8PKKYJSL0OW/O7AjcINA1qnEs+Hlc+p69z52l2Qs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>39gwek6rpt</Fingerprint>
-      <Integrity>R9jKNoUcNHAO+kAjdBiLpqiOS6ChUade73fpxbGkWu0=</Integrity>
+      <Fingerprint>053g0g1o1q</Fingerprint>
+      <Integrity>5MPzi2WV2h4jM7c+m/krJKLlbs97C7xxUGolsbLp6bw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\table\indexTable.html'))</OriginalItemSpec>

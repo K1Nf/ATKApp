@@ -32,7 +32,7 @@ namespace ATKApplication.Controllers
         {
             Response.Headers.ContentType = "text/html";
             //await Response.WriteAsync("<h2>THIS IS PAGE TO WATCH ALL EVENTS BY ASP.NET CORE 8.0</h2>");
-            await Response.SendFileAsync("wwwroot/html/index.html");
+            await Response.SendFileAsync("wwwroot/src/table/indexTable.html");
         }
     }
 }

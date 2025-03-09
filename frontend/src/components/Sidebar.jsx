@@ -23,19 +23,20 @@ const Sidebar = () => {
           </button>
         </div>
         <ul className="menu-list">
-          <li className="menu-item active">
-            <i className="fas fa-home"></i> Страница мероприятий
+          <li className="menu-item active" onClick={() => window.location.href = '/events'}>
+            <a className="fas fa-home" href="/events"></a> Страница мероприятий
+          </li>
+          <li className="menu-item" onClick={() => window.location.href = '/create'}>
+            <a className="fas fa-user" href="/create"></a> Создание мероприятий
           </li>
           <li className="menu-item">
-            <i className="fas fa-user"></i> Создание мероприятий
-          </li>
-          <li className="menu-item">
-            <i className="fas fa-cog"></i> Статистика
+            <a className="fas fa-cog"></a> Статистика
           </li>
         </ul>
       </nav>
     </>
   );
 };
+
 
 export default Sidebar;

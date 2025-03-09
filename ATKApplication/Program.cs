@@ -1,7 +1,10 @@
 using ATKApplication.DataBase;
 using ATKApplication.Services;
+using System.Security.Cryptography.X509Certificates;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 builder.Services.AddControllers();
 
@@ -16,6 +19,7 @@ var app = builder.Build();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
+
 
 app.MapControllers();
 //app.MapGet("/", () => "Hello World!");

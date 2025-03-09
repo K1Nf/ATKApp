@@ -5,6 +5,9 @@ body {
     margin: 0;
     padding: 0;
     color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Боковое меню */
@@ -118,12 +121,10 @@ body {
   
   /* Таблица мероприятий */
   .table-container {
-    margin: 50px auto;
-    /* padding-left: 80px; */
-    max-width: 1200px;
-
-    margin-left: 160px !important; /* Для смещения с учётом бокового меню */
+    margin: 50px;
+    width: 1200px;
   }
+  
   table {
     width: 100%;
     border-collapse: collapse;

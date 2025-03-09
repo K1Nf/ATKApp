@@ -1,6 +1,6 @@
 wwwroot\assets\css\create_form-Dtn62Xmo.css
-wwwroot\assets\css\events-ySUaIo0Z.css
-wwwroot\assets\css\Sidebar-d6_yuyUD.css
+wwwroot\assets\css\events-B9SqYwGu.css
+wwwroot\assets\css\Sidebar-BqmDiS9b.css
 wwwroot\assets\js\create_form.js
 wwwroot\assets\js\events.js
 wwwroot\assets\js\Sidebar-chunk.js
