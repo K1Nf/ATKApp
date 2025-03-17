@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
 import "./EventForm.css";
 
+
 const Form = () => {
+  // равный равному
+  const [isPeerFormat, setIsPeerFormat] = useState(false);
+const [peerFormatDescription, setPeerFormatDescription] = useState("");
+
+const handlePeerFormatChange = () => {
+  setIsPeerFormat((prev) => !prev);
+};  
 
   // сотрудничество
   const [isCooperation, setIsCooperation] = useState(false);
@@ -200,9 +208,7 @@ const handleFormSubmit = (e) => {
     linkElement.scrollIntoView({ behavior: "smooth", block: "center" });
     alert(`Некорректные ссылки: ${invalidLinks.join(', ')}`);
     hasError = true;
-  } else {
-    linkElement.classList.remove("error"); // Убираем красный стиль, если все ссылки корректны
-  }
+  } 
 
   if (hasError) {
     alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
@@ -938,7 +944,7 @@ const handleFormSubmit = (e) => {
         </div>
       )}
     </section>
-    <section>
+        <section>
       <h2>Дополнительные характеристики</h2>
 
       <div className="checkbox-container">
@@ -967,7 +973,7 @@ const handleFormSubmit = (e) => {
         <label>
           <input
             type="checkbox"
-            checked={equalFormat}
+            checked={equalFormat} // Убедись, что состояние правильно объявлено
             onChange={() => setEqualFormat(!equalFormat)}
           />
           Формат "равный равному"
@@ -978,12 +984,13 @@ const handleFormSubmit = (e) => {
         </span>
       </div>
 
+      {/* Используем ту же переменную, что и в чекбоксе */}
       {equalFormat && (
-        <div id="equal_format_description">
+        <div id="peer_format_description">
           <label>Описание:</label>
           <textarea
-            value={equalFormatDescription}
-            onChange={(e) => setEqualFormatDescription(e.target.value)}
+            value={peerFormatDescription}
+            onChange={(e) => setPeerFormatDescription(e.target.value)}
             maxLength={200}
             placeholder="Введите описание формата 'равный равному', не более 200 символов"
           ></textarea>
