@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import EventForm from "../components/EventForm";
 import Sidebar from "../components/Sidebar";
+import EventCard from "../components/EventCard";
 
 
 

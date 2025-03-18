@@ -55,6 +55,7 @@ button {
     cursor: pointer;
 }
 
+
 button:hover {
     background-color: #002244;
 }
@@ -474,6 +475,7 @@ input.error:focus, select.error:focus, textarea.error:focus {
     margin-left: 40%;
   }
 
+
   .form-section label{
     margin-bottom: 10px;
     margin-top: 10px;
@@ -701,4 +703,11 @@ p {
 /* Когда описание активно, показываем его */
 #description.visible {
   display: block;
+}
+
+.edit{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 20%;
+  margin-left: 40%;
 }
