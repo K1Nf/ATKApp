@@ -51,7 +51,7 @@
     "Parameters": [
       {
         "Name": "createPlanRequest",
-        "Type": "ATKApplication.Contracts.CreatePlanRequest",
+        "Type": "ATKApplication.Contracts.Request.CreatePlanRequest",
         "IsRequired": true
       }
     ],
@@ -88,7 +88,7 @@
       },
       {
         "Name": "updatePlanRequest",
-        "Type": "ATKApplication.Contracts.UpdatePlanRequest",
+        "Type": "ATKApplication.Contracts.Request.UpdatePlanRequest",
         "IsRequired": true
       }
     ],
@@ -130,7 +130,7 @@
     "Parameters": [
       {
         "Name": "createEventRequest",
-        "Type": "ATKApplication.Contracts.CreateEventRequest",
+        "Type": "ATKApplication.Contracts.Request.CreateEventRequest",
         "IsRequired": true
       }
     ],
@@ -167,7 +167,7 @@
       },
       {
         "Name": "createEventRequest",
-        "Type": "ATKApplication.Contracts.UpdateEventRequest",
+        "Type": "ATKApplication.Contracts.Request.UpdateEventRequest",
         "IsRequired": true
       }
     ],
@@ -230,7 +230,7 @@
     "Parameters": [
       {
         "Name": "createReportRequest",
-        "Type": "ATKApplication.Contracts.CreateReportRequest",
+        "Type": "ATKApplication.Contracts.Request.CreateReportRequest",
         "IsRequired": true
       }
     ],
@@ -288,7 +288,7 @@
       },
       {
         "Name": "updateReportRequest",
-        "Type": "ATKApplication.Contracts.UpdateReportRequest",
+        "Type": "ATKApplication.Contracts.Request.UpdateReportRequest",
         "IsRequired": true
       }
     ],
@@ -325,5 +325,37 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.PagesController",
+    "Method": "GetEventsTablePage",
+    "RelativePath": "events/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "GetTest",
+    "RelativePath": "test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

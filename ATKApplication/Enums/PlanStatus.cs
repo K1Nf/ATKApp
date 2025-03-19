@@ -1,6 +1,13 @@
-﻿namespace ATKApplication.Enums;
+﻿using System.Runtime.Serialization;
+
+namespace ATKApplication.Enums;
 public enum PlanStatus
 {
-    Created, FilledIn, Sent
+    [EnumMember(Value = "Создано")] 
+    Created, 
+    [EnumMember(Value = "Заполнено")] 
+    FilledIn, 
+    [EnumMember(Value = "Отправлено")] 
+    Sent
 }
 

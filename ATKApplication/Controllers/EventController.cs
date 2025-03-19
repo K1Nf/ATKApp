@@ -1,4 +1,4 @@
-﻿using ATKApplication.Contracts;
+﻿using ATKApplication.Contracts.Request;
 using ATKApplication.DataBase;
 using ATKApplication.Models;
 using ATKApplication.Services;
@@ -74,17 +74,31 @@ namespace ATKApplication.Controllers
 
 
 
-        [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreateEventRequest createEventRequest)
+        [HttpGet("/test")]
+        public async Task<IActionResult> GetTest()
         {
-            Guid tokenId = Guid.NewGuid();
-            var result = await _eventService.Create(tokenId, createEventRequest);
-
-            if (result.IsSuccess)
+            return Ok(new
             {
-                return Created();
-            }
-            return BadRequest("Мероприятие не добавлено:");
+                Id = 123,
+                Test = EventStatus.Planned
+            });
+        }
+
+
+
+        [HttpPost("Create")]
+        public async Task<IActionResult> Create([FromBody] CreateEventRequest CreateEventRequest)
+        {
+            Console.WriteLine("creating new event...");
+            return Ok("как будто бы создали...");
+            //Guid tokenId = Guid.NewGuid();
+            //var result = await _eventService.Create(tokenId, CreateEventRequest);
+            //
+            //if (result.IsSuccess)
+            //{
+            //    return Created();
+            //}
+            //return BadRequest("Мероприятие не добавлено:");
         }
 
 

@@ -1,0 +1,32 @@
+﻿using ATKApplication.Enums;
+using ATKApplication.Models;
+
+namespace ATKApplication.Contracts.Response
+{
+    public class EventResponse
+    {
+        public Guid Id { get; init; }
+        public string Name { get; init; }
+        public string Content { get; init; }
+        public string DateTime { get; init; }
+        public EventType EventType { get; init; }
+        public LevelType LevelType { get; init; }
+        public EventStatus EventStatus { get; init; }
+        public string IsEffective { get; init; } 
+        public string IsValuable { get; init; }
+        public string IsBestPractice { get; init; }
+
+
+
+        public Organization? Organizer { get; init; }
+        public Theme? Theme { get; init; }
+        public Category? Category { get; init; }
+        public Finance? Finance { get; init; }
+
+
+
+        //public List<FeedBack> FeedBack { get; set; } = [];
+        //public List<InterAgencyCooperation> InterAgencyCooperations { get; set; } = [];
+        //public List<MediaLink> MediaLinks { get; set; } = [];
+    }
+}

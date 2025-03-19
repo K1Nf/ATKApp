@@ -49,10 +49,14 @@ namespace ATKApplication.Models
         public Finance? Finance { get; set; }
         public Guid FinanceId { get; set; }
 
-        
+        public Category? Category { get; set; }
+        public Guid CategoryId { get; set; }
+
+
+
         public List<FeedBack> FeedBack { get; set; } = [];
         public List<InterAgencyCooperation> InterAgencyCooperations { get; set; } = [];
-        public List<CategoryAndEvent> CategoryAndEvents { get; set; } = [];
+        
         public List<ReportAndEvent> ReportAndEvents { get; set; } = [];
         public List<MediaLink> MediaLinks { get; set; } = [];
 
@@ -121,16 +125,16 @@ namespace ATKApplication.Models
             Console.WriteLine("Участники:");
 
 
-            var participants = CategoryAndEvents
-                .Select(x => new
-                {
-                    CategoryName = x.Category!.Name,
-                    Number = x.Count
-                })
-                .ToList();
+            //var participants = CategoryAndEvents
+            //    .Select(x => new
+            //    {
+            //        CategoryName = x.Category!.Name,
+            //        //Number = x.Count
+            //    })
+            //    .ToList();
 
-            participants.ForEach(x => Console.WriteLine("  -" + x.CategoryName + ": " + x.Number));
-            Console.WriteLine("  -Всего: " + participants.Sum(x => x.Number));
+            //participants.ForEach(x => Console.WriteLine("  -" + x.CategoryName + ": " + x.Number));
+            //Console.WriteLine("  -Всего: " + participants.Sum(x => x.Number));
             
             Console.WriteLine();
             Console.WriteLine("Входит в план: \"" + Plan!.Name + "\" за " + Plan.Year + "г. для " + Organizer!.Name);

@@ -1,12 +1,18 @@
 using ATKApplication.DataBase;
 using ATKApplication.Services;
-using System.Security.Cryptography.X509Certificates;
+using Newtonsoft.Json.Converters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+        options.SerializerSettings.Converters.Add(new StringEnumConverter());
+    });
+
 
 builder.Services.AddDbContext<DataBaseContext>();
 

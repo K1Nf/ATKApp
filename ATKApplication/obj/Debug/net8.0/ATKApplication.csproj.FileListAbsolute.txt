@@ -405,6 +405,13 @@ C:\Users\tellu\vkr-atk-app\ATKApplication\obj\Debug\net8.0\refint\ATKApplication
 C:\Users\tellu\vkr-atk-app\ATKApplication\obj\Debug\net8.0\ATKApplication.pdb
 C:\Users\tellu\vkr-atk-app\ATKApplication\obj\Debug\net8.0\ATKApplication.genruntimeconfig.cache
 C:\Users\tellu\vkr-atk-app\ATKApplication\obj\Debug\net8.0\ref\ATKApplication.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.AssemblyInfo.cs
+C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.sourcelink.json
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\appsettings.json
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\ATKApplication.staticwebassets.runtime.json
@@ -416,6 +423,8 @@ C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\ATKApplicati
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\ATKApplication.pdb
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Humanizer.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -439,6 +448,8 @@ C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.Ex
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Npgsql.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\System.CodeDom.dll
@@ -517,13 +528,6 @@ C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\tr\Microsoft
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.AssemblyInfo.cs
-C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.sourcelink.json
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\scopedcss\bundle\ATKApplication.styles.css
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\staticwebassets.development.json

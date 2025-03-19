@@ -40,8 +40,13 @@ namespace ATKApplication.Configurations
             builder.HasMany(e => e.MediaLinks)
                 .WithOne(m => m.Event);
 
-            builder.HasMany(e => e.CategoryAndEvents)
-                .WithOne(c => c.Event);
+            builder.HasOne(e => e.Category)
+                .WithOne(f => f.Event)
+                .HasForeignKey(typeof(Category));
+
+
+            //builder.HasMany(e => e.CategoryAndEvents)
+            //    .WithOne(c => c.Event);
 
             builder.HasMany(e => e.InterAgencyCooperations)
                 .WithOne(c => c.Event);

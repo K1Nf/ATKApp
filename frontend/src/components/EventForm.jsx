@@ -172,7 +172,7 @@ const validateLinks = (linkString) => {
 };
 
 // Функция для проверки обязательных полей и ссылок
-const handleFormSubmit = (e) => {
+const handleFormSubmit = async (e) => {
   e.preventDefault();
 
   let hasError = false;
@@ -246,40 +246,62 @@ const handleFormSubmit = (e) => {
     },
 
     createFinanceRequest: {
-      MunicipalBudget: financing.municipal,
-      RegionalBudget: financing.regional,
-      GranteBudget: financing.grants,
-      OtherBudget: financing.other,
+      MunicipalBudget: Number(financing.municipal),
+      RegionalBudget: Number(financing.regional),
+      GranteBudget: Number(financing.grants),
+      OtherBudget: Number(financing.other),
       description: financingOtherDescription
     },
 
     createFeedBackRequest:{
-      feedBackTypes: selectedFeedbackTypes,
+      feedBackTypes: selectedFeedbackTypes.toString(),
       description: feedbackDescription
     }, 
 
     createInterAgencyCooperationRequest:{
-      //????
+      conent: selectedOrganizations
     },
 
     createParticipantsRequest:{
-      students:  participants.students,
-      schoolKids : participants.schoolKids,
-      registeredPersons:  participants.registeredPersons,
-      migrants: participants.migrants,
-      workingYouth: participants.workingYouth,
-      unemployedYouth: participants.unemployedYouth,
-      total: totalParticipants
+      students: Number(participants.students),
+      schoolKids : Number(participants.schoolKids),
+      registeredPersons: Number(participants.registeredPersons),
+      migrants: Number(participants.migrants),
+      workingYouth: Number(participants.workingYouth),
+      unemployedYouth: Number(participants.unemployedYouth),
+      //total: totalParticipants
     },
 
     createEqualToEqualRequest:{
-      //????
+      content: peerFormatDescription
     },
   };
 
-  console.log("create DTO:");
   console.log(createEventRequest);
-  console.log("create DTO:");
+  console.log("---------------");
+
+  const backCreateUrl = `/api/ref/events/create`;
+
+  // отправка нового мероприятия на сервер
+  try {
+    const response = await fetch(backCreateUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(createEventRequest)
+    });
+
+    if (!response.ok) {
+        throw new Error("Ошибка при создании события");
+    }
+
+    const data = await response.text();
+    console.log("Событие создано:", data);
+  } catch (error) {
+      console.error("Ошибка:", error);
+  } 
+
 
   //alert("Форма успешно отправлена!");
 };

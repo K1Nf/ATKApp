@@ -14,7 +14,7 @@ namespace ATKApplication.Models
         public string Description { get; set; } = description;
         public Guid EventId { get; set; } = eventId;
         public Event? Event { get; set; }
-        public FeedBackType FeedBackType { get; set; } = feedBackType;
+        public FeedBackType FeedBackType { get; set; }/* = feedBackType;*/
 
     }
 }

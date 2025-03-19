@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ATKApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20250217055702_ChengedRatingDataType")]
-    partial class ChengedRatingDataType
+    [Migration("20250319101511_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,37 +31,46 @@ namespace ATKApplication.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<Guid>("EventId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int?>("Migrants")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("ATKApplication.Models.CategoryAndEvent", b =>
-                {
-                    b.Property<Guid>("CategoryId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("EventId")
-                        .HasColumnType("uuid");
-
-                    b.Property<int>("Count")
+                    b.Property<int?>("NotWorkingYouth")
                         .HasColumnType("integer");
 
-                    b.HasKey("CategoryId", "EventId");
+                    b.Property<int?>("Registrated")
+                        .HasColumnType("integer");
 
-                    b.HasIndex("EventId");
+                    b.Property<int?>("Schools")
+                        .HasColumnType("integer");
 
-                    b.ToTable("CategoryAndEvents");
+                    b.Property<int?>("Students")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("WorkingYouth")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId")
+                        .IsUnique();
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Event", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Content")
@@ -84,7 +93,7 @@ namespace ATKApplication.Migrations
                     b.Property<bool>("IsEffective")
                         .HasColumnType("boolean");
 
-                    b.Property<bool>("IsMostValuable")
+                    b.Property<bool>("IsValuable")
                         .HasColumnType("boolean");
 
                     b.Property<int>("LevelType")
@@ -338,21 +347,13 @@ namespace ATKApplication.Migrations
                     b.ToTable("Themes");
                 });
 
-            modelBuilder.Entity("ATKApplication.Models.CategoryAndEvent", b =>
+            modelBuilder.Entity("ATKApplication.Models.Category", b =>
                 {
-                    b.HasOne("ATKApplication.Models.Category", "Category")
-                        .WithMany("Events")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ATKApplication.Models.Event", "Event")
-                        .WithMany("CategoryAndEvents")
-                        .HasForeignKey("EventId")
+                        .WithOne("Category")
+                        .HasForeignKey("ATKApplication.Models.Category", "EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Category");
 
                     b.Navigation("Event");
                 });
@@ -488,14 +489,9 @@ namespace ATKApplication.Migrations
                     b.Navigation("Report");
                 });
 
-            modelBuilder.Entity("ATKApplication.Models.Category", b =>
-                {
-                    b.Navigation("Events");
-                });
-
             modelBuilder.Entity("ATKApplication.Models.Event", b =>
                 {
-                    b.Navigation("CategoryAndEvents");
+                    b.Navigation("Category");
 
                     b.Navigation("FeedBack");
 

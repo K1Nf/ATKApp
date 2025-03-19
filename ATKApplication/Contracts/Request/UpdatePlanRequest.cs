@@ -1,7 +1,7 @@
 ﻿using ATKApplication.Enums;
 using ATKApplication.Models;
 
-namespace ATKApplication.Contracts
+namespace ATKApplication.Contracts.Request
 {
     public record UpdatePlanRequest(string Name, PlanStatus PlanStatus);
 }

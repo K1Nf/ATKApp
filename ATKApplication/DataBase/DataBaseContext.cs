@@ -22,7 +22,7 @@ namespace ATKApplication.DataBase
         public DbSet<Finance> Finances { get; set; }
 
         public DbSet<Category> Categories { get; set; }
-        public DbSet<CategoryAndEvent> CategoryAndEvents { get; set; }
+        //public DbSet<CategoryAndEvent> CategoryAndEvents { get; set; }
         public DbSet<ReportAndEvent> ReportAndEvents { get; set; }
 
         public DbSet<InterAgencyCooperation> InterAgencyCooperations { get; set; }
@@ -37,7 +37,7 @@ namespace ATKApplication.DataBase
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EventConfiguration());
-            modelBuilder.ApplyConfiguration(new CategoryAndEventConfiguration());
+            //modelBuilder.ApplyConfiguration(new CategoryAndEventConfiguration());
             modelBuilder.ApplyConfiguration(new ReportAndEventConfiguration());
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
             base.OnModelCreating(modelBuilder);

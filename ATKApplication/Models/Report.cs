@@ -106,38 +106,38 @@ public class Report
         Console.WriteLine("  2. Статус: " + Status);
         Console.WriteLine("  3. Количество мероприятий: " + Events.Count);
 
-        var categoriesAndEvents = Events
-            .SelectMany(e => e.CategoryAndEvents)
-            .ToList()
-            .Select(x => new
-            {
-                CategoryName = x.Category!.Name,
-                Number = x.Count
-            })
-            .ToList();
+        //var categoriesAndEvents = Events
+        //    .SelectMany(e => e.CategoryAndEvents)
+        //    .ToList()
+        //    .Select(x => new
+        //    {
+        //        CategoryName = x.Category!.Name,
+        //        Number = x.Count
+        //    })
+        //    .ToList();
 
-        var categoriesGroupped = categoriesAndEvents
-            .GroupBy(x => x.CategoryName)
-            .Select(x => new
-            {
-                CategoryName = x.Key,
-                Number = x.Sum(x => x.Number)
-            })
-            .ToList();
-
-
-        Console.WriteLine("  4. Среднее количество посетителей мероприятий: " + categoriesGroupped.Average(e => e.Number));
-        Console.WriteLine("  5. Всего участников по категориям:");
-        categoriesGroupped.ForEach(x => Console.WriteLine("    -" + x.CategoryName + ": " + x.Number));
-
-
-        Console.WriteLine("  6. Количество мероприятий по типам: ");
-        var evs = Events
-            .GroupBy(e => e.EventType)
-            .ToList();
-
-        evs.ForEach(e => Console.WriteLine("    -" + e.Key + ": " + e.Count()));
-        Console.WriteLine();
+        //var categoriesGroupped = categoriesAndEvents
+        //    .GroupBy(x => x.CategoryName)
+        //    .Select(x => new
+        //    {
+        //        CategoryName = x.Key,
+        //        Number = x.Sum(x => x.Number)
+        //    })
+        //    .ToList();
+        //
+        //
+        //Console.WriteLine("  4. Среднее количество посетителей мероприятий: " + categoriesGroupped.Average(e => e.Number));
+        //Console.WriteLine("  5. Всего участников по категориям:");
+        //categoriesGroupped.ForEach(x => Console.WriteLine("    -" + x.CategoryName + ": " + x.Number));
+        //
+        //
+        //Console.WriteLine("  6. Количество мероприятий по типам: ");
+        //var evs = Events
+        //    .GroupBy(e => e.EventType)
+        //    .ToList();
+        //
+        //evs.ForEach(e => Console.WriteLine("    -" + e.Key + ": " + e.Count()));
+        //Console.WriteLine();
     }
 }
 

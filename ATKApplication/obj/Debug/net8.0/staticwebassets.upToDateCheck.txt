@@ -1,11 +1,13 @@
-wwwroot\assets\css\create_form-Dtn62Xmo.css
 wwwroot\assets\css\events-B9SqYwGu.css
-wwwroot\assets\css\Sidebar-BqmDiS9b.css
-wwwroot\assets\js\create_form.js
+wwwroot\assets\css\indexForm-Dtn62Xmo.css
+wwwroot\assets\css\Sidebar-Bsq-VF98.css
+wwwroot\assets\js\createEvent.js
+wwwroot\assets\js\eventCard.js
 wwwroot\assets\js\events.js
 wwwroot\assets\js\Sidebar-chunk.js
 wwwroot\images\hanty-mansijskogo.png
 wwwroot\images\АТК.png
 wwwroot\index.html
+wwwroot\src\eventCard\eventCard.html
 wwwroot\src\table\indexTable.html
 wwwroot\vite.svg

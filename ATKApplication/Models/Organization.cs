@@ -14,6 +14,7 @@ namespace ATKApplication.Models
         {
             
         }
+
         public Guid Id { get; init; }
         public string Name { get; set; }
         public int Rating { get; private set; }
@@ -25,6 +26,7 @@ namespace ATKApplication.Models
         //public Role? Role { get; set; }
 
         [JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public List<Event> Events { get; set; } = [];
         
 

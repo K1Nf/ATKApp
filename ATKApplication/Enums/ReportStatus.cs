@@ -1,7 +1,12 @@
-﻿namespace ATKApplication.Enums;
+﻿using System.Runtime.Serialization;
+
+namespace ATKApplication.Enums;
 public enum ReportStatus
 {
+    [EnumMember(Value = "Создано")]
     Created,
+    [EnumMember(Value = "Заполнено")]
     FilledIn,
-    Sent,
+    [EnumMember(Value = "Отправлено")]
+    Sent
 }

@@ -12,24 +12,12 @@ namespace ATKApplication.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categories",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Organizations",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    Rating = table.Column<float>(type: "real", nullable: false),
+                    Rating = table.Column<int>(type: "integer", nullable: false),
                     MunicipalityId = table.Column<Guid>(type: "uuid", nullable: true),
                     RoleId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
@@ -110,14 +98,15 @@ namespace ATKApplication.Migrations
                     Time = table.Column<TimeOnly>(type: "time without time zone", nullable: false),
                     EventType = table.Column<int>(type: "integer", nullable: false),
                     LevelType = table.Column<int>(type: "integer", nullable: false),
-                    Status = table.Column<int>(type: "integer", nullable: false),
                     IsEffective = table.Column<bool>(type: "boolean", nullable: false),
-                    IsMostValuable = table.Column<bool>(type: "boolean", nullable: false),
+                    IsValuable = table.Column<bool>(type: "boolean", nullable: false),
                     IsBestPractice = table.Column<bool>(type: "boolean", nullable: false),
                     OrganizerId = table.Column<Guid>(type: "uuid", nullable: false),
                     ThemeId = table.Column<Guid>(type: "uuid", nullable: false),
                     PlanId = table.Column<Guid>(type: "uuid", nullable: false),
                     FinanceId = table.Column<Guid>(type: "uuid", nullable: false),
+                    CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Status = table.Column<int>(type: "integer", nullable: false),
                     ReportId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
@@ -149,24 +138,24 @@ namespace ATKApplication.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CategoryAndEvents",
+                name: "Categories",
                 columns: table => new
                 {
-                    CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
-                    EventId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Count = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Schools = table.Column<int>(type: "integer", nullable: true),
+                    Students = table.Column<int>(type: "integer", nullable: true),
+                    WorkingYouth = table.Column<int>(type: "integer", nullable: true),
+                    NotWorkingYouth = table.Column<int>(type: "integer", nullable: true),
+                    Migrants = table.Column<int>(type: "integer", nullable: true),
+                    Registrated = table.Column<int>(type: "integer", nullable: true),
+                    EventId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CategoryAndEvents", x => new { x.CategoryId, x.EventId });
+                    table.PrimaryKey("PK_Categories", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CategoryAndEvents_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CategoryAndEvents_Events_EventId",
+                        name: "FK_Categories_Events_EventId",
                         column: x => x.EventId,
                         principalTable: "Events",
                         principalColumn: "Id",
@@ -285,9 +274,10 @@ namespace ATKApplication.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CategoryAndEvents_EventId",
-                table: "CategoryAndEvents",
-                column: "EventId");
+                name: "IX_Categories_EventId",
+                table: "Categories",
+                column: "EventId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Events_OrganizerId",
@@ -360,7 +350,7 @@ namespace ATKApplication.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CategoryAndEvents");
+                name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "FeedBacks");
@@ -376,9 +366,6 @@ namespace ATKApplication.Migrations
 
             migrationBuilder.DropTable(
                 name: "ReportAndEvents");
-
-            migrationBuilder.DropTable(
-                name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "Events");
