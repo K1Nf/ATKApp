@@ -1,6 +1,8 @@
 using ATKApplication.DataBase;
 using ATKApplication.Services;
 using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +13,12 @@ builder.Services.AddControllers()
     {
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         options.SerializerSettings.Converters.Add(new StringEnumConverter());
-    });
+    })
+    //.AddJsonOptions(options =>
+    //{
+    //    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
+    //})
+    ;
 
 
 builder.Services.AddDbContext<DataBaseContext>();

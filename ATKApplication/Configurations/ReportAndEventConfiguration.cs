@@ -18,7 +18,7 @@ namespace ATKApplication.Configurations
         public void Configure(EntityTypeBuilder<InterAgencyCooperation> builder)
         {
 
-            builder.HasKey(e => new { e.OrganizerId, e.EventId });
+            builder.HasKey(e => e.Id);
         }
     }
 }

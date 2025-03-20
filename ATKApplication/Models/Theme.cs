@@ -6,6 +6,7 @@ namespace ATKApplication.Models
     {
         public Guid Id { get; init; }
         public string Name { get; set; } = null!;
+        public string Code { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]
         public List<Event> Events = [];

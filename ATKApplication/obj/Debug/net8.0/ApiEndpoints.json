@@ -129,7 +129,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "createEventRequest",
+        "Name": "CreateEventRequest",
         "Type": "ATKApplication.Contracts.Request.CreateEventRequest",
         "IsRequired": true
       }

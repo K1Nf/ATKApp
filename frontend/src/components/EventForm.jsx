@@ -237,7 +237,7 @@ const handleFormSubmit = async (e) => {
     date: eventDate,
     level: level,
     form: formConducted,
-    themeId: selectedSubTheme,
+    themeCode: selectedSubTheme,
     isBestPractice: bestEvent,
     isValuable: importantEvent, 
 
@@ -254,12 +254,12 @@ const handleFormSubmit = async (e) => {
     },
 
     createFeedBackRequest:{
-      feedBackTypes: selectedFeedbackTypes.toString(),
+      feedBackTypes: selectedFeedbackTypes,
       description: feedbackDescription
     }, 
 
     createInterAgencyCooperationRequest:{
-      conent: selectedOrganizations
+      content: selectedOrganizations
     },
 
     createParticipantsRequest:{
@@ -268,8 +268,7 @@ const handleFormSubmit = async (e) => {
       registeredPersons: Number(participants.registeredPersons),
       migrants: Number(participants.migrants),
       workingYouth: Number(participants.workingYouth),
-      unemployedYouth: Number(participants.unemployedYouth),
-      //total: totalParticipants
+      notWorkingYouth: Number(participants.unemployedYouth),
     },
 
     createEqualToEqualRequest:{
@@ -644,6 +643,7 @@ const handleFormSubmit = async (e) => {
             <option value="action">Акция</option>
             <option value="quiz">Квиз</option>
             <option value="quest">Квест</option>
+            <option value="game">Игра</option>
             <option value="other">Другое</option>
           </select>
 

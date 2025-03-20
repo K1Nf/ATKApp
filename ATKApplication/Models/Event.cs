@@ -6,12 +6,11 @@ namespace ATKApplication.Models
 {
     public class Event
     {
-        private Event(string name, string content, DateOnly date, TimeOnly time, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType)
+        private Event(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType)
         {
             Name = name;
             Content = content;
             Date = date;
-            Time = time;
             OrganizerId = organizerId;
             ThemeId = themeId;
             EventType = eventType;
@@ -29,7 +28,7 @@ namespace ATKApplication.Models
         public string Name { get; set; }
         public string Content { get; set; }
         public DateOnly Date { get; set; }
-        public TimeOnly Time { get; set; }
+        //public TimeOnly Time { get; set; }
         public EventType EventType { get; set; }
         public LevelType LevelType { get; set; }
         private EventStatus status;
@@ -75,33 +74,34 @@ namespace ATKApplication.Models
                 if (value == EventStatus.Completed)
                 {
                     // проверка на дату и время перед тем как ставить статус 
-                    DateTime storedDateTime = Date.ToDateTime(Time);
-                    DateTime now = DateTime.Now;
-
-                    if (now == storedDateTime)
-                    {
-                        Console.WriteLine("Дата и время совпадают!");
-                    }
-                    else if (now > storedDateTime)
-                    {
-                        // мероприятие уже прошло
-                        Console.WriteLine("Текущая дата и время позже сохраненных.");
-                    }
-                    else
-                    {
-                        // мероприятие еще не прошло
-                        Console.WriteLine("Текущая дата и время раньше сохраненных.");
-                    }
+                    //DateTime storedDateTime = Date.ToDateTime(Time);
+                    //DateTime storedDateTime = Date.ToDateTime(Time);
+                    //DateTime now = DateTime.Now;
+                    //
+                    //if (now == storedDateTime)
+                    //{
+                    //    Console.WriteLine("Дата и время совпадают!");
+                    //}
+                    //else if (now > storedDateTime)
+                    //{
+                    //    // мероприятие уже прошло
+                    //    Console.WriteLine("Текущая дата и время позже сохраненных.");
+                    //}
+                    //else
+                    //{
+                    //    // мероприятие еще не прошло
+                    //    Console.WriteLine("Текущая дата и время раньше сохраненных.");
+                    //}
                 }
             }
         }
 
 
-        public static Event Create(string name, string content, DateOnly date, TimeOnly time, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType)
+        public static Event Create(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType)
         {
 
             Console.WriteLine("Создаем новое мероприятие");
-            return new(name, content, date, time, organizerId, themeId, planId, eventType, levelType);
+            return new(name, content, date, organizerId, themeId, planId, eventType, levelType);
         }
 
 
@@ -117,7 +117,7 @@ namespace ATKApplication.Models
             Console.WriteLine("Подробная информация о мероприятии.");
             Console.WriteLine($"Название: {Name}");
             Console.WriteLine($"Описание: {Content}");
-            Console.WriteLine($"Дата и время проведения: {Date} {Time}");
+            //Console.WriteLine($"Дата и время проведения: {Date} {Time}");
             Console.WriteLine($"Уровень: {LevelType}");
             Console.WriteLine($"Тип: {EventType}");
             Console.WriteLine($"Статус: {Status}");

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace ATKApplication.Models
 {
-    public class FeedBack(string description, Guid eventId, FeedBackType feedBackType)
+    public class FeedBack(string? description, Guid eventId, FeedBackType[] feedBackType)
     {
         public Guid Id { get; init; }
-        public string Description { get; set; } = description;
+        public string? Description { get; set; } = description;
         public Guid EventId { get; set; } = eventId;
         public Event? Event { get; set; }
-        public FeedBackType FeedBackType { get; set; }/* = feedBackType;*/
+        public FeedBackType[] FeedBackType { get; set; } = feedBackType;
 
     }
 }

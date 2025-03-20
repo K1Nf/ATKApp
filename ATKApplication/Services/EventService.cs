@@ -27,7 +27,7 @@ namespace ATKApplication.Services
             }
 
             var dateO = @event.Date;
-            var timeO = @event.Time;
+            //var timeO = @event.Time;
 
             string month = dateO.Month switch
             {
@@ -50,7 +50,7 @@ namespace ATKApplication.Services
                 Content = @event.Content,
                 Name = @event.Name,
 
-                DateTime = dateO.Day + " " + month + " " + dateO.Year + " " + timeO.Hour + ":" + timeO.Minute,
+                DateTime = dateO.Day + " " + month + " " + dateO.Year + " ", //timeO.Hour + ":" + timeO.Minute,
 
                 EventStatus = @event.Status,
                 EventType = @event.EventType,
@@ -84,76 +84,79 @@ namespace ATKApplication.Services
 
         public async Task<Result<Event>> Create(Guid tokenId, CreateEventRequest createEventRequest)
         {
-            //Guid planId = _dB.Plans.
-            //    First(e => e.OrganizationId == tokenId && e.Year == createEventRequest.Date.Year)
-            //    .Id;
+            DateOnly dateO = DateOnly.Parse(createEventRequest.Date!);
+            int year = dateO.Year;
 
-            //var newEvent = Event.Create(createEventRequest.Name, createEventRequest.Content, createEventRequest.Date,
-            //    createEventRequest.Time, tokenId, createEventRequest.ThemeId,
-            //    planId, createEventRequest.EventType, createEventRequest.LevelType);
+            Guid themeId = _dB.Themes
+                .SingleOrDefault(t => t.Code == createEventRequest.ThemeCode)!
+                .Id;
+
+            Guid planId = Guid.NewGuid();
+                //_dB.Plans.
+                //First(e => e.OrganizationId == tokenId && e.Year == year)
+                //.Id;
+
+            var newEvent = Event.Create(createEventRequest.Name, createEventRequest.Content, dateO,
+                tokenId, themeId, planId, createEventRequest.Form, createEventRequest.Level);
+
+
+            var participants = createEventRequest.CreateParticipantsRequest;
+            var equalToEqual = createEventRequest.CreateEqualToEqualRequest;
 
 
             //transaction begin
 
-            //if (newEvent != null)
-            //{
-            //    if (createEventRequest.CreateFinanceRequest != null)
-            //    {
-            //        var financeRequest = createEventRequest.CreateFinanceRequest;
+            if (newEvent != null)
+            {
+                if (createEventRequest.CreateFinanceRequest != null)
+                {
+                    var financeRequest = createEventRequest.CreateFinanceRequest;
+                    var finance = new Finance(financeRequest.MunicipalBudget, financeRequest.RegionalBudget,
+                        financeRequest.GranteBudget, financeRequest.OtherBudget, newEvent.Id);
 
-            //        var finance = new Finance(financeRequest.MunicipalBudget, financeRequest.RegionalBudget,
-            //            financeRequest.GranteBudget, financeRequest.OtherBudget, newEvent.Id);
+                    await _dB.Finances.AddAsync(finance);
+                }
 
-            //        await _dB.Finances.AddAsync(finance);
-            //        await _dB.SaveChangesAsync(); //???
-            //        //_dB.Attach(finance); //???
-            //    }
+                if (createEventRequest.CreateFeedBackRequest != null)
+                {
+                    var feedBackRequest = createEventRequest.CreateFeedBackRequest;
 
-            //    if (createEventRequest.CreateFeedBackRequest != null)
-            //    {
-            //        var feedBackRequest = createEventRequest.CreateFeedBackRequest;
+                    var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id, [FeedBackType.Internet] /*feedBackRequest.FeedBackTypes*/);
 
-            //        var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id, FeedBackType.Internet /*feedBackRequest.FeedBackTypes*/);
+                    await _dB.FeedBacks.AddAsync(feedBack);
+                }
 
-            //        await _dB.FeedBacks.AddAsync(feedBack);
-            //        await _dB.SaveChangesAsync(); //???
-            //        //_dB.Attach(feedBack); //???
-            //    }
+                if (createEventRequest.CreateMediaLinkRequest != null)
+                {
+                    var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
 
-            //    if (createEventRequest.CreateMediaLinkRequest != null)
-            //    {
-            //        var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
+                    var mediaLink = MediaLink.Create(mediaLinkRequest.Content, newEvent.Id);
 
-            //        var mediaLink = MediaLink.Create(mediaLinkRequest.Content, newEvent.Id);
+                    if(mediaLink != null)
+                        await _dB.MediaLinks.AddAsync(mediaLink);
+                }
 
-            //        if(mediaLink != null)
-            //        {
-            //            await _dB.MediaLinks.AddAsync(mediaLink);
-            //            await _dB.SaveChangesAsync(); //???
-            //        //_dB.Attach(mediaLink); //???
-            //        }
-            //    }
+                if (createEventRequest.CreateInterAgencyCooperationRequest != null)
+                {
+                    var interAgencyCooperationRequest = createEventRequest.CreateInterAgencyCooperationRequest;
 
-            //    if (createEventRequest.CreateInterAgencyCooperationRequest != null)
-            //    {
-            //        var interAgencyCooperationRequest = createEventRequest.CreateInterAgencyCooperationRequest;
+                    foreach (var item in interAgencyCooperationRequest.Content)
+                    {
+                        var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id,
+                        item.Key, item.Value.Type, item.Value.Description);
 
-            //        //var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id, 
-            //        //    interAgencyCooperationRequest.OrganizerId, interAgencyCooperationRequest.Content);
-            //        //
-            //        //
-            //        //await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
-            //        //await _dB.SaveChangesAsync(); //???
-            //        //_dB.Attach(interAgencyCooperation); //???
-            //    }
+                        if(interAgencyCooperation != null)
+                            await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
+                    }
+                }
 
-            //    if (newEvent != null)
-            //    {
-            //        await _dB.Events.AddAsync(newEvent);
-            //        await _dB.SaveChangesAsync();
-            //        return Result.Success(newEvent);
-            //    }
-            //}
+                if (newEvent != null)
+                {
+                    await _dB.Events.AddAsync(newEvent);
+                    //await _dB.SaveChangesAsync();
+                    return Result.Success(newEvent);
+                }
+            }
 
             return Result.Failure<Event>("Не удалось создать мероприятие");
         }
@@ -179,7 +182,7 @@ namespace ATKApplication.Services
                 .Where(x => x.Id == eventId && x.OrganizerId == tokenId)
                     .ExecuteUpdateAsync(x => x.
                         SetProperty(p => p.Date, updateEventRequest.Date)
-                        .SetProperty(p => p.Time, updateEventRequest.Time)
+                        //.SetProperty(p => p.Time, updateEventRequest.Time)
                         .SetProperty(p => p.Content, updateEventRequest.Content)
                         .SetProperty(p => p.EventType, updateEventRequest.EventType)
                         .SetProperty(p => p.LevelType, updateEventRequest.LevelType)

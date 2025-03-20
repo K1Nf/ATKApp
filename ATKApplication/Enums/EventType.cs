@@ -11,7 +11,9 @@ namespace ATKApplication.Models
         [EnumMember(Value = "Акция")] 
         Action, 
         [EnumMember(Value = "Игра")] 
-        Game, 
+        Game,
+        [EnumMember(Value = "Квест")]
+        quest,
         [EnumMember(Value = "Другое")] 
         Other
     }

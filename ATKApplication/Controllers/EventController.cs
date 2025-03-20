@@ -89,16 +89,17 @@ namespace ATKApplication.Controllers
         [HttpPost("Create")]
         public async Task<IActionResult> Create([FromBody] CreateEventRequest CreateEventRequest)
         {
-            Console.WriteLine("creating new event...");
-            return Ok("как будто бы создали...");
-            //Guid tokenId = Guid.NewGuid();
-            //var result = await _eventService.Create(tokenId, CreateEventRequest);
-            //
-            //if (result.IsSuccess)
-            //{
-            //    return Created();
-            //}
-            //return BadRequest("Мероприятие не добавлено:");
+            //Console.WriteLine("creating new event...");
+
+
+            Guid tokenId = Guid.NewGuid();
+            var result = await _eventService.Create(tokenId, CreateEventRequest);
+            
+            if (result.IsSuccess)
+            {
+                return Created();
+            }
+            return BadRequest("Мероприятие не добавлено:");
         }
 
 
