@@ -50,8 +50,11 @@ namespace ATKApplication.Services
                 Content = @event.Content,
                 Name = @event.Name,
 
-                DateTime = dateO.Day + " " + month + " " + dateO.Year + " ", //timeO.Hour + ":" + timeO.Minute,
-
+                DateTime = dateO.Day + " " + month + " " + dateO.Year + " ",
+                //EqualToEqual = @event.eq
+                //????????????????????????????????????????????????????????????????????
+                //InterAgencyCooperation = @event.InterAgencyCooperations,
+                Link = @event.MediaLinks.Select(x => x.Content + ", ").ToString(),
                 EventStatus = @event.Status,
                 EventType = @event.EventType,
                 LevelType = @event.LevelType,
@@ -69,15 +72,32 @@ namespace ATKApplication.Services
 
 
 
-        public async Task<Result<List<Event>>> GetAll()
+        public async Task<Result<List<ShortEventResponse>>> GetAll()
         {
             var events = await _dB.Events
                 .Include(e => e.Organizer)
                 .Include(e => e.Theme)
+                .Include(e => e.Category)
                 .AsNoTracking()
                 .ToListAsync();
 
-            return events;
+            List<ShortEventResponse> shortEventsResponse = events.Select(x => new ShortEventResponse
+            {
+                Id = x.Id,
+                Date = x.Date,
+                EventStatus = x.Status,
+                Form = x.EventType,
+                Level = x.LevelType,
+                IsBestPractice = x.IsBestPractice ? "Да" : "Нет",
+                IsValuable = x.IsValuable ? "Да" : "Нет",
+                Name = x.Name,
+                OrganizerName = x.Organizer!.Name,
+                ThemeCode = x.Theme!.Code,
+                ParticipantsCount = x.Category?.Total
+            })
+            .ToList();
+
+            return shortEventsResponse;
         }
 
 
@@ -106,60 +126,62 @@ namespace ATKApplication.Services
 
             //transaction begin
 
+            if (createEventRequest.CreateFinanceRequest != null)
+            {
+                var financeRequest = createEventRequest.CreateFinanceRequest;
+                var finance = new Finance(financeRequest.MunicipalBudget, financeRequest.RegionalBudget,
+                    financeRequest.GranteBudget, financeRequest.OtherBudget, newEvent.Id, financeRequest.Description);
+
+                await _dB.Finances.AddAsync(finance);
+            }
+
+            if (createEventRequest.CreateFeedBackRequest != null)
+            {
+                var feedBackRequest = createEventRequest.CreateFeedBackRequest;
+
+                //feedBackRequest.FeedBackTypes - foreach взять элемент и ставить true или false в feedback
+
+
+                //var test = feedBackRequest.FeedBackTypes
+                //var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id, [FeedBackTypes.Internet] /*feedBackRequest.FeedBackTypes*/);
+
+                //await _dB.FeedBacks.AddAsync(feedBack);
+            }
+
+            if (createEventRequest.CreateMediaLinkRequest != null)
+            {
+                var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
+
+                var mediaLink = MediaLink.Create(mediaLinkRequest.Content, newEvent.Id);
+
+                if(mediaLink != null)
+                    await _dB.MediaLinks.AddAsync(mediaLink);
+            }
+
+            if (createEventRequest.CreateInterAgencyCooperationRequest != null)
+            {
+                var interAgencyCooperationRequest = createEventRequest.CreateInterAgencyCooperationRequest;
+
+                foreach (var item in interAgencyCooperationRequest.Content)
+                {
+                    var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id,
+                    item.Key, item.Value.Type, item.Value.Description);
+
+                    if(interAgencyCooperation != null)
+                        await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
+                }
+            }
+
             if (newEvent != null)
             {
-                if (createEventRequest.CreateFinanceRequest != null)
-                {
-                    var financeRequest = createEventRequest.CreateFinanceRequest;
-                    var finance = new Finance(financeRequest.MunicipalBudget, financeRequest.RegionalBudget,
-                        financeRequest.GranteBudget, financeRequest.OtherBudget, newEvent.Id);
-
-                    await _dB.Finances.AddAsync(finance);
-                }
-
-                if (createEventRequest.CreateFeedBackRequest != null)
-                {
-                    var feedBackRequest = createEventRequest.CreateFeedBackRequest;
-
-                    var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id, [FeedBackType.Internet] /*feedBackRequest.FeedBackTypes*/);
-
-                    await _dB.FeedBacks.AddAsync(feedBack);
-                }
-
-                if (createEventRequest.CreateMediaLinkRequest != null)
-                {
-                    var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
-
-                    var mediaLink = MediaLink.Create(mediaLinkRequest.Content, newEvent.Id);
-
-                    if(mediaLink != null)
-                        await _dB.MediaLinks.AddAsync(mediaLink);
-                }
-
-                if (createEventRequest.CreateInterAgencyCooperationRequest != null)
-                {
-                    var interAgencyCooperationRequest = createEventRequest.CreateInterAgencyCooperationRequest;
-
-                    foreach (var item in interAgencyCooperationRequest.Content)
-                    {
-                        var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id,
-                        item.Key, item.Value.Type, item.Value.Description);
-
-                        if(interAgencyCooperation != null)
-                            await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
-                    }
-                }
-
-                if (newEvent != null)
-                {
-                    await _dB.Events.AddAsync(newEvent);
-                    //await _dB.SaveChangesAsync();
-                    return Result.Success(newEvent);
-                }
+                await _dB.Events.AddAsync(newEvent);
+                //await _dB.SaveChangesAsync();
+                return Result.Success(newEvent);
             }
 
             return Result.Failure<Event>("Не удалось создать мероприятие");
         }
+
 
 
         public async Task<Result> Update(Guid eventId, Guid tokenId, UpdateEventRequest updateEventRequest)

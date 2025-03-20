@@ -6,8 +6,9 @@ namespace ATKApplication.Models
 {
     public class Event
     {
-        private Event(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType)
+        private Event(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid? planId, EventType eventType, LevelType levelType)
         {
+            Id = Guid.NewGuid();
             Name = name;
             Content = content;
             Date = date;
@@ -43,13 +44,16 @@ namespace ATKApplication.Models
         public Guid ThemeId { get; set; }
 
         public Plan? Plan { get; set; }
-        public Guid PlanId { get; set; }
+        public Guid? PlanId { get; set; }
 
         public Finance? Finance { get; set; }
         public Guid FinanceId { get; set; }
 
         public Category? Category { get; set; }
         public Guid CategoryId { get; set; }
+
+        //public EqualToEqual? EqualToEqual { get; set; }
+        //public Guid EqualToEqualId { get; set; }
 
 
 

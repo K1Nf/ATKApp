@@ -11,7 +11,7 @@ namespace ATKApplication.Controllers
 {
     [Route("api/ref/[controller]")]
     [ApiController]
-    public class EventsController(EventService _eventService) : ControllerBase
+    public class EventsController(DataBaseContext _db, EventService _eventService) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -52,6 +52,10 @@ namespace ATKApplication.Controllers
             //await _db.Events.AddRangeAsync(event1, event2);
             //await _db.SaveChangesAsync();*/
 
+
+            //Category category = new Category(15, 20, 10, 25, 12, 4, Guid.Parse("0195adec-0c7f-7bff-93b5-38632e1b50c2"));
+            //await _db.Categories.AddAsync(category);
+            //await _db.SaveChangesAsync();
             var events = await _eventService.GetAll();
             return Ok(events.Value);
         }

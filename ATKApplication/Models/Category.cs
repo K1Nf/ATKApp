@@ -10,7 +10,7 @@ namespace ATKApplication.Models
 {
     public class Category(int? schools, int? students, int? workingYouth, int? notWorkingYouth, int? migrants, int? registrated, Guid eventId)
     {
-        public Guid Id { get; init; }
+        public Guid Id { get; init; } = Guid.NewGuid();
         public int? Schools { get; set; } = schools;
         public int? Students { get; set; } = students;
         public int? WorkingYouth { get; set; } = workingYouth;
@@ -25,11 +25,5 @@ namespace ATKApplication.Models
 
         [Newtonsoft.Json.JsonIgnore]
         public Event? Event { get; set; }
-
-
-
-        //public int? GetTotal() => Schools + Students + WorkingYouth + NotWorkingYouth + Migrants + Registrated;
-
-        //public List<CategoryAndEvent> Events { get; set; } = [];
     }
 }

@@ -106,16 +106,16 @@ export default function GetEvents(){
 
           {data.map((event) => (
             <tr key={event.id}>
-              <td>{event.id}</td>
-              <td>{event.status}</td>
+              <td>{event.themeCode}</td>
+              <td>{event.eventStatus}</td>
               <td>{event.name}</td>
               <td>{event.date}</td>
-              <td>{event.participants}</td>
+              <td>{event.participantsCount}</td>
               <td>{event.level}</td>
               <td>{event.form}</td>
-              <td>{event.significant}</td>
-              <td>{event.best}</td>
-              <td>{event.format}</td>
+              <td>{event.isValuable}</td>
+              <td>{event.isBestPractice}</td>
+              <td><a href={`/events/${event.id}`}>Подробнее</a></td>
             </tr>
           ))}
     </> 

@@ -4,18 +4,19 @@ namespace ATKApplication.Enums
 {
     public enum LevelType
     {
+        [EnumMember(Value = "Учреждение")]
         institution,
-        
-        municipality, 
-        
-        intermunicipality, 
-        
-        regional, 
-        
-        interregional, 
-        
-        all_russian, 
-        
+        [EnumMember(Value = "Муниципальное")]
+        municipality,
+        [EnumMember(Value = "Межмуниципальное")]
+        intermunicipality,
+        [EnumMember(Value = "Региональное")]
+        regional,
+        [EnumMember(Value = "Межрегиональное")]
+        interregional,
+        [EnumMember(Value = "Всероссийское")]
+        all_russian,
+        [EnumMember(Value = "Международное")]
         international
     }
 }

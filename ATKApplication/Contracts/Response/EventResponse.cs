@@ -15,6 +15,8 @@ namespace ATKApplication.Contracts.Response
         public string IsEffective { get; init; } 
         public string IsValuable { get; init; }
         public string IsBestPractice { get; init; }
+        public string Link { get; init; }
+        public string EqualToEqual { get; init; }
 
 
 
@@ -22,6 +24,8 @@ namespace ATKApplication.Contracts.Response
         public Theme? Theme { get; init; }
         public Category? Category { get; init; }
         public Finance? Finance { get; init; }
+        public FeedBack? FeedBack { get; init; }
+        public InterAgencyCooperation InterAgencyCooperation { get; init; }
 
 
 

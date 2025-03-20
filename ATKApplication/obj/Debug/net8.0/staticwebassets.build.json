@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HVhO5RhFhvlRVn8nGowGuK5KXCDBvOLs/dJHlTfXP1o=",
+  "Hash": "qA3Etn1Ht1BwzRguHbuvQ2LqL1oRNePLcpYCnT89fTs=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t0mf48j879",
-      "Integrity": "PfGBCBpOVpgc4xTB35ovMf3wNl1JHcIxHXOWJy1BbkU=",
+      "Fingerprint": "np2vsz02ck",
+      "Integrity": "e6dQgZ6f90ZXqib+n8ABOlZATyt4HhgscZzAP57meWs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6htnsejvuw",
-      "Integrity": "BocmyxkoEdS3a+Z1Dau0xxs52/CmOo+oZnzocpLiZCo=",
+      "Fingerprint": "u9zyeugbx3",
+      "Integrity": "7lJW62YUC6Kao3mpS3jLsNuyZxMpAaFhUijM6yMf124=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\events.js"
@@ -314,7 +314,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -351,7 +351,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -396,7 +396,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -441,7 +441,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -478,7 +478,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -515,7 +515,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -548,7 +548,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "24555"
+          "Value": "24557"
         },
         {
           "Name": "Content-Type",
@@ -556,11 +556,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PfGBCBpOVpgc4xTB35ovMf3wNl1JHcIxHXOWJy1BbkU=\""
+          "Value": "\"e6dQgZ6f90ZXqib+n8ABOlZATyt4HhgscZzAP57meWs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -570,12 +570,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PfGBCBpOVpgc4xTB35ovMf3wNl1JHcIxHXOWJy1BbkU="
+          "Value": "sha256-e6dQgZ6f90ZXqib+n8ABOlZATyt4HhgscZzAP57meWs="
         }
       ]
     },
     {
-      "Route": "assets/js/createEvent.t0mf48j879.js",
+      "Route": "assets/js/createEvent.np2vsz02ck.js",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -585,7 +585,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "24555"
+          "Value": "24557"
         },
         {
           "Name": "Content-Type",
@@ -593,11 +593,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PfGBCBpOVpgc4xTB35ovMf3wNl1JHcIxHXOWJy1BbkU=\""
+          "Value": "\"e6dQgZ6f90ZXqib+n8ABOlZATyt4HhgscZzAP57meWs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -607,7 +607,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t0mf48j879"
+          "Value": "np2vsz02ck"
         },
         {
           "Name": "label",
@@ -615,7 +615,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PfGBCBpOVpgc4xTB35ovMf3wNl1JHcIxHXOWJy1BbkU="
+          "Value": "sha256-e6dQgZ6f90ZXqib+n8ABOlZATyt4HhgscZzAP57meWs="
         }
       ]
     },
@@ -642,7 +642,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -687,7 +687,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -702,51 +702,6 @@
       ]
     },
     {
-      "Route": "assets/js/events.6htnsejvuw.js",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\events.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2596"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BocmyxkoEdS3a+Z1Dau0xxs52/CmOo+oZnzocpLiZCo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6htnsejvuw"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/events.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BocmyxkoEdS3a+Z1Dau0xxs52/CmOo+oZnzocpLiZCo="
-        }
-      ]
-    },
-    {
       "Route": "assets/js/events.js",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "Selectors": [],
@@ -757,7 +712,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2596"
+          "Value": "2657"
         },
         {
           "Name": "Content-Type",
@@ -765,11 +720,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"BocmyxkoEdS3a+Z1Dau0xxs52/CmOo+oZnzocpLiZCo=\""
+          "Value": "\"7lJW62YUC6Kao3mpS3jLsNuyZxMpAaFhUijM6yMf124=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -779,7 +734,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-BocmyxkoEdS3a+Z1Dau0xxs52/CmOo+oZnzocpLiZCo="
+          "Value": "sha256-7lJW62YUC6Kao3mpS3jLsNuyZxMpAaFhUijM6yMf124="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/events.u9zyeugbx3.js",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\events.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2657"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7lJW62YUC6Kao3mpS3jLsNuyZxMpAaFhUijM6yMf124=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u9zyeugbx3"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/events.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7lJW62YUC6Kao3mpS3jLsNuyZxMpAaFhUijM6yMf124="
         }
       ]
     },
@@ -806,7 +806,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -851,7 +851,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1052,7 +1052,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1097,7 +1097,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1134,7 +1134,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1171,7 +1171,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1216,7 +1216,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1253,7 +1253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 05:49:56 GMT"
+          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
         },
         {
           "Name": "Cache-Control",
