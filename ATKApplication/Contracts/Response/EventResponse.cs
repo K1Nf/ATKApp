@@ -25,7 +25,7 @@ namespace ATKApplication.Contracts.Response
         public Category? Category { get; init; }
         public Finance? Finance { get; init; }
         public FeedBack? FeedBack { get; init; }
-        public InterAgencyCooperation InterAgencyCooperation { get; init; }
+        public List<InterAgencyCooperation> InterAgencyCooperations { get; init; }
 
 
 

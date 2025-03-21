@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qA3Etn1Ht1BwzRguHbuvQ2LqL1oRNePLcpYCnT89fTs=",
+  "Hash": "HWlcmpCruGkVEVm+2V/QlfnD2acRv+FmSZujWP0X9Xo=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4c02jx9asb",
-      "Integrity": "zGp6sYpOc9GodxZQmYwhSzqsXIy99/IpyDN95SjUmbA=",
+      "Fingerprint": "3firrccxhi",
+      "Integrity": "Ab/UXXjaSrHi/TRUzu4PbJDuLCFp+erf2AfSvpkdmVg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\eventCard.js"
@@ -314,7 +314,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -351,7 +351,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -396,7 +396,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -441,7 +441,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -478,7 +478,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -515,7 +515,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -560,7 +560,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -597,7 +597,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -620,7 +620,7 @@
       ]
     },
     {
-      "Route": "assets/js/eventCard.4c02jx9asb.js",
+      "Route": "assets/js/eventCard.3firrccxhi.js",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -630,7 +630,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4440"
+          "Value": "6206"
         },
         {
           "Name": "Content-Type",
@@ -638,11 +638,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zGp6sYpOc9GodxZQmYwhSzqsXIy99/IpyDN95SjUmbA=\""
+          "Value": "\"Ab/UXXjaSrHi/TRUzu4PbJDuLCFp+erf2AfSvpkdmVg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -652,7 +652,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4c02jx9asb"
+          "Value": "3firrccxhi"
         },
         {
           "Name": "label",
@@ -660,7 +660,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zGp6sYpOc9GodxZQmYwhSzqsXIy99/IpyDN95SjUmbA="
+          "Value": "sha256-Ab/UXXjaSrHi/TRUzu4PbJDuLCFp+erf2AfSvpkdmVg="
         }
       ]
     },
@@ -675,7 +675,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4440"
+          "Value": "6206"
         },
         {
           "Name": "Content-Type",
@@ -683,11 +683,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zGp6sYpOc9GodxZQmYwhSzqsXIy99/IpyDN95SjUmbA=\""
+          "Value": "\"Ab/UXXjaSrHi/TRUzu4PbJDuLCFp+erf2AfSvpkdmVg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -697,7 +697,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zGp6sYpOc9GodxZQmYwhSzqsXIy99/IpyDN95SjUmbA="
+          "Value": "sha256-Ab/UXXjaSrHi/TRUzu4PbJDuLCFp+erf2AfSvpkdmVg="
         }
       ]
     },
@@ -724,7 +724,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -761,7 +761,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -806,7 +806,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -851,7 +851,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1052,7 +1052,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1097,7 +1097,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1134,7 +1134,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1171,7 +1171,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1216,7 +1216,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1253,7 +1253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 15:10:24 GMT"
+          "Value": "Fri, 21 Mar 2025 07:56:21 GMT"
         },
         {
           "Name": "Cache-Control",

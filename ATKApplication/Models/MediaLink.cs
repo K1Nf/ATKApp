@@ -12,6 +12,7 @@ public class MediaLink
     public Guid Id { get; init; }
     public string Content { get; set; }
     public Guid EventId { get; set; }
+    [Newtonsoft.Json.JsonIgnore]
     public Event? Event { get; set; }
 
     

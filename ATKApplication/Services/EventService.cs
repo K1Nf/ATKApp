@@ -5,6 +5,7 @@ using ATKApplication.Enums;
 using ATKApplication.Models;
 using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace ATKApplication.Services
 {
@@ -16,6 +17,9 @@ namespace ATKApplication.Services
                 .Include(e => e.Finance)
                 .Include(e => e.Organizer)
                 .Include(e => e.Theme)
+                .Include(e => e.FeedBack)
+                .Include(e => e.InterAgencyCooperations)
+                .Include(e => e.MediaLinks)
                 .Include(e => e.Category)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(e => e.Id == Id);
@@ -26,8 +30,16 @@ namespace ATKApplication.Services
                 return Result.Failure<EventResponse>("Мероприятие не найден");
             }
 
+
             var dateO = @event.Date;
-            //var timeO = @event.Time;
+
+
+            var sb = new StringBuilder();
+            foreach (var item in @event.MediaLinks)
+            {
+                sb.AppendLine(item.Content);
+            }
+
 
             string month = dateO.Month switch
             {
@@ -49,22 +61,24 @@ namespace ATKApplication.Services
                 Id = @event.Id,
                 Content = @event.Content,
                 Name = @event.Name,
+                DateTime = dateO.Day + " " + month + " " + dateO.Year,
 
-                DateTime = dateO.Day + " " + month + " " + dateO.Year + " ",
-                //EqualToEqual = @event.eq
-                //????????????????????????????????????????????????????????????????????
-                //InterAgencyCooperation = @event.InterAgencyCooperations,
-                Link = @event.MediaLinks.Select(x => x.Content + ", ").ToString(),
+                InterAgencyCooperations = @event.InterAgencyCooperations,           // Взаимодействие
+                FeedBack = @event.FeedBack,                                         // Обратная связь
+                EqualToEqual = @event.EqualToEqualDescription,                      // Равный равному
+                Link = sb.ToString().TrimEnd(),                                               // Ссылки
+                Finance = @event.Finance,                                           // Финансирование
+                Organizer = @event.Organizer,                                       // Организтор
+                Theme = @event.Theme,                                               // Тема
+                Category = @event.Category,                                         // Участники
+
                 EventStatus = @event.Status,
                 EventType = @event.EventType,
                 LevelType = @event.LevelType,
+
                 IsBestPractice = @event.IsBestPractice ? "Да" : "Нет",
                 IsEffective = @event.IsEffective ? "Да" : "Нет",
                 IsValuable = @event.IsValuable ? "Да" : "Нет",
-                Finance = @event.Finance,
-                Organizer = @event.Organizer,
-                Theme = @event.Theme,
-                Category = @event.Category,
             };
 
             return eventRespone;
@@ -111,17 +125,16 @@ namespace ATKApplication.Services
                 .SingleOrDefault(t => t.Code == createEventRequest.ThemeCode)!
                 .Id;
 
-            Guid planId = Guid.NewGuid();
-                //_dB.Plans.
-                //First(e => e.OrganizationId == tokenId && e.Year == year)
-                //.Id;
+            Guid planId = _dB.Plans
+                .AsNoTracking()
+                .First(e => e.OrganizationId == tokenId && e.Year == year)
+                .Id;
 
             var newEvent = Event.Create(createEventRequest.Name, createEventRequest.Content, dateO,
-                tokenId, themeId, planId, createEventRequest.Form, createEventRequest.Level);
+                tokenId, themeId, planId, createEventRequest.Form, createEventRequest.Level, createEventRequest.CreateEqualToEqualRequest?.Content);
 
 
-            var participants = createEventRequest.CreateParticipantsRequest;
-            var equalToEqual = createEventRequest.CreateEqualToEqualRequest;
+            
 
 
             //transaction begin
@@ -135,18 +148,30 @@ namespace ATKApplication.Services
                 await _dB.Finances.AddAsync(finance);
             }
 
+
             if (createEventRequest.CreateFeedBackRequest != null)
             {
                 var feedBackRequest = createEventRequest.CreateFeedBackRequest;
+                var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id);
 
-                //feedBackRequest.FeedBackTypes - foreach взять элемент и ставить true или false в feedback
+
+                // заменить на рефлексию???
+                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Opros))
+                    feedBack.HasOpros = true;
+
+                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Guestionnaire))
+                    feedBack.HasGuestionnaire = true;
+
+                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Internet))
+                    feedBack.HasInternet = true;
+
+                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Interview))
+                    feedBack.HasInterview = true;
 
 
-                //var test = feedBackRequest.FeedBackTypes
-                //var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id, [FeedBackTypes.Internet] /*feedBackRequest.FeedBackTypes*/);
-
-                //await _dB.FeedBacks.AddAsync(feedBack);
+                await _dB.FeedBacks.AddAsync(feedBack);
             }
+
 
             if (createEventRequest.CreateMediaLinkRequest != null)
             {
@@ -157,6 +182,7 @@ namespace ATKApplication.Services
                 if(mediaLink != null)
                     await _dB.MediaLinks.AddAsync(mediaLink);
             }
+
 
             if (createEventRequest.CreateInterAgencyCooperationRequest != null)
             {
@@ -172,12 +198,25 @@ namespace ATKApplication.Services
                 }
             }
 
+
+            if (createEventRequest.CreateParticipantsRequest != null)
+            {
+                var participants = createEventRequest.CreateParticipantsRequest;
+
+                var category = new Category(participants.SchoolKids, participants.Students, participants.WorkingYouth, 
+                    participants.NotWorkingYouth, participants.Migrants, participants.RegisteredPersons, newEvent.Id);
+
+                await _dB.Categories.AddAsync(category);
+            }
+
+
             if (newEvent != null)
             {
                 await _dB.Events.AddAsync(newEvent);
-                //await _dB.SaveChangesAsync();
+                await _dB.SaveChangesAsync(); 
                 return Result.Success(newEvent);
             }
+
 
             return Result.Failure<Event>("Не удалось создать мероприятие");
         }

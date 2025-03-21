@@ -27,8 +27,9 @@ namespace ATKApplication.Configurations
             builder.HasOne(e => e.Plan)
                 .WithMany(e => e.Events);
 
-            builder.HasMany(e => e.FeedBack)
-                .WithOne(f => f.Event);
+            builder.HasOne(e => e.FeedBack)
+                .WithOne(f => f.Event)
+                .HasForeignKey(typeof(FeedBack));
 
             builder.HasOne(e => e.Finance)
                 .WithOne(f => f.Event)

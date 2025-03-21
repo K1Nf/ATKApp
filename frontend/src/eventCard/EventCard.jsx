@@ -41,48 +41,45 @@ const EventCard = () => {
   return (
     <div className="container">
       <div className="event-card">
-        <h2>Основная информация о мероприятии</h2>
+        <h2>Основная информация о мероприятии "{data.name}"</h2>
         <section>
           <label>Номер темы:</label>
-          <p>"№ 1.1.1"</p>
+          <p>"№ {data.theme.code}</p>
         </section>
 
         <section>
           <label>Описание темы</label>
-          {/* <p>*описание темы*</p> */}
-          <p>{data.content}</p>
+          <p>{data.theme.description}</p>
         </section>
         
         <section>
           <label>Наименование мероприятия:</label>
-          {/* <p>Антитеррористический форум</p> */}
           <p>{data.name}</p>
         </section>
         
         <section>
+          <label>Статус:</label>
+          <p>{data.eventStatus}</p>
+        </section>
+
+        <section>
           <label>Дата проведения:</label>
-          {/* <p>25 апреля 2025</p> */}
           <p>{data.dateTime}</p>
-          {/* <p>Статус: запланировано</p> */}
-          <p>Статус: {data.eventStatus}</p>
         </section>
         
         <section>
           <label>Краткое описание мероприятия:</label>
-          {/* <p>Форум, направленный на повышение осведомленности о методах противодействия терроризму.</p> */}
           <p>{data.content}</p>
         </section>
         
         <section>
           <label>Уровень мероприятия:</label>
-          {/* <p>региональное</p> */}
           <p>{data.levelType}</p>
         </section>
 
 
         <section>
           <h2>Форма проведения</h2>
-          {/* <p>Лекция</p> */}
           <p>{data.eventType}</p>
         </section>
         
@@ -116,11 +113,45 @@ const EventCard = () => {
 
 
         <section>
+          <h2>Обратная связь</h2>
+          <p><strong>Опрос:</strong> {data.feedBack.hasOpros ? "Да" : "Нет"}</p>
+          <p><strong>Онлайн-опрос:</strong> {data.feedBack.hasInternet ? "Да" : "Нет"}</p>
+          <p><strong>Анкетирование:</strong> {data.feedBack.hasGuestionnaire ? "Да" : "Нет"}</p>
+          <p><strong>Интервью:</strong> {data.feedBack.hasInterview ? "Да" : "Нет"}</p>
+          <p><strong>Другое:</strong> {data.feedBack.hasOther ? "Да" : "Нет"}</p>
+          <p><strong>Описание:</strong> {data.feedBack.description}</p>
+        </section>
+        
+        
+        <section>
+          <h2>Взаимодействие</h2>
+          <table style={{color:"black", border:"2px black solid"}}>
+            <thead style={{color:"black", border:"2px black solid"}}>
+              <tr style={{color:"black", border:"2px black solid"}}>
+                <td style={{color:"black", border:"2px black solid"}}>Организация</td>
+                <td style={{color:"black", border:"2px black solid"}}>Тип участия</td>
+                <td style={{color:"black", border:"2px black solid"}}>Описание</td>
+              </tr>
+            </thead>
+            <tbody style={{color:"black", border:"2px black solid"}}>
+              {data.interAgencyCooperations.map((element) => ( // ✅ исправили forEach на map
+                <tr key={element.id} style={{color:"black", border:"2px black solid"}}>
+                  <td style={{color:"black", border:"2px black solid"}}>{element.organization}</td>
+                  <td style={{color:"black", border:"2px black solid"}}>{element.type}</td>
+                  <td style={{color:"black", border:"2px black solid"}}>{element.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+
+        <section>
           <h2>Дополнительные характеристики</h2>
           <p><strong>Значимое мероприятие: </strong> {data.isValuable}</p>
           <p><strong>Включено в сборник лучших практик: </strong> {data.isBestPractice}</p>
-          <p><strong>Формат равный равному: </strong> Да???</p>
-          <p><strong>Описание формата:</strong> *Пример описание*</p>
+          <p><strong>Формат равный равному: </strong> {data.equalToEqual ?? "Нет"}</p>
+
         </section>
         <button className = "edit" type="button">Редактировать</button>
         <button className = "delete" type="button">Удалить</button>

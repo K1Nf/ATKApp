@@ -6,7 +6,7 @@ namespace ATKApplication.Models
 {
     public class Event
     {
-        private Event(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid? planId, EventType eventType, LevelType levelType)
+        private Event(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid? planId, EventType eventType, LevelType levelType, string equalToEqualContent)
         {
             Id = Guid.NewGuid();
             Name = name;
@@ -16,6 +16,7 @@ namespace ATKApplication.Models
             ThemeId = themeId;
             EventType = eventType;
             LevelType = levelType;
+            EqualToEqualDescription = equalToEqualContent;
             PlanId = planId;
             status = EventStatus.Planned;
         }
@@ -36,6 +37,7 @@ namespace ATKApplication.Models
         public bool IsEffective { get; set; } = false;
         public bool IsValuable { get; set; }
         public bool IsBestPractice { get; set; } 
+        public string EqualToEqualDescription { get; set; } 
 
         public Organization? Organizer { get; init; }
         public Guid OrganizerId { get; set; }
@@ -57,7 +59,7 @@ namespace ATKApplication.Models
 
 
 
-        public List<FeedBack> FeedBack { get; set; } = [];
+        public FeedBack? FeedBack { get; set; }
         public List<InterAgencyCooperation> InterAgencyCooperations { get; set; } = [];
         
         public List<ReportAndEvent> ReportAndEvents { get; set; } = [];
@@ -101,11 +103,11 @@ namespace ATKApplication.Models
         }
 
 
-        public static Event Create(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType)
+        public static Event Create(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType, string equalToEqualContent)
         {
 
             Console.WriteLine("Создаем новое мероприятие");
-            return new(name, content, date, organizerId, themeId, planId, eventType, levelType);
+            return new(name, content, date, organizerId, themeId, planId, eventType, levelType, equalToEqualContent);
         }
 
 

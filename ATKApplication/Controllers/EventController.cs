@@ -96,7 +96,7 @@ namespace ATKApplication.Controllers
             //Console.WriteLine("creating new event...");
 
 
-            Guid tokenId = Guid.NewGuid();
+            Guid tokenId = Guid.Parse("a291d854-cbbb-480f-8309-b14fd32429f5");
             var result = await _eventService.Create(tokenId, CreateEventRequest);
             
             if (result.IsSuccess)

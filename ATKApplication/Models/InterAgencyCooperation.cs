@@ -4,6 +4,7 @@
     {
         public Guid Id { get; init; } = Guid.NewGuid();
         public Guid EventId { get; init; } = eventId;
+        [Newtonsoft.Json.JsonIgnore]
         public Event? Event { get; set; }
         public string? Organization {  get; set; } = organization;
         public string? Type { get; set; } = type;
