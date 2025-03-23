@@ -7,6 +7,11 @@ const Form = () => {
   const [isPeerFormat, setIsPeerFormat] = useState(false);
 const [peerFormatDescription, setPeerFormatDescription] = useState("");
 
+// отправка уведомления
+const [successMessage, setSuccessMessage] = useState("");
+
+
+
 const handlePeerFormatChange = () => {
   setIsPeerFormat((prev) => !prev);
 };  
@@ -64,6 +69,8 @@ const handlePeerFormatChange = () => {
         : [...prev, type]
     );
   };
+
+
 
   // Дополнительные характеристики
   const [importantEvent, setImportantEvent] = useState(false);
@@ -297,12 +304,75 @@ const handleFormSubmit = async (e) => {
 
     const data = await response.text();
     console.log("Событие создано:", data);
+    //  Показать уведомление
+    setSuccessMessage("Данные сохранены");
+    setTimeout(() => setSuccessMessage(""), 4000);
   } catch (error) {
       console.error("Ошибка:", error);
   } 
 
+// Очистка данных при снятии галочек
+useEffect(() => {
+  if (!hasFinancing) {
+    setFinancing({
+      municipal: "",
+      regional: "",
+      grants: "",
+      other: ""
+    });
+    setFinancingOtherDescription("");
+  }
+}, [hasFinancing]);
 
-  //alert("Форма успешно отправлена!");
+useEffect(() => {
+  if (!feedbackCollected) {
+    setSelectedFeedbackTypes([]);
+    setFeedbackDescription("");
+  }
+}, [feedbackCollected]);
+
+useEffect(() => {
+  if (!detailedInput) {
+    setParticipants({
+      schoolKids: 0,
+      students: 0,
+      registeredPersons: 0,
+      migrants: 0,
+      workingYouth: 0,
+      unemployedYouth: 0,
+    });
+  }
+}, [detailedInput]);
+
+useEffect(() => {
+  if (!isCooperation) {
+    setSelectedOrganizations({});
+  }
+}, [isCooperation]);
+
+useEffect(() => {
+  if (!equalFormat) {
+    setPeerFormatDescription("");
+  }
+}, [equalFormat]);
+
+// Обновление общей суммы участников
+useEffect(() => {
+  const total =
+    participants.schoolKids +
+    participants.students +
+    participants.registeredPersons +
+    participants.migrants +
+    participants.workingYouth +
+    participants.unemployedYouth;
+
+  setTotalParticipants(total);
+}, [participants]);
+
+
+
+
+
 };
   const handleOtherDescriptionChange = (e) => setOtherDescription(e.target.value);
   const getDescription = (subTheme) => {
@@ -415,6 +485,12 @@ const handleFormSubmit = async (e) => {
     <img src="images/АТК.png" alt="Символика АТК" />
     </div>
     <div className="container">
+      {/* Уведомление об успехе */}
+    {successMessage && (
+      <div className="alert alert-success">
+        {successMessage}
+      </div>
+    )}
       <div id="heraldry">
       <img src="images/hanty-mansijskogo.png" alt="Герб Ханты-Мансийского автономного округа" />
     </div>
@@ -432,7 +508,7 @@ const handleFormSubmit = async (e) => {
         <div id="form_theme_1" className="form-block">
           <h1>Форма создания мероприятия</h1>
 
-
+     
           <form onSubmit={handleFormSubmit} >
 
             

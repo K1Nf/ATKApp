@@ -711,3 +711,11 @@ p {
   width: 20%;
   margin-left: 40%;
 }
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
