@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import "./EventForm.css";
-
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const Form = () => {
   // равный равному
   const [isPeerFormat, setIsPeerFormat] = useState(false);
 const [peerFormatDescription, setPeerFormatDescription] = useState("");
-
-// отправка уведомления
-const [successMessage, setSuccessMessage] = useState("");
-
 
 
 const handlePeerFormatChange = () => {
@@ -305,8 +302,8 @@ const handleFormSubmit = async (e) => {
     const data = await response.text();
     console.log("Событие создано:", data);
     //  Показать уведомление
-    setSuccessMessage("Данные сохранены");
-    setTimeout(() => setSuccessMessage(""), 4000);
+    toastr.success("Данные успешно сохранены!", "Успех");
+    
   } catch (error) {
       console.error("Ошибка:", error);
   } 
@@ -485,12 +482,6 @@ useEffect(() => {
     <img src="images/АТК.png" alt="Символика АТК" />
     </div>
     <div className="container">
-      {/* Уведомление об успехе */}
-    {successMessage && (
-      <div className="alert alert-success">
-        {successMessage}
-      </div>
-    )}
       <div id="heraldry">
       <img src="images/hanty-mansijskogo.png" alt="Герб Ханты-Мансийского автономного округа" />
     </div>
