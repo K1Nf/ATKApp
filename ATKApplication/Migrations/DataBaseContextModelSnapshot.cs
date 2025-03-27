@@ -54,7 +54,7 @@ namespace ATKApplication.Migrations
                     b.HasIndex("EventId")
                         .IsUnique();
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Event", b =>
@@ -126,7 +126,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("ThemeId");
 
-                    b.ToTable("Events");
+                    b.ToTable("Events", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.FeedBack", b =>
@@ -161,7 +161,7 @@ namespace ATKApplication.Migrations
                     b.HasIndex("EventId")
                         .IsUnique();
 
-                    b.ToTable("FeedBacks");
+                    b.ToTable("FeedBacks", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Finance", b =>
@@ -193,7 +193,7 @@ namespace ATKApplication.Migrations
                     b.HasIndex("EventId")
                         .IsUnique();
 
-                    b.ToTable("Finances");
+                    b.ToTable("Finances", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.InterAgencyCooperation", b =>
@@ -218,7 +218,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("InterAgencyCooperations");
+                    b.ToTable("InterAgencyCooperations", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.MediaLink", b =>
@@ -238,7 +238,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("MediaLinks");
+                    b.ToTable("MediaLinks", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Organization", b =>
@@ -264,7 +264,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("MunicipalityId");
 
-                    b.ToTable("Organizations");
+                    b.ToTable("Organizations", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Plan", b =>
@@ -290,7 +290,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("OrganizationId");
 
-                    b.ToTable("Plans");
+                    b.ToTable("Plans", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Report", b =>
@@ -322,7 +322,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("OrganizerId");
 
-                    b.ToTable("Reports");
+                    b.ToTable("Reports", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.ReportAndEvent", b =>
@@ -340,7 +340,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("ReportAndEvents");
+                    b.ToTable("ReportAndEvents", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Theme", b =>
@@ -363,7 +363,7 @@ namespace ATKApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Themes");
+                    b.ToTable("Themes", (string)null);
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Category", b =>

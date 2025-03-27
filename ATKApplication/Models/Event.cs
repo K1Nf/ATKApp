@@ -30,7 +30,6 @@ namespace ATKApplication.Models
         public string Name { get; set; }
         public string Content { get; set; }
         public DateOnly Date { get; set; }
-        //public TimeOnly Time { get; set; }
         public EventType EventType { get; set; }
         public LevelType LevelType { get; set; }
         private EventStatus status;
@@ -54,16 +53,16 @@ namespace ATKApplication.Models
         public Category? Category { get; set; }
         public Guid CategoryId { get; set; }
 
-        //public EqualToEqual? EqualToEqual { get; set; }
-        //public Guid EqualToEqualId { get; set; }
-
-
-
         public FeedBack? FeedBack { get; set; }
+        //public Guid FeedBackId { get; set; }
+
+
+
         public List<InterAgencyCooperation> InterAgencyCooperations { get; set; } = [];
-        
         public List<ReportAndEvent> ReportAndEvents { get; set; } = [];
         public List<MediaLink> MediaLinks { get; set; } = [];
+
+
 
         public EventStatus Status
         {
