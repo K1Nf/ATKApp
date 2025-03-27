@@ -186,10 +186,13 @@ namespace ATKApplication.Services
             {
                 var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
 
-                var mediaLink = MediaLink.Create(mediaLinkRequest.Content, newEvent.Id);
+                foreach (var item in mediaLinkRequest.Content)
+                {
+                    var mediaLink = MediaLink.Create(item, newEvent.Id);
 
-                if(mediaLink != null)
-                    await _dB.MediaLinks.AddAsync(mediaLink);
+                    if (mediaLink != null)
+                        await _dB.MediaLinks.AddAsync(mediaLink);
+                }
             }
 
 
@@ -199,8 +202,7 @@ namespace ATKApplication.Services
 
                 foreach (var item in interAgencyCooperationRequest.Content)
                 {
-                    var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id,
-                    item.Key, item.Value.Type, item.Value.Description);
+                    var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id, item.Name, item.Role, item.Description);
 
                     if(interAgencyCooperation != null)
                         await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
@@ -270,6 +272,7 @@ namespace ATKApplication.Services
         }
 
 
+
         public async Task<Result> Delete(Guid eventId)
         {
             // transaction???
@@ -285,6 +288,148 @@ namespace ATKApplication.Services
             return Result.Failure<Event>("Что-то пошло не так!");
         }
 
+
+
+
+
+        public async Task<List<Event>> GetSortedAndFiltered(FilterEntity filter, int? page, int? pageSize)
+        {
+            IQueryable<Event> eventsQuery = _dB.Events
+                .AsQueryable();
+
+            if (filter.Level != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.LevelType == filter.Level);
+            }
+            if (filter.Form != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.EventType == filter.Form);
+            }
+            if (filter.Content != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Content.ToLower().Contains(filter.Content.ToLower()));
+            }
+            if (filter.Status != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Status == filter.Status);
+            }
+            if (filter.IsBestPractice != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.IsBestPractice == filter.IsBestPractice);
+            }
+            if (filter.IsValuable != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.IsValuable == filter.IsValuable);
+            }
+            if (filter.Name != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Name.ToLower().Contains(filter.Name.ToLower()));
+            }
+            if (filter.ThemeCode != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Theme.Code.ToLower() == filter.ThemeCode.ToLower());
+            }
+
+
+            // Apply sorting
+            if (filter.Orders != null && filter.Orders.Any())
+            {
+                // sort
+                IOrderedQueryable<Event>? eventsOrdered = null; //eventsQuery.OrderBy(x => x.Id);
+                bool isFirst = true;
+
+                foreach (var order in filter.Orders)
+                {
+                    if (isFirst)
+                        eventsOrdered = null;
+
+                    if (string.Equals(order!.Key, "Date", StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        Expression<Func<Event, dynamic>> expression = ev => ev.Date;
+                        eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
+                    }
+                    else if (string.Equals(order.Key, "Organizer", StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        Expression<Func<Event, dynamic>> expression = ev => ev.OrganizerId;
+                        eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
+                    }
+
+                    /*//if (string.Equals(order!.Key, "Date", StringComparison.CurrentCultureIgnoreCase))
+                    //{
+                    //    Expression<Func<Event, dynamic>> expression = ev => ev.Date;
+                    //    Console.WriteLine("Выполняется сортировка по дате");
+                    //    if (isFirst)
+                    //    {
+                    //        eventsOrdered = order.OrderBy ?
+                    //            eventsQuery.OrderBy(expression) : 
+                    //            eventsQuery.OrderByDescending(expression);
+
+                    //        isFirst = false;
+                    //    }
+                    //    else
+                    //    {
+                    //        eventsOrdered = order.OrderBy ?
+
+                    //            eventsOrdered!.ThenBy(expression) :
+                    //            eventsOrdered!.ThenByDescending(expression);
+                    //    }
+                    //}
+
+                    //if (string.Equals(order.Key, "Organizer", StringComparison.CurrentCultureIgnoreCase))
+                    //{
+                    //    Expression<Func<Event, dynamic>> expression = ev => ev.OrganizerId;
+                    //    Console.WriteLine("Выполняется сортировка по организатору");
+                    //    if (isFirst)
+                    //    {
+                    //        eventsOrdered = order.OrderBy ?
+                    //            eventsQuery.OrderBy(expression) :
+                    //            eventsQuery.OrderByDescending(expression);
+
+
+                    //        isFirst = false;
+                    //    }
+                    //    else
+                    //    {
+                    //        eventsOrdered = order.OrderBy ?
+                    //            eventsOrdered!.ThenBy(expression) :
+                    //            eventsOrdered!.ThenByDescending(expression);
+                    //    }
+                    //}*/
+
+                }
+                eventsQuery = eventsOrdered!.AsQueryable();
+            }
+
+
+
+            int entitesCount = pageSize ?? 15;
+            int pageNumber = page ?? 1;
+            int entitiesToSkip = (pageNumber - 1) * entitesCount;
+
+
+            var result = await eventsQuery
+                .Skip(entitiesToSkip)
+                .Take(entitesCount)
+                .ToListAsync();
+
+
+            return result;
+        }
+
+        private IOrderedQueryable<Event> ApplyOrdering(IQueryable<Event> query, IOrderedQueryable<Event>? orderedQuery, Expression<Func<Event, dynamic>> expression, bool orderBy, ref bool isFirst)
+        {
+            if (isFirst)
+            {
+                orderedQuery = orderBy ? query.OrderBy(expression) : query.OrderByDescending(expression);
+                isFirst = false;
+            }
+            else
+            {
+                orderedQuery = orderBy ? orderedQuery!.ThenBy(expression) : orderedQuery!.ThenByDescending(expression);
+            }
+
+            return orderedQuery!;
+        }
 
     }
 }

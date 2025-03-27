@@ -1,10 +1,11 @@
 ﻿namespace ATKApplication.Contracts.Request
 {
-    public record CreateInterAgencyCooperationRequest(Dictionary<string, EventDetailDto> Content);
+    public record CreateInterAgencyCooperationRequest(/*Dictionary<string, EventDetailDto> */ List<CoopOrgs?>? Content);
 
-    public class CoopOrgs(string? type, string? description)
+    public class CoopOrgs(string? name, string? role, string? description)
     {
-        public string? Type { get; set; } = type;
+        public string? Name { get; set; } = name;
+        public string? Role { get; set; } = role;
         public string? Description { get; set; } = description;
     }
 
