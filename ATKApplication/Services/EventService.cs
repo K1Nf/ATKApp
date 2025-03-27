@@ -177,10 +177,13 @@ namespace ATKApplication.Services
             {
                 var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
 
-                var mediaLink = MediaLink.Create(mediaLinkRequest.Content, newEvent.Id);
+                foreach (var item in mediaLinkRequest.Content)
+                {
+                    var mediaLink = MediaLink.Create(item, newEvent.Id);
 
-                if(mediaLink != null)
-                    await _dB.MediaLinks.AddAsync(mediaLink);
+                    if (mediaLink != null)
+                        await _dB.MediaLinks.AddAsync(mediaLink);
+                }
             }
 
 
@@ -190,10 +193,9 @@ namespace ATKApplication.Services
 
                 foreach (var item in interAgencyCooperationRequest.Content)
                 {
-                    var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id,
-                    item.Key, item.Value.Type, item.Value.Description);
+                    var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id, item.Name, item.Role, item.Description);
 
-                    if(interAgencyCooperation != null)
+                    if (interAgencyCooperation != null)
                         await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
                 }
             }
@@ -203,7 +205,7 @@ namespace ATKApplication.Services
             {
                 var participants = createEventRequest.CreateParticipantsRequest;
 
-                var category = new Category(participants.SchoolKids, participants.Students, participants.WorkingYouth, 
+                var category = new Category(participants.SchoolKids, participants.Students, participants.WorkingYouth,
                     participants.NotWorkingYouth, participants.Migrants, participants.RegisteredPersons, newEvent.Id);
 
                 await _dB.Categories.AddAsync(category);

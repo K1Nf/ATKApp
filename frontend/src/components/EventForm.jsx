@@ -351,7 +351,7 @@ if (selectedDate.getFullYear() !== currentYear) {
         detailedInput && customParticipants.length > 0
           ? customParticipants
           : null,
-      total: totalParticipants
+      // total: totalParticipants
     },
     
   

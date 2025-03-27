@@ -1,5 +1,6 @@
 ﻿using ATKApplication.Contracts.Request;
 using ATKApplication.DataBase;
+using ATKApplication.Enums;
 using ATKApplication.Models;
 using ATKApplication.Services;
 using Microsoft.AspNetCore.Http;
@@ -16,48 +17,65 @@ namespace ATKApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            await Task.Delay(2000);
+            //await Task.Delay(2000);
 
-            /*//Organization organization1 = Organization.Create("г. Ханты-Мансийск");
+            //Organization organization1 = Organization.Create("г. Ханты-Мансийск");
 
             //await _db.Organizations.AddAsync(organization1);
             //await _db.SaveChangesAsync();
 
-            //Plan plan = Plan.Create("План #1", organization1.Id, 2025);
+            //Plan plan = Plan.Create("План ⁠1", organization1.Id, 2025);
 
             //await _db.Plans.AddAsync(plan);
             //await _db.SaveChangesAsync();
 
             //Theme theme1 = new()
             //{
-            //    Name = "23 февраля"
+            //    Name = "23 февраля",
+            //    Code = "1.1.2",
+            //    Description = "Описание темы # 1.1.2",
             //};
 
             //Theme theme2 = new()
             //{
-            //    Name = "День борьбы с терроризмом"
+            //    Name = "День борьбы с терроризмом",
+            //    Code = "1.1.1",
+            //    Description = "Описание темы # 1.1.1",
             //};
 
             //await _db.Themes.AddRangeAsync(theme1, theme2);
             //await _db.SaveChangesAsync();
 
-            //Event event1 = Event.Create("Мероприятие 1", "Содержимое и описание мероприятия #1", 
-            //    new DateOnly(2025,03,03), new TimeOnly(12,15), organization1.Id, theme1.Id, plan.Id, EventType.Game, Enums.LevelType.Municipal);
+            //Event event1 = Event.Create("Мероприятие ⁠1", "Содержимое и описание мероприятия ⁠1",
+            //    new DateOnly(2025, 06, 03), organization1.Id, theme1.Id, plan.Id, EventType.Game, LevelType.municipality, "описание формата равный равному ⁠1");
 
 
-            //Event event2 = Event.Create("Мероприятие 2", "Содержимое и описание мероприятия #2",
-            //    new DateOnly(2025, 02, 28), new TimeOnly(15, 30), organization1.Id, theme2.Id, plan.Id, EventType.Action, Enums.LevelType.Regional);
+            //Event event2 = Event.Create("Мероприятие ⁠2", "Содержимое и описание мероприятия ⁠2",
+            //    new DateOnly(2025, 05, 28), organization1.Id, theme2.Id, plan.Id, EventType.Action, LevelType.regional, "описание формата равный равному ⁠2");
 
 
             //await _db.Events.AddRangeAsync(event1, event2);
-            //await _db.SaveChangesAsync();*/
+            //await _db.SaveChangesAsync();
 
 
-            //Category category = new Category(15, 20, 10, 25, 12, 4, Guid.Parse("0195adec-0c7f-7bff-93b5-38632e1b50c2"));
-            //await _db.Categories.AddAsync(category);
+            //Category category1 = new Category(15, 20, 10, 25, 12, 4, event1.Id);
+            //Category category2 = new Category(15, 20, 10, 25, 5, 30, event2.Id);
+
+
+            //FeedBack feedBack1 = new FeedBack("Фидбек за мероприятие ⁠1", event1.Id);
+            //feedBack1.HasInternet = true;
+            //feedBack1.HasInterview = true;
+            //feedBack1.HasOpros = false;
+            //feedBack1.HasGuestionnaire = false;
+
+
+
+            //await _db.Categories.AddAsync(category1);
+            //await _db.Categories.AddAsync(category2);
             //await _db.SaveChangesAsync();
             var events = await _eventService.GetAll();
             return Ok(events.Value);
+      
         }
         
 
@@ -96,7 +114,7 @@ namespace ATKApplication.Controllers
             //Console.WriteLine("creating new event...");
 
 
-            Guid tokenId = Guid.Parse("a291d854-cbbb-480f-8309-b14fd32429f5");
+            Guid tokenId = Guid.Parse("77e86bc1-1974-44ca-adb1-d96672dcd27d");
             var result = await _eventService.Create(tokenId, CreateEventRequest);
             
             if (result.IsSuccess)

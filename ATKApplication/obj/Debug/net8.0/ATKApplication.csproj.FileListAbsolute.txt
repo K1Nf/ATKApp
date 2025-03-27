@@ -545,3 +545,7 @@ C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\refint\ATKAp
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.pdb
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.genruntimeconfig.cache
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ref\ATKApplication.dll
+C:\Users\tellu\vkr-atk-app\ATKApplication\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\tellu\vkr-atk-app\ATKApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\tellu\vkr-atk-app\ATKApplication\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\tellu\vkr-atk-app\ATKApplication\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

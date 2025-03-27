@@ -1,11 +1,7 @@
 ﻿using ATKApplication.Configurations;
 using ATKApplication.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ATKApplication.DataBase
 {
@@ -22,7 +18,6 @@ namespace ATKApplication.DataBase
         public DbSet<Finance> Finances { get; set; }
 
         public DbSet<Category> Categories { get; set; }
-        //public DbSet<CategoryAndEvent> CategoryAndEvents { get; set; }
         public DbSet<ReportAndEvent> ReportAndEvents { get; set; }
 
         public DbSet<InterAgencyCooperation> InterAgencyCooperations { get; set; }
@@ -31,7 +26,9 @@ namespace ATKApplication.DataBase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=Fnaticwinner");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=root");
+
+            optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -40,6 +37,9 @@ namespace ATKApplication.DataBase
             //modelBuilder.ApplyConfiguration(new CategoryAndEventConfiguration());
             modelBuilder.ApplyConfiguration(new ReportAndEventConfiguration());
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
+
+
+
             base.OnModelCreating(modelBuilder);
         }
     }

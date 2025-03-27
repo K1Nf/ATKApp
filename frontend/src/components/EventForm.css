@@ -143,6 +143,7 @@ button:hover:not(.close-btn, .menu-toggle) {
   box-shadow: 0 0 10px rgba(0, 153, 255, 0.7); /* голубое свечение */
   transform: scale(1.1); /* лёгкое увеличение */
   color: #00aaff; /* чуть ярче при наведении */
+  box-shadow: none;
 }
 
 .menu-list {
