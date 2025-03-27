@@ -1,42 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './EventForm.css';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activePath, setActivePath] = useState(window.location.pathname);
 
   const toggleSidebar = () => setIsOpen(!isOpen);
   const closeSidebar = () => setIsOpen(false);
 
+  const handleNavigate = (path) => {
+    window.location.href = path;
+    setActivePath(path);
+  };
+
+  useEffect(() => {
+    setActivePath(window.location.pathname);
+  }, []);
+
   return (
     <>
-      {/* Кнопка открытия меню, скрывается если меню открыто */}
       {!isOpen && (
         <button id="menu-toggle" className="menu-toggle" onClick={toggleSidebar}>
           ☰
         </button>
       )}
-      <nav id="sidebar" className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <span> Навигация </span>
-          <button id="close-menu" className="close-btn" onClick={closeSidebar}>
-            ✖
-          </button>
+          <span>Меню</span>
+          <button className="close-btn" onClick={closeSidebar}>✖</button>
         </div>
         <ul className="menu-list">
-          <li className="menu-item active" onClick={() => window.location.href = '/events'}>
-            <a className="fas fa-home" href="/events"></a> Страница мероприятий
+          <li
+            className={`menu-item ${activePath === '/events' ? 'active' : ''}`}
+            onClick={() => handleNavigate('/events')}
+          >
+            <i className="fas fa-file-alt icon"></i> Страница мероприятий
           </li>
-          <li className="menu-item" onClick={() => window.location.href = '/create'}>
-            <a className="fas fa-user" href="/create"></a> Создание мероприятий
+          <li
+            className={`menu-item ${activePath === '/create' ? 'active' : ''}`}
+            onClick={() => handleNavigate('/create')}
+          >
+            <i className="fas fa-table icon"></i> Страница таблицы
           </li>
-          <li className="menu-item">
-            <a className="fas fa-cog"></a> Статистика
+          <li
+            className={`menu-item ${activePath === '/analytics' ? 'active' : ''}`}
+            onClick={() => handleNavigate('/analytics')}
+          >
+            <i className="fas fa-chart-pie icon"></i> Страница аналитики
           </li>
         </ul>
       </nav>
     </>
   );
 };
-
 
 export default Sidebar;

@@ -60,9 +60,9 @@ namespace ATKApplication.Controllers
             var events = await _eventService.GetAll();
             return Ok(events.Value);
         }
-        
 
-        
+
+
         [HttpGet("{Id:guid}")]
         public async Task<IActionResult> Get(Guid id)
         {
@@ -99,7 +99,7 @@ namespace ATKApplication.Controllers
 
             Guid tokenId = Guid.Parse("a291d854-cbbb-480f-8309-b14fd32429f5");
             var result = await _eventService.Create(tokenId, CreateEventRequest);
-            
+
             if (result.IsSuccess)
             {
                 return Created();
@@ -137,33 +137,5 @@ namespace ATKApplication.Controllers
             return BadRequest();
         }
 
-
-
-        [HttpGet("sort")]
-        public async Task<IActionResult> GetSortedAndFiltered([FromQuery] FilterEntity filterEntity, int? page, int? pageSize)
-        {
-            //if(filterEntity.Orders.Count == 0)
-            //{
-            //    return NotFound("COUNT IS 0");
-            //}
-            var events = await _eventService.GetSortedAndFiltered(filterEntity, page, pageSize);
-            return Ok(new { events, eventsCount = events.Count });
-        }
-    }
-
-    public record Sort(string Key, bool OrderBy);
-    
-    public class FilterEntity
-    {
-        public string? Name { get; set; }
-        public string? Content { get; set; }
-        public string? ThemeCode { get; set; }
-        public EventStatus? Status { get; set; }
-        public Guid? OrganizerId { get; set; }
-        public LevelType? Level { get; set; }
-        public EventType? Form { get; set; }
-        public bool? IsValuable { get; set; }
-        public bool? IsBestPractice { get; set; }
-        public List<Sort?> Orders { get; set; } = [];
     }
 }

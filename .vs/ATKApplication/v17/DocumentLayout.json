@@ -11,16 +11,12 @@
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\contracts\\response\\eventresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\response\\eventresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\enums\\feedbacktypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\enums\\feedbacktypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\models\\theme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\theme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\user\\desktop\\diplomproject\\atkapplication\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,40 +35,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FeedBackTypes.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Enums\\FeedBackTypes.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Enums\\FeedBackTypes.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Enums\\FeedBackTypes.cs",
-              "RelativeToolTip": "ATKApplication\\Enums\\FeedBackTypes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "DataBaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\DataBase\\DataBaseContext.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\DataBase\\DataBaseContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\DataBase\\DataBaseContext.cs",
+              "RelativeToolTip": "ATKApplication\\DataBase\\DataBaseContext.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwCMAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T07:15:21.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Theme.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Models\\Theme.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Models\\Theme.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Models\\Theme.cs",
-              "RelativeToolTip": "ATKApplication\\Models\\Theme.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T07:05:00.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T10:29:22.612Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EventResponse.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Contracts\\Response\\EventResponse.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Response\\EventResponse.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Contracts\\Response\\EventResponse.cs",
-              "RelativeToolTip": "ATKApplication\\Contracts\\Response\\EventResponse.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBwAAAAAAAAAAAAAAA==",
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Models\\Event.cs",
+              "RelativeToolTip": "ATKApplication\\Models\\Event.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAIA8wDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T06:51:37.409Z",
+              "WhenOpened": "2025-03-25T09:03:52.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Controllers\\EventController.cs",
+              "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAIsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:53:45.695Z",
               "EditorCaption": ""
             },
             {
@@ -83,22 +77,9 @@
               "RelativeDocumentMoniker": "ATKApplication\\Services\\EventService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Services\\EventService.cs",
               "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAkwN0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAowB8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T17:55:57.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Controllers\\EventController.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Controllers\\EventController.cs",
-              "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAowGoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:53:45.695Z",
               "EditorCaption": ""
             }
           ]

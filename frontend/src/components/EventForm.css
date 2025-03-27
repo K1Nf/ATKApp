@@ -45,7 +45,7 @@ textarea {
 }
 
 /* Стили для кнопок */
-button {
+button:not(.close-btn, .menu-toggle) {
     background-color: #003366;
     color: white;
     padding: 10px 20px;
@@ -56,7 +56,7 @@ button {
 }
 
 
-button:hover {
+button:hover:not(.close-btn, .menu-toggle) {
     background-color: #002244;
 }
 
@@ -79,119 +79,105 @@ button:hover {
 }
 
 /* Стили для бокового меню */
-#sidebar {
-    width: 250px;
-    position: fixed;
-    left: -250px;
-    top: 0;
-    background-color: #002d57;
-    color: white;
-    height: 100%;
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1000;
-}
-
-#sidebar a {
-    display: block;
-    padding: 15px 25px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    transition: background-color 0.3s;
-}
-
-#sidebar a:hover {
-    background-color: #444;
-}
-
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background: #d9eaff; 
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: -250px; /* По умолчанию скрыто */
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  background-color: #e0f2ff;
+  color: #003366;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Когда меню открыто */
 .sidebar.open {
-    transform: translateX(250px);
+  transform: translateX(0);
 }
 
-/* Заголовок и кнопка закрытия */
 .sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .close-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #549feb;
 }
 
-/* Список меню */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+   font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.menu-toggle,
+.close-btn {
+  background:none !important; 
+  border: none !important;
+  color: #0077cc; /* небесно-голубой */
+  font-size: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.menu-toggle:hover,
+.close-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.7); /* голубое свечение */
+  transform: scale(1.1); /* лёгкое увеличение */
+  color: #00aaff; /* чуть ярче при наведении */
+}
+
 .menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .menu-item {
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.3s;
+  display: flex;
+  align-items: center;
 }
 
-.menu-item i {
-    margin-right: 10px;
-}
-
-/* При наведении */
 .menu-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+  background-color: #cce7ff;
+  transform: translateX(4px);
 }
 
-/* Активный пункт */
+.menu-item .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #0077cc;
+}
+
 .menu-item.active {
-    background: #444;
-    border-left: 4px solid #3cb617; /* Золотая полоса */
+  background-color: #b3e5fc;
+  font-weight: bold;
+  border-left: 6px solid #0077cc;
 }
 
-/* Кнопка открытия */
-.menu-toggle {
-    position: fixed;
-    left: 20px;
-    top: 20px;
-    background: #1E1E1E;
-    color: #fff;
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.menu-toggle:hover {
-    background: #333;
-}
 
 /* Скрываем стандартный чекбокс */
 input[type="checkbox"] {
@@ -367,8 +353,8 @@ input.error[type="date"],
 input.error[type="url"],
 select.error, 
 textarea.error {
-    border-color: red;
-    background-color: red
+    border-color: rgb(245, 122, 122);
+    background-color: rgb(247, 138, 138)
 }
 
 /* небольшой эффект при ошибке */
@@ -408,9 +394,11 @@ input.error:focus, select.error:focus, textarea.error:focus {
   }
   
   .participant-field {
-    flex: 1 1 200px; 
+    flex: 1 1 30%;
+    min-width: 240px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
   }
   
   .participant-field label {
@@ -424,6 +412,17 @@ input.error:focus, select.error:focus, textarea.error:focus {
     width: 100%;
     box-sizing: border-box;
   }
+
+  .participants-row .form-group.other-block {
+    flex: 1 1 100%;
+    order: 100;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+  }
+  
   
   .financing-row {
     display: flex;
@@ -482,17 +481,16 @@ input.error:focus, select.error:focus, textarea.error:focus {
   }
 
   .required {
-    color: red;
+    color: RED;
     margin-right: 4px;
   }
   
-  /* Контейнер для tooltip */
   .tooltip {
-    margin-left: 5px; /* Отступ между иконками */
-    position: relative; /* Для правильного позиционирования подсказок */
-}
+    position: relative;
+    display: inline-block;
+    margin-left: 6px;
+  }
   
-  /* Стиль для значка вопроса */
   .question-icon {
     background-color: #ccc;
     color: #fff;
@@ -505,94 +503,27 @@ input.error:focus, select.error:focus, textarea.error:focus {
     justify-content: center;
     font-size: 12px;
     cursor: help;
+    margin-bottom: 10px;
   }
   
-  /* Скрытый текст tooltip */
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 150px;
-    background-color: #333;
+    width: 160px;
+    background-color: #003366;
     color: #fff;
     text-align: center;
-    padding: 5px;
+    padding: 6px;
     border-radius: 4px;
-    
-    /* Позиционирование */
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* над значком */
+    bottom: 125%;
     left: 50%;
-    margin-left: -75px; /* половина ширины tooltip */
-    
+    transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
-
-    font-size: 14px !important;
-    font-weight: normal !important;
-    background-color: #003366; /* Цвет для единообразия */
+    font-size: 13px;
   }
   
-  /* Стрелочка tooltip */
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%; /* снизу tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-  }
-  
-  .required {
-    color: red;
-    margin-right: 4px;
-  }
-  
-  /* Контейнер для tooltip */
-  .tooltip {
-    margin-left: 10px; /* Отступ между иконками */
-    position: relative; /* Для правильного позиционирования подсказок */
-}
-  
-  
-  /* Значок вопроса */
-  .question-icon {
-    background-color: #ccc;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    cursor: help;
-    margin-left: 2px;
-  }
-  
-  /* Скрытый текст tooltip */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 150px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 4px;
-    
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Располагаем над значком */
-    left: 50%;
-    margin-left: -75px;
-    
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  /* Стрелочка tooltip */
   .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -601,20 +532,12 @@ input.error:focus, select.error:focus, textarea.error:focus {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #333 transparent transparent transparent;
+    border-color: #003366 transparent transparent transparent;
   }
   
-  /* Отображение tooltip при наведении */
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
-  .description-content {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
   }
 
   label {
@@ -627,9 +550,7 @@ input.error:focus, select.error:focus, textarea.error:focus {
     vertical-align: middle; /* Выравнивание по центру */
   }
 
-#znak{
-    margin-left: 100px;
-  }
+
   .checkbox-container {
     display: flex; /* Используем flexbox для выравнивания */
     align-items: center; /* Выравнивание по вертикали */
@@ -718,4 +639,64 @@ p {
   margin-bottom: 20px;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.org-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+}
+
+.remove-org-x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #d9534f;
+  color: #d9534f;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.remove-org-x:hover {
+  background-color: #d9534f;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+.participant-total{
+  color:#001429;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.simple-total-input{
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+#toast-container > .toast-success {
+  min-width: 600px;
+  min-height: 100px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 24px;
+  padding: 16px 20px;
+  line-height: 1.5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding-left: 60px; /* больше отступ слева, чтобы иконка не лезла на текст */
+  position: relative;
+}
+
+#toast-container > .toast-success .toast-message {
+  font-size: 20px;
 }
