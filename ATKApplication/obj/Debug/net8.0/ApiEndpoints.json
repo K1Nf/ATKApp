@@ -140,7 +140,7 @@
     "ContainingType": "ATKApplication.Controllers.EventsController",
     "Method": "Delete",
     "RelativePath": "api/ref/Events/Delete/{Id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

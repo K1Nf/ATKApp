@@ -276,19 +276,13 @@ namespace ATKApplication.Services
         public async Task<Result> Delete(Guid eventId)
         {
             // transaction???
-            int deletedEventsCount = await _dB.Events
+            return await _dB.Events
                 .Where(x => x.Id == eventId)
-                .ExecuteDeleteAsync();
-            
-            if (deletedEventsCount == 1)
-            {
-                return Result.Success();
-            }
+                .ExecuteDeleteAsync() == 1 ?
 
-            return Result.Failure<Event>("Что-то пошло не так!");
+                Result.Success() :
+                Result.Failure<Event>("Что-то пошло не так!");
         }
-
-
 
 
 

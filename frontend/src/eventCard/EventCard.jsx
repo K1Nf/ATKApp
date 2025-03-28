@@ -1,14 +1,50 @@
 import { useEffect, useState } from "react";
 import DeleteConfirmationModal from '../eventCard/DeleteConfirmationModal';
-
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const EventCard = () => {
   // Модальное окно и логика удаления
     const [showModal, setShowModal] = useState(false);
-  
-    const handleDelete = () => {
+
+    const handleDelete = async () => {
       // Здесь логика удаления
-      console.log('Удалено!');
+
+      let pathToDelete = "/api/ref/events/delete/" + data.id;
+      try {
+        const response = await fetch(pathToDelete, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+    
+        if (!response.ok) {
+            throw new Error("Ошибка при удалении события");
+            // обработка ошибки
+        }
+    
+        if(response.status == 204){
+
+          // сделать кнопки disabled (не доступными для клика)
+          
+
+          const data = await response.text();
+          //console.log("Событие удалено с сообщением:", data);
+
+          //  Показать уведомление
+          toastr.success("Мероприятие успешно удалено из системы!", "Удалено");
+
+          setTimeout(() => {
+            window.location.href="/events";
+          }, 3000);
+        }
+        
+      } catch (error) {
+          console.error("Ошибка:", error);
+      } 
+
+
       setShowModal(false);
     };
 
@@ -18,13 +54,13 @@ const EventCard = () => {
   const [error, setError] = useState(null);
 
   // 1. Получаем текущий URL
-  const path = window.location.pathname; // Например: "/element/5"
-  const parts = path.split("/"); // Разделяем строку по "/"
-  const id = parts[parts.length - 1]; // Берем последний элемент (5)
+  const path = window.location.pathname;  // Например: "/element/5"
+  const parts = path.split("/");          // Разделяем строку по "/"
+  const id = parts[parts.length - 1];     // Берем последний элемент (5)
 
   const backUrl = `/api/ref/events/${id}`;
 
-  console.log(backUrl);
+  //console.log(backUrl);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,7 +83,7 @@ const EventCard = () => {
   if (loading) return <p>Загрузка...</p>;
   if (error) return <p>Ошибка: {error}</p>;
 
-  console.log(data);
+  //console.log(data);
 
   return (
     <div className="container">

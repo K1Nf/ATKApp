@@ -27,30 +27,38 @@ namespace ATKApplication.Configurations
             builder.HasOne(e => e.Plan)
                 .WithMany(e => e.Events);
 
+            builder.HasMany(e => e.ReportAndEvents)
+                .WithOne(f => f.Event);
+
+
+
             builder.HasOne(e => e.FeedBack)
                 .WithOne(f => f.Event)
-                .HasForeignKey(typeof(FeedBack));
+                .HasForeignKey(typeof(FeedBack))
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(e => e.Finance)
                 .WithOne(f => f.Event)
-                .HasForeignKey(typeof(Finance));
+                .HasForeignKey(typeof(Finance))
+                .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasMany(e => e.ReportAndEvents)
-                .WithOne(f => f.Event);
+            
 
             builder.HasMany(e => e.MediaLinks)
                 .WithOne(m => m.Event);
 
             builder.HasOne(e => e.Category)
                 .WithOne(f => f.Event)
-                .HasForeignKey(typeof(Category));
+                .HasForeignKey(typeof(Category))
+                .OnDelete(DeleteBehavior.Cascade);
 
 
             //builder.HasMany(e => e.CategoryAndEvents)
             //    .WithOne(c => c.Event);
 
             builder.HasMany(e => e.InterAgencyCooperations)
-                .WithOne(c => c.Event);
+                .WithOne(c => c.Event)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
