@@ -8,6 +8,7 @@ const ControlPanel = () => {
   const handleSearchChange = (e) => setSearchQuery(e.target.value);
   const handleFilterChange = (e) => setFilter(e.target.value);
 
+
   return (
     <header className="control-panel">
       <input
@@ -22,8 +23,9 @@ const ControlPanel = () => {
         <option value="closed">Завершенные</option>
       </select>
       {/* <button type="button" onClick={handleCreateEvent}> */}
-    <button type="button">
+    <button type="button" onClick={() => window.location.href = '/create'}>
         Создать мероприятие
+        
       </button>
     </header>
   );

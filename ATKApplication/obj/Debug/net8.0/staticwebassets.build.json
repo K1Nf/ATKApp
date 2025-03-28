@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "02ZTFmUqwn1NoUvD4H9hRRpU5zUGsIHf2+9lCiOo9es=",
+  "Hash": "3SsQi8klJ5EmRY5VK6o2OrJRxLj5cb3DEb7m2VMvSKw=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pxvh294dz8",
-      "Integrity": "7UHYdlxzJshja1XnfyWC7Pfnx8J24WGO9KoU4LcR1fw=",
+      "Fingerprint": "6ro718ekfb",
+      "Integrity": "7uVQHULL/yjoBhF+HpbcBvoktMFG5qxOMgJyaFMPiLk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\events.js"
@@ -335,7 +335,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -372,7 +372,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -417,7 +417,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -454,7 +454,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -499,7 +499,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -544,7 +544,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -581,7 +581,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -626,7 +626,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -663,7 +663,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -700,7 +700,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -745,7 +745,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -790,7 +790,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -805,6 +805,51 @@
       ]
     },
     {
+      "Route": "assets/js/events.6ro718ekfb.js",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\events.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2689"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7uVQHULL/yjoBhF+HpbcBvoktMFG5qxOMgJyaFMPiLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ro718ekfb"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/events.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7uVQHULL/yjoBhF+HpbcBvoktMFG5qxOMgJyaFMPiLk="
+        }
+      ]
+    },
+    {
       "Route": "assets/js/events.js",
       "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "Selectors": [],
@@ -815,7 +860,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2651"
+          "Value": "2689"
         },
         {
           "Name": "Content-Type",
@@ -823,11 +868,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7UHYdlxzJshja1XnfyWC7Pfnx8J24WGO9KoU4LcR1fw=\""
+          "Value": "\"7uVQHULL/yjoBhF+HpbcBvoktMFG5qxOMgJyaFMPiLk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -837,52 +882,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7UHYdlxzJshja1XnfyWC7Pfnx8J24WGO9KoU4LcR1fw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/events.pxvh294dz8.js",
-      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\events.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2651"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7UHYdlxzJshja1XnfyWC7Pfnx8J24WGO9KoU4LcR1fw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pxvh294dz8"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/events.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-7UHYdlxzJshja1XnfyWC7Pfnx8J24WGO9KoU4LcR1fw="
+          "Value": "sha256-7uVQHULL/yjoBhF+HpbcBvoktMFG5qxOMgJyaFMPiLk="
         }
       ]
     },
@@ -909,7 +909,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -954,7 +954,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1155,7 +1155,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1200,7 +1200,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1237,7 +1237,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1274,7 +1274,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1319,7 +1319,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1356,7 +1356,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 17:35:21 GMT"
+          "Value": "Thu, 27 Mar 2025 18:10:18 GMT"
         },
         {
           "Name": "Cache-Control",

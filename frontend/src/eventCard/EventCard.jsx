@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
+import DeleteConfirmationModal from '../eventCard/DeleteConfirmationModal';
+
 
 const EventCard = () => {
+  // Модальное окно и логика удаления
+    const [showModal, setShowModal] = useState(false);
+  
+    const handleDelete = () => {
+      // Здесь логика удаления
+      console.log('Удалено!');
+      setShowModal(false);
+    };
+
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -154,8 +165,13 @@ const EventCard = () => {
 
         </section>
         <button className = "edit" type="button">Редактировать</button>
-        <button className = "delete" type="button">Удалить</button>
-        <button className = "back" type="button">Назад</button>
+        <button className = "delete" type="button" onClick={() => setShowModal(true)}>Удалить</button>
+        <DeleteConfirmationModal
+        isOpen={showModal}
+        onConfirm={handleDelete}
+        onCancel={() => setShowModal(false)}
+      />
+        <button className = "back" type="button" onClick={() => window.history.back()}> Назад</button>
       </div>
     </div>
   );

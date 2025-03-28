@@ -701,3 +701,81 @@ p {
 #toast-container > .toast-success .toast-message {
   font-size: 20px;
 }
+
+/* Модальное окно */
+/* Сброс всех стилей */
+.modal-overlay, .modal-box, .modal-buttons, .confirm-del-btn, .confirm-cancel-btn  {
+  all: unset;
+  box-sizing: border-box;
+}
+
+/* Задний фон */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Модальное окно */
+.modal-box {
+  background-color: #fff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* Заголовок и текст */
+.modal-box h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.modal-box p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Кнопки */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirm-del-btn,
+.confirm-cancel-btn {
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirm-del-btn {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.confirm-cancel-btn  {
+  background-color: #cfd8dc;
+  color: #333;
+}
+
+.confirm-del-btn:hover {
+  background-color: #c62828;
+}
+
+.confirm-cancel-btn:hover {
+  background-color: #b0bec5;
+}
