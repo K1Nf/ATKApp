@@ -17,18 +17,27 @@ namespace ATKApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            await Task.Delay(2000);
+            //await Task.Delay(2000);
 
+<<<<<<< HEAD
             Organization organization1 = Organization.Create("г. Ханты-Мансийск");
+=======
+            //Organization organization1 = Organization.Create("г. Ханты-Мансийск");
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
 
             await _db.Organizations.AddAsync(organization1);
             await _db.SaveChangesAsync();
 
+<<<<<<< HEAD
             Plan plan = Plan.Create("План #1", organization1.Id, 2025);
+=======
+            //Plan plan = Plan.Create("План ⁠1", organization1.Id, 2025);
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
 
             await _db.Plans.AddAsync(plan);
             await _db.SaveChangesAsync();
 
+<<<<<<< HEAD
             Theme theme1 = new()
             {
                 Name = "23 февраля",
@@ -42,10 +51,26 @@ namespace ATKApplication.Controllers
                 Code = "1.1.1",
                 Description = "Описание темы # 1.1.1",
             };
+=======
+            //Theme theme1 = new()
+            //{
+            //    Name = "23 февраля",
+            //    Code = "1.1.2",
+            //    Description = "Описание темы # 1.1.2",
+            //};
+
+            //Theme theme2 = new()
+            //{
+            //    Name = "День борьбы с терроризмом",
+            //    Code = "1.1.1",
+            //    Description = "Описание темы # 1.1.1",
+            //};
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
 
             await _db.Themes.AddRangeAsync(theme1, theme2);
             await _db.SaveChangesAsync();
 
+<<<<<<< HEAD
             Event event1 = Event.Create("Мероприятие #1", "Содержимое и описание мероприятия #1", 
                 new DateOnly(2025,06,03), organization1.Id, theme1.Id, plan.Id, EventType.Game, LevelType.municipality, "описание формата равный равному #1");
 
@@ -73,8 +98,38 @@ namespace ATKApplication.Controllers
             await _db.Categories.AddAsync(category1);
             await _db.Categories.AddAsync(category2);
             await _db.SaveChangesAsync();
+=======
+            //Event event1 = Event.Create("Мероприятие ⁠1", "Содержимое и описание мероприятия ⁠1",
+            //    new DateOnly(2025, 06, 03), organization1.Id, theme1.Id, plan.Id, EventType.Game, LevelType.municipality, "описание формата равный равному ⁠1");
+
+
+            //Event event2 = Event.Create("Мероприятие ⁠2", "Содержимое и описание мероприятия ⁠2",
+            //    new DateOnly(2025, 05, 28), organization1.Id, theme2.Id, plan.Id, EventType.Action, LevelType.regional, "описание формата равный равному ⁠2");
+
+
+            //await _db.Events.AddRangeAsync(event1, event2);
+            //await _db.SaveChangesAsync();
+
+
+            //Category category1 = new Category(15, 20, 10, 25, 12, 4, event1.Id);
+            //Category category2 = new Category(15, 20, 10, 25, 5, 30, event2.Id);
+
+
+            //FeedBack feedBack1 = new FeedBack("Фидбек за мероприятие ⁠1", event1.Id);
+            //feedBack1.HasInternet = true;
+            //feedBack1.HasInterview = true;
+            //feedBack1.HasOpros = false;
+            //feedBack1.HasGuestionnaire = false;
+
+
+
+            //await _db.Categories.AddAsync(category1);
+            //await _db.Categories.AddAsync(category2);
+            //await _db.SaveChangesAsync();
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
             var events = await _eventService.GetAll();
             return Ok(events.Value);
+      
         }
 
 
@@ -113,7 +168,7 @@ namespace ATKApplication.Controllers
             //Console.WriteLine("creating new event...");
 
 
-            Guid tokenId = Guid.Parse("a291d854-cbbb-480f-8309-b14fd32429f5");
+            Guid tokenId = Guid.Parse("77e86bc1-1974-44ca-adb1-d96672dcd27d");
             var result = await _eventService.Create(tokenId, CreateEventRequest);
 
             if (result.IsSuccess)

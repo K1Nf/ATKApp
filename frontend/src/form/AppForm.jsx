@@ -1,8 +1,9 @@
 import React from "react";
-//import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import EventForm from "../components/EventForm";
+import EventCard from "../eventCard/EventCard";
 import Sidebar from "../components/Sidebar";
-
+import EventTable from "../components/EventTable";
 
 
 const App = () => {
@@ -10,6 +11,8 @@ const App = () => {
     <div>
       <Sidebar />
       <EventForm />
+      {/* <EventCard /> */}
+      {/* <EventTable /> */}
     </div>
   );
 };

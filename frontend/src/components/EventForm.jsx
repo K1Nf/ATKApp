@@ -351,7 +351,11 @@ if (selectedDate.getFullYear() !== currentYear) {
         detailedInput && customParticipants.length > 0
           ? customParticipants
           : null,
+<<<<<<< HEAD
       //total: totalParticipants
+=======
+      // total: totalParticipants
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
     },
     
   

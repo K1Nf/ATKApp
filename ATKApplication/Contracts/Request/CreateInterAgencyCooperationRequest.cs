@@ -8,4 +8,8 @@
         public string? Role { get; set; } = role;
         public string? Description { get; set; } = description;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d

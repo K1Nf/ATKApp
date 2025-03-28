@@ -204,7 +204,7 @@ namespace ATKApplication.Services
                 {
                     var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id, item.Name, item.Role, item.Description);
 
-                    if(interAgencyCooperation != null)
+                    if (interAgencyCooperation != null)
                         await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
                 }
             }
@@ -214,7 +214,7 @@ namespace ATKApplication.Services
             {
                 var participants = createEventRequest.CreateParticipantsRequest;
 
-                var category = new Category(participants.SchoolKids, participants.Students, participants.WorkingYouth, 
+                var category = new Category(participants.SchoolKids, participants.Students, participants.WorkingYouth,
                     participants.NotWorkingYouth, participants.Migrants, participants.RegisteredPersons, newEvent.Id);
 
                 await _dB.Categories.AddAsync(category);

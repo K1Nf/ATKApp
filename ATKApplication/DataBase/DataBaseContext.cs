@@ -26,7 +26,11 @@ namespace ATKApplication.DataBase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+<<<<<<< HEAD
             optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=Fnaticwinner");
+=======
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=root");
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
 
             optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
         }
@@ -39,7 +43,11 @@ namespace ATKApplication.DataBase
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
 
 
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
             base.OnModelCreating(modelBuilder);
         }
     }

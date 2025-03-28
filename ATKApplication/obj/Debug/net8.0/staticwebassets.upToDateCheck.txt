@@ -1,7 +1,11 @@
 wwwroot\assets\css\createEvent-DPlFYqzU.css
 wwwroot\assets\css\events-B9SqYwGu.css
 wwwroot\assets\css\indexForm-Dtn62Xmo.css
+<<<<<<< HEAD
 wwwroot\assets\css\Sidebar-DeOfIZRs.css
+=======
+wwwroot\assets\css\Sidebar-G61cL7Gd.css
+>>>>>>> 08be05627de4d01275457645fb3c13175de0be6d
 wwwroot\assets\js\createEvent.js
 wwwroot\assets\js\eventCard.js
 wwwroot\assets\js\events.js
