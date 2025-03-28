@@ -1,11 +1,7 @@
 ﻿using ATKApplication.Configurations;
 using ATKApplication.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ATKApplication.DataBase
 {
@@ -22,7 +18,6 @@ namespace ATKApplication.DataBase
         public DbSet<Finance> Finances { get; set; }
 
         public DbSet<Category> Categories { get; set; }
-        //public DbSet<CategoryAndEvent> CategoryAndEvents { get; set; }
         public DbSet<ReportAndEvent> ReportAndEvents { get; set; }
 
         public DbSet<InterAgencyCooperation> InterAgencyCooperations { get; set; }

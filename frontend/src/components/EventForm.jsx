@@ -336,9 +336,9 @@ if (selectedDate.getFullYear() !== currentYear) {
       description: cleanedFeedbackDescription
     },
   
-    createInterAgencyCooperationRequest: {
-      content: cleanedOrganizations
-    },
+    // createInterAgencyCooperationRequest: {
+    //   content: cleanedOrganizations
+    // },
   
     createParticipantsRequest: {
       students: Number(participants.students),
@@ -351,7 +351,7 @@ if (selectedDate.getFullYear() !== currentYear) {
         detailedInput && customParticipants.length > 0
           ? customParticipants
           : null,
-      total: totalParticipants
+      //total: totalParticipants
     },
     
   
@@ -363,7 +363,7 @@ if (selectedDate.getFullYear() !== currentYear) {
       content: otherOrganizations
     }
   };
-  alert(JSON.stringify(createEventRequest, null, 2));
+  //alert(JSON.stringify(createEventRequest, null, 2));
 
 
   console.log(createEventRequest);

@@ -354,48 +354,6 @@ namespace ATKApplication.Services
                         eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
                     }
 
-                    /*//if (string.Equals(order!.Key, "Date", StringComparison.CurrentCultureIgnoreCase))
-                    //{
-                    //    Expression<Func<Event, dynamic>> expression = ev => ev.Date;
-                    //    Console.WriteLine("Выполняется сортировка по дате");
-                    //    if (isFirst)
-                    //    {
-                    //        eventsOrdered = order.OrderBy ?
-                    //            eventsQuery.OrderBy(expression) : 
-                    //            eventsQuery.OrderByDescending(expression);
-
-                    //        isFirst = false;
-                    //    }
-                    //    else
-                    //    {
-                    //        eventsOrdered = order.OrderBy ?
-
-                    //            eventsOrdered!.ThenBy(expression) :
-                    //            eventsOrdered!.ThenByDescending(expression);
-                    //    }
-                    //}
-
-                    //if (string.Equals(order.Key, "Organizer", StringComparison.CurrentCultureIgnoreCase))
-                    //{
-                    //    Expression<Func<Event, dynamic>> expression = ev => ev.OrganizerId;
-                    //    Console.WriteLine("Выполняется сортировка по организатору");
-                    //    if (isFirst)
-                    //    {
-                    //        eventsOrdered = order.OrderBy ?
-                    //            eventsQuery.OrderBy(expression) :
-                    //            eventsQuery.OrderByDescending(expression);
-
-
-                    //        isFirst = false;
-                    //    }
-                    //    else
-                    //    {
-                    //        eventsOrdered = order.OrderBy ?
-                    //            eventsOrdered!.ThenBy(expression) :
-                    //            eventsOrdered!.ThenByDescending(expression);
-                    //    }
-                    //}*/
-
                 }
                 eventsQuery = eventsOrdered!.AsQueryable();
             }
@@ -416,7 +374,7 @@ namespace ATKApplication.Services
             return result;
         }
 
-        private IOrderedQueryable<Event> ApplyOrdering(IQueryable<Event> query, IOrderedQueryable<Event>? orderedQuery, Expression<Func<Event, dynamic>> expression, bool orderBy, ref bool isFirst)
+        private static IOrderedQueryable<Event> ApplyOrdering(IQueryable<Event> query, IOrderedQueryable<Event>? orderedQuery, Expression<Func<Event, dynamic>> expression, bool orderBy, ref bool isFirst)
         {
             if (isFirst)
             {

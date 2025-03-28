@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ATKApplication.Models
 {
+
     public class FeedBack(string? description, Guid eventId)
     {
         public Guid Id { get; init; } = Guid.NewGuid();
