@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './EventForm.css';
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Sidebar = ({ isOpen, toggleSidebar }) => {
   const [activePath, setActivePath] = useState(window.location.pathname);
 
-  const toggleSidebar = () => setIsOpen(!isOpen);
-  const closeSidebar = () => setIsOpen(false);
+  const closeSidebar = () => toggleSidebar(); // просто переключаем обратно
 
   const handleNavigate = (path) => {
     window.location.href = path;
@@ -34,19 +32,19 @@ const Sidebar = () => {
             className={`menu-item ${activePath === '/events' ? 'active' : ''}`}
             onClick={() => handleNavigate('/events')}
           >
-            <i className="fas fa-file-alt icon"></i> Страница мероприятий
+            <i className="fas fa-table icon"></i> Таблицы мероприятий  
           </li>
           <li
             className={`menu-item ${activePath === '/create' ? 'active' : ''}`}
             onClick={() => handleNavigate('/create')}
           >
-            <i className="fas fa-table icon"></i> Страница таблицы
+            <i className="fas fa-file-alt icon"></i> Создание мероприятия
           </li>
           <li
             className={`menu-item ${activePath === '/analytics' ? 'active' : ''}`}
             onClick={() => handleNavigate('/analytics')}
           >
-            <i className="fas fa-chart-pie icon"></i> Страница аналитики
+            <i className="fas fa-chart-pie icon"></i> Статистика
           </li>
         </ul>
       </nav>

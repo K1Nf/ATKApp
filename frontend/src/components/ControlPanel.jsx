@@ -24,9 +24,8 @@ const ControlPanel = () => {
       </select>
       {/* <button type="button" onClick={handleCreateEvent}> */}
     <button type="button" onClick={() => window.location.href = '/create'}>
-        Создать мероприятие
-        
-      </button>
+        Создать мероприятие    
+    </button>
     </header>
   );
 };
