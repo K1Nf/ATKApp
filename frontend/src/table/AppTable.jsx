@@ -12,13 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* Кнопка открытия бокового меню */}
-      {!sidebarOpen && (
-        <button className="menu-toggle" onClick={toggleSidebar}>
-          ☰
-        </button>
-      )}
-
       {/* Боковое меню */}
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
 

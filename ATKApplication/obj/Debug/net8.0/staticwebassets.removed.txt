@@ -1,1 +1,2 @@
-C:\Users\tellu\vkr-atk-app\ATKApplication\wwwroot\assets\css\Sidebar-G61cL7Gd.css
+C:\Users\tellu\vkr-atk-app\ATKApplication\wwwroot\assets\css\events-B9SqYwGu.css
+C:\Users\tellu\vkr-atk-app\ATKApplication\wwwroot\assets\css\Sidebar-DcG7bBQv.css

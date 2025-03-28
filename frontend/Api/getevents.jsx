@@ -83,40 +83,44 @@ export default function GetEvents(){
   //Если данные еще загружаются, показываем индикатор загрузки
   if (loading) {
     return (
-      <div>
-        <h3> Загрузка данных c сервера...</h3>
-      </div>
+      <tr>
+        <td colSpan="10">Загрузка данных c сервера...</td>
+      </tr>
     );
   }
-
-
-  //Если произошла ошибка, отображаем ее
+  
   if (error) {
     return (
-      <div>
-        <h3> Error: {error}</h3>
-      </div>
+      <tr>
+        <td colSpan="10">Ошибка: {error}</td>
+      </tr>
     );
   }
-
 
   // Отображаем полученные данные
   return (
     <>
-
-          {data.map((event) => (
-            <tr key={event.id}>
-              <td>{event.themeCode}</td>
-              <td>{event.eventStatus}</td>
-              <td>{event.name}</td>
-              <td>{event.date}</td>
-              <td>{event.participantsCount}</td>
-              <td>{event.level}</td>
-              <td>{event.form}</td>
-              <td>{event.isValuable}</td>
-              <td>{event.isBestPractice}</td>
-              <td><a href={`/events/${event.id}`}>Подробнее</a></td>
-            </tr>
-          ))}
-    </> 
-  )};
+      {data.map((event) => (
+        <tr key={event.id}>
+          <td>{event.themeCode}</td>
+          <td>{event.eventStatus}</td>
+          <td>{event.name}</td>
+          <td>{event.date}</td>
+          <td>{event.participantsCount}</td>
+          <td>{event.level}</td>
+          <td>{event.form}</td>
+          <td>{event.isValuable ? "Да" : "Нет"}</td>
+          <td>{event.isBestPractice ? "Да" : "Нет"}</td>
+          <td>
+            <button
+              className="details-btn"
+              onClick={() => window.location.href = `/events/${event.id}`}
+            >
+              Подробнее
+            </button>
+          </td>
+        </tr>
+      ))}
+    </>
+  );
+}  

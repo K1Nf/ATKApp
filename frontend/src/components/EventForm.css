@@ -45,7 +45,7 @@ textarea {
 }
 
 /* Стили для кнопок */
-button:not(.close-btn, .menu-toggle) {
+/* button:not(.close-btn, .menu-toggle .details-btn, .details-btn-cell) {
     background-color: #003366;
     color: white;
     padding: 10px 20px;
@@ -56,9 +56,9 @@ button:not(.close-btn, .menu-toggle) {
 }
 
 
-button:hover:not(.close-btn, .menu-toggle) {
+button:hover:not(.close-btn, .menu-toggle .details-btn, .details-btn-cell) {
     background-color: #002244;
-}
+} */
 
 /* Стиль для текста "ИТОГО" */
 #total_amount {

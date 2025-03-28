@@ -10,152 +10,140 @@ body {
     align-items: center;
   }
   
-  /* Боковое меню */
-  .sidebar {
-    width: 250px;
-    height: 100vh;
-    background: #002244;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 3px 0 10px rgba(0,0,0,0.2);
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  .sidebar.open {
-    transform: translateX(250px);
-  }
-  .sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  .close-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .menu-item {
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  .menu-item i {
-    margin-right: 10px;
-  }
-  .menu-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  .menu-item.active {
-    background: #444;
-    border-left: 4px solid #FFD700;
-  }
-  .menu-toggle {
-    position: fixed;
-    left: 20px;
-    top: 20px;
-    background: #1E1E1E;
-    color: #fff;
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  .menu-toggle:hover {
-    background: #333;
-  }
-  
-  /* Панель управления */
-  .control-panel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 40px auto 0;
-    background-color: #002244; /* Темно-синий */
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 8px;
-    max-width: 800px;
-  }
-  .control-panel input[type="text"],
-  .control-panel button,
-  .control-panel select {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  .control-panel input[type="text"] {
-    background-color: #fff;
-    color: #333;
-  }
-  .control-panel button {
-    background-color: #001a33; /* Ещё более темный оттенок */
-    color: #fff;
-    cursor: pointer;
-  }
-  .control-panel select {
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  /* Таблица мероприятий */
-  .table-container {
-    margin: 50px;
-    width: 1200px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-  }
-  th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
+/* Панель управления — светлый стиль с анимацией */
+.control-panel {
+  display: flex;
+  align-items: flex-start; /* <-- ключевой момент для выравнивания */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  padding: 20px 25px;
+
+  background-color: #e6f0f8; /* Мягкий фон */
+  border: 1px solid #cfdfea;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 18px;
+  transition: all 0.3s ease;
+  max-width: 800px;
 }
 
-  
-  th {
-    background-color: #002244; /* Темно-синий */
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 0.05em;
-  }
-  tr:hover {
-    background-color: #f1faff;
-  }
-  tr:last-child td {
-    border-bottom: none;
-  }
+/* Поля */
+.control-panel input[type="text"],
+.control-panel select {
+  padding: 10px 14px 10px 40px;
+  font-size: 16px;
+  border: 1px solid #bfcbd9;
+  border-radius: 8px;
+  background-color: #f9fbfd;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
+  transition: 0.3s ease;
+  width: 220px;
+  color: #333;
+}
 
-  th:not(:last-child),
-  td:not(:last-child) {
-    border-right: 1px solid #ccc;
-  }
+.control-panel input[type="text"] {
+  background-image: url('/icons/search.svg');
+}
+
+.control-panel select {
+  background-image: url('/icons/filter.svg');
+}
+
+.control-panel input[type="text"]:focus,
+.control-panel select:focus {
+  border-color: #8bb5df;
+  box-shadow: 0 0 0 2px rgba(139, 181, 223, 0.25);
+}
+
+/* Кнопка */
+.control-panel button {
+  background-color: #001a33;
+  color: #fff;
+  padding: 8px 12px;
+  height: 38px; /* <-- такая же высота, как у инпутов */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 0; /* убираем сдвиг вниз */
+}
+
+.control-panel button:hover {
+  background-color: #3a5870;
+}
+
+
+/* Таблица */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fafcff;
+}
+
+/* Заголовки */
+th {
+  background-color: #e1f0ff; /* светло-голубой */
+  color: #003366; /* глубокий синий */
+  padding: 16px;
+  text-align: left;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 2px solid #bcdffb;
+}
+
+/* Ячейки */
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #ebf2f9;
+  background-color: #ffffff;
+  vertical-align: middle;
+}
+
+/* Последняя строка без линии */
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* При наведении */
+tr:hover td {
+  background-color: #f0f8ff;
+  cursor: default;
+}
+
+/* Альтернативные строки */
+tbody tr:nth-child(even) td {
+  background-color: #f9fcff;
+}
+
+/* Убрать границы между колонками */
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid #e3edf7;
+}
+
+.details-btn-cell {
+  text-align: right;
+  padding-right: 10px;
+  width: 120px;
+}
+
+.details-btn {
+  background-color: #8cc0f5; 
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: #3395f7;
+}
+

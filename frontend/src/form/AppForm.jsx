@@ -1,23 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React, { useState } from "react";
 import EventForm from "../components/EventForm";
-import EventCard from "../eventCard/EventCard";
 import Sidebar from "../components/Sidebar";
-import EventTable from "../components/EventTable";
-
 
 const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+
   return (
     <div>
-      <Sidebar />
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       <EventForm />
-      {/* <EventCard /> */}
-      {/* <EventTable /> */}
     </div>
   );
 };
-
-//const root = ReactDOM.createRoot(document.getElementById("root"));
-//root.render(<App />);
 
 export default App;

@@ -58,8 +58,7 @@
               "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateMediaLinkRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T17:38:15.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T17:38:15.299Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateParticipantsRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T17:34:01.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T17:34:01.997Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateInterAgencyCooperationRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T17:33:16.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T17:33:16.655Z"
             },
             {
               "$type": "Document",
@@ -97,8 +94,7 @@
               "RelativeToolTip": "ATKApplication\\DataBase\\DataBaseContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T17:08:43.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T17:08:43.599Z"
             },
             {
               "$type": "Document",
@@ -122,8 +118,7 @@
               "RelativeToolTip": "ATKApplication\\Models\\Theme.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T07:05:00.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T07:05:00.183Z"
             },
             {
               "$type": "Document",
@@ -147,8 +142,7 @@
               "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAADwv3cAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:55:57.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T17:55:57.64Z"
             },
             {
               "$type": "Document",
@@ -158,7 +152,7 @@
               "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
               "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
               "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAIwIUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAIwJIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T17:53:45.695Z",
               "EditorCaption": ""
