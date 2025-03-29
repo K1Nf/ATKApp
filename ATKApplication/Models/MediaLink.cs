@@ -17,7 +17,7 @@ public class MediaLink
 
     
 
-    public static MediaLink? Create(string? content, Guid eventId)
+    public static MediaLink? Create(string content, Guid eventId)
     {
         if(!content.StartsWith("https://"))
         {

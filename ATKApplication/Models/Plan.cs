@@ -11,18 +11,17 @@ namespace ATKApplication.Models
             OrganizationId = organizerId;
             Year = year;
         }
+
         public Plan()
         {
             
         }
-
         public Guid Id { get; init; }
-        public string Name { get; set; } = null!;
-        public PlanStatus Status { get; set; } = PlanStatus.Created;
+        public string Name { get; set; }
+        //public DateOnly Date { get; set; }
         public int Year { get; set; }
-        public Organization? Organization { get; init; }
+        public Organization? Organization { get; set; }
         public Guid OrganizationId { get; set; }
-        public List<Event> Events { get; set; } = [];
 
 
 
@@ -30,18 +29,9 @@ namespace ATKApplication.Models
         {
             //validation
             Plan plan = new (name, organizerId, year);
-            Console.WriteLine("Создан план за " + plan.Year + "г.");
+            Console.WriteLine("Создан план на " + plan.Year + "г.");
             
             return plan;
-        }
-
-
-
-        public void SendPlan()
-        {
-            Status = PlanStatus.FilledIn;
-            // логика уведомлений???
-            Console.WriteLine($"План мероприятий \"{Name}\" за \"{Year}\"г. успешно отправлен");
         }
     }
 }

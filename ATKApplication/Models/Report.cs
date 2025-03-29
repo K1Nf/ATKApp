@@ -34,26 +34,26 @@ public class Report
 
 
 
-    public void AddEvents(params Event[] events)
-    {
-        if(Status == ReportStatus.Sent)
-        {
-            return;
-        }
-
-        foreach (var @event in events)
-        {
-            if (@event.OrganizerId == OrganizerId && StartDate < @event.Date && @event.Date < EndDate && @event.Status == EventStatus.Completed)
-            {
-                Events.Add(@event);
-                Console.WriteLine("Мероприятие \"" + @event.Name + "\" добавлено в отчет \"" + Name + "\"!");
-            }
-            else
-            {
-                Console.WriteLine("Мероприятие \"" + @event.Name + "\" не добавлено в отчет");
-            }
-        }
-    }
+    //public void AddEvents(params Event[] events)
+    //{
+    //    if(Status == ReportStatus.Sent)
+    //    {
+    //        return;
+    //    }
+    //
+    //    foreach (var @event in events)
+    //    {
+    //        if (@event.OrganizerId == OrganizerId && StartDate < @event.Date && @event.Date < EndDate && @event.Status == EventStatus.Completed)
+    //        {
+    //            Events.Add(@event);
+    //            Console.WriteLine("Мероприятие \"" + @event.Name + "\" добавлено в отчет \"" + Name + "\"!");
+    //        }
+    //        else
+    //        {
+    //            Console.WriteLine("Мероприятие \"" + @event.Name + "\" не добавлено в отчет");
+    //        }
+    //    }
+    //}
 
 
 
@@ -75,19 +75,19 @@ public class Report
 
 
 
-    public bool CanSendReport()
-    {
-        if(Events.Any(e => e.Status != EventStatus.Completed))
-        {
-            Console.WriteLine("Некоторые мероприятия еще не проведены! Отчет не отправлен!");
-            return false;
-        }
-
-        Status = ReportStatus.Sent;
-        // логика уведомлений???
-        Console.WriteLine($"Отчет по плану \"{Name}\" успешно отправлен");
-        return true;
-    }
+    //public bool CanSendReport()
+    //{
+    //    if(Events.Any(e => e.Status != EventStatus.Completed))
+    //    {
+    //        Console.WriteLine("Некоторые мероприятия еще не проведены! Отчет не отправлен!");
+    //        return false;
+    //    }
+    //
+    //    Status = ReportStatus.Sent;
+    //    // логика уведомлений???
+    //    Console.WriteLine($"Отчет по плану \"{Name}\" успешно отправлен");
+    //    return true;
+    //}
 
 
     

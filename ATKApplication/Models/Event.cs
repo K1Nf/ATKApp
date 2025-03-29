@@ -6,7 +6,7 @@ namespace ATKApplication.Models
 {
     public class Event
     {
-        private Event(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid? planId, EventType eventType, LevelType levelType, string equalToEqualContent)
+        private Event(string name, string content, DateOnly date, Guid organizerId, Guid themeId, /*Guid? planId,*/ EventType eventType, LevelType levelType, string? equalToEqualContent)
         {
             Id = Guid.NewGuid();
             Name = name;
@@ -17,8 +17,8 @@ namespace ATKApplication.Models
             EventType = eventType;
             LevelType = levelType;
             EqualToEqualDescription = equalToEqualContent;
-            PlanId = planId;
-            status = EventStatus.Planned;
+            //PlanId = planId;
+            //status = EventStatus.Planned;
         }
 
         public Event()
@@ -32,11 +32,11 @@ namespace ATKApplication.Models
         public DateOnly Date { get; set; }
         public EventType EventType { get; set; }
         public LevelType LevelType { get; set; }
-        private EventStatus status;
-        public bool IsEffective { get; set; } = false;
+        //private EventStatus status;
+        public bool IsSystematic { get; set; } = false;
         public bool IsValuable { get; set; }
         public bool IsBestPractice { get; set; } 
-        public string EqualToEqualDescription { get; set; } 
+        public string? EqualToEqualDescription { get; set; } 
 
         public Organization? Organizer { get; init; }
         public Guid OrganizerId { get; set; }
@@ -44,8 +44,8 @@ namespace ATKApplication.Models
         public Theme? Theme { get; set; }
         public Guid ThemeId { get; set; }
 
-        public Plan? Plan { get; set; }
-        public Guid? PlanId { get; set; }
+        //public Plan? Plan { get; set; }
+        //public Guid? PlanId { get; set; }
 
         public Finance? Finance { get; set; }
         public Guid FinanceId { get; set; }
@@ -64,59 +64,53 @@ namespace ATKApplication.Models
 
 
 
-        public EventStatus Status
-        {
-            get => status;
-            set
-            {
-                if (value == EventStatus.Planned)
-                {
-                    Console.WriteLine("Изменен статус мероприятия \"" + Name + "\" c \"" + status + "\" на \"" + value + "\"!");
-                    status = value;
-                    return;
-                }
+        //public EventStatus Status
+        //{
+        //    get => status;
+        //    set
+        //    {
+        //        if (value == EventStatus.Planned)
+        //        {
+        //            Console.WriteLine("Изменен статус мероприятия \"" + Name + "\" c \"" + status + "\" на \"" + value + "\"!");
+        //            status = value;
+        //            return;
+        //        }
 
-                if (value == EventStatus.Completed)
-                {
-                    // проверка на дату и время перед тем как ставить статус 
-                    //DateTime storedDateTime = Date.ToDateTime(Time);
-                    //DateTime storedDateTime = Date.ToDateTime(Time);
-                    //DateTime now = DateTime.Now;
-                    //
-                    //if (now == storedDateTime)
-                    //{
-                    //    Console.WriteLine("Дата и время совпадают!");
-                    //}
-                    //else if (now > storedDateTime)
-                    //{
-                    //    // мероприятие уже прошло
-                    //    Console.WriteLine("Текущая дата и время позже сохраненных.");
-                    //}
-                    //else
-                    //{
-                    //    // мероприятие еще не прошло
-                    //    Console.WriteLine("Текущая дата и время раньше сохраненных.");
-                    //}
-                }
-            }
-        }
+        //        if (value == EventStatus.Completed)
+        //        {
+        //            // проверка на дату и время перед тем как ставить статус 
+        //            //DateTime storedDateTime = Date.ToDateTime(Time);
+        //            //DateTime storedDateTime = Date.ToDateTime(Time);
+        //            //DateTime now = DateTime.Now;
+        //            //
+        //            //if (now == storedDateTime)
+        //            //{
+        //            //    Console.WriteLine("Дата и время совпадают!");
+        //            //}
+        //            //else if (now > storedDateTime)
+        //            //{
+        //            //    // мероприятие уже прошло
+        //            //    Console.WriteLine("Текущая дата и время позже сохраненных.");
+        //            //}
+        //            //else
+        //            //{
+        //            //    // мероприятие еще не прошло
+        //            //    Console.WriteLine("Текущая дата и время раньше сохраненных.");
+        //            //}
+        //        }
+        //    }
+        //}
 
 
-        public static Event Create(string name, string content, DateOnly date, Guid organizerId, Guid themeId, Guid planId, EventType eventType, LevelType levelType, string equalToEqualContent)
+        public static Event Create(string name, string content, DateOnly date, Guid organizerId, Guid themeId, /*Guid planId,*/ EventType eventType, LevelType levelType, string? equalToEqualContent)
         {
 
             Console.WriteLine("Создаем новое мероприятие");
-            return new(name, content, date, organizerId, themeId, planId, eventType, levelType, equalToEqualContent);
+            return new(name, content, date, organizerId, themeId, /*planId, */eventType, levelType, equalToEqualContent);
         }
 
 
-        public bool CalculateIfEffective()
-        {
-            Console.WriteLine("Происходит расчет эффективности");
-            return IsEffective;
-        }
-
-
+        
         public void GetDetails()
         {
             Console.WriteLine("Подробная информация о мероприятии.");
@@ -125,7 +119,7 @@ namespace ATKApplication.Models
             //Console.WriteLine($"Дата и время проведения: {Date} {Time}");
             Console.WriteLine($"Уровень: {LevelType}");
             Console.WriteLine($"Тип: {EventType}");
-            Console.WriteLine($"Статус: {Status}");
+            //Console.WriteLine($"Статус: {Status}");
             
             Console.WriteLine("Участники:");
 
@@ -141,8 +135,8 @@ namespace ATKApplication.Models
             //participants.ForEach(x => Console.WriteLine("  -" + x.CategoryName + ": " + x.Number));
             //Console.WriteLine("  -Всего: " + participants.Sum(x => x.Number));
             
-            Console.WriteLine();
-            Console.WriteLine("Входит в план: \"" + Plan!.Name + "\" за " + Plan.Year + "г. для " + Organizer!.Name);
+            //Console.WriteLine();
+            //Console.WriteLine("Входит в план: \"" + Plan!.Name + "\" за " + Plan.Year + "г. для " + Organizer!.Name);
 
         }
     }

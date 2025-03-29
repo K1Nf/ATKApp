@@ -14,7 +14,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
+using System.Transactions;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ATKApplication.Services
 {
@@ -74,19 +76,19 @@ namespace ATKApplication.Services
 
                 InterAgencyCooperations = @event.InterAgencyCooperations,           // Взаимодействие
                 FeedBack = @event.FeedBack,                                         // Обратная связь
-                EqualToEqual = @event.EqualToEqualDescription,                      // Равный равному
-                Link = sb.ToString().TrimEnd(),                                               // Ссылки
+                EqualToEqual = @event.EqualToEqualDescription ?? "Нет",             // Равный равному
+                Link = sb.ToString().TrimEnd(),                                     // Ссылки
                 Finance = @event.Finance,                                           // Финансирование
                 Organizer = @event.Organizer,                                       // Организатор
                 Theme = @event.Theme,                                               // Тема
                 Category = @event.Category,                                         // Участники
 
-                EventStatus = @event.Status,
+                EventStatus = EventStatus.Planned,
                 EventType = @event.EventType,
                 LevelType = @event.LevelType,
 
                 IsBestPractice = @event.IsBestPractice ? "Да" : "Нет",
-                IsEffective = @event.IsEffective ? "Да" : "Нет",
+                IsSystematic = @event.IsSystematic ? "Да" : "Нет",
                 IsValuable = @event.IsValuable ? "Да" : "Нет",
             };
 
@@ -104,11 +106,11 @@ namespace ATKApplication.Services
                 .AsNoTracking()
                 .ToListAsync();
 
-            List<ShortEventResponse> shortEventsResponse = events.Select(x => new ShortEventResponse
+            List<ShortEventResponse> shortEventsResponse = [.. events.Select(x => new ShortEventResponse
             {
                 Id = x.Id,
                 Date = x.Date,
-                EventStatus = x.Status,
+                EventStatus =  EventStatus.Planned, //x.Status,
                 Form = x.EventType,
                 Level = x.LevelType,
                 IsBestPractice = x.IsBestPractice ? "Да" : "Нет",
@@ -117,8 +119,7 @@ namespace ATKApplication.Services
                 OrganizerName = x.Organizer!.Name,
                 ThemeCode = x.Theme!.Code,
                 ParticipantsCount = x.Category?.Total
-            })
-            .ToList();
+            })];
 
             return shortEventsResponse;
         }
@@ -128,113 +129,124 @@ namespace ATKApplication.Services
         public async Task<Result<Event>> Create(Guid tokenId, CreateEventRequest createEventRequest)
         {
             DateOnly dateO = DateOnly.Parse(createEventRequest.Date!);
-            int year = dateO.Year;
+            //int year = dateO.Year;
 
             Guid themeId = _dB.Themes
                 .SingleOrDefault(t => t.Code == createEventRequest.ThemeCode)!
                 .Id;
 
-            Guid planId = _dB.Plans
-                .AsNoTracking()
-                .First(e => e.OrganizationId == tokenId && e.Year == year)
-                .Id;
+            //Guid planId = _dB.Plans
+            //    .AsNoTracking()
+            //    .First(e => e.OrganizationId == tokenId && e.Year == year)
+            //    .Id;
 
             var newEvent = Event.Create(createEventRequest.Name, createEventRequest.Content, dateO,
-                tokenId, themeId, planId, createEventRequest.Form, createEventRequest.Level, createEventRequest.CreateEqualToEqualRequest?.Content);
+                tokenId, themeId,/* planId,*/ createEventRequest.Form, createEventRequest.Level, createEventRequest.CreateEqualToEqualRequest?.Content);
 
 
+            var transaction = await _dB.Database.BeginTransactionAsync();
             
-
-
-            //transaction begin
-
-            if (createEventRequest.CreateFinanceRequest != null)
+            try
             {
-                var financeRequest = createEventRequest.CreateFinanceRequest;
-                var finance = new Finance(financeRequest.MunicipalBudget, financeRequest.RegionalBudget,
-                    financeRequest.GranteBudget, financeRequest.OtherBudget, newEvent.Id, financeRequest.Description);
-
-                await _dB.Finances.AddAsync(finance);
-            }
-
-
-            if (createEventRequest.CreateFeedBackRequest != null)
-            {
-                var feedBackRequest = createEventRequest.CreateFeedBackRequest;
-                var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id);
-
-
-                // заменить на рефлексию???
-                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Opros))
-                    feedBack.HasOpros = true;
-
-                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Guestionnaire))
-                    feedBack.HasGuestionnaire = true;
-
-                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Internet))
-                    feedBack.HasInternet = true;
-
-                if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Interview))
-                    feedBack.HasInterview = true;
-
-
-                await _dB.FeedBacks.AddAsync(feedBack);
-            }
-
-
-            if (createEventRequest.CreateMediaLinkRequest != null)
-            {
-                var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
-
-                foreach (var item in mediaLinkRequest.Content)
+                if (createEventRequest.CreateFinanceRequest != null)
                 {
-                    var mediaLink = MediaLink.Create(item, newEvent.Id);
+                    var financeRequest = createEventRequest.CreateFinanceRequest;
+                    var finance = new Finance(financeRequest.MunicipalBudget, financeRequest.RegionalBudget,
+                        financeRequest.GranteBudget, financeRequest.OtherBudget, newEvent.Id, financeRequest.Description);
 
-                    if (mediaLink != null)
-                        await _dB.MediaLinks.AddAsync(mediaLink);
+                    await _dB.Finances.AddAsync(finance);
+                }
+
+
+                if (createEventRequest.CreateFeedBackRequest != null)
+                {
+                    var feedBackRequest = createEventRequest.CreateFeedBackRequest;
+                    var feedBack = new FeedBack(feedBackRequest.Description, newEvent.Id);
+
+
+                    // заменить на рефлексию???
+                    if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Opros))
+                        feedBack.HasOpros = true;
+
+                    if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Guestionnaire))
+                        feedBack.HasGuestionnaire = true;
+
+                    if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Internet))
+                        feedBack.HasInternet = true;
+
+                    if (feedBackRequest.FeedBackTypes.Contains(FeedBackTypes.Interview))
+                        feedBack.HasInterview = true;
+
+
+                    await _dB.FeedBacks.AddAsync(feedBack);
+                }
+
+
+                if (createEventRequest.CreateParticipantsRequest != null)
+                {
+                    var participants = createEventRequest.CreateParticipantsRequest;
+
+                    var category = new Category(participants.SchoolKids, participants.Students, participants.WorkingYouth,
+                        participants.NotWorkingYouth, participants.Migrants, participants.RegisteredPersons, newEvent.Id);
+
+                    await _dB.Categories.AddAsync(category);
+                }
+
+
+                if (createEventRequest.CreateMediaLinkRequest?.Content?.Length != 0)
+                {
+                    var mediaLinkRequest = createEventRequest.CreateMediaLinkRequest;
+
+                    foreach (var item in mediaLinkRequest!.Content)
+                    {
+                        var mediaLink = MediaLink.Create(item, newEvent.Id);
+
+                        if (mediaLink != null)
+                            await _dB.MediaLinks.AddAsync(mediaLink);
+                    }
+                }
+
+
+                if (createEventRequest.CreateInterAgencyCooperationRequest?.Content?.Count > 0)
+                {
+                    var interAgencyCooperationRequest = createEventRequest.CreateInterAgencyCooperationRequest;
+
+                    foreach (var item in interAgencyCooperationRequest.Content)
+                    {
+                        var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id, item.Name, item.Role, item.Description);
+
+                        if (interAgencyCooperation != null)
+                            await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
+                    }
+                }
+
+
+                if (newEvent != null)
+                {
+                    await _dB.Events.AddAsync(newEvent);
+                    await _dB.SaveChangesAsync();
+                    await transaction.CommitAsync();
+                    return Result.Success(newEvent);
                 }
             }
-
-
-            if (createEventRequest.CreateInterAgencyCooperationRequest != null)
+            catch (TransactionAbortedException ex)
             {
-                var interAgencyCooperationRequest = createEventRequest.CreateInterAgencyCooperationRequest;
-
-                foreach (var item in interAgencyCooperationRequest.Content)
-                {
-                    var interAgencyCooperation = new InterAgencyCooperation(newEvent.Id, item.Name, item.Role, item.Description);
-
-                    if (interAgencyCooperation != null)
-                        await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
-                }
+                Console.WriteLine("Ошибка при создании мероприятия (транзакция прервана): " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Transaction error: " + ex.Message);
             }
 
-
-            if (createEventRequest.CreateParticipantsRequest != null)
-            {
-                var participants = createEventRequest.CreateParticipantsRequest;
-
-                var category = new Category(participants.SchoolKids, participants.Students, participants.WorkingYouth,
-                    participants.NotWorkingYouth, participants.Migrants, participants.RegisteredPersons, newEvent.Id);
-
-                await _dB.Categories.AddAsync(category);
-            }
-
-
-            if (newEvent != null)
-            {
-                await _dB.Events.AddAsync(newEvent);
-                await _dB.SaveChangesAsync(); 
-                return Result.Success(newEvent);
-            }
-
-
+            await transaction.RollbackAsync();
             return Result.Failure<Event>("Не удалось создать мероприятие");
         }
 
 
 
-        public async Task<Result> Update(Guid eventId, Guid tokenId, UpdateEventRequest updateEventRequest)
+#pragma warning disable CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
+        public async Task<Result> Update(/*Guid eventId, Guid tokenId, UpdateEventRequest updateEventRequest*/)
+#pragma warning restore CS1998 // В асинхронном методе отсутствуют операторы await, будет выполнен синхронный метод
         {
             /*//Event
             //var @event = await _dB.Events
@@ -301,12 +313,12 @@ namespace ATKApplication.Services
             }
             if (filter.Content != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.Content.ToLower().Contains(filter.Content.ToLower()));
+                eventsQuery = eventsQuery.Where(x => x.Content.Contains(filter.Content, StringComparison.CurrentCultureIgnoreCase));
             }
-            if (filter.Status != null)
-            {
-                eventsQuery = eventsQuery.Where(x => x.Status == filter.Status);
-            }
+            //if (filter.Status != null)
+            //{
+            //    eventsQuery = eventsQuery.Where(x => x.Status == filter.Status);
+            //}
             if (filter.IsBestPractice != null)
             {
                 eventsQuery = eventsQuery.Where(x => x.IsBestPractice == filter.IsBestPractice);
@@ -317,16 +329,18 @@ namespace ATKApplication.Services
             }
             if (filter.Name != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.Name.ToLower().Contains(filter.Name.ToLower()));
+                eventsQuery = eventsQuery.Where(x => x.Name.Contains(filter.Name, StringComparison.CurrentCultureIgnoreCase));
             }
             if (filter.ThemeCode != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.Theme.Code.ToLower() == filter.ThemeCode.ToLower());
+#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
+                eventsQuery = eventsQuery.Where(x => x.Theme.Code.Equals(filter.ThemeCode, StringComparison.CurrentCultureIgnoreCase));
+#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
             }
 
 
             // Apply sorting
-            if (filter.Orders != null && filter.Orders.Any())
+            if (filter.Orders.Count != 0)
             {
                 // sort
                 IOrderedQueryable<Event>? eventsOrdered = null; //eventsQuery.OrderBy(x => x.Id);

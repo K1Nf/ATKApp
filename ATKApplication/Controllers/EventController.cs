@@ -12,7 +12,7 @@ namespace ATKApplication.Controllers
 {
     [Route("api/ref/[controller]")]
     [ApiController]
-    public class EventsController(DataBaseContext _db, EventService _eventService) : ControllerBase
+    public class EventsController(/*DataBaseContext _db,*/ EventService _eventService) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -101,15 +101,15 @@ namespace ATKApplication.Controllers
 
 
 
-        [HttpGet("/test")]
-        public async Task<IActionResult> GetTest()
-        {
-            return Ok(new
-            {
-                Id = 123,
-                Test = EventStatus.Planned
-            });
-        }
+        //[HttpGet("/test")]
+        //public async Task<IActionResult> GetTest()
+        //{
+        //    return Ok(new
+        //    {
+        //        Id = 123,
+        //        Test = EventStatus.Planned
+        //    });
+        //}
 
 
 
@@ -131,11 +131,11 @@ namespace ATKApplication.Controllers
 
 
 
-        [HttpPost("Update/{Id:guid}")]
-        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateEventRequest createEventRequest)
+        //[HttpPost("Update/{Id:guid}")]
+        public async Task<IActionResult> Update(/*[FromRoute] Guid id, [FromBody] UpdateEventRequest createEventRequest*/)
         {
-            Guid tokenId = Guid.NewGuid();
-            var result = await _eventService.Update(id, tokenId, createEventRequest);
+            //Guid tokenId = Guid.NewGuid();
+            var result = await _eventService.Update(/*id, tokenId, createEventRequest*/);
 
             if (result.IsSuccess)
             {

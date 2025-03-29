@@ -12,59 +12,60 @@ namespace ATKApplication.Controllers
     [ApiController]
     public class PlansController(PlanService _planService) : ControllerBase
     {
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [HttpGet("{userId:guid}")]
+        public async Task<IActionResult> GetAll(Guid userId)
         {
-            var plans = await _planService.GetAll();
+            var plans = await _planService.GetAll(userId);
             return Ok(plans.Value);
         }
         
 
         
-        [HttpGet("{Id:guid}")]
-        public async Task<IActionResult> Get(Guid Id)
-        {
-            var plan = await _planService.Get(Id);
-
-            if (plan.IsSuccess)
-            {
-                // создание кастомного под требования ДТО с нужными данными
-                return Ok(plan.Value);
-            }
-
-            return NotFound("Не найден такой план");
-        }
+        //[HttpGet("{Id:guid}")]
+        //public async Task<IActionResult> Get(Guid Id)
+        //{
+        //    var plan = await _planService.Get(Id);
+        //
+        //    if (plan.IsSuccess)
+        //    {
+        //        // создание кастомного под требования ДТО с нужными данными
+        //        return Ok(plan.Value);
+        //    }
+        //
+        //    return NotFound("Не найден такой план");
+        //}
 
 
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreatePlanRequest createPlanRequest)
+        public async Task<IActionResult> Create(/*[FromBody] CreatePlanRequest createPlanRequest*/)
         {
-            Guid tokenId = Guid.NewGuid();
-            var result = await _planService.Create(tokenId, createPlanRequest);
+            Guid tokenId = Guid.Parse("");          //NewGuid();
+                                                    /*var result = */ 
+            await _planService.Create(tokenId);
 
-            if (result.IsSuccess)
-            {
+            //if (result.IsSuccess)
+            //{
                 return Created();
-            }
+            //}
 
-            return BadRequest("План не добавлен: " + result.Error);
+            //return BadRequest("План не создан: " + result.Error);
         }
 
 
 
-        [HttpPost("Update/{Id:guid}")]
-        public async Task<IActionResult> Update([FromRoute] Guid Id, [FromBody] UpdatePlanRequest updatePlanRequest)
-        {
-            Guid tokenId = Guid.NewGuid();
-            var result = await _planService.Update(Id, tokenId, updatePlanRequest);
-            
-            if (result.IsSuccess)
-            {
-                return Ok();
-            }
-            return BadRequest("План не обновлен: " + result.Error);
-        }
+        //[HttpPost("Update/{Id:guid}")]
+        //public async Task<IActionResult> Update([FromRoute] Guid Id, [FromBody] UpdatePlanRequest updatePlanRequest)
+        //{
+        //    Guid tokenId = Guid.NewGuid();
+        //    var result = await _planService.Update(Id, tokenId, updatePlanRequest);
+        //    
+        //    if (result.IsSuccess)
+        //    {
+        //        return Ok();
+        //    }
+        //    return BadRequest("План не обновлен: " + result.Error);
+        //}
 
 
         [HttpPost("Delete/{Id:guid}")]

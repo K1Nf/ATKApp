@@ -24,8 +24,8 @@ namespace ATKApplication.Configurations
             builder.HasOne(e => e.Theme)
                 .WithMany(e => e.Events);
 
-            builder.HasOne(e => e.Plan)
-                .WithMany(e => e.Events);
+            //builder.HasOne(e => e.Plan)
+            //    .WithMany(e => e.Events);
 
             builder.HasMany(e => e.ReportAndEvents)
                 .WithOne(f => f.Event);
