@@ -1,7 +1,7 @@
 wwwroot\assets\css\createEvent-DPlFYqzU.css
-wwwroot\assets\css\events-B9SqYwGu.css
+wwwroot\assets\css\events-DlZwj7pn.css
 wwwroot\assets\css\indexForm-Dtn62Xmo.css
-wwwroot\assets\css\Sidebar-DcG7bBQv.css
+wwwroot\assets\css\Sidebar-YFcQCTQa.css
 wwwroot\assets\js\createEvent.js
 wwwroot\assets\js\eventCard.js
 wwwroot\assets\js\events.js
