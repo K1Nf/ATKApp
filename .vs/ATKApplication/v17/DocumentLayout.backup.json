@@ -68,6 +68,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
               "Title": "EventResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Contracts\\Response\\EventResponse.cs",
@@ -75,6 +76,15 @@
               "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Contracts\\Response\\EventResponse.cs",
               "RelativeToolTip": "ATKApplication\\Contracts\\Response\\EventResponse.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAADwvxIAAAAVAAAAAAAAAA==",
+=======
+              "DocumentIndex": 0,
+              "Title": "EventController.cs",
+              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
+              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
+              "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwIwAAAAAAAAAAAAAAA==",
+>>>>>>> 22cbe38af5d104c2f43df2a74c93f0ac2028dd05
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-29T11:54:40.598Z",
               "EditorCaption": ""

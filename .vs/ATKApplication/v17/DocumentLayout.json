@@ -78,12 +78,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "EventConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Configurations\\EventConfiguration.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Configurations\\EventConfiguration.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\Configurations\\EventConfiguration.cs",
               "RelativeToolTip": "ATKApplication\\Configurations\\EventConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+=======
+              "Title": "EventController.cs",
+              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
+              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
+              "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAIwJoAAAAJAAAAAAAAAA==",
+>>>>>>> 22cbe38af5d104c2f43df2a74c93f0ac2028dd05
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-29T11:07:28.349Z",
               "EditorCaption": ""

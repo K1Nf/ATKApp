@@ -1,0 +1,4 @@
+<<<<<<< HEAD
+=======
+C:\Users\tellu\vkr-atk-app\ATKApplication\wwwroot\assets\css\Sidebar-YFcQCTQa.css
+>>>>>>> 22cbe38af5d104c2f43df2a74c93f0ac2028dd05

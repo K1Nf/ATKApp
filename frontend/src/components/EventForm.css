@@ -12,7 +12,7 @@ body {
 
 /* Стили для контейнера формы */
 .container {
-  width: 1200px;  /* Можно уменьшить, если 1200px слишком широко */
+  width: 1400px;  /* Можно уменьшить, если 1200px слишком широко */
   margin: 50px auto;
   background-color: #ffffff;
   border-radius: 10px;
@@ -130,8 +130,8 @@ button:hover:not(.close-btn, .menu-toggle .details-btn, .details-btn-cell) {
 
 .menu-toggle,
 .close-btn {
-  background:none !important; 
-  border: none !important;
+  background:none ; 
+  border: none ;
   color: #0077cc; /* небесно-голубой */
   font-size: 20px;
   cursor: pointer;
@@ -739,6 +739,9 @@ p {
   font-size: 20px;
   margin-bottom: 12px;
 }
+h3 {
+  color: #000000;
+}
 
 .modal-box p {
   font-size: 16px;
@@ -778,4 +781,40 @@ p {
 
 .confirm-cancel-btn:hover {
   background-color: #b0bec5;
+}
+
+#save_button {
+  background-color: #003366; 
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+#save_button:hover {
+  background-color: #001f4d; /* чуть темнее при наведении */
+}
+
+#save_button:active {
+  transform: scale(0.98);
+}
+
+#add_button {
+  background-color: #003366; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#add_button:hover {
+  background-color: #001f4d; /* чуть темнее при наведении */
+}
+
+#add_button:active {
+  transform: scale(0.98);
 }
