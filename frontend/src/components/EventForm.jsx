@@ -11,6 +11,8 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
   // сотрудничество
   const [isCooperation, setIsCooperation] = useState(false);
   const [selectedOrganizations, setSelectedOrganizations] = useState({});
+  const [customOrganizations, setCustomOrganizations] = useState([]);
+  const organizationsList = Object.values(selectedOrganizations);
 
   const handleCheckboxChange = (id) => {
     setSelectedOrganizations((prev) => {
@@ -24,19 +26,19 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
     });
   };
 
+
+
+
   // Дата
   const [dateHasError, setDateHasError] = useState(false);
-
-  
-
-  const handleParticipationChange = (id, value) => {
+  const handleOtherParticipationChange = (id, value) => {
     setSelectedOrganizations((prev) => ({
       ...prev,
       [id]: { ...prev[id], type: value },
     }));
   };
 
-  const handleDescriptionChange = (id, value) => {
+  const handleotherDescriptionChange = (id, value) => {
     setSelectedOrganizations((prev) => ({
       ...prev,
       [id]: { ...prev[id], description: value },
@@ -44,7 +46,8 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
   };
 
 
-//Добавить организацию  
+
+// Добавить организацию  
 const [otherOrganizations, setOtherOrganizations] = useState([]);
 
 const handleAddOrganization = () => {
@@ -60,13 +63,12 @@ const handleOrgChange = (index, field, value) => {
   setOtherOrganizations(updated);
 };
 
-const handleRemoveOrganization = (indexToRemove) => {
-  setOtherOrganizations((prev) =>
-    prev.filter((_, idx) => idx !== indexToRemove)
-  );
+// Удалить организацию  
+const handleRemoveOrganization = (index) => {
+  setOtherOrganizations((prev) => prev.filter((_, i) => i !== index));
 };
 
-  // обратная связь
+  // Обратная связь
   const [feedbackCollected, setFeedbackCollected] = useState(false);
   const [selectedFeedbackTypes, setSelectedFeedbackTypes] = useState([]);
   const [feedbackDescription, setFeedbackDescription] = useState("");
@@ -111,9 +113,18 @@ const handleRemoveOrganization = (indexToRemove) => {
     schoolKids: 0,
     students: 0,
     registeredPersons: 0,
-    migrants: 0,
+    trudmigrants: 0,
     workingYouth: 0,
     unemployedYouth: 0,
+    migrantStudents: 0,
+    migrantChildrenInSchools: 0,
+    migrantChildrenHome: 0,
+    newSubjectsResidents: 0,
+    registeredSchoolKids: 0,
+    registeredYouth: 0,
+    returnedFromCombatZones: 0,
+    subcultureYouth: 0,
+    suicidalChildren: 0,
   });
 
   // Обновление общей суммы участников при изменении значений в деталях
@@ -344,7 +355,7 @@ if (selectedDate.getFullYear() !== currentYear) {
       students: Number(participants.students),
       schoolKids: Number(participants.schoolKids),
       registeredPersons: Number(participants.registeredPersons),
-      migrants: Number(participants.migrants),
+      trudmigrants: Number(participants.trudmigrants),
       workingYouth: Number(participants.workingYouth),
       notWorkingYouth: Number(participants.unemployedYouth),
       others:
@@ -586,10 +597,10 @@ if (selectedDate.getFullYear() !== currentYear) {
               <option value="5.9">5.9</option>
             </select>
 
-            {/* Отображение описания выбранной темы */}
-            <div id="description" className={selectedSubTheme ? "description visible" : "description"}>
-              <p>{getDescription(selectedSubTheme)} </p>
-            </div>
+        {/* Отображение описания выбранной темы */}
+        <div id="description" className={selectedSubTheme ? "description visible" : "description"}>
+          <p>{getDescription(selectedSubTheme)} </p>
+        </div>
         
       <section className="form-section1">
         <h2>Основная информация о мероприятии</h2>
@@ -761,7 +772,46 @@ if (selectedDate.getFullYear() !== currentYear) {
                 required
               />
             </div>
+            
           )}
+        </section>
+        <section>
+          <label htmlFor="event_description">
+            Результаты проведения 
+            <span className="required">*</span>
+            <span className="tooltip">
+              <span className="question-icon">?</span>
+              <span className="tooltiptext">Это обязательное поле</span>
+            </span>
+          </label>
+          <textarea
+            id="event_description"
+            name="event_description"
+            value={eventDescription}
+            onChange={handleEventDescriptionChange}
+            maxLength={200}
+            placeholder="Введите описание, не более 200 символов"
+            required
+          />
+        </section>
+        <section>
+          <label htmlFor="event_description">
+            Необходимые управленческие решения
+            <span className="required">*</span>
+            <span className="tooltip">
+              <span className="question-icon">?</span>
+              <span className="tooltiptext">Это обязательное поле</span>
+            </span>
+          </label>
+          <textarea
+            id="event_description"
+            name="event_description"
+            value={eventDescription}
+            onChange={handleEventDescriptionChange}
+            maxLength={200}
+            placeholder="Введите описание, не более 200 символов"
+            required
+          />
         </section>
         </section>
         <section className = "form-section1">
@@ -889,6 +939,7 @@ if (selectedDate.getFullYear() !== currentYear) {
           onChange={handleDetailedChange}
         />
       </div>
+
       <div className="participant-field">
         <label>Студенты</label>
         <input
@@ -899,8 +950,9 @@ if (selectedDate.getFullYear() !== currentYear) {
           onChange={handleDetailedChange}
         />
       </div>
+
       <div className="participant-field">
-        <label>Состоящие на учёте</label>
+        <label>Состоящие на различных формах учёта</label>
         <input
           type="number"
           min="0"
@@ -909,16 +961,18 @@ if (selectedDate.getFullYear() !== currentYear) {
           onChange={handleDetailedChange}
         />
       </div>
+
       <div className="participant-field">
-        <label>Мигранты</label>
+        <label>Трудовые мигранты</label>
         <input
           type="number"
           min="0"
-          name="migrants"
-          value={participants.migrants}
+          name="trud-migrants"
+          value={participants.trudmigrants}
           onChange={handleDetailedChange}
         />
       </div>
+
       <div className="participant-field">
         <label>Работающая молодёжь</label>
         <input
@@ -929,6 +983,7 @@ if (selectedDate.getFullYear() !== currentYear) {
           onChange={handleDetailedChange}
         />
       </div>
+
       <div className="participant-field">
         <label>Не работающая молодёжь</label>
         <input
@@ -939,6 +994,106 @@ if (selectedDate.getFullYear() !== currentYear) {
           onChange={handleDetailedChange}
         />
       </div>
+
+      <div className="participant-field">
+  <label>Мигранты-студенты</label>
+  <input
+    type="number"
+    min="0"
+    name="migrantStudents"
+    value={participants.migrantStudents}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Дети мигрантов (в ОУ)</label>
+  <input
+    type="number"
+    min="0"
+    name="migrantChildrenInSchools"
+    value={participants.migrantChildrenInSchools}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Дети мигрантов (дом. обучение)</label>
+  <input
+    type="number"
+    min="0"
+    name="migrantChildrenHome"
+    value={participants.migrantChildrenHome}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Жители новых субъектов РФ</label>
+  <input
+    type="number"
+    min="0"
+    name="newSubjectsResidents"
+    value={participants.newSubjectsResidents}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Школьники на учёте</label>
+  <input
+    type="number"
+    min="0"
+    name="registeredSchoolKids"
+    value={participants.registeredSchoolKids}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Молодёжь на учёте</label>
+  <input
+    type="number"
+    min="0"
+    name="registeredYouth"
+    value={participants.registeredYouth}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Возвратившиеся из зон БД</label>
+  <input
+    type="number"
+    min="0"
+    name="returnedFromCombatZones"
+    value={participants.returnedFromCombatZones}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Субкультуры, склонные к насилию</label>
+  <input
+    type="number"
+    min="0"
+    name="subcultureYouth"
+    value={participants.subcultureYouth}
+    onChange={handleDetailedChange}
+  />
+</div>
+
+<div className="participant-field">
+  <label>Дети/школьники с суиц. наклонностями</label>
+  <input
+    type="number"
+    min="0"
+    name="suicidalChildren"
+    value={participants.suicidalChildren}
+    onChange={handleDetailedChange}
+  />
+</div>
+ 
     </div>
   </>
 )}
@@ -976,7 +1131,7 @@ if (selectedDate.getFullYear() !== currentYear) {
 
 
     <div className="add-org-btn-wrapper">
-      <button type="button" className="add-organization-btn" onClick={handleAddParticipant}>
+      <button type="button" id = "add_button" className="add-organization-btn" onClick={handleAddParticipant}>
         + Добавить категорию
       </button>
     </div>
@@ -985,118 +1140,154 @@ if (selectedDate.getFullYear() !== currentYear) {
   </section>
   
 )}
-<div className="participant-total"><strong>ИТОГО: {totalParticipants}</strong></div>
+<div className="participant-total"><strong> ИТОГО: {totalParticipants}</strong></div>
 
       
     </section>
-
     <section>
-  <h2>Сотрудничество с другими организациями
-  <span className="tooltip">
-          <span className="question-icon"> ! </span>
-          <span className="tooltiptext"> Влияет на рейтинг мероприятия </span>
-          </span>
-  </h2>
+  <h2> Сотрудничество с другими организациями </h2>
+  <label>
+    <input
+      type="checkbox"
+      checked={isCooperation}
+      onChange={(e) => setIsCooperation(e.target.checked)}
+    />
+    Было сотрудничество с другими организациями
+  </label>
 
- {otherOrganizations.map((org, index) => (
- <div key={index} className="organization-row">
- <div className="org-header">
-   <input
-     type="text"
-     maxLength={50}
-     placeholder="Название организации. Пишите внимательно, без ошибок!"
-     value={org.name}
-     onChange={(e) => handleOrgChange(index, "name", e.target.value)}
-   />
-   <span
-     className="remove-org-x"
-     onClick={() => handleRemoveOrganization(index)}
-     title="Удалить"
-   >
-     ×
-   </span>
- </div>
+  {isCooperation && (
+    <>
+      {/* Статические организации с чекбоксами */}
+      {[
+        "Аппарат АТК-ХМАО",
+        "Аппарат АТК-ОНСУ",
+        "СОНКО",
+        "ОМВД по ОНСУ",
+        "СВО",
+        "ЛОМЫ",
+        "Представители религиозных организаций традиционных для России конфессий"
+      ].map((orgName) => (
+        <div key={orgName} className="organization-row">
+          <label className="org-label">
+            {orgName}
+            <input
+              type="checkbox"
+              checked={!!selectedOrganizations[orgName]}
+              onChange={() => {
+                setSelectedOrganizations((prev) => {
+                  const updated = { ...prev };
+                  if (updated[orgName]) {
+                    delete updated[orgName];
+                  } else {
+                    updated[orgName] = { role: "", description: "" };
+                  }
+                  return updated;
+                });
+              }}
+              className="org-checkbox"
+            />
+          </label>
 
- <select
-   value={org.role}
-   onChange={(e) => handleOrgChange(index, "role", e.target.value)}
- >
-   <option value="">Выберите роль</option>
-   <option value="участие">Принял участие</option>
-   <option value="выступление">Выступил</option>
- </select>
+          {selectedOrganizations[orgName] && (
+            <>
+              <select
+                value={selectedOrganizations[orgName].role}
+                onChange={(e) =>
+                  setSelectedOrganizations((prev) => ({
+                    ...prev,
+                    [orgName]: {
+                      ...prev[orgName],
+                      role: e.target.value,
+                      description:
+                        e.target.value === "выступление"
+                          ? prev[orgName]?.description || ""
+                          : ""
+                    }
+                  }))
+                }
+              >
+                <option value="">Выберите роль</option>
+                <option value="участие">Принял участие</option>
+                <option value="выступление">Выступил</option>
+              </select>
 
- {org.role === "выступление" && (
-   <textarea
-     maxLength={200}
-     placeholder="Описание выступления, не более 200 символов!"
-     value={org.description}
-     onChange={(e) => handleOrgChange(index, "description", e.target.value)}
-   />
- )}
-</div>
-))}
+              {selectedOrganizations[orgName].role === "выступление" && (
+                <textarea
+                  maxLength={200}
+                  placeholder="Описание выступления"
+                  value={selectedOrganizations[orgName].description}
+                  onChange={(e) =>
+                    setSelectedOrganizations((prev) => ({
+                      ...prev,
+                      [orgName]: {
+                        ...prev[orgName],
+                        description: e.target.value
+                      }
+                    }))
+                  }
+                />
+              )}
+            </>
+          )}
+        </div>
+      ))}
 
-  <button
-    type="button"
-    className="add-organization-btn"
-    onClick={handleAddOrganization}
-  >
-    + Добавить организацию
-  </button>
+      {/* Динамически добавленные организации */}
+      
+      {otherOrganizations.map((org, index) => (
+        <div key={`custom-${index}`} className="organization-row">
+          <div className="org-header">
+            <input
+              type="text"
+              placeholder="Название организации"
+              maxLength={50}
+              value={org.name}
+              onChange={(e) => handleOrgChange(index, "name", e.target.value)}
+            />
+            <span
+              className="remove-org-x"
+              onClick={() => handleRemoveOrganization(index)}
+            >
+              ×
+            </span>
+          </div>
+
+          <select
+            value={org.role}
+            onChange={(e) => handleOrgChange(index, "role", e.target.value)}
+          >
+            <option value="">Выберите роль</option>
+            <option value="участие">Принял участие</option>
+            <option value="выступление">Выступил</option>
+          </select>
+
+          {org.role === "выступление" && (
+            <textarea
+              placeholder="Описание выступления, не более 200 символов!"
+              maxLength={200}
+              value={org.description}
+              onChange={(e) => handleOrgChange(index, "description", e.target.value)}
+            />
+          )}
+        </div>
+      ))}
+
+
+      {/* Кнопка добавления новой организации */}
+      <button
+        id ="add_button"
+        type="button"
+        className="add-organization-btn"
+        onClick={handleAddOrganization}
+      >
+        + Добавить организацию
+      </button>
+    </>
+  )}
 </section>
 
-    <section>
-      <h2>
-        Обратная связь
-        <span className="tooltip">
-          <span className="question-icon"> ! </span>
-          <span className="tooltiptext"> Влияет на рейтинг мероприятия </span>
-        </span>
-      </h2>
 
-      <div className="checkbox-container">
-        <label htmlFor="feedbackCollected">Обратная связь была собрана:</label>
-        <input
-          type="checkbox"
-          id="feedbackCollected"
-          name="feedbackCollected"
-          checked={feedbackCollected}
-          onChange={handleFeedbackToggle}
-        />
-      </div>
 
-      {feedbackCollected && (
-        <div className="card feedback">
-          <div className="feedback-types">
-            {feedbackOptions.map((option) => (
-              <div key={option} className="feedback-type">
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={selectedFeedbackTypes.includes(option)}
-                    onChange={() => handleFeedbackTypeChange(option)}
-                  />
-                  {option}
-                </label>
-              </div>
-            ))}
-          </div>
-          <div className="feedbackDescription">
-            <label htmlFor="feedbackDescriptionField">
-              Описание результатов обратной связи:
-            </label>
-            <textarea
-              id="feedbackDescriptionField"
-              maxLength={300}
-              placeholder="Введите описание обратной связи, не более 300 символов"
-              value={feedbackDescription}
-              onChange={(e) => setFeedbackDescription(e.target.value)}
-            />
-          </div>
-        </div>
-      )}
-    </section>
         <section>
       <h2>Дополнительные характеристики</h2>
 
