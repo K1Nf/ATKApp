@@ -27,8 +27,6 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
   };
 
 
-
-
   // Дата
   const [dateHasError, setDateHasError] = useState(false);
   const handleOtherParticipationChange = (id, value) => {
