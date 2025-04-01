@@ -1,10 +1,20 @@
 import { useState, useEffect } from "react";
-import "./EventForm.css";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import "./EventForm.css";
 
-const Form = () => {
-  // равный равному
+// Подключаем все необходимые компоненты формы
+import BasicInfo_LinkLevelFormat from "../components/EventFormSections/BasicInfo_LinkLevelFormat"; // Основная информация о мероприятии
+import BasicInfo_NameDataDeskEventForm from "../components/EventFormSections/BasicInfo_NameDataDeskEvent"; // Имя и дата мероприятия
+import BasicInfo_ResultDecision from "../components/EventFormSections/BasicInfo_ResultDecision"; // Результат проведения и управленческие решения
+import DopInfo_Cooperation from "../components/EventFormSections/DopInfo_Cooperation"; // Сотрудничество
+import DopInfo_Finanse from "../components/EventFormSections/DopInfo_Finanse"; // Финансирование
+import DopInfo_ImportantTheBestEqual from "../components/EventFormSections/DopInfo_ImportantTheBestEqual"; // Дополнительные характеристики
+import DopInfo_Participants from "../components/EventFormSections/DopInfo_Participants"; // Количество участников
+import DopInfo_Feedback from "../components/EventFormSections/DopInfo_Feedback"; // Обратная связь
+
+const EventForm = () => {
+    // равный равному
 const [isPeerFormat, setIsPeerFormat] = useState(false);
 const [peerFormatDescription, setPeerFormatDescription] = useState("");
 
@@ -25,6 +35,16 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
       return newState;
     });
   };
+
+
+
+
+
+
+
+
+
+
 
 
   // Дата
@@ -106,6 +126,26 @@ const handleRemoveOrganization = (index) => {
   const [otherParticipantCount, setOtherParticipantCount] = useState(0);
   const [showOtherParticipant, setShowOtherParticipant] = useState(false);
 
+  const [participantsCategories, setParticipantsCategories] = useState([
+    { category: "", count: 0 }
+  ]);
+
+  const handleParticipantCategoryChange = (index, key, value) => {
+    const updatedCategories = [...participantsCategories];
+    updatedCategories[index][key] = value;
+    setParticipantsCategories(updatedCategories);
+  };
+
+  const handleAddParticipantCategory = () => {
+    setParticipantsCategories([...participantsCategories, { category: "", count: 0 }]);
+  };
+
+  const handleRemoveParticipantCategory = (index) => {
+    const updatedCategories = participantsCategories.filter((_, i) => i !== index);
+    setParticipantsCategories(updatedCategories);
+  };
+
+  const [uprDescription, setUprDescription] = useState(""); // Инициализация переменной
 
   const [participants, setParticipants] = useState({
     schoolKids: 0,
@@ -135,6 +175,7 @@ const handleRemoveOrganization = (index) => {
 
 
   const [customParticipants, setCustomParticipants] = useState([]);
+  const [resultDescription, setResultDescription] = useState("");
 
   const handleAddParticipant = () => {
     setCustomParticipants((prev) => [...prev, { label: "", count: 0 }]);
@@ -345,9 +386,9 @@ if (selectedDate.getFullYear() !== currentYear) {
       description: cleanedFeedbackDescription
     },
   
-    // createInterAgencyCooperationRequest: {
-    //   content: cleanedOrganizations
-    // },
+    createInterAgencyCooperationRequest: {
+      content: cleanedOrganizations
+    },
   
     createParticipantsRequest: {
       students: Number(participants.students),
@@ -360,19 +401,15 @@ if (selectedDate.getFullYear() !== currentYear) {
         detailedInput && customParticipants.length > 0
           ? customParticipants
           : null,
-      //total: totalParticipants
+      // total: totalParticipants
     },
     
   
     createEqualToEqualRequest: {
       content: cleanedPeerFormat
     },
-
-    createInterAgencyCooperationRequest: {
-      content: otherOrganizations
-    }
   };
-  //alert(JSON.stringify(createEventRequest, null, 2));
+  alert(JSON.stringify(createEventRequest, null, 2));
 
 
   console.log(createEventRequest);
@@ -511,872 +548,217 @@ if (selectedDate.getFullYear() !== currentYear) {
 
   return (
     <div>
-    {/* Элемент, который будет находиться "над" контейнером */}
-    <div className="centered-container" id="above-container">
-    <img src="images/АТК.png" alt="Символика АТК" />
-    </div>
-    <div className="container">
-      <div id="heraldry">
-      <img src="images/hanty-mansijskogo.png" alt="Герб Ханты-Мансийского автономного округа" />
-    </div>
-
-      {/* Выбор темы */}
-      <label htmlFor="theme_select">Создание формы по номеру темы</label>
-      <select id="theme_select" value={selectedTheme} onChange={handleThemeChange}>
-        <option value="none">Выберите тему</option>
-        <option value="1">1.1.1, 1.2.1</option>
-        <option value="2">2.1.1</option>
-      </select>
-
-      {/* Форма для выбранной темы */}
-      {selectedTheme === "1" && (
-        <div id="form_theme_1" className="form-block">
-          <h1>Форма создания мероприятия</h1>
-          <form onSubmit={handleFormSubmit} >
-            <label htmlFor="themeSelection"> 
-              Выбор темы 
-              <span style={{ color: "red" }}>*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-            </label>
-
-            <select 
-            id="themeSelection" value={selectedSubTheme} onChange={handleSubThemeChange} required>
-              <option value="">Выберите тему</option>
-              <option value="1.1.1">1.1.1</option>
-              <option value="1.1.2">1.1.2</option>
-              <option value="1.1.3">1.1.3</option>
-              <option value="1.2.1">1.2.1</option>
-              <option value="1.3.1.1">1.3.1.1</option>
-              <option value="1.3.1.2">1.3.1.2</option>
-              <option value="1.3.2">1.3.2</option>
-              <option value="1.3.3.1">1.3.3.1</option>
-              <option value="1.3.3.2">1.3.3.2</option>
-              <option value="1.3.4">1.3.4</option>
-              <option value="1.3.5">1.3.5</option>
-              <option value="1.4">1.4</option>
-              <option value="1.5.1">1.5.1</option>
-              <option value="1.5.2">1.5.2</option>
-              <option value="1.6">1.6</option>
-              <option value="2.1">2.1</option>
-              <option value="2.2">2.2</option>
-              <option value="2.3">2.3</option>
-              <option value="2.4">2.4</option>
-              <option value="2.5">2.5</option>
-              <option value="2.6">2.6</option>
-              <option value="2.7.1">2.7.1</option>
-              <option value="2.7.2">2.7.2</option>
-              <option value="2.8">2.8</option>
-              <option value="3.1.1">3.1.1</option>
-              <option value="3.1.2">3.1.2</option>
-              <option value="3.2.1">3.2.1</option>
-              <option value="3.2.2">3.2.2</option>
-              <option value="3.2.3">3.2.3</option>
-              <option value="3.3.1">3.3.1</option>
-              <option value="3.3.2">3.3.2</option>
-              <option value="3.4.1">3.4.1</option>
-              <option value="3.4.2">3.4.2</option>
-              <option value="3.4.3">3.4.3</option>
-              <option value="3.5">3.5</option>
-              <option value="3.6">3.6</option>
-              <option value="4.1.1">4.1.1</option>
-              <option value="4.1.3">4.1.3</option>
-              <option value="4.2">4.2</option>
-              <option value="4.3">4.3</option>
-              <option value="4.4">4.4</option>
-              <option value="4.5">4.5</option>
-              <option value="4.6">4.6</option>
-              <option value="4.7">4.7</option>
-              <option value="4.8">4.8</option>
-              <option value="5.2">5.2</option>
-              <option value="5.6">5.6</option>
-              <option value="5.9">5.9</option>
+      <form onSubmit={handleFormSubmit}>
+        <div>
+          {/* Элемент, который будет находиться "над" контейнером */}
+          <div className="centered-container" id="above-container">
+            <img src="images/АТК.png" alt="Символика АТК" />
+          </div>
+          <div className="container">
+            <div id="heraldry">
+              <img src="images/hanty-mansijskogo.png" alt="Герб Ханты-Мансийского автономного округа" />
+            </div>
+  
+            {/* Выбор темы */}
+            <label htmlFor="theme_select">Создание формы по номеру темы</label>
+            <select id="theme_select" value={selectedTheme} onChange={handleThemeChange}>
+              <option value="none">Выберите тему</option>
+              <option value="1">1.1.1, 1.2.1</option>
+              <option value="2">2.1.1</option>
             </select>
+  
+            {/* Форма для выбранной темы */}
+            {selectedTheme === "1" && (
+              <div id="form_theme_1" className="form-block">
+                <h1>Форма создания мероприятия</h1>
+                <form onSubmit={handleFormSubmit}>
+                  <label htmlFor="themeSelection">
+                    Выбор темы
+                    <span style={{ color: "red" }}>*</span>
+                    <span className="tooltip">
+                      <span className="question-icon">?</span>
+                      <span className="tooltiptext">Это обязательное поле</span>
+                    </span>
+                  </label>
+  
+                  <select
+                    id="themeSelection"
+                    value={selectedSubTheme}
+                    onChange={handleSubThemeChange}
+                    required
+                  >
+                    <option value="">Выберите тему</option>
+                    <option value="1.1.1">1.1.1</option>
+                    <option value="1.1.2">1.1.2</option>
+                    <option value="1.1.3">1.1.3</option>
+                    <option value="1.2.1">1.2.1</option>
+                    <option value="1.3.1.1">1.3.1.1</option>
+                    <option value="1.3.1.2">1.3.1.2</option>
+                    <option value="1.3.2">1.3.2</option>
+                    <option value="1.3.3.1">1.3.3.1</option>
+                    <option value="1.3.3.2">1.3.3.2</option>
+                    <option value="1.3.4">1.3.4</option>
+                    <option value="1.3.5">1.3.5</option>
+                    <option value="1.4">1.4</option>
+                    <option value="1.5.1">1.5.1</option>
+                    <option value="1.5.2">1.5.2</option>
+                    <option value="1.6">1.6</option>
+                    <option value="2.1">2.1</option>
+                    <option value="2.2">2.2</option>
+                    <option value="2.3">2.3</option>
+                    <option value="2.4">2.4</option>
+                    <option value="2.5">2.5</option>
+                    <option value="2.6">2.6</option>
+                    <option value="2.7.1">2.7.1</option>
+                    <option value="2.7.2">2.7.2</option>
+                    <option value="2.8">2.8</option>
+                    <option value="3.1.1">3.1.1</option>
+                    <option value="3.1.2">3.1.2</option>
+                    <option value="3.2.1">3.2.1</option>
+                    <option value="3.2.2">3.2.2</option>
+                    <option value="3.2.3">3.2.3</option>
+                    <option value="3.3.1">3.3.1</option>
+                    <option value="3.3.2">3.3.2</option>
+                    <option value="3.4.1">3.4.1</option>
+                    <option value="3.4.2">3.4.2</option>
+                    <option value="3.4.3">3.4.3</option>
+                    <option value="3.5">3.5</option>
+                    <option value="3.6">3.6</option>
+                    <option value="4.1.1">4.1.1</option>
+                    <option value="4.1.3">4.1.3</option>
+                    <option value="4.2">4.2</option>
+                    <option value="4.3">4.3</option>
+                    <option value="4.4">4.4</option>
+                    <option value="4.5">4.5</option>
+                    <option value="4.6">4.6</option>
+                    <option value="4.7">4.7</option>
+                    <option value="4.8">4.8</option>
+                    <option value="5.2">5.2</option>
+                    <option value="5.6">5.6</option>
+                    <option value="5.9">5.9</option>
+                  </select>
+  
+                  {/* Отображение описания выбранной темы */}
+                  <div
+                    id="description"
+                    className={selectedSubTheme ? "description visible" : "description"}
+                  >
+                    <p>{getDescription(selectedSubTheme)} </p>
+                  </div>
+  
+                  {/* Основная информация о мероприятии */}
+                  <section className="form-section1">
+                    <h2>Основная информация о мероприятии</h2>
+                     {/* Наименование, дата, краткое описание*/}
 
-        {/* Отображение описания выбранной темы */}
-        <div id="description" className={selectedSubTheme ? "description visible" : "description"}>
-          <p>{getDescription(selectedSubTheme)} </p>
-        </div>
-        
-      <section className="form-section1">
-        <h2>Основная информация о мероприятии</h2>
+                    <BasicInfo_NameDataDeskEventForm 
+                    eventName={eventName} 
+                    setEventName={setEventName} 
+                    eventDate={eventDate} 
+                    setEventDate={setEventDate} 
+                    eventDescription={eventDescription} 
+                    setEventDescription={setEventDescription} 
+                    dateHasError={dateHasError} 
+                    />
 
-        {/* Наименование мероприятия */}
-        <section>
-          <label htmlFor="event_name">
-            Наименование мероприятия 
-            <span className="required">*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-          </label>
-          <input
-            type="text"
-            id="event_name"
-            name="event_name"
-            value={eventName}
-            onChange={handleEventNameChange}
-            placeholder="Введите название мероприятия"
-            required
-          />
-        </section>
-
-        {/* Дата проведения */}
-        <section>
-          <label htmlFor="event_date">
-            Дата проведения 
-            <span className="required">*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-          </label>
-          <input
-            type="date"
-            id="event_date"
-            name="event_date"
-            value={eventDate}
-            onChange={handleEventDateChange}
-            min={`${new Date().getFullYear()}-01-01`}
-            max={`${new Date().getFullYear()}-12-31`}
-            placeholder="Выберите дату проведения"
-            required
-            className={dateHasError ? "error" : ""}
-          />
-        </section>
-
-        {/* Краткое описание мероприятия */}
-        <section>
-          <label htmlFor="event_description">
-            Краткое описание мероприятия 
-            <span className="required">*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-          </label>
-          <textarea
-            id="event_description"
-            name="event_description"
-            value={eventDescription}
-            onChange={handleEventDescriptionChange}
-            maxLength={200}
-            placeholder="Введите описание, не более 200 символов"
-            required
-          />
-        </section>
-
-        {/* Уровень мероприятия */}
-        <section>
-          <label htmlFor="level">
-            Уровень мероприятия 
-            <span className="required">*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-
-            <span className="tooltip">
-              <span className="question-icon">!</span>
-              <span className="tooltiptext">Влияет на рейтинг мероприятия</span>
-            </span>
-          </label>
-          <select
-            id="level"
-            name="level"
-            value={level}
-            onChange={handleLevelChange}
-            required
-          >
-            <option value="">Выберите уровень</option>
-            <option value="institution">Учреждение</option>
-            <option value="municipality">Муниципалитет</option>
-            <option value="intermunicipality">Межмуниципитет</option>
-            <option value="regional">Региональный</option>
-            <option value="interregional">Межрегиональный</option>
-            <option value="all_russian">Всероссийский</option>
-            <option value="international">Международный</option>
-          </select>
-        </section>
-
-        {/* Ссылка на СМИ/СМК */}
-        <section>
-          <label htmlFor="link">
-            Ссылка на СМИ/СМК 
-            <span className="required">*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-          </label>
-          <input
-            type="text"
-            id="link"
-            name="link"
-            value={link}
-            onChange={handleLinkChange}
-            maxLength={200}
-            placeholder="Введите одну или несколько ссылок через запятую, например: https://example1.com, https://example2.com"
-            required
-          />
-        </section>
-
-        {/* Форма проведения */}
-        <section>
-          <label htmlFor="formConducted">
-            Форма проведения 
-            <span className="required">*</span>
-
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-
-            <span className="tooltip">
-              <span className="question-icon">!</span>
-              <span className="tooltiptext">Влияет на рейтинг мероприятия</span>
-            </span>
-          </label>
-          <select
-            id="formConducted"
-            name="formConducted"
-            value={formConducted}
-            onChange={handleFormConductedChange}
-            required
-          >
-            <option value="">Выберите форму проведения</option>
-            <option value="lecture">Лекция</option>
-            <option value="action">Акция</option>
-            <option value="quiz">Квиз</option>
-            <option value="quest">Квест</option>
-            <option value="game">Игра</option>
-            <option value="other">Другое</option>
-          </select>
-
-          {/* Описание для "Другое" */}
-          {isOtherDescriptionVisible && (
-            <div id="otherDescriptionContainer">
-              <label htmlFor="otherDescription">Описание:</label>
-              <textarea
-                id="otherDescription"
-                name="otherDescription"
-                value={otherDescription}
-                onChange={handleOtherDescriptionChange}
-                maxLength={300}
-                placeholder="Введите описание формы проведения, не более 300 символов"
-                required
-              />
-            </div>
-            
-          )}
-        </section>
-        <section>
-          <label htmlFor="event_description">
-            Результаты проведения 
-            <span className="required">*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-          </label>
-          <textarea
-            id="event_description"
-            name="event_description"
-            value={eventDescription}
-            onChange={handleEventDescriptionChange}
-            maxLength={200}
-            placeholder="Введите описание, не более 200 символов"
-            required
-          />
-        </section>
-        <section>
-          <label htmlFor="event_description">
-            Необходимые управленческие решения
-            <span className="required">*</span>
-            <span className="tooltip">
-              <span className="question-icon">?</span>
-              <span className="tooltiptext">Это обязательное поле</span>
-            </span>
-          </label>
-          <textarea
-            id="event_description"
-            name="event_description"
-            value={eventDescription}
-            onChange={handleEventDescriptionChange}
-            maxLength={200}
-            placeholder="Введите описание, не более 200 символов"
-            required
-          />
-        </section>
-        </section>
-        <section className = "form-section1">
-        <h2>Дополнительная информация о мероприятии</h2>
-        <section>
-        <h2>Финансирование</h2>
-        <label>
-          <input type="checkbox" checked={hasFinancing} onChange={() => setHasFinancing(!hasFinancing)} />
-          Есть финансирование
-        </label>
-
-        {hasFinancing && (
-          <div className="financing-details">
-            <div className="financing-row">
-              <div className="financing-field">
-                <label>Муниципальный бюджет:</label>
-                <input
-                  type="number"
-                  name="municipal"
-                  placeholder="0"
-                  min="0"
-                  value={financing.municipal}
-                  onChange={handleFinancingChange}
-                />
-              </div>
-              <div className="financing-field">
-                <label>Окружной бюджет:</label>
-                <input
-                  type="number"
-                  name="regional"
-                  placeholder="0"
-                  min="0"
-                  value={financing.regional}
-                  onChange={handleFinancingChange}
-                />
-              </div>
-            </div>
-            
-            <div className="financing-row">
-              <div className="financing-field">
-                <label>Гранты/Субсидии:</label>
-                <input
-                  type="number"
-                  name="grants"
-                  placeholder="0"
-                  min="0"
-                  value={financing.grants}
-                  onChange={handleFinancingChange}
-                />
-              </div>
-              <div className="financing-field">
-                <label>Другое (сумма):</label>
-                <input
-                  type="number"
-                  name="other"
-                  placeholder="0"
-                  min="0"
-                  value={financing.other}
-                  onChange={handleFinancingChange}
-                />
-              </div>
-            </div>
-            
-            {financing.other && (
-              <div className="other-details">
-                <label>Описание источника финансирования:</label>
-                <textarea
-                  maxLength={200}
-                  placeholder="Введите описание источника, не более 200 символов"
-                  value={financingOtherDescription}
-                  onChange={(e) => setFinancingOtherDescription(e.target.value)}
-                ></textarea>
+                     {/* Ссылка, уроень, формат*/}
+                    <BasicInfo_LinkLevelFormat
+                      eventName={eventName}
+                      setEventName={setEventName}
+                      eventDate={eventDate}
+                      setEventDate={setEventDate}
+                      eventDescription={eventDescription}
+                      setEventDescription={setEventDescription}
+                      level={level}
+                      setLevel={setLevel}
+                      link={link}
+                      setLink={setLink}
+                      formConducted={formConducted}
+                      setFormConducted={setFormConducted}
+                      otherDescription={otherDescription}
+                      setOtherDescription={setOtherDescription}
+                    />
+                       {/* Результат проведения мероприятия и управленческие решения */}
+                      <BasicInfo_ResultDecision
+                        resultDescription={resultDescription}
+                        setResultDescription={setResultDescription}
+                        uprDescription={uprDescription}
+                        setUprDescription={setUprDescription}
+                      />
+                  </section>
+  
+               
+                  <section className="form-section1">
+                  <h2>Дополнительная информация о мероприятии</h2>
+                  {/* Обратная связь */}
+                  <DopInfo_Feedback
+                    feedbackCollected={feedbackCollected}
+                    setFeedbackCollected={setFeedbackCollected}
+                    selectedFeedbackTypes={selectedFeedbackTypes}
+                    setSelectedFeedbackTypes={setSelectedFeedbackTypes}
+                    feedbackDescription={feedbackDescription}
+                    setFeedbackDescription={setFeedbackDescription}
+                  />
+  
+                  {/* Финансирование */}
+                  <DopInfo_Finanse
+                    hasFinancing={hasFinancing}
+                    setHasFinancing={setHasFinancing}
+                    financing={financing}
+                    setFinancing={setFinancing}
+                  />
+  
+                  {/* Количество участников */}
+                  <DopInfo_Participants
+                    participantsCategories={participantsCategories}
+                    setParticipantsCategories={setParticipantsCategories}
+                    participants={participants}
+                    setParticipants={setParticipants}
+                    customParticipants={customParticipants}
+                    setCustomParticipants={setCustomParticipants}
+                    detailedInput={detailedInput}
+                    setDetailedInput={setDetailedInput}
+                    totalParticipants={totalParticipants}
+                    setTotalParticipants={setTotalParticipants}
+                    handleDetailedChange={handleDetailedChange}
+                    handleTotalChange={handleTotalChange}
+                    handleAddParticipant={handleAddParticipant}
+                    handleParticipantChange={handleParticipantChange}
+                    handleRemoveParticipant={handleRemoveParticipant}
+                  
+                  />
+  
+                  {/* Сотрудничество */}
+                  <DopInfo_Cooperation
+                    isCooperation={isCooperation}
+                    setIsCooperation={setIsCooperation}
+                    selectedOrganizations={selectedOrganizations}
+                    setSelectedOrganizations={setSelectedOrganizations}
+                    otherOrganizations={otherOrganizations}
+                    setOtherOrganizations={setOtherOrganizations}
+                  />
+  
+                  {/* Дополнительные характеристики */}
+                  <DopInfo_ImportantTheBestEqual
+                    equalFormat={equalFormat}
+                    setEqualFormat={setEqualFormat}
+                    equalFormatDescription={equalFormatDescription}
+                    setEqualFormatDescription={setEqualFormatDescription}
+                  />
+                  </section>
+                  {/* Кнопка сохранения */}
+                  <button type="submit" id="save_button">Сохранить</button>
+                  <button type="button" onClick={() => toastr.success("Данные успешно сохранены и добавлены в таблицу", "Успех")}>
+                    Показать Toastr
+                  </button>
+                </form>
               </div>
             )}
-            
-            <div className="total-amount">
-              <p>ИТОГО: <span>{(Number(financing.municipal) + Number(financing.regional) + Number(financing.grants) + Number(financing.other)).toFixed(2)}</span></p>
-            </div>
           </div>
-        )}
-      </section>
-
-      <section>
-      <h2>Количество участников</h2>
-<label>
-  {detailedInput ? "Категории участников" : "Количество участников"}
-  {!detailedInput && (
-    <input
-      type="number"
-      min={0}
-      value={totalParticipants}
-      onChange={(e) => setTotalParticipants(Number(e.target.value))}
-      className="simple-total-input"
-      placeholder="Введите количество"
-    />
-  )}
-</label>
-
-<label style={{ marginTop: "10px", display: "block" }}>
-  <input
-    type="checkbox"
-    checked={detailedInput}
-    onChange={(e) => {
-      setDetailedInput(e.target.checked);
-      if (e.target.checked) {
-        setTotalParticipants(0);
-        setCustomParticipants([]);
-      }
-    }}
-  />
-  Подробнее
-</label>
-
-{detailedInput && (
-  <>
-    <div className="participants-row">
-      {/* СТАРЫЕ КАТЕГОРИИ */}
-      <div className="participant-field">
-        <label>Школьники</label>
-        <input
-          type="number"
-          min="0"
-          name="schoolKids"
-          value={participants.schoolKids}
-          onChange={handleDetailedChange}
-        />
-      </div>
-
-      <div className="participant-field">
-        <label>Студенты</label>
-        <input
-          type="number"
-          min="0"
-          name="students"
-          value={participants.students}
-          onChange={handleDetailedChange}
-        />
-      </div>
-
-      <div className="participant-field">
-        <label>Состоящие на различных формах учёта</label>
-        <input
-          type="number"
-          min="0"
-          name="registeredPersons"
-          value={participants.registeredPersons}
-          onChange={handleDetailedChange}
-        />
-      </div>
-
-      <div className="participant-field">
-        <label>Трудовые мигранты</label>
-        <input
-          type="number"
-          min="0"
-          name="trud-migrants"
-          value={participants.trudmigrants}
-          onChange={handleDetailedChange}
-        />
-      </div>
-
-      <div className="participant-field">
-        <label>Работающая молодёжь</label>
-        <input
-          type="number"
-          min="0"
-          name="workingYouth"
-          value={participants.workingYouth}
-          onChange={handleDetailedChange}
-        />
-      </div>
-
-      <div className="participant-field">
-        <label>Не работающая молодёжь</label>
-        <input
-          type="number"
-          min="0"
-          name="unemployedYouth"
-          value={participants.unemployedYouth}
-          onChange={handleDetailedChange}
-        />
-      </div>
-
-      <div className="participant-field">
-  <label>Мигранты-студенты</label>
-  <input
-    type="number"
-    min="0"
-    name="migrantStudents"
-    value={participants.migrantStudents}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Дети мигрантов (в ОУ)</label>
-  <input
-    type="number"
-    min="0"
-    name="migrantChildrenInSchools"
-    value={participants.migrantChildrenInSchools}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Дети мигрантов (дом. обучение)</label>
-  <input
-    type="number"
-    min="0"
-    name="migrantChildrenHome"
-    value={participants.migrantChildrenHome}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Жители новых субъектов РФ</label>
-  <input
-    type="number"
-    min="0"
-    name="newSubjectsResidents"
-    value={participants.newSubjectsResidents}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Школьники на учёте</label>
-  <input
-    type="number"
-    min="0"
-    name="registeredSchoolKids"
-    value={participants.registeredSchoolKids}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Молодёжь на учёте</label>
-  <input
-    type="number"
-    min="0"
-    name="registeredYouth"
-    value={participants.registeredYouth}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Возвратившиеся из зон БД</label>
-  <input
-    type="number"
-    min="0"
-    name="returnedFromCombatZones"
-    value={participants.returnedFromCombatZones}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Субкультуры, склонные к насилию</label>
-  <input
-    type="number"
-    min="0"
-    name="subcultureYouth"
-    value={participants.subcultureYouth}
-    onChange={handleDetailedChange}
-  />
-</div>
-
-<div className="participant-field">
-  <label>Дети/школьники с суиц. наклонностями</label>
-  <input
-    type="number"
-    min="0"
-    name="suicidalChildren"
-    value={participants.suicidalChildren}
-    onChange={handleDetailedChange}
-  />
-</div>
- 
-    </div>
-  </>
-)}
-{detailedInput && (
-  <section className="form-section">
-    {customParticipants.map((p, index) => (
-      <div key={index} className="organization-row">
-        <div className="org-header">
-          <input
-            type="text"
-            placeholder="Категория участников, пишите внимательно, без ошибок, с большой буквы!"
-            maxLength={50}
-            value={p.label}
-            spellCheck={true}
-            onChange={(e) => handleParticipantChange(index, "label", e.target.value)}
-          />
-          <span
-            className="remove-org-x"
-            onClick={() => handleRemoveParticipant(index)}
-            title="Удалить"
-          >
-            ×
-          </span>
         </div>
-        <input
-          type="number"
-          min="0"
-          placeholder="Количество"
-          value={p.count}
-          onChange={(e) => handleParticipantChange(index, "count", e.target.value)}
-        />
-      </div>
-    ))}
-
-
-
-    <div className="add-org-btn-wrapper">
-      <button type="button" id = "add_button" className="add-organization-btn" onClick={handleAddParticipant}>
-        + Добавить категорию
-      </button>
-    </div>
-
-   
-  </section>
-  
-)}
-<div className="participant-total"><strong> ИТОГО: {totalParticipants}</strong></div>
-
-      
-    </section>
-    <section>
-  <h2> Сотрудничество с другими организациями </h2>
-  <label>
-    <input
-      type="checkbox"
-      checked={isCooperation}
-      onChange={(e) => setIsCooperation(e.target.checked)}
-    />
-    Было сотрудничество с другими организациями
-  </label>
-
-  {isCooperation && (
-    <>
-      {/* Статические организации с чекбоксами */}
-      {[
-        "Аппарат АТК-ХМАО",
-        "Аппарат АТК-ОНСУ",
-        "СОНКО",
-        "ОМВД по ОНСУ",
-        "СВО",
-        "ЛОМЫ",
-        "Представители религиозных организаций традиционных для России конфессий"
-      ].map((orgName) => (
-        <div key={orgName} className="organization-row">
-          <label className="org-label">
-            {orgName}
-            <input
-              type="checkbox"
-              checked={!!selectedOrganizations[orgName]}
-              onChange={() => {
-                setSelectedOrganizations((prev) => {
-                  const updated = { ...prev };
-                  if (updated[orgName]) {
-                    delete updated[orgName];
-                  } else {
-                    updated[orgName] = { role: "", description: "" };
-                  }
-                  return updated;
-                });
-              }}
-              className="org-checkbox"
-            />
-          </label>
-
-          {selectedOrganizations[orgName] && (
-            <>
-              <select
-                value={selectedOrganizations[orgName].role}
-                onChange={(e) =>
-                  setSelectedOrganizations((prev) => ({
-                    ...prev,
-                    [orgName]: {
-                      ...prev[orgName],
-                      role: e.target.value,
-                      description:
-                        e.target.value === "выступление"
-                          ? prev[orgName]?.description || ""
-                          : ""
-                    }
-                  }))
-                }
-              >
-                <option value="">Выберите роль</option>
-                <option value="участие">Принял участие</option>
-                <option value="выступление">Выступил</option>
-              </select>
-
-              {selectedOrganizations[orgName].role === "выступление" && (
-                <textarea
-                  maxLength={200}
-                  placeholder="Описание выступления"
-                  value={selectedOrganizations[orgName].description}
-                  onChange={(e) =>
-                    setSelectedOrganizations((prev) => ({
-                      ...prev,
-                      [orgName]: {
-                        ...prev[orgName],
-                        description: e.target.value
-                      }
-                    }))
-                  }
-                />
-              )}
-            </>
-          )}
-        </div>
-      ))}
-
-      {/* Динамически добавленные организации */}
-      
-      {otherOrganizations.map((org, index) => (
-        <div key={`custom-${index}`} className="organization-row">
-          <div className="org-header">
-            <input
-              type="text"
-              placeholder="Название организации"
-              maxLength={50}
-              value={org.name}
-              onChange={(e) => handleOrgChange(index, "name", e.target.value)}
-            />
-            <span
-              className="remove-org-x"
-              onClick={() => handleRemoveOrganization(index)}
-            >
-              ×
-            </span>
-          </div>
-
-          <select
-            value={org.role}
-            onChange={(e) => handleOrgChange(index, "role", e.target.value)}
-          >
-            <option value="">Выберите роль</option>
-            <option value="участие">Принял участие</option>
-            <option value="выступление">Выступил</option>
-          </select>
-
-          {org.role === "выступление" && (
-            <textarea
-              placeholder="Описание выступления, не более 200 символов!"
-              maxLength={200}
-              value={org.description}
-              onChange={(e) => handleOrgChange(index, "description", e.target.value)}
-            />
-          )}
-        </div>
-      ))}
-
-
-      {/* Кнопка добавления новой организации */}
-      <button
-        id ="add_button"
-        type="button"
-        className="add-organization-btn"
-        onClick={handleAddOrganization}
-      >
-        + Добавить организацию
-      </button>
-    </>
-  )}
-</section>
-
-
-
-        <section>
-      <h2>Дополнительные характеристики</h2>
-
-      <div className="checkbox-container">
-        <label>
-          <input
-            type="checkbox"
-            checked={importantEvent}
-            onChange={() => setImportantEvent(!importantEvent)}
-          />
-          Отметить, как значимое мероприятие
-        </label>
-      </div>
-
-      <div className="checkbox-container">
-        <label>
-          <input
-            type="checkbox"
-            checked={bestEvent}
-            onChange={() => setBestEvent(!bestEvent)}
-          />
-          Включить в сборник лучших практик
-        </label>
-      </div>
-
-      <div className="checkbox-container">
-        <label>
-          <input
-            type="checkbox"
-            checked={equalFormat} // Убедись, что состояние правильно объявлено
-            onChange={() => setEqualFormat(!equalFormat)}
-          />
-          Формат "равный равному"
-        </label>
-        <span className="tooltip">
-          <span className="question-icon">!</span>
-          <span className="tooltiptext">Влияет на рейтинг мероприятия</span>
-        </span>
-      </div>
-
-      {/* Используем ту же переменную, что и в чекбоксе */}
-      {equalFormat && (
-        <div id="peer_format_description">
-          <label>Описание:</label>
-          <textarea
-            value={peerFormatDescription}
-            onChange={(e) => setPeerFormatDescription(e.target.value)}
-            maxLength={200}
-            placeholder="Введите описание формата 'равный равному', не более 200 символов"
-          ></textarea>
-        </div>
-      )}
-    </section>
-
-        </section>
-        
-    
-      
-            {/* Кнопка сохранения */}
-            <button type="submit" id="save_button">Сохранить</button>
-
-            <button type="button" onClick={() => toastr.success("Данные успешно сохранены и добавлены в таблицу", "Успех")}>
-  Показать Toastr
-</button>
-          </form>
-        </div>
-      )}
-
-       {selectedTheme === "2" && (
-          <div id="form_theme_2" className="form-block">
-            <section className="form-section">
-              <h2>Тема 2.1.1</h2>
-              <label htmlFor="theme_2">№ темы</label>
-              <input type="text" id="theme_2" name="theme_2" value="2.1.1" readOnly />
-            </section>
-          {/* Кнопка сохранения */}
-          <button type="submit" id="save_button">Сохранить</button>
-        </div>
-        )}
-      </div>
+      </form>
     </div>
   );
-  
-};
+}
 
-export default Form;
-
-// document.getElementById("save_button")?.addEventListener("submit", (e) => {
-
-//   e.preventDefault();
-//   console.log("213!!!");
-//   console.log(isCooperation, selectedOrganizations);
-
-// });
+export default EventForm;

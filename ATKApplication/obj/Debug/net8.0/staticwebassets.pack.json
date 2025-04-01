@@ -1,20 +1,16 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-YFcQCTQa.css",
-      "PackagePath": "staticwebassets\\assets\\css\\Sidebar-YFcQCTQa.css"
-    },
-    {
-      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\createEvent-DPlFYqzU.css",
-      "PackagePath": "staticwebassets\\assets\\css\\createEvent-DPlFYqzU.css"
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-D0Ea8YY-.css",
+      "PackagePath": "staticwebassets\\assets\\css\\Sidebar-D0Ea8YY-.css"
     },
     {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
       "PackagePath": "staticwebassets\\assets\\css\\events-DlZwj7pn.css"
     },
     {
-      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\indexForm-Dtn62Xmo.css",
-      "PackagePath": "staticwebassets\\assets\\css\\indexForm-Dtn62Xmo.css"
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
+      "PackagePath": "staticwebassets\\assets\\css\\toastr-PcHlmDLb.css"
     },
     {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
@@ -31,6 +27,10 @@
     {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "PackagePath": "staticwebassets\\assets\\js\\events.js"
+    },
+    {
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
+      "PackagePath": "staticwebassets\\assets\\js\\toastr.min-chunk.js"
     },
     {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
