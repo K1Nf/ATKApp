@@ -18,23 +18,13 @@
   {
     "ContainingType": "ATKApplication.Controllers.PlansController",
     "Method": "GetAll",
-    "RelativePath": "api/Plans",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.PlansController",
-    "Method": "Get",
-    "RelativePath": "api/Plans/{Id}",
+    "RelativePath": "api/Plans/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "userId",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -48,13 +38,7 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "createPlanRequest",
-        "Type": "ATKApplication.Contracts.Request.CreatePlanRequest",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -74,31 +58,20 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ATKApplication.Controllers.PlansController",
-    "Method": "Update",
-    "RelativePath": "api/Plans/Update/{Id}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "updatePlanRequest",
-        "Type": "ATKApplication.Contracts.Request.UpdatePlanRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "ATKApplication.Controllers.EventsController",
     "Method": "GetAll",
     "RelativePath": "api/ref/Events",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Update",
+    "RelativePath": "api/ref/Events",
+    "HttpMethod": "",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -225,23 +198,12 @@
   },
   {
     "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "Update",
-    "RelativePath": "api/ref/Events/Update/{Id}",
-    "HttpMethod": "POST",
+    "Method": "GetThemes",
+    "RelativePath": "api/ref/themes",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "createEventRequest",
-        "Type": "ATKApplication.Contracts.Request.UpdateEventRequest",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -418,15 +380,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "GetTest",
-    "RelativePath": "test",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
   }
 ]

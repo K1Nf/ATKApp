@@ -171,6 +171,16 @@ namespace ATKApplication.Controllers
             var events = await _eventService.GetSortedAndFiltered(filterEntity, page, pageSize);
             return Ok(new { events, eventsCount = events.Count });
         }
+
+
+
+        [HttpGet("/api/ref/themes")]
+        public async Task<IActionResult> GetThemes()
+        {
+            //_db
+            var themes = await _eventService.GetThemes();
+            return Ok(themes);
+        }
     }
 
     public record Sort(string Key, bool OrderBy);

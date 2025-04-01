@@ -397,6 +397,9 @@ namespace ATKApplication.Services
             return orderedQuery!;
         }
 
+        public async Task<List<Theme>> GetThemes() => await _dB.Themes
+            .OrderBy(t => t.Code)
+            .ToListAsync();
     }
 }
 

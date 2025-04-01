@@ -5,11 +5,10 @@ namespace ATKApplication.Models
     public class Theme
     {
         public Guid Id { get; init; }
-        public string Name { get; set; } = null!;
         public string Code { get; set; }
         public string Description { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]
-        public List<Event> Events = [];
+        public List<Event> Events { get; set; } = [];
     }
 }

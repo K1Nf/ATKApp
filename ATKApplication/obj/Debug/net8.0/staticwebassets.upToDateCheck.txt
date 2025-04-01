@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 76d37f0ad739c087af2c4b684faf9a737aab8cb2
 wwwroot\assets\css\events-DlZwj7pn.css
-wwwroot\assets\css\Sidebar-D0Ea8YY-.css
+wwwroot\assets\css\Sidebar-iZhaJAq6.css
 wwwroot\assets\css\toastr-PcHlmDLb.css
-<<<<<<< HEAD
-=======
-wwwroot\assets\css\createEvent-DPlFYqzU.css
-wwwroot\assets\css\events-DlZwj7pn.css
-wwwroot\assets\css\indexForm-Dtn62Xmo.css
-wwwroot\assets\css\Sidebar-YFcQCTQa.css
->>>>>>> 22cbe38af5d104c2f43df2a74c93f0ac2028dd05
-=======
->>>>>>> 76d37f0ad739c087af2c4b684faf9a737aab8cb2
 wwwroot\assets\js\createEvent.js
 wwwroot\assets\js\eventCard.js
 wwwroot\assets\js\events.js

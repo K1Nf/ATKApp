@@ -3,6 +3,7 @@ using System;
 using ATKApplication.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ATKApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250401142530_I123")]
+    partial class I123
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +57,7 @@ namespace ATKApplication.Migrations
                     b.HasIndex("EventId")
                         .IsUnique();
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Event", b =>
@@ -117,7 +120,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("ThemeId");
 
-                    b.ToTable("Events", (string)null);
+                    b.ToTable("Events");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.FeedBack", b =>
@@ -152,7 +155,7 @@ namespace ATKApplication.Migrations
                     b.HasIndex("EventId")
                         .IsUnique();
 
-                    b.ToTable("FeedBacks", (string)null);
+                    b.ToTable("FeedBacks");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Finance", b =>
@@ -184,7 +187,7 @@ namespace ATKApplication.Migrations
                     b.HasIndex("EventId")
                         .IsUnique();
 
-                    b.ToTable("Finances", (string)null);
+                    b.ToTable("Finances");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.InterAgencyCooperation", b =>
@@ -209,7 +212,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("InterAgencyCooperations", (string)null);
+                    b.ToTable("InterAgencyCooperations");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.MediaLink", b =>
@@ -229,7 +232,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("MediaLinks", (string)null);
+                    b.ToTable("MediaLinks");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Organization", b =>
@@ -255,7 +258,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("MunicipalityId");
 
-                    b.ToTable("Organizations", (string)null);
+                    b.ToTable("Organizations");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Plan", b =>
@@ -278,7 +281,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("OrganizationId");
 
-                    b.ToTable("Plans", (string)null);
+                    b.ToTable("Plans");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Report", b =>
@@ -310,7 +313,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("OrganizerId");
 
-                    b.ToTable("Reports", (string)null);
+                    b.ToTable("Reports");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.ReportAndEvent", b =>
@@ -328,7 +331,7 @@ namespace ATKApplication.Migrations
 
                     b.HasIndex("EventId");
 
-                    b.ToTable("ReportAndEvents", (string)null);
+                    b.ToTable("ReportAndEvents");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Theme", b =>
@@ -347,7 +350,7 @@ namespace ATKApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Themes", (string)null);
+                    b.ToTable("Themes");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.Category", b =>
