@@ -38,77 +38,62 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
 
 
 
+  // Состояния для тем и подтем
+  const [topics, setTopics] = useState([]);
+  const [selectedTopic, setSelectedTopic] = useState("");
+  const [subThemes, setSubThemes] = useState([]);
 
 
 
 
 
 
+ // Дата
+ const [dateHasError, setDateHasError] = useState(false);
 
+   // Другие участники
+   const [otherOrganizations, setOtherOrganizations] = useState([]);
 
+   const handleAddOrganization = () => {
+     setOtherOrganizations((prev) => [
+       ...prev,
+       { name: "", role: "", description: "" },
+     ]);
+   };
+ 
+   const handleOrgChange = (index, field, value) => {
+     const updated = [...otherOrganizations];
+     updated[index][field] = value;
+     setOtherOrganizations(updated);
+   };
+ 
+   const handleRemoveOrganization = (index) => {
+     setOtherOrganizations((prev) => prev.filter((_, i) => i !== index));
+   };
 
-  // Дата
-  const [dateHasError, setDateHasError] = useState(false);
-  const handleOtherParticipationChange = (id, value) => {
-    setSelectedOrganizations((prev) => ({
-      ...prev,
-      [id]: { ...prev[id], type: value },
-    }));
-  };
+ // Обратная связь
+ const [feedbackCollected, setFeedbackCollected] = useState(false);
+ const [selectedFeedbackTypes, setSelectedFeedbackTypes] = useState([]);
+ const [feedbackDescription, setFeedbackDescription] = useState("");
 
-  const handleotherDescriptionChange = (id, value) => {
-    setSelectedOrganizations((prev) => ({
-      ...prev,
-      [id]: { ...prev[id], description: value },
-    }));
-  };
+ const feedbackOptions = [
+   "Анкетирование",
+   "Опрос",
+   "Онлайн-опрос",
+   "Интервью",
+ ];
 
+ const handleFeedbackToggle = () => {
+   setFeedbackCollected((prev) => !prev);
+ };
 
-
-// Добавить организацию  
-const [otherOrganizations, setOtherOrganizations] = useState([]);
-
-const handleAddOrganization = () => {
-  setOtherOrganizations((prev) => [
-    ...prev,
-    { name: "", role: "", description: "" }
-  ]);
-};
-
-const handleOrgChange = (index, field, value) => {
-  const updated = [...otherOrganizations];
-  updated[index][field] = value;
-  setOtherOrganizations(updated);
-};
-
-// Удалить организацию  
-const handleRemoveOrganization = (index) => {
-  setOtherOrganizations((prev) => prev.filter((_, i) => i !== index));
-};
-
-  // Обратная связь
-  const [feedbackCollected, setFeedbackCollected] = useState(false);
-  const [selectedFeedbackTypes, setSelectedFeedbackTypes] = useState([]);
-  const [feedbackDescription, setFeedbackDescription] = useState("");
-
-  const feedbackOptions = [
-    "Анкетирование",
-    "Опрос",
-    "Онлайн-опрос",
-    "Интервью",
-  ];
-
-  const handleFeedbackToggle = () => {
-    setFeedbackCollected((prev) => !prev);
-  };
-
-  const handleFeedbackTypeChange = (type) => {
-    setSelectedFeedbackTypes((prev) =>
-      prev.includes(type)
-        ? prev.filter((item) => item !== type)
-        : [...prev, type]
-    );
-  };
+ const handleFeedbackTypeChange = (type) => {
+   setSelectedFeedbackTypes((prev) =>
+     prev.includes(type)
+       ? prev.filter((item) => item !== type)
+       : [...prev, type]
+   );
+ };
 
 
 
@@ -261,44 +246,74 @@ const validateLinks = (linkString) => {
 };
 
 
+
 // Функция для проверки обязательных полей и ссылок
 const handleFormSubmit = async (e) => {
+  
+  e.preventDefault();
+    if (!selectedTopic) {
+      toastr.error("Пожалуйста, выберите тему", "Ошибка");
+      return;
+    }
 
-//Обнуление переменных
-let cleanedFeedbackTypes = feedbackCollected ? selectedFeedbackTypes : [];
-let cleanedFeedbackDescription = feedbackCollected ? feedbackDescription : "";
+    // Создаем объект с данными для отправки на сервер
+    try {
+      const response = await fetch("/api/ref/events/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(createEventRequest),
+      });
 
-let cleanedFinancing = hasFinancing ? financing : {
-  municipal: "",
-  regional: "",
-  grants: "",
-  other: ""
-};
-let cleanedFinancingOther = hasFinancing ? financingOtherDescription : "";
+      if (!response.ok) {
+        throw new Error("Ошибка при создании события");
+      }
 
-let cleanedOrganizations = isCooperation ? selectedOrganizations : {};
+      const data = await response.text();
+      toastr.success("Данные успешно сохранены!", "Успех");
+      console.log("Событие создано:", data);
+    } catch (error) {
+      console.error("Ошибка:", error);
+      toastr.error("Произошла ошибка при создании события", "Ошибка");
+    }
+  
+    console.log("Topics:", topics);  // Логируем темы в JSX, чтобы проверить, что они обновляются
 
-let cleanedPeerFormat = equalFormat ? peerFormatDescription : "";
+  //Обнуление переменных
+  let cleanedFeedbackTypes = feedbackCollected ? selectedFeedbackTypes : [];
+  let cleanedFeedbackDescription = feedbackCollected ? feedbackDescription : "";
 
-let cleanedParticipants = detailedInput ? customParticipants : [];
+  let cleanedFinancing = hasFinancing ? financing : {
+    municipal: "",
+    regional: "",
+    grants: "",
+    other: ""
+  };
+  let cleanedFinancingOther = hasFinancing ? financingOtherDescription : "";
+
+  let cleanedOrganizations = isCooperation ? selectedOrganizations : {};
+
+  let cleanedPeerFormat = equalFormat ? peerFormatDescription : "";
+
+  let cleanedParticipants = detailedInput ? customParticipants : [];
 
 
 
 
-// Проверка даты
-const dateElement = document.getElementById("event_date");
-const selectedDate = new Date(eventDate);
-const currentYear = new Date().getFullYear();
+  // Проверка даты
+  const dateElement = document.getElementById("event_date");
+  const selectedDate = new Date(eventDate);
+  const currentYear = new Date().getFullYear();
 
-if (selectedDate.getFullYear() !== currentYear) {
-  dateElement?.classList.add("error");
-  dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
-  alert("Дата должна быть в пределах текущего года.");
-  return;
-} else {
-  dateElement?.classList.remove("error");
-}
-
+  if (selectedDate.getFullYear() !== currentYear) {
+    dateElement?.classList.add("error");
+    dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
+    alert("Дата должна быть в пределах текущего года.");
+    return;
+  } else {
+    dateElement?.classList.remove("error");
+  }
 
 
   e.preventDefault();
@@ -416,6 +431,77 @@ if (selectedDate.getFullYear() !== currentYear) {
   console.log("---------------");
 
   const backCreateUrl = `/api/ref/events/create`;
+  const [topics, setTopics] = useState([]); // Состояние для списка тем
+  const [selectedTopic, setSelectedTopic] = useState(""); // Состояние для выбранной темы
+
+  // Получаем список тем при монтировании компонента
+  useEffect(() => {
+    const fetchTopics = async () => {
+      try {
+        const response = await fetch('/api/ref/themes');
+        const data = await response.json();
+        setTopics(data);  // Сохраняем полученные данные в состояние
+      } catch (error) {
+        console.error('Ошибка при получении тем:', error);
+      }
+    };
+
+    fetchTopics();  // Вызовем функцию для получения данных
+  }, []); // Зависимость [] — запрос только при первом рендере компонента
+
+  // Обработчик отправки формы
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!selectedTopic) {
+      toastr.error("Пожалуйста, выберите тему!", "Ошибка");
+      return;
+    }
+
+    const createEventRequest = {
+      topic: selectedTopic,
+      // Добавьте другие данные формы
+    };
+
+    try {
+      const response = await fetch('/api/ref/events/create', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(createEventRequest)
+      });
+
+      if (!response.ok) {
+        throw new Error("Ошибка при создании события");
+      }
+
+      const data = await response.text();
+      toastr.success("Данные успешно сохранены!", "Успех");
+      console.log("Событие создано:", data);
+    } catch (error) {
+      console.error("Ошибка:", error);
+      toastr.error("Произошла ошибка при создании события", "Ошибка");
+    }
+  };
+
+
+  useEffect(() => {
+    const fetchSubThemes = async () => {
+      try {
+        // Измененный URL для получения подтем
+        const response = await fetch(`/api/ref/subthemes?topic=${selectedTopic}`);
+        const data = await response.json();
+        setSubThemes(data);  // Сохраняем подтемы в состояние
+      } catch (error) {
+        console.error("Ошибка при получении подтем:", error);
+      }
+    };
+  
+    if (selectedTopic) {
+      fetchSubThemes();  // Запрашиваем подтемы только если тема выбрана
+    }
+  }, [selectedTopic]);  // Запрос подтем происходит при изменении выбранной темы
 
   // отправка нового мероприятия на сервер
   try {
@@ -442,109 +528,150 @@ if (selectedDate.getFullYear() !== currentYear) {
 
 
 };
-  const handleOtherDescriptionChange = (e) => setOtherDescription(e.target.value);
-  const getDescription = (subTheme) => {
-    switch (subTheme) {
-      case "1.1.1":
-        return `"Проведение мероприятий, посвященных Дню защитника Отечества (23 февраля), Дню солидарности в борьбе с терроризмом (3 сентября), Дню Героев Отечества (9 декабря)  с привлечением военнослужащих, сотрудников правоохранительных органов и гражданских лиц, участвовавших в борьбе с терроризмом, экспертов, журналистов, общественных деятелей"`
-      case "1.1.2":
-        return "Описание для темы 1.1.2.";
-      case "1.1.3":
-        return "Описание для темы 1.1.3.";
-      case "1.2.1":
-        return "Описание для темы 1.2.1.";
-      case "1.3.1.1":
-        return "Описание для темы 1.3.1.1.";
-      case "1.3.1.2":
-        return "Описание для темы 1.3.1.2.";
-      case "1.3.2":
-        return "Описание для темы 1.3.2.";
-      case "1.3.3.1":
-        return "Описание для темы 1.3.3.1.";
-      case "1.3.3.2":
-        return "Описание для темы 1.3.3.2.";
-      case "1.3.4":
-        return "Описание для темы 1.3.4.";
-      case "1.3.5":
-        return "Описание для темы 1.3.5.";
-      case "1.4":
-        return "Описание для темы 1.4.";
-      case "1.5.1":
-        return "Описание для темы 1.5.1.";
-      case "1.5.2":
-        return "Описание для темы 1.5.2.";
-      case "1.6":
-        return "Описание для темы 1.6.";
-      case "2.1":
-        return "Описание для темы 2.1.";
-      case "2.2":
-        return "Описание для темы 2.2.";
-      case "2.3":
-        return "Описание для темы 2.3.";
-      case "2.4":
-        return "Описание для темы 2.4.";
-      case "2.5":
-        return "Описание для темы 2.5.";
-      case "2.6":
-        return "Описание для темы 2.6.";
-      case "2.7.1":
-        return "Описание для темы 2.7.1.";
-      case "2.7.2":
-        return "Описание для темы 2.7.2.";
-      case "2.8":
-        return "Описание для темы 2.8.";
-      case "3.1.1":
-        return "Описание для темы 3.1.1.";
-      case "3.1.2":
-        return "Описание для темы 3.1.2.";
-      case "3.2.1":
-        return "Описание для темы 3.2.1.";
-      case "3.2.2":
-        return "Описание для темы 3.2.2.";
-      case "3.2.3":
-        return "Описание для темы 3.2.3.";
-      case "3.3.1":
-        return "Описание для темы 3.3.1.";
-      case "3.3.2":
-        return "Описание для темы 3.3.2.";
-      case "3.4.1":
-        return "Описание для темы 3.4.1.";
-      case "3.4.2":
-        return "Описание для темы 3.4.2.";
-      case "3.4.3":
-        return "Описание для темы 3.4.3.";
-      case "3.5":
-        return "Описание для темы 3.5.";
-      case "3.6":
-        return "Описание для темы 3.6.";
-      case "4.1.1":
-        return "Описание для темы 4.1.1.";
-      case "4.1.3":
-        return "Описание для темы 4.1.3.";
-      case "4.2":
-        return "Описание для темы 4.2.";
-      case "4.3":
-        return "Описание для темы 4.3.";
-      case "4.4":
-        return "Описание для темы 4.4.";
-      case "4.5":
-        return "Описание для темы 4.5.";
-      case "4.6":
-        return "Описание для темы 4.6.";
-      case "4.7":
-        return "Описание для темы 4.7.";
-      case "4.8":
-        return "Описание для темы 4.8.";
-      case "5.2":
-        return "Описание для темы 5.2.";
-      case "5.6":
-        return "Описание для темы 5.6.";
-      case "5.9":
-        return "Описание для темы 5.9.";
-      default:
-        return "";
+
+  const [description, setDescription] = useState(""); // Состояние для описания выбранной темы
+
+  useEffect(() => {
+    const fetchTopics = async () => {
+      try {
+        const response = await fetch('/api/ref/themes');
+        const data = await response.json();
+        console.log("Темы:", data);  // Проверка, что данные получены
+        setTopics(data);  // Сохраняем полученные данные в состояние
+      } catch (error) {
+        console.error('Ошибка при получении тем:', error);
+      }
+    };
+  
+    fetchTopics();  // Запрос при монтировании компонента
+  }, []);  // Запрос выполняется только при первом рендере компонента
+
+  // Обработчик изменения выбранной темы
+  const handleTopicChange = (e) => {
+    const topicCode = e.target.value;
+    setSelectedTopic(topicCode);
+  
+    // Ищем описание для выбранной темы
+    const selectedTopicData = topics.find((t) => t.code === topicCode);
+    if (selectedTopicData) {
+      setDescription(selectedTopicData.description); // Устанавливаем описание
+    } else {
+      setDescription(""); // Если тема не найдена, очищаем описание
     }
   };
+
+  // Обработчик отправки формы
+
+    
+
+
+  const handleOtherDescriptionChange = (e) => setOtherDescription(e.target.value);
+  const getDescription = (subTheme) => {
+    const foundSubTheme = subThemes.find((st) => st.name === subTheme);
+    return foundSubTheme ? foundSubTheme.description : "Описание не найдено";
+  };
+  // const getDescription = (subTheme) => {
+    // switch (subTheme) {
+    //   case "1.1.1":
+    //     return `"Проведение мероприятий, посвященных Дню защитника Отечества (23 февраля), Дню солидарности в борьбе с терроризмом (3 сентября), Дню Героев Отечества (9 декабря)  с привлечением военнослужащих, сотрудников правоохранительных органов и гражданских лиц, участвовавших в борьбе с терроризмом, экспертов, журналистов, общественных деятелей"`
+    //   case "1.1.2":
+    //     return "Описание для темы 1.1.2.";
+    //   case "1.1.3":
+    //     return "Описание для темы 1.1.3.";
+    //   case "1.2.1":
+    //     return "Описание для темы 1.2.1.";
+    //   case "1.3.1.1":
+    //     return "Описание для темы 1.3.1.1.";
+    //   case "1.3.1.2":
+    //     return "Описание для темы 1.3.1.2.";
+    //   case "1.3.2":
+    //     return "Описание для темы 1.3.2.";
+    //   case "1.3.3.1":
+    //     return "Описание для темы 1.3.3.1.";
+    //   case "1.3.3.2":
+    //     return "Описание для темы 1.3.3.2.";
+    //   case "1.3.4":
+    //     return "Описание для темы 1.3.4.";
+    //   case "1.3.5":
+    //     return "Описание для темы 1.3.5.";
+    //   case "1.4":
+    //     return "Описание для темы 1.4.";
+    //   case "1.5.1":
+    //     return "Описание для темы 1.5.1.";
+    //   case "1.5.2":
+    //     return "Описание для темы 1.5.2.";
+    //   case "1.6":
+    //     return "Описание для темы 1.6.";
+    //   case "2.1":
+    //     return "Описание для темы 2.1.";
+    //   case "2.2":
+    //     return "Описание для темы 2.2.";
+    //   case "2.3":
+    //     return "Описание для темы 2.3.";
+    //   case "2.4":
+    //     return "Описание для темы 2.4.";
+    //   case "2.5":
+    //     return "Описание для темы 2.5.";
+    //   case "2.6":
+    //     return "Описание для темы 2.6.";
+    //   case "2.7.1":
+    //     return "Описание для темы 2.7.1.";
+    //   case "2.7.2":
+    //     return "Описание для темы 2.7.2.";
+    //   case "2.8":
+    //     return "Описание для темы 2.8.";
+    //   case "3.1.1":
+    //     return "Описание для темы 3.1.1.";
+    //   case "3.1.2":
+    //     return "Описание для темы 3.1.2.";
+    //   case "3.2.1":
+    //     return "Описание для темы 3.2.1.";
+    //   case "3.2.2":
+    //     return "Описание для темы 3.2.2.";
+    //   case "3.2.3":
+    //     return "Описание для темы 3.2.3.";
+    //   case "3.3.1":
+    //     return "Описание для темы 3.3.1.";
+    //   case "3.3.2":
+    //     return "Описание для темы 3.3.2.";
+    //   case "3.4.1":
+    //     return "Описание для темы 3.4.1.";
+    //   case "3.4.2":
+    //     return "Описание для темы 3.4.2.";
+    //   case "3.4.3":
+    //     return "Описание для темы 3.4.3.";
+    //   case "3.5":
+    //     return "Описание для темы 3.5.";
+    //   case "3.6":
+    //     return "Описание для темы 3.6.";
+    //   case "4.1.1":
+    //     return "Описание для темы 4.1.1.";
+    //   case "4.1.3":
+    //     return "Описание для темы 4.1.3.";
+    //   case "4.2":
+    //     return "Описание для темы 4.2.";
+    //   case "4.3":
+    //     return "Описание для темы 4.3.";
+    //   case "4.4":
+    //     return "Описание для темы 4.4.";
+    //   case "4.5":
+    //     return "Описание для темы 4.5.";
+    //   case "4.6":
+    //     return "Описание для темы 4.6.";
+    //   case "4.7":
+    //     return "Описание для темы 4.7.";
+    //   case "4.8":
+    //     return "Описание для темы 4.8.";
+    //   case "5.2":
+    //     return "Описание для темы 5.2.";
+    //   case "5.6":
+    //     return "Описание для темы 5.6.";
+    //   case "5.9":
+    //     return "Описание для темы 5.9.";
+    //   default:
+    //     return "";
+    // }
+  // };
 
   return (
     <div>
@@ -570,82 +697,42 @@ if (selectedDate.getFullYear() !== currentYear) {
             {/* Форма для выбранной темы */}
             {selectedTheme === "1" && (
               <div id="form_theme_1" className="form-block">
-                <h1>Форма создания мероприятия</h1>
-                <form onSubmit={handleFormSubmit}>
-                  <label htmlFor="themeSelection">
-                    Выбор темы
-                    <span style={{ color: "red" }}>*</span>
-                    <span className="tooltip">
-                      <span className="question-icon">?</span>
-                      <span className="tooltiptext">Это обязательное поле</span>
-                    </span>
-                  </label>
-  
-                  <select
-                    id="themeSelection"
-                    value={selectedSubTheme}
-                    onChange={handleSubThemeChange}
-                    required
-                  >
-                    <option value="">Выберите тему</option>
-                    <option value="1.1.1">1.1.1</option>
-                    <option value="1.1.2">1.1.2</option>
-                    <option value="1.1.3">1.1.3</option>
-                    <option value="1.2.1">1.2.1</option>
-                    <option value="1.3.1.1">1.3.1.1</option>
-                    <option value="1.3.1.2">1.3.1.2</option>
-                    <option value="1.3.2">1.3.2</option>
-                    <option value="1.3.3.1">1.3.3.1</option>
-                    <option value="1.3.3.2">1.3.3.2</option>
-                    <option value="1.3.4">1.3.4</option>
-                    <option value="1.3.5">1.3.5</option>
-                    <option value="1.4">1.4</option>
-                    <option value="1.5.1">1.5.1</option>
-                    <option value="1.5.2">1.5.2</option>
-                    <option value="1.6">1.6</option>
-                    <option value="2.1">2.1</option>
-                    <option value="2.2">2.2</option>
-                    <option value="2.3">2.3</option>
-                    <option value="2.4">2.4</option>
-                    <option value="2.5">2.5</option>
-                    <option value="2.6">2.6</option>
-                    <option value="2.7.1">2.7.1</option>
-                    <option value="2.7.2">2.7.2</option>
-                    <option value="2.8">2.8</option>
-                    <option value="3.1.1">3.1.1</option>
-                    <option value="3.1.2">3.1.2</option>
-                    <option value="3.2.1">3.2.1</option>
-                    <option value="3.2.2">3.2.2</option>
-                    <option value="3.2.3">3.2.3</option>
-                    <option value="3.3.1">3.3.1</option>
-                    <option value="3.3.2">3.3.2</option>
-                    <option value="3.4.1">3.4.1</option>
-                    <option value="3.4.2">3.4.2</option>
-                    <option value="3.4.3">3.4.3</option>
-                    <option value="3.5">3.5</option>
-                    <option value="3.6">3.6</option>
-                    <option value="4.1.1">4.1.1</option>
-                    <option value="4.1.3">4.1.3</option>
-                    <option value="4.2">4.2</option>
-                    <option value="4.3">4.3</option>
-                    <option value="4.4">4.4</option>
-                    <option value="4.5">4.5</option>
-                    <option value="4.6">4.6</option>
-                    <option value="4.7">4.7</option>
-                    <option value="4.8">4.8</option>
-                    <option value="5.2">5.2</option>
-                    <option value="5.6">5.6</option>
-                    <option value="5.9">5.9</option>
-                  </select>
-  
-                  {/* Отображение описания выбранной темы */}
-                  <div
-                    id="description"
-                    className={selectedSubTheme ? "description visible" : "description"}
-                  >
-                    <p>{getDescription(selectedSubTheme)} </p>
-                  </div>
-  
+                 <h1>Форма создания мероприятия</h1>
+      <form onSubmit={handleFormSubmit}>
+        <label htmlFor="themeSelection">
+          Выбор темы
+          <span style={{ color: "red" }}>*</span>
+          <span className="tooltip">
+            <span className="question-icon">?</span>
+            <span className="tooltiptext">Это обязательное поле</span>
+          </span>
+        </label>
+
+        <select
+          id="topic"
+          name="topic"
+          value={selectedTopic}
+          onChange={handleTopicChange}
+        >
+          <option value="">Выберите тему</option>
+          {topics.length > 0 ? (
+            topics.map((topic) => (
+              <option key={topic.id} value={topic.code}>
+                {topic.code}  {/* Здесь отображаем номер темы */}
+              </option>
+            ))
+          ) : (
+            <option disabled>Темы не загружены</option>  // Сообщение, если темы не загружены
+          )}
+        </select>
+
+        {/* Отображение описания выбранной темы в красной рамке */}
+        {selectedTopic && description && (
+          <div className="description-container">
+            <h3>Описание темы:</h3>
+            <p>{description}</p>
+          </div>
+        )}
                   {/* Основная информация о мероприятии */}
                   <section className="form-section1">
                     <h2>Основная информация о мероприятии</h2>
