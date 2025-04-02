@@ -4,6 +4,7 @@ import "toastr/build/toastr.min.css";
 import "./EventForm.css";
 
 // Подключаем все необходимые компоненты формы
+import BaseInfo_Themes from "../components/EventFormSections/BaseInfo_Themes"; // Импортируем компонент
 import BasicInfo_LinkLevelFormat from "../components/EventFormSections/BasicInfo_LinkLevelFormat"; // Основная информация о мероприятии
 import BasicInfo_NameDataDeskEventForm from "../components/EventFormSections/BasicInfo_NameDataDeskEvent"; // Имя и дата мероприятия
 import BasicInfo_ResultDecision from "../components/EventFormSections/BasicInfo_ResultDecision"; // Результат проведения и управленческие решения
@@ -37,16 +38,10 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
   };
 
 
-
   // Состояния для тем и подтем
   const [topics, setTopics] = useState([]);
   const [selectedTopic, setSelectedTopic] = useState("");
   const [subThemes, setSubThemes] = useState([]);
-
-
-
-
-
 
  // Дата
  const [dateHasError, setDateHasError] = useState(false);
@@ -562,116 +557,12 @@ const handleFormSubmit = async (e) => {
 
   // Обработчик отправки формы
 
-    
-
-
   const handleOtherDescriptionChange = (e) => setOtherDescription(e.target.value);
   const getDescription = (subTheme) => {
     const foundSubTheme = subThemes.find((st) => st.name === subTheme);
     return foundSubTheme ? foundSubTheme.description : "Описание не найдено";
   };
-  // const getDescription = (subTheme) => {
-    // switch (subTheme) {
-    //   case "1.1.1":
-    //     return `"Проведение мероприятий, посвященных Дню защитника Отечества (23 февраля), Дню солидарности в борьбе с терроризмом (3 сентября), Дню Героев Отечества (9 декабря)  с привлечением военнослужащих, сотрудников правоохранительных органов и гражданских лиц, участвовавших в борьбе с терроризмом, экспертов, журналистов, общественных деятелей"`
-    //   case "1.1.2":
-    //     return "Описание для темы 1.1.2.";
-    //   case "1.1.3":
-    //     return "Описание для темы 1.1.3.";
-    //   case "1.2.1":
-    //     return "Описание для темы 1.2.1.";
-    //   case "1.3.1.1":
-    //     return "Описание для темы 1.3.1.1.";
-    //   case "1.3.1.2":
-    //     return "Описание для темы 1.3.1.2.";
-    //   case "1.3.2":
-    //     return "Описание для темы 1.3.2.";
-    //   case "1.3.3.1":
-    //     return "Описание для темы 1.3.3.1.";
-    //   case "1.3.3.2":
-    //     return "Описание для темы 1.3.3.2.";
-    //   case "1.3.4":
-    //     return "Описание для темы 1.3.4.";
-    //   case "1.3.5":
-    //     return "Описание для темы 1.3.5.";
-    //   case "1.4":
-    //     return "Описание для темы 1.4.";
-    //   case "1.5.1":
-    //     return "Описание для темы 1.5.1.";
-    //   case "1.5.2":
-    //     return "Описание для темы 1.5.2.";
-    //   case "1.6":
-    //     return "Описание для темы 1.6.";
-    //   case "2.1":
-    //     return "Описание для темы 2.1.";
-    //   case "2.2":
-    //     return "Описание для темы 2.2.";
-    //   case "2.3":
-    //     return "Описание для темы 2.3.";
-    //   case "2.4":
-    //     return "Описание для темы 2.4.";
-    //   case "2.5":
-    //     return "Описание для темы 2.5.";
-    //   case "2.6":
-    //     return "Описание для темы 2.6.";
-    //   case "2.7.1":
-    //     return "Описание для темы 2.7.1.";
-    //   case "2.7.2":
-    //     return "Описание для темы 2.7.2.";
-    //   case "2.8":
-    //     return "Описание для темы 2.8.";
-    //   case "3.1.1":
-    //     return "Описание для темы 3.1.1.";
-    //   case "3.1.2":
-    //     return "Описание для темы 3.1.2.";
-    //   case "3.2.1":
-    //     return "Описание для темы 3.2.1.";
-    //   case "3.2.2":
-    //     return "Описание для темы 3.2.2.";
-    //   case "3.2.3":
-    //     return "Описание для темы 3.2.3.";
-    //   case "3.3.1":
-    //     return "Описание для темы 3.3.1.";
-    //   case "3.3.2":
-    //     return "Описание для темы 3.3.2.";
-    //   case "3.4.1":
-    //     return "Описание для темы 3.4.1.";
-    //   case "3.4.2":
-    //     return "Описание для темы 3.4.2.";
-    //   case "3.4.3":
-    //     return "Описание для темы 3.4.3.";
-    //   case "3.5":
-    //     return "Описание для темы 3.5.";
-    //   case "3.6":
-    //     return "Описание для темы 3.6.";
-    //   case "4.1.1":
-    //     return "Описание для темы 4.1.1.";
-    //   case "4.1.3":
-    //     return "Описание для темы 4.1.3.";
-    //   case "4.2":
-    //     return "Описание для темы 4.2.";
-    //   case "4.3":
-    //     return "Описание для темы 4.3.";
-    //   case "4.4":
-    //     return "Описание для темы 4.4.";
-    //   case "4.5":
-    //     return "Описание для темы 4.5.";
-    //   case "4.6":
-    //     return "Описание для темы 4.6.";
-    //   case "4.7":
-    //     return "Описание для темы 4.7.";
-    //   case "4.8":
-    //     return "Описание для темы 4.8.";
-    //   case "5.2":
-    //     return "Описание для темы 5.2.";
-    //   case "5.6":
-    //     return "Описание для темы 5.6.";
-    //   case "5.9":
-    //     return "Описание для темы 5.9.";
-    //   default:
-    //     return "";
-    // }
-  // };
+ 
 
   return (
     <div>
@@ -690,49 +581,31 @@ const handleFormSubmit = async (e) => {
             <label htmlFor="theme_select">Создание формы по номеру темы</label>
             <select id="theme_select" value={selectedTheme} onChange={handleThemeChange}>
               <option value="none">Выберите тему</option>
-              <option value="1">1.1.1, 1.2.1</option>
-              <option value="2">2.1.1</option>
+              <option value="1">1.1.1, 1.2.1, 1.1.3, 1.2.1, 1.3.1.1, 1.3.1.2, 1.3.3.1, 1.3.3.2, 1.3.4, 1.5.1, 1.5.2, 2.2, 2.3, 2.4, 2.5, 2.6, 3.6, 4.1.1</option>
+              <option value="2">1.3.5</option>
+              <option value="3">1.4</option>
+              <option value="4">2.7.1</option>
+              <option value="5">2.7.2</option>
+              <option value="6">3.2.1 </option>
+              <option value="7">3.2.2 </option>
+              <option value="8">3.4.3 </option>
+              <option value="9">3.5 </option>
+              <option value="10">3.6 </option>
+              <option value="11">4.2 </option>
             </select>
   
-            {/* Форма для выбранной темы */}
+            {/* Форма для выбранной темы 1*/}
             {selectedTheme === "1" && (
               <div id="form_theme_1" className="form-block">
                  <h1>Форма создания мероприятия</h1>
-      <form onSubmit={handleFormSubmit}>
-        <label htmlFor="themeSelection">
-          Выбор темы
-          <span style={{ color: "red" }}>*</span>
-          <span className="tooltip">
-            <span className="question-icon">?</span>
-            <span className="tooltiptext">Это обязательное поле</span>
-          </span>
-        </label>
-
-        <select
-          id="topic"
-          name="topic"
-          value={selectedTopic}
-          onChange={handleTopicChange}
-        >
-          <option value="">Выберите тему</option>
-          {topics.length > 0 ? (
-            topics.map((topic) => (
-              <option key={topic.id} value={topic.code}>
-                {topic.code}  {/* Здесь отображаем номер темы */}
-              </option>
-            ))
-          ) : (
-            <option disabled>Темы не загружены</option>  // Сообщение, если темы не загружены
-          )}
-        </select>
-
-        {/* Отображение описания выбранной темы в красной рамке */}
-        {selectedTopic && description && (
-          <div className="description-container">
-            <h3>Описание темы:</h3>
-            <p>{description}</p>
-          </div>
-        )}
+                <form onSubmit={handleFormSubmit}>
+                  <BaseInfo_Themes
+                      topics={topics} 
+                      selectedTopic={selectedTopic} 
+                      setSelectedTopic={setSelectedTopic} 
+                      description={description} 
+                      setDescription={setDescription} 
+                    />
                   {/* Основная информация о мероприятии */}
                   <section className="form-section1">
                     <h2>Основная информация о мероприятии</h2>
@@ -838,9 +711,11 @@ const handleFormSubmit = async (e) => {
                   <button type="button" onClick={() => toastr.success("Данные успешно сохранены и добавлены в таблицу", "Успех")}>
                     Показать Toastr
                   </button>
+                  
                 </form>
               </div>
             )}
+            
           </div>
         </div>
       </form>

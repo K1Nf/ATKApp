@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ATKApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a66b9a09cb4bfc526794710cded3b2884965eb1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08a21326e98290719fad571b67e388670ec660c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ATKApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ATKApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

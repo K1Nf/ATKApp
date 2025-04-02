@@ -1,5 +1,5 @@
 wwwroot\assets\css\events-DlZwj7pn.css
-wwwroot\assets\css\Sidebar-iZhaJAq6.css
+wwwroot\assets\css\Sidebar-G10zORfr.css
 wwwroot\assets\css\toastr-PcHlmDLb.css
 wwwroot\assets\js\createEvent.js
 wwwroot\assets\js\eventCard.js
