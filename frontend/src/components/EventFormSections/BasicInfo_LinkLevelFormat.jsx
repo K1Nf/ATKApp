@@ -1,6 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const BasicInfo_LinkLevelFormat = ({ link, setLink, level, setLevel, formConducted, setFormConducted, isOtherDescriptionVisible, setIsOtherDescriptionVisible, otherDescription, setOtherDescription }) => {
+const BasicInfo_LinkLevelFormat = ({
+  link,
+  setLink,
+  level,
+  setLevel,
+  formConducted,
+  setFormConducted,
+  isOtherDescriptionVisible,
+  setIsOtherDescriptionVisible,
+  otherDescription,
+  setOtherDescription,
+  setLevelTitle,
+  selectedTopic,
+  levelTitle
+   // Добавим selectedTopic для отслеживания выбранной темы
+}) => {
 
   // Обработчики для полей
   const handleLinkChange = (e) => setLink(e.target.value);
@@ -12,12 +27,21 @@ const BasicInfo_LinkLevelFormat = ({ link, setLink, level, setLevel, formConduct
   };
   const handleOtherDescriptionChange = (e) => setOtherDescription(e.target.value);
 
+  // Изменяем название поля в зависимости от выбранной темы
+  useEffect(() => {
+    if (selectedTopic === "1.3.4") {
+      setLevelTitle("Уровень проекта"); // Если тема выбрана 1.3.4, изменим заголовок
+    } else {
+      setLevelTitle("Уровень мероприятия"); // Восстановим стандартное название уровня
+    }
+  }, [selectedTopic, setLevelTitle]); // Срабатывает при изменении выбранной темы
+
   return (
     <>
       {/* Ссылка на СМИ/СМК */}
       <section>
         <label htmlFor="link">
-          Ссылка на СМИ/СМК 
+          Ссылка на СМИ/СМК
           <span className="required">*</span>
           <span className="tooltip">
             <span className="question-icon">?</span>
@@ -39,7 +63,7 @@ const BasicInfo_LinkLevelFormat = ({ link, setLink, level, setLevel, formConduct
       {/* Уровень мероприятия */}
       <section>
         <label htmlFor="level">
-          Уровень мероприятия 
+          {levelTitle} {/* Показываем динамический заголовок */}
           <span className="required">*</span>
           <span className="tooltip">
             <span className="question-icon">?</span>
@@ -48,7 +72,7 @@ const BasicInfo_LinkLevelFormat = ({ link, setLink, level, setLevel, formConduct
 
           <span className="tooltip">
             <span className="question-icon">!</span>
-            <span className="tooltiptext">Влияет на рейтинг мероприятия</span>
+            <span className="tooltiptext">Влияет на рейтинг</span>
           </span>
         </label>
         <select
@@ -72,7 +96,7 @@ const BasicInfo_LinkLevelFormat = ({ link, setLink, level, setLevel, formConduct
       {/* Форма проведения */}
       <section>
         <label htmlFor="formConducted">
-          Форма проведения 
+          Форма проведения
           <span className="required">*</span>
           <span className="tooltip">
             <span className="question-icon">?</span>
@@ -80,7 +104,7 @@ const BasicInfo_LinkLevelFormat = ({ link, setLink, level, setLevel, formConduct
           </span>
           <span className="tooltip">
             <span className="question-icon">!</span>
-            <span className="tooltiptext">Влияет на рейтинг мероприятия</span>
+            <span className="tooltiptext">Влияет на рейтинг</span>
           </span>
         </label>
         <select

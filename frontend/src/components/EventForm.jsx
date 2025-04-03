@@ -13,8 +13,13 @@ import DopInfo_Finanse from "../components/EventFormSections/DopInfo_Finanse"; /
 import DopInfo_ImportantTheBestEqual from "../components/EventFormSections/DopInfo_ImportantTheBestEqual"; // Дополнительные характеристики
 import DopInfo_Participants from "../components/EventFormSections/DopInfo_Participants"; // Количество участников
 import DopInfo_Feedback from "../components/EventFormSections/DopInfo_Feedback"; // Обратная связь
+import BaseInfo_Project from "../components/EventFormSections/BasicInfo_Project";
+import BaseInfo_TeachMaterials from "../components/EventFormSections/BasicInfo_TeachMaterials"
+
 
 const EventForm = () => {
+
+
     // равный равному
 const [isPeerFormat, setIsPeerFormat] = useState(false);
 const [peerFormatDescription, setPeerFormatDescription] = useState("");
@@ -191,20 +196,26 @@ const [peerFormatDescription, setPeerFormatDescription] = useState("");
   };
 
   const [eventName, setEventName] = useState("");
+  const [projectName, setProjectName] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [eventDescription, setEventDescription] = useState("");
+  const [ProjectDescription, setProjectDescription] = useState("");
   const [level, setLevel] = useState("");
   const [link, setLink] = useState("");
   const [formConducted, setFormConducted] = useState("");
   const [otherDescription, setOtherDescription] = useState("");
   const [isOtherDescriptionVisible, setIsOtherDescriptionVisible] = useState(false);
 
+
+
   // Обработчики изменений
   const handleEventNameChange = (e) => setEventName(e.target.value);
+  const handleprojectNameChange = (e) => setProjectName(e.target.value);
   const handleEventDateChange = (e) => setEventDate(e.target.value);
   const handleEventDescriptionChange = (e) => setEventDescription(e.target.value);
   const handleLevelChange = (e) => setLevel(e.target.value);
   const handleLinkChange = (e) => setLink(e.target.value);
+  
   const handleFormConductedChange = (e) => {
     const value = e.target.value;
     setFormConducted(value);
@@ -317,6 +328,7 @@ const handleFormSubmit = async (e) => {
 
   const requiredFields = [
     { value: eventName, id: "event_name" },
+    { value: projectName, id: "event_name" },
     { value: eventDate, id: "event_date" },
     { value: eventDescription, id: "event_description" },
     { value: link, id: "link" },
@@ -427,7 +439,7 @@ const handleFormSubmit = async (e) => {
 
   const backCreateUrl = `/api/ref/events/create`;
   const [topics, setTopics] = useState([]); // Состояние для списка тем
-  const [selectedTopic, setSelectedTopic] = useState(""); // Состояние для выбранной темы
+
 
   // Получаем список тем при монтировании компонента
   useEffect(() => {
@@ -563,6 +575,31 @@ const handleFormSubmit = async (e) => {
     return foundSubTheme ? foundSubTheme.description : "Описание не найдено";
   };
  
+  // Изменяем название поля в зависимости от выбранной темы
+  const [fieldTitle, setFieldTitle] = useState("Название мероприятия"); // Состояние для названия поля
+  const [descriptionTitle, setDescriptionTitle] = useState("Краткое описание мероприятия"); // Заголовок для краткого описания
+  const [levelTitle, setLevelTitle] = useState("Уровень мероприятия"); // Заголовок для уровня мероприятия
+  const [formType, setFormType] = useState(null);  // Тип формы
+
+  const [isInfoSupported, setIsInfoSupported] = useState(false);
+  const [isMethodologicalSupported, setIsMethodologicalSupported] = useState(false);
+  const [isOrganizationalSupported, setIsOrganizationalSupported] = useState(false);
+  const [isFinancialSupported, setIsFinancialSupported] = useState(false);
+  const [isOtherSupported, setIsOtherSupported] = useState(false);
+
+  const [namePlaceholder, setNamePlaceholder] = useState("Введите название мероприятия");
+
+
+  const [isInfoChecked, setIsInfoChecked] = useState(false);
+  const [isMethodChecked, setIsMethodChecked] = useState(false);
+  const [isOrgChecked, setIsOrgChecked] = useState(false);
+  const [isOtherChecked, setIsOtherChecked] = useState(false);
+  const [isCompetitionDirectionChecked, setIsCompetitionDirectionChecked] = useState(false);
+  const [competitionDescription, setCompetitionDescription] = useState("");
+  const [participationResult, setParticipationResult] = useState("");
+  const [winnerDetails, setWinnerDetails] = useState("");
+
+
 
   return (
     <div>
@@ -579,56 +616,47 @@ const handleFormSubmit = async (e) => {
   
             {/* Выбор темы */}
             <label htmlFor="theme_select">Создание формы по номеру темы</label>
-            <select id="theme_select" value={selectedTheme} onChange={handleThemeChange}>
-              <option value="none">Выберите тему</option>
-              <option value="1">1.1.1, 1.2.1, 1.1.3, 1.2.1, 1.3.1.1, 1.3.1.2, 1.3.3.1, 1.3.3.2, 1.3.4, 1.5.1, 1.5.2, 2.2, 2.3, 2.4, 2.5, 2.6, 3.6, 4.1.1</option>
-              <option value="2">1.3.5</option>
-              <option value="3">1.4</option>
-              <option value="4">2.7.1</option>
-              <option value="5">2.7.2</option>
-              <option value="6">3.2.1 </option>
-              <option value="7">3.2.2 </option>
-              <option value="8">3.4.3 </option>
-              <option value="9">3.5 </option>
-              <option value="10">3.6 </option>
-              <option value="11">4.2 </option>
-            </select>
+  
+
+            <BaseInfo_Themes
+              topics={topics} 
+              selectedTopic={selectedTopic} 
+              setSelectedTopic={setSelectedTopic} 
+              description={description} 
+              setDescription={setDescription} 
+              setFormType={setFormType} // Передаем функцию для обновления формы
+            />
   
             {/* Форма для выбранной темы 1*/}
-            {selectedTheme === "1" && (
+            {formType === 1  && (
               <div id="form_theme_1" className="form-block">
                  <h1>Форма создания мероприятия</h1>
                 <form onSubmit={handleFormSubmit}>
-                  <BaseInfo_Themes
-                      topics={topics} 
-                      selectedTopic={selectedTopic} 
-                      setSelectedTopic={setSelectedTopic} 
-                      description={description} 
-                      setDescription={setDescription} 
-                    />
+                  
                   {/* Основная информация о мероприятии */}
                   <section className="form-section1">
                     <h2>Основная информация о мероприятии</h2>
                      {/* Наименование, дата, краткое описание*/}
 
-                    <BasicInfo_NameDataDeskEventForm 
-                    eventName={eventName} 
-                    setEventName={setEventName} 
-                    eventDate={eventDate} 
-                    setEventDate={setEventDate} 
-                    eventDescription={eventDescription} 
-                    setEventDescription={setEventDescription} 
-                    dateHasError={dateHasError} 
-                    />
-
-                     {/* Ссылка, уроень, формат*/}
-                    <BasicInfo_LinkLevelFormat
+                     <BasicInfo_NameDataDeskEventForm 
                       eventName={eventName}
                       setEventName={setEventName}
                       eventDate={eventDate}
                       setEventDate={setEventDate}
                       eventDescription={eventDescription}
                       setEventDescription={setEventDescription}
+                      dateHasError={dateHasError}
+                      selectedTopic={selectedTopic}
+                      fieldTitle={fieldTitle} // Передаем сюда поле для названия
+                      setFieldTitle={setFieldTitle} // Для обновления заголовка
+                      namePlaceholder={setNamePlaceholder} // Передаем сюда плейсхолдер
+                      setNamePlaceholder={setNamePlaceholder} // Для обновления плейсхолдера
+                      descriptionTitle={descriptionTitle} // Передаем сюда описание для краткого описания
+                      setDescriptionTitle={setDescriptionTitle} // Для обновления описания
+                    />
+
+                     {/* Ссылка, уроень, формат*/}
+                    <BasicInfo_LinkLevelFormat
                       level={level}
                       setLevel={setLevel}
                       link={link}
@@ -637,6 +665,9 @@ const handleFormSubmit = async (e) => {
                       setFormConducted={setFormConducted}
                       otherDescription={otherDescription}
                       setOtherDescription={setOtherDescription}
+                      setLevelTitle={setLevelTitle} // Здесь передаем setLevelTitle
+                      selectedTopic={selectedTopic}  // Тема для контроля заголовка
+                      levelTitle={levelTitle}        // Заголовок для отображения
                     />
                        {/* Результат проведения мероприятия и управленческие решения */}
                       <BasicInfo_ResultDecision
@@ -705,16 +736,171 @@ const handleFormSubmit = async (e) => {
                     equalFormatDescription={equalFormatDescription}
                     setEqualFormatDescription={setEqualFormatDescription}
                   />
-                  </section>
-                  {/* Кнопка сохранения */}
-                  <button type="submit" id="save_button">Сохранить</button>
-                  <button type="button" onClick={() => toastr.success("Данные успешно сохранены и добавлены в таблицу", "Успех")}>
-                    Показать Toastr
-                  </button>
-                  
+                  </section> 
                 </form>
               </div>
             )}
+             {formType === 2 && (
+             <div id="form_theme_1" className="form-block">
+             <h1>Форма создания мероприятия</h1>
+            <form onSubmit={handleFormSubmit}>
+              
+              {/* Основная информация о мероприятии */}
+              <section className="form-section1">
+                <h2>Основная информация о мероприятии</h2>
+                 {/* Наименование, дата, краткое описание*/}
+                 <BasicInfo_NameDataDeskEventForm 
+                      eventName={eventName}
+                      setEventName={setEventName}
+                      eventDate={eventDate}
+                      setEventDate={setEventDate}
+                      eventDescription={eventDescription}
+                      setEventDescription={setEventDescription}
+                      dateHasError={dateHasError}
+                      selectedTopic={selectedTopic}
+                      fieldTitle={fieldTitle} // Передаем сюда поле для названия
+                      setFieldTitle={setFieldTitle} // Для обновления заголовка
+                      namePlaceholder={setNamePlaceholder} // Передаем сюда плейсхолдер
+                      setNamePlaceholder={setNamePlaceholder} // Для обновления плейсхолдера
+                      descriptionTitle={descriptionTitle} // Передаем сюда описание для краткого описания
+                      setDescriptionTitle={setDescriptionTitle} // Для обновления описания
+                    />
+
+                 {/* Ссылка, уроень, формат*/}
+                <BasicInfo_LinkLevelFormat
+                  level={level}
+                  setLevel={setLevel}
+                  link={link}
+                  setLink={setLink}
+                  formConducted={formConducted}
+                  setFormConducted={setFormConducted}
+                  otherDescription={otherDescription}
+                  setOtherDescription={setOtherDescription}
+                  setLevelTitle={setLevelTitle} // Здесь передаем setLevelTitle
+                  selectedTopic={selectedTopic}  // Тема для контроля заголовка
+                  levelTitle={levelTitle}        // Заголовок для отображения
+                />
+                  
+              </section>
+
+           
+              <section className="form-section1">
+              <h2>Дополнительная информация о мероприятии</h2>
+      
+
+              {/* Поддержка проекта */}
+              <BaseInfo_Project 
+                isInfoChecked={isInfoChecked} 
+                setIsInfoChecked={setIsInfoChecked}
+                isMethodChecked={isMethodChecked} 
+                setIsMethodChecked={setIsMethodChecked}
+                isOrgChecked={isOrgChecked} 
+                setIsOrgChecked={setIsOrgChecked}
+                isOtherChecked={isOtherChecked} 
+                setIsOtherChecked={setIsOtherChecked}
+                isCompetitionDirectionChecked={isCompetitionDirectionChecked} 
+                setIsCompetitionDirectionChecked={setIsCompetitionDirectionChecked}
+                competitionDescription={competitionDescription} 
+                setCompetitionDescription={setCompetitionDescription}
+                participationResult={participationResult} 
+                setParticipationResult={setParticipationResult}
+                winnerDetails={winnerDetails} 
+                setWinnerDetails={setWinnerDetails}
+              />
+        
+              {/* Количество участников */}
+              <DopInfo_Participants
+                participantsCategories={participantsCategories}
+                setParticipantsCategories={setParticipantsCategories}
+                participants={participants}
+                setParticipants={setParticipants}
+                customParticipants={customParticipants}
+                setCustomParticipants={setCustomParticipants}
+                detailedInput={detailedInput}
+                setDetailedInput={setDetailedInput}
+                totalParticipants={totalParticipants}
+                setTotalParticipants={setTotalParticipants}
+                handleDetailedChange={handleDetailedChange}
+                handleTotalChange={handleTotalChange}
+                handleAddParticipant={handleAddParticipant}
+                handleParticipantChange={handleParticipantChange}
+                handleRemoveParticipant={handleRemoveParticipant}
+              
+              />
+
+   
+
+              {/* Дополнительные характеристики */}
+              <DopInfo_ImportantTheBestEqual
+                equalFormat={equalFormat}
+                setEqualFormat={setEqualFormat}
+                equalFormatDescription={equalFormatDescription}
+                setEqualFormatDescription={setEqualFormatDescription}
+              />
+              </section>
+             
+            </form>
+          </div>
+          )}
+               
+
+          {formType === 3 && (
+             <div id="form_theme_1" className="form-block">
+             <h1>Форма создания мероприятия</h1>
+            <form onSubmit={handleFormSubmit}>
+              
+              {/* Основная информация о мероприятии */}
+              <section className="form-section1">
+                <h2>Основная информация о мероприятии</h2>
+                 {/* Наименование, дата, краткое описание*/}
+
+                 <BasicInfo_NameDataDeskEventForm 
+                      eventName={eventName}
+                      setEventName={setEventName}
+                      eventDate={eventDate}
+                      setEventDate={setEventDate}
+                      eventDescription={eventDescription}
+                      setEventDescription={setEventDescription}
+                      dateHasError={dateHasError}
+                      selectedTopic={selectedTopic}
+                      fieldTitle={fieldTitle} // Передаем сюда поле для названия
+                      setFieldTitle={setFieldTitle} // Для обновления заголовка
+                      namePlaceholder={setNamePlaceholder} // Передаем сюда плейсхолдер
+                      setNamePlaceholder={setNamePlaceholder} // Для обновления плейсхолдера
+                      descriptionTitle={descriptionTitle} // Передаем сюда описание для краткого описания
+                      setDescriptionTitle={setDescriptionTitle} // Для обновления описания
+                    />
+                
+                  
+              </section>
+             
+
+           
+              <section className="form-section1">
+              <h2>Дополнительная информация о мероприятии</h2>
+             
+              <h2>Согласование учебного материала</h2>
+              {/* Подключение компонента BaseInfo_TeachMaterials */}
+                  <BaseInfo_TeachMaterials
+                    financing={financing}
+                    setFinancing={setFinancing}
+                    hasFinancing={hasFinancing}
+                    setHasFinancing={setHasFinancing}
+                    financingOtherDescription={financingOtherDescription}
+                    setFinancingOtherDescription={setFinancingOtherDescription}
+                  />
+             
+              </section>
+             
+            </form>
+          </div>
+          )}
+               {/* Кнопка сохранения */}
+               {formType && (
+                <button type="submit" id="save_button">
+                  Сохранить
+                </button>
+              )}
             
           </div>
         </div>

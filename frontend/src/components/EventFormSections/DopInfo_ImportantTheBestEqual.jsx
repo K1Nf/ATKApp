@@ -30,7 +30,7 @@ const DopInfo_ImportantTheBestEqual = ({ equalFormat, setEqualFormat, equalForma
             checked={importantEvent}
             onChange={handleImportantEventChange}
           />
-          Отметить, как значимое мероприятие
+          Отметить, как значимое 
         </label>
       </div>
 
@@ -56,7 +56,7 @@ const DopInfo_ImportantTheBestEqual = ({ equalFormat, setEqualFormat, equalForma
         </label>
         <span className="tooltip">
           <span className="question-icon">!</span>
-          <span className="tooltiptext">Влияет на рейтинг мероприятия</span>
+          <span className="tooltiptext">Влияет на рейтинг</span>
         </span>
       </div>
 

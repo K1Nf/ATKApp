@@ -45,6 +45,10 @@ const DopInfo_Cooperation = ({ isCooperation, setIsCooperation, selectedOrganiza
           onChange={() => setIsCooperation(!isCooperation)}
         />
         Было сотрудничество с другими организациями
+        <span className="tooltip">
+          <span className="question-icon">!</span>
+          <span className="tooltiptext">Влияет на рейтинг</span>
+        </span>
       </label>
 
       {isCooperation && (

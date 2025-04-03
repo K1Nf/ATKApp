@@ -1,16 +1,48 @@
 import { useState, useEffect } from "react";
 
-const BasicInfo_NameDataDeskEventForm = ({ eventName, setEventName, eventDate, setEventDate, eventDescription, setEventDescription, dateHasError }) => {
+const BasicInfo_NameDataDeskEventForm = ({
+  eventName,
+  setEventName,
+  eventDate,
+  setEventDate,
+  eventDescription,
+  setEventDescription,
+  dateHasError,
+  selectedTopic,
+  fieldTitle, // получаем title поля
+  setFieldTitle, // Функция для изменения заголовка поля
+  descriptionTitle, // Получаем описание для краткого описания
+  setDescriptionTitle, // Функция для изменения заголовка краткого описания
+  namePlaceholder, // Передаем имя плейсхолдера из родительского компонента
+  setNamePlaceholder, // Функция для изменения плейсхолдера
+}) => {
   const handleEventNameChange = (e) => setEventName(e.target.value);
   const handleEventDateChange = (e) => setEventDate(e.target.value);
   const handleEventDescriptionChange = (e) => setEventDescription(e.target.value);
+
+  // Обновляем заголовки и плейсхолдеры в зависимости от выбранной темы
+  useEffect(() => {
+    if (selectedTopic === "1.3.4") {
+      setFieldTitle("Название проекта");
+      setNamePlaceholder("Введите название проекта");
+      setDescriptionTitle("Содержание антитеррористического модуля");
+    } else if (selectedTopic === "1.3.5") {
+      setFieldTitle("Наименование материала");
+      setNamePlaceholder("Введите наименование материала");
+      setDescriptionTitle("Описание содержания материала антитеррористического модуля");
+    } else {
+      setFieldTitle("Название мероприятия");
+      setNamePlaceholder("Введите название мероприятия");
+      setDescriptionTitle("Краткое описание мероприятия");
+    }
+  }, [selectedTopic, setFieldTitle, setDescriptionTitle, setNamePlaceholder]);
 
   return (
     <>
       {/* Наименование мероприятия */}
       <section>
         <label htmlFor="event_name">
-          Наименование мероприятия
+          {fieldTitle} {/* Показываем заголовок, который обновляется */}
           <span className="required">*</span>
           <span className="tooltip">
             <span className="question-icon">?</span>
@@ -21,9 +53,9 @@ const BasicInfo_NameDataDeskEventForm = ({ eventName, setEventName, eventDate, s
           type="text"
           id="event_name"
           name="event_name"
-          value={eventName}
-          onChange={handleEventNameChange}
-          placeholder="Введите название мероприятия"
+          value={eventName} // Значение должно быть передано через состояние
+          onChange={handleEventNameChange} // Обработчик изменения
+          placeholder={namePlaceholder} // Используем переданный пропс
           required
         />
       </section>
@@ -54,7 +86,7 @@ const BasicInfo_NameDataDeskEventForm = ({ eventName, setEventName, eventDate, s
       {/* Краткое описание мероприятия */}
       <section>
         <label htmlFor="event_description">
-          Краткое описание мероприятия
+          {descriptionTitle} {/* Показываем динамическое описание */}
           <span className="required">*</span>
           <span className="tooltip">
             <span className="question-icon">?</span>
