@@ -12,6 +12,7 @@ namespace ATKApplication.Controllers
 {
     [Route("api/ref/[controller]")]
     [ApiController]
+    [EventsFilterNonAsync]
     public class EventsController(/*DataBaseContext _db,*/ EventService _eventService) : ControllerBase
     {
         [HttpGet]

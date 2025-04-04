@@ -1,3 +1,4 @@
+using ATKApplication.Controllers;
 using ATKApplication.DataBase;
 using ATKApplication.Services;
 using Newtonsoft.Json.Converters;
@@ -15,6 +16,7 @@ builder.Services.AddControllers()
 
 
 builder.Services.AddDbContext<DataBaseContext>();
+
 
 
 builder.Services.AddScoped<EventService>();
