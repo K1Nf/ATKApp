@@ -6,6 +6,7 @@ namespace ATKApplication.Models
     {
         public Guid Id { get; init; }
         public string Code { get; set; }
+        public int Form { get; set; }
         public string Description { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]

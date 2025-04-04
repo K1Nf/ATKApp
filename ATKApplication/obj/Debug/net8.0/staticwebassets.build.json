@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D2ZtNZX1tEtnHJX0n7lovIpc3qTV8Poyn3nKBYjSIk4=",
+  "Hash": "QV+2TIGbE8B/nJy6VgSISrXO2F0mdnq+6apVsaw8L0Q=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -38,12 +38,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\events-DlZwj7pn.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-iZhaJAq6.css",
+      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
-      "RelativePath": "assets/css/Sidebar-iZhaJAq6#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/Sidebar-G10zORfr#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,11 +52,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h3sf5uz1sg",
-      "Integrity": "A/e7fAMXinveoCHl1Rif5M7yvuLk0ID/hqjVg6TwT54=",
+      "Fingerprint": "ptlsncuehh",
+      "Integrity": "feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\css\\Sidebar-iZhaJAq6.css"
+      "OriginalItemSpec": "wwwroot\\assets\\css\\Sidebar-G10zORfr.css"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yutwhnwcbl",
-      "Integrity": "KsyLNJuzQVI3ZsW9d6+QdE2d7Tgosl36FPK75F5PYuk=",
+      "Fingerprint": "rhgrbszg0o",
+      "Integrity": "wWhVzldYEMH0HMAYhowpLSm+6M5gSk+Fdp8SA4zag1g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1c74ngi5al",
-      "Integrity": "3+rwR6zjzxWTS3UclaNyZ5nT+ZLxZgCUX4sbgg9pq4M=",
+      "Fingerprint": "77776arxuz",
+      "Integrity": "Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h61ya703oj",
-      "Integrity": "hz/Ot7PrakjsRWhyUh7aClIjU95s5Gu6xrD/9BTw5sE=",
+      "Fingerprint": "6mihc9bs62",
+      "Integrity": "godd8cbnmBqRf397IM+JmeqLr82YQUjkyxojdUQ2mms=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\eventCard\\eventCard.html"
@@ -283,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "isahw29ig1",
-      "Integrity": "4sgRcxHl95IJL+gjtiVYDqGbr5QVMT/UEnGbbu6pnz8=",
+      "Fingerprint": "2yjsg5s0ri",
+      "Integrity": "Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\table\\indexTable.html"
@@ -395,8 +395,8 @@
       ]
     },
     {
-      "Route": "assets/css/Sidebar-iZhaJAq6.css",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-iZhaJAq6.css",
+      "Route": "assets/css/Sidebar-G10zORfr.css",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -405,7 +405,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9685"
+          "Value": "9978"
         },
         {
           "Name": "Content-Type",
@@ -413,11 +413,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"A/e7fAMXinveoCHl1Rif5M7yvuLk0ID/hqjVg6TwT54=\""
+          "Value": "\"feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -427,13 +427,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-A/e7fAMXinveoCHl1Rif5M7yvuLk0ID/hqjVg6TwT54="
+          "Value": "sha256-feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k="
         }
       ]
     },
     {
-      "Route": "assets/css/Sidebar-iZhaJAq6.h3sf5uz1sg.css",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-iZhaJAq6.css",
+      "Route": "assets/css/Sidebar-G10zORfr.ptlsncuehh.css",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -442,7 +442,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9685"
+          "Value": "9978"
         },
         {
           "Name": "Content-Type",
@@ -450,11 +450,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"A/e7fAMXinveoCHl1Rif5M7yvuLk0ID/hqjVg6TwT54=\""
+          "Value": "\"feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -464,15 +464,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h3sf5uz1sg"
+          "Value": "ptlsncuehh"
         },
         {
           "Name": "label",
-          "Value": "assets/css/Sidebar-iZhaJAq6.css"
+          "Value": "assets/css/Sidebar-G10zORfr.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-A/e7fAMXinveoCHl1Rif5M7yvuLk0ID/hqjVg6TwT54="
+          "Value": "sha256-feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k="
         }
       ]
     },
@@ -569,7 +569,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "34071"
+          "Value": "42447"
         },
         {
           "Name": "Content-Type",
@@ -577,11 +577,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KsyLNJuzQVI3ZsW9d6+QdE2d7Tgosl36FPK75F5PYuk=\""
+          "Value": "\"wWhVzldYEMH0HMAYhowpLSm+6M5gSk+Fdp8SA4zag1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -591,12 +591,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KsyLNJuzQVI3ZsW9d6+QdE2d7Tgosl36FPK75F5PYuk="
+          "Value": "sha256-wWhVzldYEMH0HMAYhowpLSm+6M5gSk+Fdp8SA4zag1g="
         }
       ]
     },
     {
-      "Route": "assets/js/createEvent.yutwhnwcbl.js",
+      "Route": "assets/js/createEvent.rhgrbszg0o.js",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -606,7 +606,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "34071"
+          "Value": "42447"
         },
         {
           "Name": "Content-Type",
@@ -614,11 +614,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KsyLNJuzQVI3ZsW9d6+QdE2d7Tgosl36FPK75F5PYuk=\""
+          "Value": "\"wWhVzldYEMH0HMAYhowpLSm+6M5gSk+Fdp8SA4zag1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -628,7 +628,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yutwhnwcbl"
+          "Value": "rhgrbszg0o"
         },
         {
           "Name": "label",
@@ -636,7 +636,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KsyLNJuzQVI3ZsW9d6+QdE2d7Tgosl36FPK75F5PYuk="
+          "Value": "sha256-wWhVzldYEMH0HMAYhowpLSm+6M5gSk+Fdp8SA4zag1g="
         }
       ]
     },
@@ -1133,7 +1133,7 @@
       ]
     },
     {
-      "Route": "index.1c74ngi5al.html",
+      "Route": "index.77776arxuz.html",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1151,11 +1151,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3+rwR6zjzxWTS3UclaNyZ5nT+ZLxZgCUX4sbgg9pq4M=\""
+          "Value": "\"Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1165,7 +1165,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1c74ngi5al"
+          "Value": "77776arxuz"
         },
         {
           "Name": "label",
@@ -1173,7 +1173,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3+rwR6zjzxWTS3UclaNyZ5nT+ZLxZgCUX4sbgg9pq4M="
+          "Value": "sha256-Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw="
         }
       ]
     },
@@ -1196,11 +1196,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3+rwR6zjzxWTS3UclaNyZ5nT+ZLxZgCUX4sbgg9pq4M=\""
+          "Value": "\"Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1210,12 +1210,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3+rwR6zjzxWTS3UclaNyZ5nT+ZLxZgCUX4sbgg9pq4M="
+          "Value": "sha256-Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw="
         }
       ]
     },
     {
-      "Route": "src/eventCard/eventCard.h61ya703oj.html",
+      "Route": "src/eventCard/eventCard.6mihc9bs62.html",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1233,11 +1233,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hz/Ot7PrakjsRWhyUh7aClIjU95s5Gu6xrD/9BTw5sE=\""
+          "Value": "\"godd8cbnmBqRf397IM+JmeqLr82YQUjkyxojdUQ2mms=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1247,7 +1247,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h61ya703oj"
+          "Value": "6mihc9bs62"
         },
         {
           "Name": "label",
@@ -1255,7 +1255,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hz/Ot7PrakjsRWhyUh7aClIjU95s5Gu6xrD/9BTw5sE="
+          "Value": "sha256-godd8cbnmBqRf397IM+JmeqLr82YQUjkyxojdUQ2mms="
         }
       ]
     },
@@ -1278,11 +1278,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hz/Ot7PrakjsRWhyUh7aClIjU95s5Gu6xrD/9BTw5sE=\""
+          "Value": "\"godd8cbnmBqRf397IM+JmeqLr82YQUjkyxojdUQ2mms=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1292,7 +1292,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hz/Ot7PrakjsRWhyUh7aClIjU95s5Gu6xrD/9BTw5sE="
+          "Value": "sha256-godd8cbnmBqRf397IM+JmeqLr82YQUjkyxojdUQ2mms="
+        }
+      ]
+    },
+    {
+      "Route": "src/table/indexTable.2yjsg5s0ri.html",
+      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2yjsg5s0ri"
+        },
+        {
+          "Name": "label",
+          "Value": "src/table/indexTable.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE="
         }
       ]
     },
@@ -1315,11 +1360,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4sgRcxHl95IJL+gjtiVYDqGbr5QVMT/UEnGbbu6pnz8=\""
+          "Value": "\"Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
+          "Value": "Fri, 04 Apr 2025 07:33:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1329,52 +1374,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4sgRcxHl95IJL+gjtiVYDqGbr5QVMT/UEnGbbu6pnz8="
-        }
-      ]
-    },
-    {
-      "Route": "src/table/indexTable.isahw29ig1.html",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "749"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4sgRcxHl95IJL+gjtiVYDqGbr5QVMT/UEnGbbu6pnz8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 12:51:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "isahw29ig1"
-        },
-        {
-          "Name": "label",
-          "Value": "src/table/indexTable.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4sgRcxHl95IJL+gjtiVYDqGbr5QVMT/UEnGbbu6pnz8="
+          "Value": "sha256-Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE="
         }
       ]
     },
