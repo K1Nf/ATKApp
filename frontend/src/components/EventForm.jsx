@@ -598,6 +598,7 @@ const handleFormSubmit = async (e) => {
   const [competitionDescription, setCompetitionDescription] = useState("");
   const [participationResult, setParticipationResult] = useState("");
   const [winnerDetails, setWinnerDetails] = useState("");
+  const [executor, setExecutor] = useState(""); // Состояние для поля "Исполнитель"
 
 
 
@@ -638,22 +639,25 @@ const handleFormSubmit = async (e) => {
                     <h2>Основная информация о мероприятии</h2>
                      {/* Наименование, дата, краткое описание*/}
 
-                     <BasicInfo_NameDataDeskEventForm 
-                      eventName={eventName}
-                      setEventName={setEventName}
-                      eventDate={eventDate}
-                      setEventDate={setEventDate}
-                      eventDescription={eventDescription}
-                      setEventDescription={setEventDescription}
-                      dateHasError={dateHasError}
-                      selectedTopic={selectedTopic}
-                      fieldTitle={fieldTitle} // Передаем сюда поле для названия
-                      setFieldTitle={setFieldTitle} // Для обновления заголовка
-                      namePlaceholder={setNamePlaceholder} // Передаем сюда плейсхолдер
-                      setNamePlaceholder={setNamePlaceholder} // Для обновления плейсхолдера
-                      descriptionTitle={descriptionTitle} // Передаем сюда описание для краткого описания
-                      setDescriptionTitle={setDescriptionTitle} // Для обновления описания
-                    />
+                     <BasicInfo_NameDataDeskEventForm
+                        executor={executor}
+                        setExecutor={setExecutor}  // Передаем состояние и функцию
+                        eventName={eventName}
+                        setEventName={setEventName}
+                        eventDate={eventDate}
+                        setEventDate={setEventDate}
+                        eventDescription={eventDescription}
+                        setEventDescription={setEventDescription}
+                        dateHasError={dateHasError}
+                        selectedTopic={selectedTopic}
+                        fieldTitle={fieldTitle}
+                        setFieldTitle={setFieldTitle}
+                        namePlaceholder={namePlaceholder}
+                        setNamePlaceholder={setNamePlaceholder}
+                        descriptionTitle={descriptionTitle}
+                        setDescriptionTitle={setDescriptionTitle}
+                      />
+
 
                      {/* Ссылка, уроень, формат*/}
                     <BasicInfo_LinkLevelFormat
@@ -749,22 +753,24 @@ const handleFormSubmit = async (e) => {
               <section className="form-section1">
                 <h2>Основная информация о мероприятии</h2>
                  {/* Наименование, дата, краткое описание*/}
-                 <BasicInfo_NameDataDeskEventForm 
-                      eventName={eventName}
-                      setEventName={setEventName}
-                      eventDate={eventDate}
-                      setEventDate={setEventDate}
-                      eventDescription={eventDescription}
-                      setEventDescription={setEventDescription}
-                      dateHasError={dateHasError}
-                      selectedTopic={selectedTopic}
-                      fieldTitle={fieldTitle} // Передаем сюда поле для названия
-                      setFieldTitle={setFieldTitle} // Для обновления заголовка
-                      namePlaceholder={setNamePlaceholder} // Передаем сюда плейсхолдер
-                      setNamePlaceholder={setNamePlaceholder} // Для обновления плейсхолдера
-                      descriptionTitle={descriptionTitle} // Передаем сюда описание для краткого описания
-                      setDescriptionTitle={setDescriptionTitle} // Для обновления описания
-                    />
+                 <BasicInfo_NameDataDeskEventForm
+                    executor={executor}
+                    setExecutor={setExecutor}  // Передаем состояние и функцию
+                    eventName={eventName}
+                    setEventName={setEventName}
+                    eventDate={eventDate}
+                    setEventDate={setEventDate}
+                    eventDescription={eventDescription}
+                    setEventDescription={setEventDescription}
+                    dateHasError={dateHasError}
+                    selectedTopic={selectedTopic}
+                    fieldTitle={fieldTitle}
+                    setFieldTitle={setFieldTitle}
+                    namePlaceholder={namePlaceholder}
+                    setNamePlaceholder={setNamePlaceholder}
+                    descriptionTitle={descriptionTitle}
+                    setDescriptionTitle={setDescriptionTitle}
+                  />
 
                  {/* Ссылка, уроень, формат*/}
                 <BasicInfo_LinkLevelFormat
@@ -854,22 +860,24 @@ const handleFormSubmit = async (e) => {
                 <h2>Основная информация о мероприятии</h2>
                  {/* Наименование, дата, краткое описание*/}
 
-                 <BasicInfo_NameDataDeskEventForm 
-                      eventName={eventName}
-                      setEventName={setEventName}
-                      eventDate={eventDate}
-                      setEventDate={setEventDate}
-                      eventDescription={eventDescription}
-                      setEventDescription={setEventDescription}
-                      dateHasError={dateHasError}
-                      selectedTopic={selectedTopic}
-                      fieldTitle={fieldTitle} // Передаем сюда поле для названия
-                      setFieldTitle={setFieldTitle} // Для обновления заголовка
-                      namePlaceholder={setNamePlaceholder} // Передаем сюда плейсхолдер
-                      setNamePlaceholder={setNamePlaceholder} // Для обновления плейсхолдера
-                      descriptionTitle={descriptionTitle} // Передаем сюда описание для краткого описания
-                      setDescriptionTitle={setDescriptionTitle} // Для обновления описания
-                    />
+                 <BasicInfo_NameDataDeskEventForm
+                    executor={executor}
+                    setExecutor={setExecutor}  // Передаем состояние и функцию
+                    eventName={eventName}
+                    setEventName={setEventName}
+                    eventDate={eventDate}
+                    setEventDate={setEventDate}
+                    eventDescription={eventDescription}
+                    setEventDescription={setEventDescription}
+                    dateHasError={dateHasError}
+                    selectedTopic={selectedTopic}
+                    fieldTitle={fieldTitle}
+                    setFieldTitle={setFieldTitle}
+                    namePlaceholder={namePlaceholder}
+                    setNamePlaceholder={setNamePlaceholder}
+                    descriptionTitle={descriptionTitle}
+                    setDescriptionTitle={setDescriptionTitle}
+                  />
                 
                   
               </section>
@@ -892,6 +900,70 @@ const handleFormSubmit = async (e) => {
              
               </section>
              
+            </form>
+          </div>
+          )}
+            {formType === 4 && (
+             <div id="form_theme_1" className="form-block">
+             <h1>Форма создания мероприятия</h1>
+            <form onSubmit={handleFormSubmit}>
+              
+              {/* Основная информация о мероприятии */}
+              <section className="form-section1">
+                <h2>Основная информация о мероприятии</h2>
+                 {/* Наименование, дата, краткое описание*/}
+
+                 <BasicInfo_NameDataDeskEventForm
+                    executor={executor}
+                    setExecutor={setExecutor}  // Передаем состояние и функцию
+                    eventName={eventName}
+                    setEventName={setEventName}
+                    eventDate={eventDate}
+                    setEventDate={setEventDate}
+                    eventDescription={eventDescription}
+                    setEventDescription={setEventDescription}
+                    dateHasError={dateHasError}
+                    selectedTopic={selectedTopic}
+                    fieldTitle={fieldTitle}
+                    setFieldTitle={setFieldTitle}
+                    namePlaceholder={namePlaceholder}
+                    setNamePlaceholder={setNamePlaceholder}
+                    descriptionTitle={descriptionTitle}
+                    setDescriptionTitle={setDescriptionTitle}
+                  />    
+              </section>    
+            </form>
+          </div>
+          )}
+           {formType === 5 && (
+             <div id="form_theme_1" className="form-block">
+             <h1>Форма создания мероприятия</h1>
+            <form onSubmit={handleFormSubmit}>
+              
+              {/* Основная информация о мероприятии */}
+              <section className="form-section1">
+                <h2>Основная информация о мероприятии</h2>
+                 {/* Наименование, дата, краткое описание*/}
+
+                 <BasicInfo_NameDataDeskEventForm
+                    executor={executor}
+                    setExecutor={setExecutor}  // Передаем состояние и функцию
+                    eventName={eventName}
+                    setEventName={setEventName}
+                    eventDate={eventDate}
+                    setEventDate={setEventDate}
+                    eventDescription={eventDescription}
+                    setEventDescription={setEventDescription}
+                    dateHasError={dateHasError}
+                    selectedTopic={selectedTopic}
+                    fieldTitle={fieldTitle}
+                    setFieldTitle={setFieldTitle}
+                    namePlaceholder={namePlaceholder}
+                    setNamePlaceholder={setNamePlaceholder}
+                    descriptionTitle={descriptionTitle}
+                    setDescriptionTitle={setDescriptionTitle}
+                  />    
+              </section>    
             </form>
           </div>
           )}
