@@ -83,7 +83,7 @@ namespace ATKApplication.Services
                 Theme = @event.Theme,                                               // Тема
                 Category = @event.Category,                                         // Участники
 
-                EventStatus = EventStatus.Planned,
+                //EventStatus = EventStatus.Planned,
                 EventType = @event.EventType,
                 LevelType = @event.LevelType,
 
@@ -110,7 +110,7 @@ namespace ATKApplication.Services
             {
                 Id = x.Id,
                 Date = x.Date,
-                EventStatus =  EventStatus.Planned, //x.Status,
+                //EventStatus =  EventStatus.Planned, //x.Status,
                 Form = x.EventType,
                 Level = x.LevelType,
                 IsBestPractice = x.IsBestPractice ? "Да" : "Нет",

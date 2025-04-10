@@ -103,7 +103,6 @@ export default function GetEvents(){
       {data.map((event) => (
         <tr key={event.id}>
           <td>{event.themeCode}</td>
-          <td>{event.eventStatus}</td>
           <td>{event.name}</td>
           <td>{event.date}</td>
           <td>{event.participantsCount}</td>

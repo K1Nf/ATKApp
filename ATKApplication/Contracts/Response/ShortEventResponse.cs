@@ -11,7 +11,7 @@ namespace ATKApplication.Contracts.Response
         public DateOnly Date { get; init; }
         public EventType Form { get; init; }
         public LevelType Level { get; init; }
-        public EventStatus EventStatus { get; init; }
+        //public EventStatus EventStatus { get; init; }
         public string IsValuable { get; init; }
         public string IsBestPractice { get; init; }
         public string OrganizerName { get; init; }

@@ -1,17 +1,14 @@
 ﻿using ATKApplication.Contracts.Request;
-using ATKApplication.DataBase;
 using ATKApplication.Enums;
 using ATKApplication.Models;
 using ATKApplication.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace ATKApplication.Controllers
 {
     [Route("api/ref/[controller]")]
     [ApiController]
+    //[EventsFilterNonAsync]
     public class EventsController(/*DataBaseContext _db,*/ EventService _eventService) : ControllerBase
     {
         [HttpGet]

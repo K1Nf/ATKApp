@@ -104,10 +104,10 @@ const EventCard = () => {
           <p>{data.name}</p>
         </section>
         
-        <section>
+        {/* <section>
           <label>Статус:</label>
           <p>{data.eventStatus}</p>
-        </section>
+        </section> */}
 
         <section>
           <label>Дата проведения:</label>
