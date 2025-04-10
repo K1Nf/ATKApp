@@ -15,7 +15,7 @@ import DopInfo_Participants from "../components/EventFormSections/DopInfo_Partic
 import DopInfo_Feedback from "../components/EventFormSections/DopInfo_Feedback"; // Обратная связь
 import BaseInfo_Project from "../components/EventFormSections/BasicInfo_Project";
 import BaseInfo_TeachMaterials from "../components/EventFormSections/BasicInfo_TeachMaterials"
-
+import Info_DestrCont from "../components/EventFormSections/Info_DestrCont" 
 
 const EventForm = () => {
 
@@ -600,7 +600,24 @@ const handleFormSubmit = async (e) => {
   const [winnerDetails, setWinnerDetails] = useState("");
   const [executor, setExecutor] = useState(""); // Состояние для поля "Исполнитель"
 
+ // Состояния для чекбоксов и селектов
+ const [selectedUMVD, setSelectedUMVD] = useState(false);
+ const [selectedProsecutor, setSelectedProsecutor] = useState(false);
+ const [selectedRoskomnadzor, setSelectedRoskomnadzor] = useState(false);
+ const [selectedFSB, setSelectedFSB] = useState(false);
 
+ // Состояния для селектов
+ const [umvdStatus, setUmvdStatus] = useState("");
+ const [prosecutorStatus, setProsecutorStatus] = useState("");
+ const [roskomnadzorStatus, setRoskomnadzorStatus] = useState("");
+ const [fsbStatus, setFsbStatus] = useState("");
+
+ // Состояния для ввода чисел
+ const [numMaterialsSent, setNumMaterialsSent] = useState("");
+ const [numMaterialsBlocked, setNumMaterialsBlocked] = useState("");
+
+ console.log("selectedUMVD:", selectedUMVD);
+  console.log("umvdStatus:", umvdStatus);
 
   return (
     <div>
@@ -944,7 +961,6 @@ const handleFormSubmit = async (e) => {
               <section className="form-section1">
                 <h2>Основная информация о мероприятии</h2>
                  {/* Наименование, дата, краткое описание*/}
-
                  <BasicInfo_NameDataDeskEventForm
                     executor={executor}
                     setExecutor={setExecutor}  // Передаем состояние и функцию
@@ -964,6 +980,64 @@ const handleFormSubmit = async (e) => {
                     setDescriptionTitle={setDescriptionTitle}
                   />    
               </section>    
+            </form>
+          </div>
+          )}
+         {formType === 6 && (
+          <div id="form_theme_1" className="form-block">
+            <h1>Форма создания мероприятия</h1>
+            <form onSubmit={handleFormSubmit}>
+      
+              {/* Основная информация о мероприятии */}
+              <section className="form-section1">
+                <h2>Основная информация о мероприятии</h2>
+                {/* Наименование, дата, краткое описание */}
+                <BasicInfo_NameDataDeskEventForm
+                  executor={executor}
+                  setExecutor={setExecutor}  // Передаем состояние и функцию
+                  eventName={eventName}
+                  setEventName={setEventName}
+                  eventDate={eventDate}
+                  setEventDate={setEventDate}
+                  eventDescription={eventDescription}
+                  setEventDescription={setEventDescription}
+                  dateHasError={dateHasError}
+                  selectedTopic={selectedTopic}
+                  fieldTitle={fieldTitle}
+                  setFieldTitle={setFieldTitle}
+                  namePlaceholder={namePlaceholder}
+                  setNamePlaceholder={setNamePlaceholder}
+                  descriptionTitle={descriptionTitle}
+                  setDescriptionTitle={setDescriptionTitle}
+                />
+              </section>
+
+              {/* Дополнительная информация */}
+              <section className="form-section1">
+                <h2>Дополнительная информация о мероприятии</h2>
+                <Info_DestrCont
+                  selectedUMVD={selectedUMVD}  
+                  setSelectedUMVD={setSelectedUMVD}  // Функция для обновления состояния УМВД
+                  selectedProsecutor={selectedProsecutor}  
+                  setSelectedProsecutor={setSelectedProsecutor}  
+                  selectedFSB={selectedFSB}  
+                  setSelectedFSB={setSelectedFSB}  
+                  selectedRoskomnadzor={selectedRoskomnadzor}  
+                  setSelectedRoskomnadzor={setSelectedRoskomnadzor}  
+                  numMaterialsSent={numMaterialsSent}  
+                  setNumMaterialsSent={setNumMaterialsSent}  
+                  numMaterialsBlocked={numMaterialsBlocked}  
+                  setNumMaterialsBlocked={setNumMaterialsBlocked}  
+                  fsbStatus={fsbStatus}  
+                  setFsbStatus={setFsbStatus}  
+                  roskomnadzorStatus={roskomnadzorStatus}  
+                  setRoskomnadzorStatus={setRoskomnadzorStatus}  
+                  prosecutorStatus={prosecutorStatus}  
+                  setProsecutorStatus={setProsecutorStatus}  
+                  umvdStatus={umvdStatus}  // передаем состояние
+                  setUmvdStatus={setUmvdStatus}  // передаем функцию для изменения состояния
+                />
+              </section> 
             </form>
           </div>
           )}
