@@ -36,17 +36,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7365"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:09:55 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ATKApplication/assets/js/createEvent.75mx6cpg2t.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"75mx6cpg2t"},{"Name":"integrity","Value":"sha256-pQts\u002B4yviHbAe96zZTcDkB61NZsLSsMsGLi/F2jotgQ="},{"Name":"label","Value":"_content/ATKApplication/assets/js/createEvent.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"42446"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022pQts\u002B4yviHbAe96zZTcDkB61NZsLSsMsGLi/F2jotgQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:09:55 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ATKApplication/assets/js/createEvent.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pQts\u002B4yviHbAe96zZTcDkB61NZsLSsMsGLi/F2jotgQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"42446"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022pQts\u002B4yviHbAe96zZTcDkB61NZsLSsMsGLi/F2jotgQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:09:55 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jfBlWzp91ORoZYVSGdmUI2FD1Fi35iWSMmbFQO15Sro="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"54650"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jfBlWzp91ORoZYVSGdmUI2FD1Fi35iWSMmbFQO15Sro=\u0022"},{"Name":"Last-Modified","Value":"Fri, 11 Apr 2025 06:47:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ATKApplication/assets/js/createEvent.pd26vc74pf.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pd26vc74pf"},{"Name":"integrity","Value":"sha256-jfBlWzp91ORoZYVSGdmUI2FD1Fi35iWSMmbFQO15Sro="},{"Name":"label","Value":"_content/ATKApplication/assets/js/createEvent.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"54650"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jfBlWzp91ORoZYVSGdmUI2FD1Fi35iWSMmbFQO15Sro=\u0022"},{"Name":"Last-Modified","Value":"Fri, 11 Apr 2025 06:47:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ATKApplication/assets/js/eventCard.0ikbk8ntok.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\eventCard.js'))</AssetFile>
