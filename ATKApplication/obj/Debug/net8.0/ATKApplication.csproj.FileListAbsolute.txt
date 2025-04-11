@@ -549,3 +549,12 @@ C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\refint\ATKAp
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.pdb
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ATKApplication.genruntimeconfig.cache
 C:\Users\User\Desktop\DiplomProject\ATKApplication\obj\Debug\net8.0\ref\ATKApplication.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\Desktop\DiplomProject\ATKApplication\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

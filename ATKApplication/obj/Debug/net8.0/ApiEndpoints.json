@@ -69,16 +69,6 @@
   },
   {
     "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "Update",
-    "RelativePath": "api/ref/Events",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
     "Method": "Get",
     "RelativePath": "api/ref/Events/{Id}",
     "HttpMethod": "GET",
@@ -149,11 +139,6 @@
         "IsRequired": false
       },
       {
-        "Name": "Status",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "OrganizerId",
         "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
@@ -180,7 +165,7 @@
       },
       {
         "Name": "Orders",
-        "Type": "System.Collections.Generic.List\u00601[[ATKApplication.Controllers.Sort, ATKApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[ATKApplication.Extensions.Sort, ATKApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       },
       {
