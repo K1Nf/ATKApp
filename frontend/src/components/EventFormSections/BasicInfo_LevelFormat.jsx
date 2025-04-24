@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const BasicInfo_LinkLevelFormat = ({
+const BasicInfo_LevelFormat = ({
   link,
   setLink,
   level,
@@ -38,28 +38,6 @@ const BasicInfo_LinkLevelFormat = ({
 
   return (
     <>
-      {/* Ссылка на СМИ/СМК */}
-      <section>
-        <label htmlFor="link">
-          Ссылка на СМИ/СМК
-          <span className="required">*</span>
-          <span className="tooltip">
-            <span className="question-icon">?</span>
-            <span className="tooltiptext">Это обязательное поле</span>
-          </span>
-        </label>
-        <input
-          type="text"
-          id="link"
-          name="link"
-          value={link}
-          onChange={handleLinkChange}
-          maxLength={200}
-          placeholder="Введите одну или несколько ссылок через запятую, например: https://example1.com, https://example2.com"
-          required
-        />
-      </section>
-
       {/* Уровень мероприятия */}
       <section>
         <label htmlFor="level">
@@ -120,7 +98,9 @@ const BasicInfo_LinkLevelFormat = ({
           <option value="quiz">Квиз</option>
           <option value="quest">Квест</option>
           <option value="game">Игра</option>
-          <option value="other">Другое</option>
+          <option value="exhibition"> Организация выставки</option>
+          <option value="excursion"> Проведение экскурсии</option>
+          <option value="other"> Другое</option>
         </select>
 
         {/* Описание для "Другое" */}
@@ -143,4 +123,4 @@ const BasicInfo_LinkLevelFormat = ({
   );
 };
 
-export default BasicInfo_LinkLevelFormat;
+export default BasicInfo_LevelFormat;
