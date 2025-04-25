@@ -12,6 +12,8 @@ namespace ATKApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+
+            Console.WriteLine(Guid.NewGuid());
             var events = await _eventService.GetAll();
             return Ok(events.Value);
         }

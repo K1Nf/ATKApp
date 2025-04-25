@@ -23,6 +23,7 @@ const BaseInfo_TeachMaterials = ({}) => {
   const [expertCouncilResult, setExpertCouncilResult] = useState("");
   const [expertCouncilDescription, setExpertCouncilDescription] = useState("");
 
+
   // Новая логика для использования в работе
   const [isWorkUseChecked, setIsWorkUseChecked] = useState(false);
   const [workUseDescription, setWorkUseDescription] = useState("");
@@ -52,7 +53,7 @@ const BaseInfo_TeachMaterials = ({}) => {
 
   return (
     <div>
-      <section>
+      <h2>Согласование материала</h2>
         {/* Согласование материала */}
         <div>
           <label>
@@ -61,7 +62,7 @@ const BaseInfo_TeachMaterials = ({}) => {
               checked={isMaterialAgreementChecked}
               onChange={() => setIsMaterialAgreementChecked(!isMaterialAgreementChecked)}
             />
-            Согласование материала
+            Материал был согласован 
           </label>
 
           {/* Добавление категорий только если согласование материала активировано */}
@@ -217,51 +218,8 @@ const BaseInfo_TeachMaterials = ({}) => {
             </>
           )}
         </div>
-      </section>
-
-      {/* Новый отдельный селект с чекбоксом и текстовым полем */}
-      <section>
-        <div>
-          <h2>Использование в работе</h2>
-          <label>
-            <input
-              type="checkbox"
-              checked={isWorkUseChecked}
-              onChange={() => setIsWorkUseChecked(!isWorkUseChecked)}
-            />
-            Направлена субъектам противодействующим идеологии для использования в работе
-          </label>
-
-          {isWorkUseChecked && (
-            <div>
-              <textarea
-                value={workUseDescription}
-                onChange={(e) => setWorkUseDescription(e.target.value)}
-                placeholder="Кому и № исходящего документа"
-                maxLength={100}
-              />
-            </div>
-          )}
-        </div>
-      </section>
-  {/* Чекбокс в НАК */}
-  <section>
-        <div>
-          <h2>Дополнительные характеристики</h2>
-          <label>
-            <input
-              type="checkbox"
-              checked={sendNAK}
-              onChange={handlesendNAKChange}
-            />
-            Направлено в НАК
-          </label>
-        </div>
-      </section>
     </div>
-    
   );
-  
 };
 
 export default BaseInfo_TeachMaterials;

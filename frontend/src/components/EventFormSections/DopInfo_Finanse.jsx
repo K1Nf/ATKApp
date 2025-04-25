@@ -7,6 +7,8 @@ const DopInfo_Finanse = ({ financing, setFinancing, hasFinancing, setHasFinancin
     setFinancing({ ...financing, [e.target.name]: e.target.value });
   };
 
+  
+
   return (
     <section>
       <h2>Финансирование</h2>

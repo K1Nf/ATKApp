@@ -9,7 +9,7 @@ namespace ATKApplication.DataBase
     public class DataBaseContext : DbContext
     {
         public DbSet<EventBase> EventsBase { get; set; }
-        public DbSet<EventForm1> EventForm1s { get; set; }
+        public DbSet<EventForm1> EventForm2s { get; set; }
         public DbSet<EventForm3> EventForm3s { get; set; }
         public DbSet<EventForm4> EventForm4s { get; set; }
         public DbSet<EventForm5> EventForm5s { get; set; }
@@ -36,9 +36,10 @@ namespace ATKApplication.DataBase
             optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=Fnaticwinner");
             optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
 
-
             optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
         }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
