@@ -8,9 +8,6 @@ namespace ATKApplication.Configurations
     {
         public void Configure(EntityTypeBuilder<EventForm5> builder)
         {
-            //builder.HasKey(e => e.Id);
-
-            
             builder.HasOne(e => e.Agreement)
                 .WithOne(c => c.Event)
                 .OnDelete(DeleteBehavior.Cascade);

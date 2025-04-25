@@ -23,7 +23,7 @@ namespace ATKApplication.Models
         
 
         [Newtonsoft.Json.JsonIgnore]
-        public EventForm1? Event { get; set; }
+        public EventForm2? Event { get; set; }
         public Guid EventId { get; set; } = eventId;
 
     }

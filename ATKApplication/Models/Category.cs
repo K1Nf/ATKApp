@@ -12,9 +12,10 @@ namespace ATKApplication.Models
     {
         public Category(int count, string name, Guid eventId)
         {
-            Id = eventId;
+            Id = Guid.NewGuid();
             Name  = name;
             Count = count;
+            EventId = eventId;
         }
         public Category()
         {
@@ -28,5 +29,6 @@ namespace ATKApplication.Models
 
         [Newtonsoft.Json.JsonIgnore]
         public EventBase? Event { get; set; }
+        public Guid EventId { get; set; }
     }
 }

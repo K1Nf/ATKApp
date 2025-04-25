@@ -2,9 +2,9 @@
 
 namespace ATKApplication.Models
 {
-    public class EventForm1 : EventBase
+    public class EventForm2 : EventBase
     {
-        public EventForm1(string name, string actor, string content, DateOnly date, 
+        public EventForm2(string name, string actor, string content, DateOnly date, 
                         Guid organizerId, Guid themeId, string? equalToEqualContent,
                         string result, string decision,
                         EventType eventType, LevelType levelType,
@@ -21,7 +21,7 @@ namespace ATKApplication.Models
             Decision = decision;
         }
 
-        public EventForm1() { }
+        public EventForm2() { }
 
         public EventType EventType { get; set; }
         public LevelType LevelType { get; set; }

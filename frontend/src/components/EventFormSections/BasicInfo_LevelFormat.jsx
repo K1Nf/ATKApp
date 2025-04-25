@@ -16,14 +16,25 @@ const BasicInfo_LevelFormat = ({
   levelTitle
    // Добавим selectedTopic для отслеживания выбранной темы
 }) => {
-
+  console.log("FORM CONDUCTED: " + formConducted);
+  console.log("FORM setFormConducted: " + setFormConducted);
   // Обработчики для полей
   const handleLinkChange = (e) => setLink(e.target.value);
+
+
   const handleLevelChange = (e) => setLevel(e.target.value);
+
+
   const handleFormConductedChange = (e) => {
     const value = e.target.value;
+    console.log(value + " 123");
     setFormConducted(value);
+
+    console.log("11");
     setIsOtherDescriptionVisible(value === "other"); // Показываем поле "Описание", если форма проведения "Другое"
+
+
+    console.log("122");
   };
   const handleOtherDescriptionChange = (e) => setOtherDescription(e.target.value);
 

@@ -281,30 +281,30 @@ const handleFormSubmit = async (e) => {
       toastr.error("Пожалуйста, выберите тему", "Ошибка");
       return;
     }
-
+    //console.log("TRYING TO SEND FORM...");
     // Создаем объект с данными для отправки на сервер
-    try {
-      const response = await fetch("/api/ref/events/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(createEventRequest),
-      });
+    // try {
+    //   const response = await fetch("/api/ref/events/create", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(createEventRequest),
+    //   });
 
-      if (!response.ok) {
-        throw new Error("Ошибка при создании события");
-      }
+    //   if (!response.ok) {
+    //     throw new Error("Ошибка при создании события");
+    //   }
 
-      const data = await response.text();
-      toastr.success("Данные успешно сохранены!", "Успех");
-      console.log("Событие создано:", data);
-    } catch (error) {
-      console.error("Ошибка:", error);
-      toastr.error("Произошла ошибка при создании события", "Ошибка");
-    }
+    //   const data = await response.text();
+    //   toastr.success("Данные успешно сохранены!", "Успех");
+    //   console.log("Событие создано:", data);
+    // } catch (error) {
+    //   console.error("Ошибка:", error);
+    //   toastr.error("Произошла ошибка при создании события", "Ошибка");
+    // }
   
-    console.log("Topics:", topics);  // Логируем темы в JSX, чтобы проверить, что они обновляются
+    //console.log("Topics:", topics);  // Логируем темы в JSX, чтобы проверить, что они обновляются
 
   //Обнуление переменных
   let cleanedFeedbackTypes = feedbackCollected ? selectedFeedbackTypes : [];
@@ -477,40 +477,41 @@ const handleFormSubmit = async (e) => {
   }, []); // Зависимость [] — запрос только при первом рендере компонента
 
   // Обработчик отправки формы
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
+  /* const handleFormSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if (!selectedTopic) {
-      toastr.error("Пожалуйста, выберите тему!", "Ошибка");
-      return;
-    }
+  //   if (!selectedTopic) {
+  //     toastr.error("Пожалуйста, выберите тему!", "Ошибка");
+  //     return;
+  //   }
 
-    const createEventRequest = {
-      topic: selectedTopic,
-      // Добавьте другие данные формы
-    };
+  //   const createEventRequest = {
+  //     topic: selectedTopic,
+  //     // Добавьте другие данные формы
+  //   };
 
-    try {
-      const response = await fetch('/api/ref/events/create', {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(createEventRequest)
-      });
+  //   try {
+  //     const response = await fetch('/api/ref/events/create', {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify(createEventRequest)
+  //     });
 
-      if (!response.ok) {
-        throw new Error("Ошибка при создании события");
-      }
+  //     if (!response.ok) {
+  //       throw new Error("Ошибка при создании события");
+  //     }
 
-      const data = await response.text();
-      toastr.success("Данные успешно сохранены!", "Успех");
-      console.log("Событие создано:", data);
-    } catch (error) {
-      console.error("Ошибка:", error);
-      toastr.error("Произошла ошибка при создании события", "Ошибка");
-    }
-  };
+  //     const data = await response.text();
+  //     toastr.success("Данные успешно сохранены!", "Успех");
+  //     console.log("Событие создано:", data);
+  //   } catch (error) {
+  //     console.error("Ошибка:", error);
+  //     toastr.error("Произошла ошибка при создании события", "Ошибка");
+  //   }
+  // };
+  // */
 
 
   useEffect(() => {
@@ -620,23 +621,23 @@ const handleFormSubmit = async (e) => {
   const [winnerDetails, setWinnerDetails] = useState("");
   const [executor, setExecutor] = useState(""); // Состояние для поля "Исполнитель"
 
- // Состояния для чекбоксов и селектов
- const [selectedUMVD, setSelectedUMVD] = useState(false);
- const [selectedProsecutor, setSelectedProsecutor] = useState(false);
- const [selectedRoskomnadzor, setSelectedRoskomnadzor] = useState(false);
- const [selectedFSB, setSelectedFSB] = useState(false);
+  // Состояния для чекбоксов и селектов
+  const [selectedUMVD, setSelectedUMVD] = useState(false);
+  const [selectedProsecutor, setSelectedProsecutor] = useState(false);
+  const [selectedRoskomnadzor, setSelectedRoskomnadzor] = useState(false);
+  const [selectedFSB, setSelectedFSB] = useState(false);
 
- // Состояния для селектов
- const [umvdStatus, setUmvdStatus] = useState("");
- const [prosecutorStatus, setProsecutorStatus] = useState("");
- const [roskomnadzorStatus, setRoskomnadzorStatus] = useState("");
- const [fsbStatus, setFsbStatus] = useState("");
+  // Состояния для селектов
+  const [umvdStatus, setUmvdStatus] = useState("");
+  const [prosecutorStatus, setProsecutorStatus] = useState("");
+  const [roskomnadzorStatus, setRoskomnadzorStatus] = useState("");
+  const [fsbStatus, setFsbStatus] = useState("");
 
- // Состояния для ввода чисел
- const [numMaterialsSent, setNumMaterialsSent] = useState("");
- const [numMaterialsBlocked, setNumMaterialsBlocked] = useState("");
+  // Состояния для ввода чисел
+  const [numMaterialsSent, setNumMaterialsSent] = useState("");
+  const [numMaterialsBlocked, setNumMaterialsBlocked] = useState("");
 
- console.log("selectedUMVD:", selectedUMVD);
+  console.log("selectedUMVD:", selectedUMVD);
   console.log("umvdStatus:", umvdStatus);
 
   
@@ -711,6 +712,8 @@ const handleFormSubmit = async (e) => {
                       setLevelTitle={setLevelTitle} // Здесь передаем setLevelTitle
                       selectedTopic={selectedTopic}  // Тема для контроля заголовка
                       levelTitle={levelTitle}        // Заголовок для отображения
+                      isOtherDescriptionVisible = {isOtherDescriptionVisible}
+                      setIsOtherDescriptionVisible = {setIsOtherDescriptionVisible}
                     />
                        {/* Результат проведения мероприятия и управленческие решения */}
                       <BasicInfo_ResultDecision
@@ -740,6 +743,8 @@ const handleFormSubmit = async (e) => {
                     setHasFinancing={setHasFinancing}
                     financing={financing}
                     setFinancing={setFinancing}
+                    financingOtherDescription = {financingOtherDescription}
+                    setFinancingOtherDescription = {setFinancingOtherDescription}
                   />
   
                   {/* Количество участников */}
@@ -774,10 +779,14 @@ const handleFormSubmit = async (e) => {
   
                   {/* Дополнительные характеристики */}
                   <DopInfo_ImportantTheBestEqual
-                    equalFormat={equalFormat}
-                    setEqualFormat={setEqualFormat}
-                    equalFormatDescription={equalFormatDescription}
-                    setEqualFormatDescription={setEqualFormatDescription}
+                    equalFormat = {equalFormat}
+                    setEqualFormat = {setEqualFormat}
+                    equalFormatDescription = {equalFormatDescription}
+                    setEqualFormatDescription = {setEqualFormatDescription}
+                    bestEvent = {bestEvent}
+                    setBestEvent = {setBestEvent}
+                    importantEvent = {importantEvent}
+                    setImportantEvent = {setImportantEvent}
                   />
                   </section> 
                 </form>
@@ -824,6 +833,8 @@ const handleFormSubmit = async (e) => {
                   setLevelTitle={setLevelTitle} // Здесь передаем setLevelTitle
                   selectedTopic={selectedTopic}  // Тема для контроля заголовка
                   levelTitle={levelTitle}        // Заголовок для отображения
+                  isOtherDescriptionVisible = {isOtherDescriptionVisible}
+                  setIsOtherDescriptionVisible = {setIsOtherDescriptionVisible}
                 /> 
               </section>
 
@@ -880,10 +891,14 @@ const handleFormSubmit = async (e) => {
 
               {/* Дополнительные характеристики */}
               <DopInfo_ImportantTheBestEqual
-                equalFormat={equalFormat}
-                setEqualFormat={setEqualFormat}
-                equalFormatDescription={equalFormatDescription}
-                setEqualFormatDescription={setEqualFormatDescription}
+                equalFormat = {equalFormat}
+                setEqualFormat = {setEqualFormat}
+                equalFormatDescription = {equalFormatDescription}
+                setEqualFormatDescription = {setEqualFormatDescription}
+                bestEvent = {bestEvent}
+                setBestEvent = {setBestEvent}
+                importantEvent = {importantEvent}
+                setImportantEvent = {setImportantEvent}
               />
               </section>
              
@@ -1016,6 +1031,8 @@ const handleFormSubmit = async (e) => {
                   setLevelTitle={setLevelTitle} // Здесь передаем setLevelTitle
                   selectedTopic={selectedTopic}  // Тема для контроля заголовка
                   levelTitle={levelTitle}        // Заголовок для отображения
+                  isOtherDescriptionVisible = {isOtherDescriptionVisible}
+                  setIsOtherDescriptionVisible = {setIsOtherDescriptionVisible}
                 />
                   
               </section>
@@ -1048,10 +1065,14 @@ const handleFormSubmit = async (e) => {
 
               {/* Дополнительные характеристики */}
               <DopInfo_ImportantTheBestEqual
-                equalFormat={equalFormat}
-                setEqualFormat={setEqualFormat}
-                equalFormatDescription={equalFormatDescription}
-                setEqualFormatDescription={setEqualFormatDescription}
+                equalFormat = {equalFormat}
+                setEqualFormat = {setEqualFormat}
+                equalFormatDescription = {equalFormatDescription}
+                setEqualFormatDescription = {setEqualFormatDescription}
+                bestEvent = {bestEvent}
+                setBestEvent = {setBestEvent}
+                importantEvent = {importantEvent}
+                setImportantEvent = {setImportantEvent}
               />
               </section>
              

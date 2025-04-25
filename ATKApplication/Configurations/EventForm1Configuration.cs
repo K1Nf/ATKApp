@@ -4,13 +4,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ATKApplication.Configurations
 {
-    public class EventForm1Configuration : IEntityTypeConfiguration<EventForm1>
+    public class EventForm1Configuration : IEntityTypeConfiguration<EventForm2>
     {
-        public void Configure(EntityTypeBuilder<EventForm1> builder)
+        public void Configure(EntityTypeBuilder<EventForm2> builder)
         {
-            //builder.HasKey(e => e.Id);
-
-            
             builder.HasOne(e => e.FeedBack)
                 .WithOne(f => f.Event)
                 .HasForeignKey(typeof(FeedBack))
