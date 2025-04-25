@@ -52,6 +52,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BenchmarkDotNet": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
+            "BenchmarkDotNet.Annotations": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
             "CsharpFunctionalExtensions": {
               "target": "Package",
               "version": "[3.4.3, )"

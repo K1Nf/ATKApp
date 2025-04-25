@@ -18,10 +18,13 @@ namespace ATKApplication.Models
         public bool HasInternet { get; set; }
         public bool HasOpros { get; set; }
         public bool HasOther { get; set; }
-        public Guid EventId { get; set; } = eventId;
-        [Newtonsoft.Json.JsonIgnore]
-        public Event? Event { get; set; }
         public string? Description { get; set; } = description;
+        
+        
+
+        [Newtonsoft.Json.JsonIgnore]
+        public EventForm1? Event { get; set; }
+        public Guid EventId { get; set; } = eventId;
 
     }
 }

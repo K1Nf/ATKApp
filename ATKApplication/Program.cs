@@ -1,4 +1,3 @@
-using ATKApplication.Controllers;
 using ATKApplication.DataBase;
 using ATKApplication.Services;
 using Newtonsoft.Json.Converters;
@@ -7,7 +6,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using ATKApplication.Extensions;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
