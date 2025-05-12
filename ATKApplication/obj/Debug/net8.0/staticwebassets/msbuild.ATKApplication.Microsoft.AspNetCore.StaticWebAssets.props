@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ik5wzt6r4h</Fingerprint>
-      <Integrity>Mpsfk4skuX01UTy/vvmaps6LaqjRtE0/nVNcO2nNWmQ=</Integrity>
+      <Fingerprint>fq2o1mawx5</Fingerprint>
+      <Integrity>13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0ikbk8ntok</Fingerprint>
-      <Integrity>iKD9khrEqksLjW1APQw0JE2EBzVdF0fLcWkGSND839M=</Integrity>
+      <Fingerprint>6a85npd2p0</Fingerprint>
+      <Integrity>0nsbY8Ltm32LneMXq825y3A8AcqKXObtQjEOwE1HXic=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\eventCard.js'))</OriginalItemSpec>
@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qsqn667w07</Fingerprint>
-      <Integrity>lgo48MP3kDvCtyyJs+yR9GrGF57i+6I34cvaNk7KQ1c=</Integrity>
+      <Fingerprint>dp6h63c7k6</Fingerprint>
+      <Integrity>z5GFfxjBDD7PhjKKO+KWsJ73ObUJy4/fde+uEDJXtBE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\events.js'))</OriginalItemSpec>

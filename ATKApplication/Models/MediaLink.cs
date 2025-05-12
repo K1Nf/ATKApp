@@ -8,7 +8,11 @@ public class MediaLink
         Content = content;
         EventId = eventId;
     }
-    
+
+    public MediaLink()
+    {
+        
+    }
     public Guid Id { get; init; }
     public string Content { get; set; }
 

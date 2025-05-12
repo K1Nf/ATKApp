@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ATKApplication.Configurations
 {
-    public class EventForm1Configuration : IEntityTypeConfiguration<EventForm2>
+    public class EventForm2Configuration : IEntityTypeConfiguration<EventForm2>
     {
         public void Configure(EntityTypeBuilder<EventForm2> builder)
         {
@@ -23,6 +23,7 @@ namespace ATKApplication.Configurations
             builder.HasMany(e => e.InterAgencyCooperations)
                 .WithOne(c => c.Event)
                 .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

@@ -137,7 +137,7 @@ const EventCard = () => {
         </section>
 
 
-        <section>
+        {/* <section>
           <h2>Количество участников</h2>
           <p><strong>Школьники:</strong> {data.category.schools}</p>
           <p><strong>Студенты:</strong> {data.category.students}</p>
@@ -146,7 +146,7 @@ const EventCard = () => {
           <p><strong>Мигранты:</strong> {data.category.migrants}</p>
           <p><strong>На учете:</strong> {data.category.registrated}</p>
           <p><strong>Общее количество: {data.category.total} </strong></p>
-        </section>
+        </section> */}
 
        
         <section>
@@ -200,7 +200,7 @@ const EventCard = () => {
           <p><strong>Формат равный равному: </strong> {data.equalToEqual ?? "Нет"}</p>
 
         </section>
-        <button className = "edit" type="button">Редактировать</button>
+        {/* <button className = "edit" type="button">Редактировать</button> */}
         <button className = "delete" type="button" onClick={() => setShowModal(true)}>Удалить</button>
         <DeleteConfirmationModal
         isOpen={showModal}

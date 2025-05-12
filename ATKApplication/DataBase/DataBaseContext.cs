@@ -33,7 +33,7 @@ namespace ATKApplication.DataBase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=Fnaticwinner");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=root");
             optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
 
             optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
@@ -44,7 +44,7 @@ namespace ATKApplication.DataBase
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EventBaseConfiguration());
-            modelBuilder.ApplyConfiguration(new EventForm1Configuration());
+            modelBuilder.ApplyConfiguration(new EventForm2Configuration());
             modelBuilder.ApplyConfiguration(new EventForm5Configuration());
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
             modelBuilder.ApplyConfiguration(new ThemeConfiguration());

@@ -106,9 +106,9 @@ export default function GetEvents(){
           <td>{event.name}</td>
           <td>{event.date}</td>
           <td>{event.participantsCount}</td>
-          <td>{event.level}</td>
-          <td>{event.form}</td>
-          <td>{event.isValuable ? "Да" : "Нет"}</td>
+          <td>{event.levelType}</td>
+          <td>{event.eventType}</td>
+          <td>{event.isValuable = "Да" }</td>
           <td>{event.isBestPractice ? "Да" : "Нет"}</td>
           <td>
             <button

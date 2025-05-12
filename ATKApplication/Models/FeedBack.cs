@@ -9,8 +9,12 @@ using System.Threading.Tasks;
 namespace ATKApplication.Models
 {
 
-    public class FeedBack(string? description, Guid eventId)
+    public class FeedBack//(string? description, Guid eventId)
     {
+        public FeedBack()
+        {
+            
+        }
         public Guid Id { get; init; } = Guid.NewGuid();
 
         public bool HasInterview { get; set; }
@@ -18,13 +22,13 @@ namespace ATKApplication.Models
         public bool HasInternet { get; set; }
         public bool HasOpros { get; set; }
         public bool HasOther { get; set; }
-        public string? Description { get; set; } = description;
+        public string? Description { get; set; }// = description;
         
         
 
         [Newtonsoft.Json.JsonIgnore]
         public EventForm2? Event { get; set; }
-        public Guid EventId { get; set; } = eventId;
+        public Guid EventId { get; set; } //= eventId;
 
     }
 }

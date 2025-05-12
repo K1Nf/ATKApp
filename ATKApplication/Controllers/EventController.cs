@@ -1,5 +1,6 @@
 ﻿using ATKApplication.Contracts.Request;
 using ATKApplication.Extensions;
+using ATKApplication.Models;
 using ATKApplication.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,7 @@ namespace ATKApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            
 
             Console.WriteLine(Guid.NewGuid());
             var events = await _eventService.GetAll();
