@@ -74,7 +74,7 @@ namespace ATKApplication.Controllers
             //await _db.Categories.AddAsync(category1);
             //await _db.Categories.AddAsync(category2);
             //await _db.SaveChangesAsync();*/
-            Console.WriteLine(Guid.NewGuid());
+            //Console.WriteLine(Guid.NewGuid());
             var events = await _eventService.GetAll();
             return Ok(events.Value);
       

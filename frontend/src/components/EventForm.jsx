@@ -24,7 +24,7 @@ import Info_BlockMaterial from "../components/EventFormSections/Info_BlockMateri
 import Info_SourceOfDistribution from "../components/EventFormSections/Info_SourceOfDistribution"
 import Info_DistrictCompetition from "../components/EventFormSections/Info_DistrictCompetition"
 import DopInfo_Support from "../components/EventFormSections/DopInfo_Support"
-
+import Info_ExecutorAndDescription from "../components/EventFormSections/Info_ExecutorAndDescription"
 const EventForm = () => {
 
 
@@ -275,7 +275,8 @@ const validateLinks = (linkString) => {
 
 // Функция для проверки обязательных полей и ссылок
 const handleFormSubmit = async (e) => {
-  
+  console.log("Нажата кнопка отправки формы");
+
   e.preventDefault();
     if (!selectedTopic) {
       toastr.error("Пожалуйста, выберите тему", "Ошибка");
@@ -298,13 +299,13 @@ const handleFormSubmit = async (e) => {
 
       const data = await response.text();
       toastr.success("Данные успешно сохранены!", "Успех");
-      console.log("Событие создано:", data);
+   
     } catch (error) {
       console.error("Ошибка:", error);
       toastr.error("Произошла ошибка при создании события", "Ошибка");
     }
   
-    console.log("Topics:", topics);  // Логируем темы в JSX, чтобы проверить, что они обновляются
+
 
   //Обнуление переменных
   let cleanedFeedbackTypes = feedbackCollected ? selectedFeedbackTypes : [];
@@ -351,8 +352,11 @@ const handleFormSubmit = async (e) => {
     { value: projectName, id: "event_name" },
     { value: eventDate, id: "event_date" },
     { value: eventDescription, id: "event_description" },
-    { value: link, id: "link" },
   ];
+  
+  if (formType !== "2.7" && formType !== "2.7.2") {
+    requiredFields.push({ value: link, id: "link" });
+  }
 
   // Проверка обязательных полей
   requiredFields.forEach((field) => {
@@ -454,8 +458,8 @@ const handleFormSubmit = async (e) => {
   alert(JSON.stringify(createEventRequest, null, 2));
 
 
-  console.log(createEventRequest);
-  console.log("---------------");
+  // console.log(createEventRequest);
+  // console.log("---------------");
 
   const backCreateUrl = `/api/ref/events/create`;
   const [topics, setTopics] = useState([]); // Состояние для списка тем
@@ -476,41 +480,6 @@ const handleFormSubmit = async (e) => {
     fetchTopics();  // Вызовем функцию для получения данных
   }, []); // Зависимость [] — запрос только при первом рендере компонента
 
-  // Обработчик отправки формы
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!selectedTopic) {
-      toastr.error("Пожалуйста, выберите тему!", "Ошибка");
-      return;
-    }
-
-    const createEventRequest = {
-      topic: selectedTopic,
-      // Добавьте другие данные формы
-    };
-
-    try {
-      const response = await fetch('/api/ref/events/create', {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(createEventRequest)
-      });
-
-      if (!response.ok) {
-        throw new Error("Ошибка при создании события");
-      }
-
-      const data = await response.text();
-      toastr.success("Данные успешно сохранены!", "Успех");
-      console.log("Событие создано:", data);
-    } catch (error) {
-      console.error("Ошибка:", error);
-      toastr.error("Произошла ошибка при создании события", "Ошибка");
-    }
-  };
 
 
   useEffect(() => {
@@ -545,7 +514,7 @@ const handleFormSubmit = async (e) => {
     }
 
     const data = await response.text();
-    console.log("Событие создано:", data);
+    // console.log("Событие создано:", data);
     //  Показать уведомление
     toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
     
@@ -563,7 +532,7 @@ const handleFormSubmit = async (e) => {
       try {
         const response = await fetch('/api/ref/themes');
         const data = await response.json();
-        console.log("Темы:", data);  // Проверка, что данные получены
+        // console.log("Темы:", data);  // Проверка, что данные получены
         setTopics(data);  // Сохраняем полученные данные в состояние
       } catch (error) {
         console.error('Ошибка при получении тем:', error);
@@ -619,7 +588,7 @@ const handleFormSubmit = async (e) => {
   const [participationResult, setParticipationResult] = useState("");
   const [winnerDetails, setWinnerDetails] = useState("");
   const [executor, setExecutor] = useState(""); // Состояние для поля "Исполнитель"
-
+  const [executorDescription, setExecutorDescription] = useState("");
  // Состояния для чекбоксов и селектов
  const [selectedUMVD, setSelectedUMVD] = useState(false);
  const [selectedProsecutor, setSelectedProsecutor] = useState(false);
@@ -636,10 +605,11 @@ const handleFormSubmit = async (e) => {
  const [numMaterialsSent, setNumMaterialsSent] = useState("");
  const [numMaterialsBlocked, setNumMaterialsBlocked] = useState("");
 
- console.log("selectedUMVD:", selectedUMVD);
-  console.log("umvdStatus:", umvdStatus);
+//  console.log("selectedUMVD:", selectedUMVD);
+//   console.log("umvdStatus:", umvdStatus);
 
-  
+
+
 
   return (
     <div>
@@ -780,6 +750,9 @@ const handleFormSubmit = async (e) => {
                     setEqualFormatDescription={setEqualFormatDescription}
                   />
                   </section> 
+                  <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
                 </form>
               </div>
             )}
@@ -886,7 +859,9 @@ const handleFormSubmit = async (e) => {
                 setEqualFormatDescription={setEqualFormatDescription}
               />
               </section>
-             
+              <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
             </form>
           </div>
           )}
@@ -926,8 +901,7 @@ const handleFormSubmit = async (e) => {
 
               <section className="form-section1">
               <h2>Дополнительная информация о мероприятии</h2>
-                  <section>
-                    <h2>Согласование учебного материала</h2>
+                  
                     {/* Подключение компонента BaseInfo_TeachMaterials */}
                         <BaseInfo_TeachMaterials/>
                         
@@ -935,9 +909,11 @@ const handleFormSubmit = async (e) => {
                         <DopInfo_Materials />
                          
                        
-                  </section>
+                  
               </section>
-             
+              <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
             </form>
           </div>
           )}
@@ -970,11 +946,19 @@ const handleFormSubmit = async (e) => {
                     setDescriptionTitle={setDescriptionTitle}
                     link={link}
                     setLink={setLink}
+                    hideLink={["2.7.2", "3.2.1"].includes(selectedTopic)}
+                   
                   />    
-              </section>    
+
+                <DopInfo_Support/>
+              </section>   
+              <button type="submit" id="save_button">
+                                  Сохранить
+                                </button> 
             </form>
           </div>
           )}
+
            {formType === 5 && (
              <div id="form_theme_1" className="form-block">
              <h1>Форма создания мероприятия</h1>
@@ -1054,7 +1038,9 @@ const handleFormSubmit = async (e) => {
                 setEqualFormatDescription={setEqualFormatDescription}
               />
               </section>
-             
+              <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
             </form>
           </div>
           )}
@@ -1085,6 +1071,8 @@ const handleFormSubmit = async (e) => {
                   setNamePlaceholder={setNamePlaceholder}
                   descriptionTitle={descriptionTitle}
                   setDescriptionTitle={setDescriptionTitle}
+                  hideLink={["3.4.3"].includes(selectedTopic)}
+                  
                 />
               </section>
 
@@ -1114,6 +1102,9 @@ const handleFormSubmit = async (e) => {
                   setUmvdStatus={setUmvdStatus}  // передаем функцию для изменения состояния
                 />
               </section> 
+              <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
             </form>
           </div>
           )}
@@ -1239,9 +1230,9 @@ const handleFormSubmit = async (e) => {
       
                 </section>
 
-                <section>
+          
                 <BaseInfo_TeachMaterials/>
-                </section>
+             
 
                 <section>
                 <Info_Direction/>
@@ -1251,36 +1242,8 @@ const handleFormSubmit = async (e) => {
                 <Info_EventStatus/>
                 </section>
 
-                <section>
+              
                 <Info_TargetAudience/>
-                </section>
-
-                <section>
-                <div>
-                <h2> Участие в создании </h2>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={isWorkSchoolAndVolodejChecked}
-                    onChange={() => setisWorkSchoolAndVolodejChecked(!isWorkSchoolAndVolodejChecked)}
-                  />
-                  Создан при участии школьников и молодежи
-                </label>
-
-                {isWorkSchoolAndVolodejChecked && (
-                  <div>
-                    <textarea
-                      value={isWorkSchoolAndVolodejDescription}
-                      onChange={(e) => setisWorkSchoolAndVolodejDescription(e.target.value)}
-                      placeholder="Описание участия данной категории, не более 200 символов"
-                      maxLength={200}
-                    />
-                 </div>
-                )}
-              </div>
-      
-                </section>
-
 
             </section>
             <button type="submit" id="save_button">
@@ -1419,7 +1382,9 @@ const handleFormSubmit = async (e) => {
              
                     
                     </section>
-                  
+                    <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
                   </form>
                 </div>
                 )}
@@ -1477,13 +1442,10 @@ const handleFormSubmit = async (e) => {
                                 <section className="form-section1">
                               <h2>Дополнительная информация о мероприятии</h2>
                               <div>
-                            
-                                
-
                                     {/* Целевая аудитория */}
                                     <Info_TargetAudience/>
 
-                                   <DopInfo_Support/>
+                                    <DopInfo_Support/>
                                     </div>
                               </section>
                          
@@ -1495,13 +1457,200 @@ const handleFormSubmit = async (e) => {
                           </div>
                           )}
 
+                        {formType === 14 && (
+                          <div id="form_theme_1" className="form-block">
+                            <h1>Форма создания мероприятия</h1>
+                            <form onSubmit={handleFormSubmit}>
+                      
+                              {/* Основная информация о мероприятии */}
+                              <section className="form-section1">
+                                <h2>Основная информация о мероприятии</h2>
+                              
+                                  <BasicInfo_NameDataDeskEventFormLink
+                                    executor={executor}
+                                    setExecutor={setExecutor}  // Передаем состояние и функцию
+                                    eventName={eventName}
+                                    setEventName={setEventName}
+                                    eventDate={eventDate}
+                                    setEventDate={setEventDate}
+                                    eventDescription={eventDescription}
+                                    setEventDescription={setEventDescription}
+                                    dateHasError={dateHasError}
+                                    selectedTopic={selectedTopic}
+                                    fieldTitle={fieldTitle}
+                                    setFieldTitle={setFieldTitle}
+                                    namePlaceholder={namePlaceholder}
+                                    setNamePlaceholder={setNamePlaceholder}
+                                    descriptionTitle={descriptionTitle}
+                                    setDescriptionTitle={setDescriptionTitle}
+                                    hideLink={selectedTopic === "1.1.3"}
+                                  />
+                                </section>
+
+                                <section className="form-section1">
+                              <h2>Дополнительная информация о мероприятии</h2>
+                              <div>
+                                    <DopInfo_ImportantTheBestEqual/>
+                                    </div>
+                              </section>
+                         
+                                         
+                            <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
+                            </form>
+                          </div>
+                          )}
+
+                        {formType === 15 && (
+                          
+                          <div id="form_theme_1" className="form-block">
+                            <h1>Форма создания мероприятия</h1>
+                            <form onSubmit={handleFormSubmit} id="eventForm">
+                      
+                              {/* Основная информация о мероприятии */}
+                              <section className="form-section1">
+                                <h2>Основная информация о мероприятии</h2>
+                              
+                                  <BasicInfo_NameDataDeskEventFormLink
+                                    executor={executor}
+                                    setExecutor={setExecutor}  // Передаем состояние и функцию
+                                    eventName={eventName}
+                                    setEventName={setEventName}
+                                    eventDate={eventDate}
+                                    setEventDate={setEventDate}
+                                    eventDescription={eventDescription}
+                                    setEventDescription={setEventDescription}
+                                    dateHasError={dateHasError}
+                                    selectedTopic={selectedTopic}
+                                    fieldTitle={fieldTitle}
+                                    setFieldTitle={setFieldTitle}
+                                    namePlaceholder={namePlaceholder}
+                                    setNamePlaceholder={setNamePlaceholder}
+                                    descriptionTitle={descriptionTitle}
+                                    setDescriptionTitle={setDescriptionTitle}
+                                  />
+                                </section>
+
+                                <section className="form-section1">
+                              <h2>Дополнительная информация о мероприятии</h2>
+                              <div>
+                                    <DopInfo_ImportantTheBestEqual/>
+                                    </div>
+                              </section>
+                              <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
+                                         
+                          
+                                
+                            </form>
+                          </div>
+                          )}
+
+                        {formType === 16 && (
+                          
+                          <div id="form_theme_1" className="form-block">
+                            <h1>Форма создания мероприятия</h1>
+                            <form onSubmit={handleFormSubmit} id="eventForm">
+                      
+                              {/* Основная информация о мероприятии */}
+                              <section className="form-section1">
+                                <h2>Основная информация о мероприятии</h2>
+                              
+                                <Info_ExecutorAndDescription
+                                  executor={executor}
+                                  setExecutor={setExecutor}
+                                  description={executorDescription}
+                                  setDescription={setExecutorDescription}
+                                />
+                                </section>
+
+                          
+                                <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
+                                         
+                          
+                                
+                            </form>
+                          </div>
+                          )}
+
+                      {formType === 17 && (
+                          
+                          <div id="form_theme_1" className="form-block">
+                          <h1>Форма создания мероприятия</h1>
+                          <form onSubmit={handleFormSubmit}>
+                    
+                            {/* Основная информация о мероприятии */}
+                            <section className="form-section1">
+                              <h2>Основная информация о мероприятии</h2>
+                              {/* Наименование, дата, краткое описание */}
+                              <BasicInfo_NameDataDeskEventFormLink
+                                executor={executor}
+                                setExecutor={setExecutor}  // Передаем состояние и функцию
+                                eventName={eventName}
+                                setEventName={setEventName}
+                                eventDate={eventDate}
+                                setEventDate={setEventDate}
+                                eventDescription={eventDescription}
+                                setEventDescription={setEventDescription}
+                                dateHasError={dateHasError}
+                                selectedTopic={selectedTopic}
+                                fieldTitle={fieldTitle}
+                                setFieldTitle={setFieldTitle}
+                                namePlaceholder={namePlaceholder}
+                                setNamePlaceholder={setNamePlaceholder}
+                                descriptionTitle={descriptionTitle}
+                                setDescriptionTitle={setDescriptionTitle}
+                              />
+                            </section>
+              
+              
+                            <section className="form-section1">
+                            <h2>Дополнительная информация о мероприятии</h2>
+              
+                              <section>
+                              
+                              <div>
+                              <h2> Участие в создании </h2>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  checked={isWorkSchoolAndVolodejChecked}
+                                  onChange={() => setisWorkSchoolAndVolodejChecked(!isWorkSchoolAndVolodejChecked)}
+                                />
+                                Создан при участии школьников и молодежи
+                              </label>
+              
+                              {isWorkSchoolAndVolodejChecked && (
+                                <div>
+                                  <textarea
+                                    value={isWorkSchoolAndVolodejDescription}
+                                    onChange={(e) => setisWorkSchoolAndVolodejDescription(e.target.value)}
+                                    placeholder="Описание участия данной категории, не более 200 символов"
+                                    maxLength={200}
+                                  />
+                               </div>
+                              )}
+                            </div>
+                              </section>
+                              <Info_TargetAudience/>
+                              </section>
+                                <button type="submit" id="save_button">
+                                  Сохранить
+                                </button>
+                            </form>
+                          </div>
+                          )}
 
                {/* Кнопка сохранения */}
-               {formType && (
+               {/* {formType && (
                 <button type="submit" id="save_button">
                   Сохранить
                 </button>
-              )}
+              )} */}
             
           </div>
         </div>
