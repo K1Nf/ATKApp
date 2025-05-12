@@ -10,24 +10,21 @@ namespace ATKApplication.Models
             Name = name;
             Rating = 0;
         }
-        public Organization()
-        {
-            
-        }
+
+        public Organization() {}
+
+
 
         public Guid Id { get; init; }
         public string Name { get; set; }
+        public string Password { get; set; }
         public int Rating { get; private set; }
 
-        public Organization? Municipality { get; set; }
-        public Guid? MunicipalityId { get; set; }
 
-        public Guid RoleId { get; init; }
-        //public Role? Role { get; set; }
 
         [JsonIgnore]
         [Newtonsoft.Json.JsonIgnore]
-        public List<Event> Events { get; set; } = [];
+        public List<EventBase> Events { get; set; } = [];
         
 
 

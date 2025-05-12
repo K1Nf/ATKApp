@@ -10,6 +10,6 @@ namespace ATKApplication.Models
         public string Description { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]
-        public List<Event> Events { get; set; } = [];
+        public List<EventBase> Events { get; set; } = [];
     }
 }

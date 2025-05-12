@@ -18,43 +18,11 @@
   {
     "ContainingType": "ATKApplication.Controllers.PlansController",
     "Method": "GetAll",
-    "RelativePath": "api/Plans/{userId}",
+    "RelativePath": "api/Plans",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.PlansController",
-    "Method": "Create",
-    "RelativePath": "api/Plans/Create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.PlansController",
-    "Method": "Delete",
-    "RelativePath": "api/Plans/Delete/{Id}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {
@@ -62,16 +30,6 @@
     "Method": "GetAll",
     "RelativePath": "api/ref/Events",
     "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.EventsController",
-    "Method": "Update",
-    "RelativePath": "api/ref/Events",
-    "HttpMethod": "",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -149,11 +107,6 @@
         "IsRequired": false
       },
       {
-        "Name": "Status",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "OrganizerId",
         "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
@@ -180,7 +133,7 @@
       },
       {
         "Name": "Orders",
-        "Type": "System.Collections.Generic.List\u00601[[ATKApplication.Controllers.Sort, ATKApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[ATKApplication.Extensions.Sort, ATKApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       },
       {
@@ -204,127 +157,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.ReportsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Reports",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.ReportsController",
-    "Method": "Get",
-    "RelativePath": "api/Reports/{Id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.ReportsController",
-    "Method": "AddEvents",
-    "RelativePath": "api/Reports/AddEvents/{Id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "eventsId",
-        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.ReportsController",
-    "Method": "Create",
-    "RelativePath": "api/Reports/Create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "createReportRequest",
-        "Type": "ATKApplication.Contracts.Request.CreateReportRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.ReportsController",
-    "Method": "Delete",
-    "RelativePath": "api/Reports/Delete/{Id}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.ReportsController",
-    "Method": "DeleteEvents",
-    "RelativePath": "api/Reports/DeleteEvents/{Id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "eventsId",
-        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ATKApplication.Controllers.ReportsController",
-    "Method": "Update",
-    "RelativePath": "api/Reports/Update/{Id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "updateReportRequest",
-        "Type": "ATKApplication.Contracts.Request.UpdateReportRequest",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {

@@ -53,7 +53,6 @@ const BaseInfo_TeachMaterials = ({}) => {
 
   return (
     <div>
-    <section>
       <h2>Согласование материала</h2>
         {/* Согласование материала */}
         <div>
@@ -160,7 +159,6 @@ const BaseInfo_TeachMaterials = ({}) => {
                     )}
                   </div>
                 )}
-                
               </div>
 
               <div>
@@ -219,7 +217,7 @@ const BaseInfo_TeachMaterials = ({}) => {
               </div>
             </>
           )}
-        </div></section>
+        </div>
     </div>
   );
 };

@@ -840,24 +840,3 @@ h3 {
   color: #333;  /* Темный цвет для текста */
   line-height: 1.5;
 }
-.law-list {
-  padding: 12px;
-  border-radius: 6px;
-}
-
-.law-list label {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.law-list input[type="checkbox"] {
-  margin-top: 5px;
-  flex-shrink: 0;
-}
-
-.law-list span {
-  word-break: break-word;
-  line-height: 1.4;
-}

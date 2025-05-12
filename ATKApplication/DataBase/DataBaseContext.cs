@@ -8,38 +8,46 @@ namespace ATKApplication.DataBase
 {
     public class DataBaseContext : DbContext
     {
-        public DbSet<Event> Events { get; set; }
-        public DbSet<Report> Reports { get; set; }
-        public DbSet<Plan> Plans { get; set; }
-        public DbSet<Organization> Organizations { get; set; }
+        public DbSet<EventBase> EventsBase { get; set; }
+        public DbSet<EventForm2> EventForm2s { get; set; }
+        public DbSet<EventForm3> EventForm3s { get; set; }
+        public DbSet<EventForm4> EventForm4s { get; set; }
+        public DbSet<EventForm5> EventForm5s { get; set; }
 
+
+        public DbSet<Organization> Organizations { get; set; }
         public DbSet<Theme> Themes { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public DbSet<MediaLink> MediaLinks { get; set; }
+
+
         public DbSet<FeedBack> FeedBacks { get; set; }
         public DbSet<Finance> Finances { get; set; }
 
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<ReportAndEvent> ReportAndEvents { get; set; }
 
         public DbSet<InterAgencyCooperation> InterAgencyCooperations { get; set; }
+        public DbSet<Support> Supports { get; set; }
+        public DbSet<Agreement> Agreements { get; set; }
 
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=root");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=AtkTest;Username=postgres;Password=Fnaticwinner");
             optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
-
 
             optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
         }
 
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new EventConfiguration());
-            modelBuilder.ApplyConfiguration(new ReportAndEventConfiguration());
+            modelBuilder.ApplyConfiguration(new EventBaseConfiguration());
+            modelBuilder.ApplyConfiguration(new EventForm1Configuration());
+            modelBuilder.ApplyConfiguration(new EventForm5Configuration());
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
+            modelBuilder.ApplyConfiguration(new ThemeConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

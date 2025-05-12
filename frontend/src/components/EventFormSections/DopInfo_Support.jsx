@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import DopInfo_Finanse from './DopInfo_Finanse'; // Импортируем компонент для финансирования
 
 const DopInfo_Support = ({}) => {
   // Состояния для всех типов поддержек
@@ -20,7 +20,6 @@ const DopInfo_Support = ({}) => {
     otherDescription: "",
     competitionDescription: "",
     winnerDetails: "",
-    financingDescription: "",
   });
 
   
@@ -112,11 +111,13 @@ const DopInfo_Support = ({}) => {
           Финансовая поддержка
         </label>
         {supportTypes.financing && (
-         <textarea
-         maxLength={200}
-         placeholder="Описание финансовой поддержки проекта (не более 200 символов)"
-         value={descriptions.financing}
-         onChange={(e) => handleDescriptionChange("financingDescription", e.target.value)}
+         <DopInfo_Finanse
+         financing={financing}
+         setFinancing={setFinancing}
+         hasFinancing={supportTypes.financing}
+         setHasFinancing={() => handleCheckboxChange("financing")}
+         financingOtherDescription={descriptions.financingOtherDescription}
+         setFinancingOtherDescription={(value) => handleDescriptionChange("financingOtherDescription", value)}
        />
         )}
       </div>
