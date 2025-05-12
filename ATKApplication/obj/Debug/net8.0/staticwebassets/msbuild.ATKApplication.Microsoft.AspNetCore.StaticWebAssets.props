@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6a85npd2p0</Fingerprint>
-      <Integrity>0nsbY8Ltm32LneMXq825y3A8AcqKXObtQjEOwE1HXic=</Integrity>
+      <Fingerprint>403tvx8ece</Fingerprint>
+      <Integrity>jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\eventCard.js'))</OriginalItemSpec>

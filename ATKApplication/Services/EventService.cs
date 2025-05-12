@@ -63,6 +63,14 @@ namespace ATKApplication.Services
                     Content = "https://link.example.ru",
                     EventId = Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"),
                     Id = Guid.NewGuid()
+                }, new MediaLink {
+                    Content = "https://link2.example.ru",
+                    EventId = Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"),
+                    Id = Guid.NewGuid()
+                }, new MediaLink {
+                    Content = "https://link3.example.ru",
+                    EventId = Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"),
+                    Id = Guid.NewGuid()
                 }]
             },
 
@@ -114,8 +122,16 @@ namespace ATKApplication.Services
                     Description = "Присвоение улицам, скверам, школам и т.д. имен Героев Российской Федерации, а также иных лиц, отличившихся в борьбе с терроризмом, прежде всего с украинскими националистическими и неонацистскими военизированными формированиями, признанными террористическими организациями"
                 },
                 MediaLinks = [new MediaLink {
-                    Content = "https://link2.example2.ru",
+                    Content = "https://link.example.ru",
                     EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
+                    Id = Guid.NewGuid()
+                }, new MediaLink {
+                    Content = "https://link2.example.ru",
+                     EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
+                    Id = Guid.NewGuid()
+                }, new MediaLink {
+                    Content = "https://link3.example.ru",
+                     EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
                     Id = Guid.NewGuid()
                 }]
             },
@@ -218,6 +234,7 @@ namespace ATKApplication.Services
                 //OrganizerName = x.Organizer!.Name,
                 ThemeCode = x.Theme!.Code,
                 EventType = x.EventType,
+                Content = x.Content,
                 LevelType = x.LevelType,
                 OrganizerName = "Департамент Х",
                 Actor = x.Actor,

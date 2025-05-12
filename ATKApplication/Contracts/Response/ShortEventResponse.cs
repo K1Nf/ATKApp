@@ -9,6 +9,7 @@ namespace ATKApplication.Contracts.Response
         public string ThemeCode { get; init; }
         public string Name { get; init; }
         public string Actor { get; init; }
+        public string Content { get; init; }
         public string[]? Links { get; init; }
         public DateOnly? Date { get; init; }
         //public string IsValuable { get; init; }

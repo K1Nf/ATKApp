@@ -104,12 +104,14 @@ export default function GetEvents(){
         <tr key={event.id}>
           <td>{event.themeCode}</td>
           <td>{event.name}</td>
+          <td>{event.content}</td>
           <td>{event.date}</td>
           <td>{event.participantsCount}</td>
-          <td>{event.levelType}</td>
-          <td>{event.eventType}</td>
-          <td>{event.isValuable = "Да" }</td>
-          <td>{event.isBestPractice ? "Да" : "Нет"}</td>
+          {/* <td>{event.levelType}</td>
+          <td>{event.eventType}</td> */}
+          <td>{event.links.map((e) => (<h3>{e}</h3>))}</td>
+          {/* <td>{event.isValuable = "Да" }</td>
+          <td>{event.isBestPractice ? "Да" : "Нет"}</td> */}
           <td>
             <button
               className="details-btn"
