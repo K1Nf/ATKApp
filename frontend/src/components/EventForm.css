@@ -840,3 +840,50 @@ h3 {
   color: #333;  /* Темный цвет для текста */
   line-height: 1.5;
 }
+
+/* Добавил вручную снизу */
+
+
+
+/* Стиль для голубой рамки */
+.description-container {
+  border: 2px solid #3498db;  /* Голубой цвет */
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #ecf7ff;  /* Легкий голубой фон */
+  border-radius: 8px;  /* Сглаженные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Легкая тень */
+}
+
+.description-container h3 {
+  font-size: 18px;
+  color: #3498db;  /* Голубой цвет для заголовка */
+  margin-bottom: 10px;
+}
+
+.description-container p {
+  font-size: 16px;
+  color: #333;  /* Темный цвет для текста */
+  line-height: 1.5;
+}
+.law-list {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.law-list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.law-list input[type="checkbox"] {
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.law-list span {
+  word-break: break-word;
+  line-height: 1.4;
+}
