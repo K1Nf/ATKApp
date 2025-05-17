@@ -13,8 +13,6 @@ namespace ATKApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            
-
             Console.WriteLine(Guid.NewGuid());
             var events = await _eventService.GetAll();
             return Ok(events.Value);
@@ -53,20 +51,6 @@ namespace ATKApplication.Controllers
             return BadRequest("Мероприятие не добавлено:");
         }
 
-
-
-        //[HttpPost("Update/{Id:guid}")]
-        //public async Task<IActionResult> Update(/*[FromRoute] Guid id, [FromBody] UpdateEventRequest createEventRequest*/)
-        //{
-        //    //Guid tokenId = Guid.NewGuid();
-        //    var result = await _eventService.Update(/*id, tokenId, createEventRequest*/);
-
-        //    if (result.IsSuccess)
-        //    {
-        //        return Ok();
-        //    }
-        //    return BadRequest("Мероприятие не обновлено:");
-        //}
 
 
 

@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "pRXwRiKwM8DRgh8V8SIMlpYiN79vkOsKvp1zuGNpNaU=",
+=======
+  "Hash": "Nc837R27FWZon5itGPEaMFrRC0KywH2V9ZtcM2D22cY=",
+>>>>>>> 6ace2d0 (laptop merge)
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -10,17 +14,17 @@
     {
       "Name": "ATKApplication\\wwwroot",
       "Source": "ATKApplication",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/css/events-DlZwj7pn#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -31,17 +35,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x5hugsd5fq",
-      "Integrity": "ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY=",
+      "Fingerprint": "3ijug50hbl",
+      "Integrity": "O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\events-DlZwj7pn.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/css/Sidebar-G10zORfr#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -52,17 +56,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "iztu2b9t2x",
-      "Integrity": "su52cE08r8/hsaPGtfL2cqX7fqbA/0rTLAOOIhaT8xQ=",
+      "Fingerprint": "ptlsncuehh",
+      "Integrity": "feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\Sidebar-G10zORfr.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/css/toastr-PcHlmDLb#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -73,17 +77,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "738usrmbe9",
-      "Integrity": "jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=",
+      "Fingerprint": "u4u6vy72f6",
+      "Integrity": "DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\toastr-PcHlmDLb.css"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/images/hanty-mansijskogo-BB2EWD9-#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -101,10 +105,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/js/createEvent#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -115,17 +119,22 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
       "Fingerprint": "fq2o1mawx5",
       "Integrity": "13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA=",
+=======
+      "Fingerprint": "4usb4qdvr6",
+      "Integrity": "RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE=",
+>>>>>>> 6ace2d0 (laptop merge)
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/js/eventCard#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -136,17 +145,22 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
       "Fingerprint": "403tvx8ece",
       "Integrity": "jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=",
+=======
+      "Fingerprint": "j1o07jv9sp",
+      "Integrity": "ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q=",
+>>>>>>> 6ace2d0 (laptop merge)
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\eventCard.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\events.js",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/js/events#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -157,17 +171,22 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
       "Fingerprint": "1ndouzvtln",
       "Integrity": "8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=",
+=======
+      "Fingerprint": "ik5k2xf1l1",
+      "Integrity": "zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM=",
+>>>>>>> 6ace2d0 (laptop merge)
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\events.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/js/Sidebar-chunk#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -178,17 +197,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4vi3m0hi2f",
-      "Integrity": "wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=",
+      "Fingerprint": "nftbdtxkyg",
+      "Integrity": "wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\Sidebar-chunk.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "assets/js/toastr.min-chunk#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -199,17 +218,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3qoivlzl8q",
-      "Integrity": "q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs=",
+      "Fingerprint": "khkt731ym1",
+      "Integrity": "+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\toastr.min-chunk.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "images/hanty-mansijskogo#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -227,10 +246,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hanty-mansijskogo.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\images\\АТК.png",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\АТК.png",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "images/АТК#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -248,10 +267,10 @@
       "OriginalItemSpec": "wwwroot\\images\\АТК.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\index.html",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -269,10 +288,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "src/eventCard/eventCard#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -290,10 +309,10 @@
       "OriginalItemSpec": "wwwroot\\src\\eventCard\\eventCard.html"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "src/table/indexTable#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -311,10 +330,10 @@
       "OriginalItemSpec": "wwwroot\\src\\table\\indexTable.html"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\vite.svg",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\vite.svg",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
       "RelativePath": "vite#[.{fingerprint}]?.svg",
       "AssetKind": "All",
@@ -334,8 +353,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "assets/css/events-DlZwj7pn.css",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
+      "Route": "assets/css/events-DlZwj7pn.3ijug50hbl.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -344,7 +363,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1987"
+          "Value": "1988"
         },
         {
           "Name": "Content-Type",
@@ -352,10 +371,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY=\""
+          "Value": "\"O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
         },
         {
@@ -394,6 +414,9 @@
         {
           "Name": "Last-Modified",
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -403,7 +426,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x5hugsd5fq"
+          "Value": "3ijug50hbl"
         },
         {
           "Name": "label",
@@ -411,13 +434,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY="
+          "Value": "sha256-O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0="
         }
       ]
     },
     {
-      "Route": "assets/css/Sidebar-G10zORfr.css",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
+      "Route": "assets/css/events-DlZwj7pn.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -426,7 +449,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9977"
+          "Value": "1988"
         },
         {
           "Name": "Content-Type",
@@ -434,11 +457,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"su52cE08r8/hsaPGtfL2cqX7fqbA/0rTLAOOIhaT8xQ=\""
+          "Value": "\"O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -448,13 +475,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-su52cE08r8/hsaPGtfL2cqX7fqbA/0rTLAOOIhaT8xQ="
+          "Value": "sha256-O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0="
         }
       ]
     },
     {
-      "Route": "assets/css/Sidebar-G10zORfr.iztu2b9t2x.css",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
+      "Route": "assets/css/Sidebar-G10zORfr.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -463,7 +490,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9977"
+          "Value": "9978"
         },
         {
           "Name": "Content-Type",
@@ -471,11 +498,52 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"su52cE08r8/hsaPGtfL2cqX7fqbA/0rTLAOOIhaT8xQ=\""
+          "Value": "\"feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k="
+        }
+      ]
+    },
+    {
+      "Route": "assets/css/Sidebar-G10zORfr.ptlsncuehh.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9978"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -485,7 +553,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "iztu2b9t2x"
+          "Value": "ptlsncuehh"
         },
         {
           "Name": "label",
@@ -493,6 +561,7 @@
         },
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-su52cE08r8/hsaPGtfL2cqX7fqbA/0rTLAOOIhaT8xQ="
         }
       ]
@@ -539,12 +608,15 @@
         {
           "Name": "integrity",
           "Value": "sha256-jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks="
+=======
+          "Value": "sha256-feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k="
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
     {
       "Route": "assets/css/toastr-PcHlmDLb.css",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -553,7 +625,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7365"
+          "Value": "7366"
         },
         {
           "Name": "Content-Type",
@@ -561,11 +633,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=\""
+          "Value": "\"DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -575,13 +651,58 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks="
+          "Value": "sha256-DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw="
+        }
+      ]
+    },
+    {
+      "Route": "assets/css/toastr-PcHlmDLb.u4u6vy72f6.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u4u6vy72f6"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/css/toastr-PcHlmDLb.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw="
         }
       ]
     },
     {
       "Route": "assets/images/hanty-mansijskogo-BB2EWD9-.g3gzev8mqx.png",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -602,7 +723,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -626,7 +751,7 @@
     },
     {
       "Route": "assets/images/hanty-mansijskogo-BB2EWD9-.png",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -647,7 +772,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -662,8 +791,13 @@
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "assets/js/createEvent.fq2o1mawx5.js",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
+=======
+      "Route": "assets/js/createEvent.4usb4qdvr6.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
+>>>>>>> 6ace2d0 (laptop merge)
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -672,7 +806,11 @@
         },
         {
           "Name": "Content-Length",
+<<<<<<< HEAD
           "Value": "88747"
+=======
+          "Value": "88786"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Content-Type",
@@ -680,11 +818,19 @@
         },
         {
           "Name": "ETag",
+<<<<<<< HEAD
           "Value": "\"13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA=\""
         },
         {
           "Name": "Last-Modified",
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "\"RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -694,7 +840,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
+<<<<<<< HEAD
           "Value": "fq2o1mawx5"
+=======
+          "Value": "4usb4qdvr6"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "label",
@@ -702,13 +852,17 @@
         },
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA="
+=======
+          "Value": "sha256-RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE="
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
     {
       "Route": "assets/js/createEvent.js",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -717,7 +871,11 @@
         },
         {
           "Name": "Content-Length",
+<<<<<<< HEAD
           "Value": "88747"
+=======
+          "Value": "88786"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Content-Type",
@@ -725,11 +883,19 @@
         },
         {
           "Name": "ETag",
+<<<<<<< HEAD
           "Value": "\"13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA=\""
         },
         {
           "Name": "Last-Modified",
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "\"RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -739,13 +905,22 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA="
+=======
+          "Value": "sha256-RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE="
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "assets/js/eventCard.403tvx8ece.js",
       "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
+=======
+      "Route": "assets/js/eventCard.j1o07jv9sp.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
+>>>>>>> 6ace2d0 (laptop merge)
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -754,7 +929,11 @@
         },
         {
           "Name": "Content-Length",
+<<<<<<< HEAD
           "Value": "6252"
+=======
+          "Value": "7183"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Content-Type",
@@ -762,11 +941,19 @@
         },
         {
           "Name": "ETag",
+<<<<<<< HEAD
           "Value": "\"jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=\""
         },
         {
           "Name": "Last-Modified",
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "\"ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -776,7 +963,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
+<<<<<<< HEAD
           "Value": "403tvx8ece"
+=======
+          "Value": "j1o07jv9sp"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "label",
@@ -784,13 +975,17 @@
         },
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU="
+=======
+          "Value": "sha256-ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q="
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
     {
       "Route": "assets/js/eventCard.js",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -799,7 +994,11 @@
         },
         {
           "Name": "Content-Length",
+<<<<<<< HEAD
           "Value": "6252"
+=======
+          "Value": "7183"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Content-Type",
@@ -807,11 +1006,19 @@
         },
         {
           "Name": "ETag",
+<<<<<<< HEAD
           "Value": "\"jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=\""
         },
         {
           "Name": "Last-Modified",
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "\"ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -821,6 +1028,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU="
         }
       ]
@@ -867,12 +1075,15 @@
         {
           "Name": "integrity",
           "Value": "sha256-8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g="
+=======
+          "Value": "sha256-ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q="
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
     {
-      "Route": "assets/js/events.js",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\events.js",
+      "Route": "assets/js/events.ik5k2xf1l1.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -881,7 +1092,11 @@
         },
         {
           "Name": "Content-Length",
+<<<<<<< HEAD
           "Value": "2464"
+=======
+          "Value": "2655"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Content-Type",
@@ -889,6 +1104,7 @@
         },
         {
           "Name": "ETag",
+<<<<<<< HEAD
           "Value": "\"8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=\""
         },
         {
@@ -898,63 +1114,42 @@
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/Sidebar-chunk.4vi3m0hi2f.js",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "187346"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=\""
+=======
+          "Value": "\"zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
+          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
         {
+<<<<<<< HEAD
+          "Name": "integrity",
+          "Value": "sha256-8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g="
+=======
           "Name": "fingerprint",
-          "Value": "4vi3m0hi2f"
+          "Value": "ik5k2xf1l1"
         },
         {
           "Name": "label",
-          "Value": "assets/js/Sidebar-chunk.js"
+          "Value": "assets/js/events.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c="
+          "Value": "sha256-zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM="
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
     {
-      "Route": "assets/js/Sidebar-chunk.js",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Route": "assets/js/events.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -963,7 +1158,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "187346"
+          "Value": "2655"
         },
         {
           "Name": "Content-Type",
@@ -971,11 +1166,14 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=\""
+          "Value": "\"zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -985,13 +1183,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c="
+          "Value": "sha256-zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM="
         }
       ]
     },
     {
-      "Route": "assets/js/toastr.min-chunk.3qoivlzl8q.js",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
+      "Route": "assets/js/Sidebar-chunk.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1000,7 +1198,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "93079"
+          "Value": "187395"
         },
         {
           "Name": "Content-Type",
@@ -1008,11 +1206,49 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs=\""
+          "Value": "\"wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/Sidebar-chunk.nftbdtxkyg.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "187395"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -1022,7 +1258,97 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3qoivlzl8q"
+          "Value": "nftbdtxkyg"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/Sidebar-chunk.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/toastr.min-chunk.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93092"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c=\""
+        },
+        {
+          "Name": "Last-Modified",
+<<<<<<< HEAD
+          "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/toastr.min-chunk.khkt731ym1.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93092"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c=\""
+        },
+        {
+          "Name": "Last-Modified",
+<<<<<<< HEAD
+          "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "khkt731ym1"
         },
         {
           "Name": "label",
@@ -1030,6 +1356,7 @@
         },
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs="
         }
       ]
@@ -1068,12 +1395,15 @@
         {
           "Name": "integrity",
           "Value": "sha256-q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs="
+=======
+          "Value": "sha256-+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c="
+>>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
     {
       "Route": "images/hanty-mansijskogo.g3gzev8mqx.png",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1094,7 +1424,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 17:27:18 GMT"
+          "Value": "Thu, 20 Mar 2025 07:53:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1118,7 +1448,7 @@
     },
     {
       "Route": "images/hanty-mansijskogo.png",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1139,7 +1469,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 17:27:18 GMT"
+          "Value": "Thu, 20 Mar 2025 07:53:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1155,7 +1485,7 @@
     },
     {
       "Route": "images/АТК.gmbfafqtd3.png",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\images\\АТК.png",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\АТК.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1176,7 +1506,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 17:27:18 GMT"
+          "Value": "Thu, 20 Mar 2025 07:53:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1200,7 +1530,7 @@
     },
     {
       "Route": "images/АТК.png",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\images\\АТК.png",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\АТК.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1221,7 +1551,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 17:27:18 GMT"
+          "Value": "Thu, 20 Mar 2025 07:53:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1237,7 +1567,7 @@
     },
     {
       "Route": "index.77776arxuz.html",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1258,7 +1588,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -1282,7 +1616,7 @@
     },
     {
       "Route": "index.html",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1303,7 +1637,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -1319,7 +1657,7 @@
     },
     {
       "Route": "src/eventCard/eventCard.16h5gnzva3.html",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1340,7 +1678,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -1364,7 +1706,7 @@
     },
     {
       "Route": "src/eventCard/eventCard.html",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1385,7 +1727,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -1401,7 +1747,7 @@
     },
     {
       "Route": "src/table/indexTable.2yjsg5s0ri.html",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1422,7 +1768,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -1446,7 +1796,7 @@
     },
     {
       "Route": "src/table/indexTable.html",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1467,7 +1817,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 12 May 2025 04:17:45 GMT"
+=======
+          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
+>>>>>>> 6ace2d0 (laptop merge)
         },
         {
           "Name": "Cache-Control",
@@ -1483,7 +1837,7 @@
     },
     {
       "Route": "vite.69kjnsiwqx.svg",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\vite.svg",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\vite.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1504,7 +1858,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 17:27:18 GMT"
+          "Value": "Thu, 20 Mar 2025 07:53:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1528,7 +1882,7 @@
     },
     {
       "Route": "vite.svg",
-      "AssetFile": "C:\\Users\\User\\Desktop\\DiplomProject\\ATKApplication\\wwwroot\\vite.svg",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\vite.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1549,7 +1903,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 17:27:18 GMT"
+          "Value": "Thu, 20 Mar 2025 07:53:55 GMT"
         },
         {
           "Name": "Cache-Control",
