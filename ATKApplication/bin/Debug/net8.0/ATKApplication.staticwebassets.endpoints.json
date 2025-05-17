@@ -29,11 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -70,11 +66,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -164,111 +156,13 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-<<<<<<< HEAD
-          "Value": "sha256-ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/events-DlZwj7pn.x5hugsd5fq.css",
-      "AssetFile": "assets/css/events-DlZwj7pn.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1987"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "x5hugsd5fq"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY="
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/events-DlZwj7pn.css"
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/toastr-PcHlmDLb.738usrmbe9.css",
-      "AssetFile": "assets/css/toastr-PcHlmDLb.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7365"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "738usrmbe9"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks="
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/toastr-PcHlmDLb.css"
-=======
           "Value": "sha256-O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0="
->>>>>>> 6ace2d0 (laptop merge)
         }
       ]
     },
@@ -299,11 +193,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -385,11 +275,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -434,11 +320,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -449,54 +331,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "assets/js/Sidebar-chunk.4vi3m0hi2f.js",
-      "AssetFile": "assets/js/Sidebar-chunk.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "187346"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4vi3m0hi2f"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c="
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/Sidebar-chunk.js"
-        }
-      ]
-    },
-    {
-=======
->>>>>>> 6ace2d0 (laptop merge)
       "Route": "assets/js/Sidebar-chunk.js",
       "AssetFile": "assets/js/Sidebar-chunk.js",
       "Selectors": [],
@@ -523,11 +357,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -538,9 +368,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "assets/js/createEvent.fq2o1mawx5.js",
-=======
       "Route": "assets/js/Sidebar-chunk.nftbdtxkyg.js",
       "AssetFile": "assets/js/Sidebar-chunk.js",
       "Selectors": [],
@@ -586,72 +413,6 @@
       ]
     },
     {
-      "Route": "assets/js/createEvent.4usb4qdvr6.js",
->>>>>>> 6ace2d0 (laptop merge)
-      "AssetFile": "assets/js/createEvent.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-<<<<<<< HEAD
-          "Value": "88747"
-=======
-          "Value": "88786"
->>>>>>> 6ace2d0 (laptop merge)
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-<<<<<<< HEAD
-          "Value": "\"13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
-          "Value": "\"RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
->>>>>>> 6ace2d0 (laptop merge)
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-<<<<<<< HEAD
-          "Value": "fq2o1mawx5"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA="
-=======
-          "Value": "4usb4qdvr6"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE="
->>>>>>> 6ace2d0 (laptop merge)
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/createEvent.js"
-        }
-      ]
-    },
-    {
       "Route": "assets/js/createEvent.js",
       "AssetFile": "assets/js/createEvent.js",
       "Selectors": [],
@@ -666,11 +427,7 @@
         },
         {
           "Name": "Content-Length",
-<<<<<<< HEAD
-          "Value": "88747"
-=======
-          "Value": "88786"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "88748"
         },
         {
           "Name": "Content-Type",
@@ -678,38 +435,67 @@
         },
         {
           "Name": "ETag",
-<<<<<<< HEAD
-          "Value": "\"13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA=\""
+          "Value": "\"/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
-          "Value": "\"RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "Sat, 17 May 2025 07:52:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-<<<<<<< HEAD
-          "Value": "sha256-13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA="
-=======
-          "Value": "sha256-RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE="
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "sha256-/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo="
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "assets/js/eventCard.403tvx8ece.js",
-=======
-      "Route": "assets/js/eventCard.j1o07jv9sp.js",
->>>>>>> 6ace2d0 (laptop merge)
+      "Route": "assets/js/createEvent.sg654sj2bl.js",
+      "AssetFile": "assets/js/createEvent.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "88748"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 17 May 2025 07:52:11 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sg654sj2bl"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/createEvent.js"
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/eventCard.0hlk7hc8jp.js",
       "AssetFile": "assets/js/eventCard.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -723,11 +509,7 @@
         },
         {
           "Name": "Content-Length",
-<<<<<<< HEAD
-          "Value": "6252"
-=======
-          "Value": "7183"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "6253"
         },
         {
           "Name": "Content-Type",
@@ -735,37 +517,21 @@
         },
         {
           "Name": "ETag",
-<<<<<<< HEAD
-          "Value": "\"jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=\""
+          "Value": "\"TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
-          "Value": "\"ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "Sat, 17 May 2025 07:52:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-<<<<<<< HEAD
-          "Value": "403tvx8ece"
+          "Value": "0hlk7hc8jp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU="
-=======
-          "Value": "j1o07jv9sp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q="
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "sha256-TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs="
         },
         {
           "Name": "label",
@@ -788,11 +554,7 @@
         },
         {
           "Name": "Content-Length",
-<<<<<<< HEAD
-          "Value": "6252"
-=======
-          "Value": "7183"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "6253"
         },
         {
           "Name": "Content-Type",
@@ -800,38 +562,22 @@
         },
         {
           "Name": "ETag",
-<<<<<<< HEAD
-          "Value": "\"jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=\""
+          "Value": "\"TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
-          "Value": "\"ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "Sat, 17 May 2025 07:52:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-<<<<<<< HEAD
-          "Value": "sha256-jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU="
-=======
-          "Value": "sha256-ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q="
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "sha256-TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs="
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "Route": "assets/js/events.1ndouzvtln.js",
-=======
-      "Route": "assets/js/events.ik5k2xf1l1.js",
->>>>>>> 6ace2d0 (laptop merge)
+      "Route": "assets/js/events.f9lfd9ze77.js",
       "AssetFile": "assets/js/events.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -845,11 +591,7 @@
         },
         {
           "Name": "Content-Length",
-<<<<<<< HEAD
-          "Value": "2464"
-=======
-          "Value": "2655"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "2465"
         },
         {
           "Name": "Content-Type",
@@ -857,37 +599,21 @@
         },
         {
           "Name": "ETag",
-<<<<<<< HEAD
-          "Value": "\"8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=\""
+          "Value": "\"Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
-          "Value": "\"zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "Sat, 17 May 2025 07:52:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-<<<<<<< HEAD
-          "Value": "1ndouzvtln"
+          "Value": "f9lfd9ze77"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g="
-=======
-          "Value": "ik5k2xf1l1"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM="
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "sha256-Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI="
         },
         {
           "Name": "label",
@@ -910,11 +636,7 @@
         },
         {
           "Name": "Content-Length",
-<<<<<<< HEAD
-          "Value": "2464"
-=======
-          "Value": "2655"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "2465"
         },
         {
           "Name": "Content-Type",
@@ -922,74 +644,17 @@
         },
         {
           "Name": "ETag",
-<<<<<<< HEAD
-          "Value": "\"8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=\""
+          "Value": "\"Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
-          "Value": "\"zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "Sat, 17 May 2025 07:52:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-<<<<<<< HEAD
-          "Value": "sha256-8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/toastr.min-chunk.3qoivlzl8q.js",
-      "AssetFile": "assets/js/toastr.min-chunk.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "93079"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3qoivlzl8q"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs="
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/toastr.min-chunk.js"
-=======
-          "Value": "sha256-zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM="
->>>>>>> 6ace2d0 (laptop merge)
+          "Value": "sha256-Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI="
         }
       ]
     },
@@ -1020,11 +685,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -1270,11 +931,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -1319,11 +976,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -1360,11 +1013,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -1409,11 +1058,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -1450,11 +1095,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [
@@ -1499,11 +1140,7 @@
         },
         {
           "Name": "Last-Modified",
-<<<<<<< HEAD
-          "Value": "Mon, 12 May 2025 04:17:45 GMT"
-=======
           "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
->>>>>>> 6ace2d0 (laptop merge)
         }
       ],
       "EndpointProperties": [

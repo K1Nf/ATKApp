@@ -84,13 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
-      <Fingerprint>fq2o1mawx5</Fingerprint>
-      <Integrity>13wIGXNgd9MgtUQi3p4s7683Rf1qIgLyzZ5iPCSXsXA=</Integrity>
-=======
-      <Fingerprint>4usb4qdvr6</Fingerprint>
-      <Integrity>RN1beMhmly/UstQ42s0hYy8NnLJWNxobs38+l1sXxQE=</Integrity>
->>>>>>> 6ace2d0 (laptop merge)
+      <Fingerprint>sg654sj2bl</Fingerprint>
+      <Integrity>/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</OriginalItemSpec>
@@ -107,13 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
-      <Fingerprint>403tvx8ece</Fingerprint>
-      <Integrity>jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=</Integrity>
-=======
-      <Fingerprint>j1o07jv9sp</Fingerprint>
-      <Integrity>ScMemvL4PJ3L0mRhEH1ngQIB9luXim45elvpHlqw18Q=</Integrity>
->>>>>>> 6ace2d0 (laptop merge)
+      <Fingerprint>0hlk7hc8jp</Fingerprint>
+      <Integrity>TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\eventCard.js'))</OriginalItemSpec>
@@ -130,13 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
-      <Fingerprint>1ndouzvtln</Fingerprint>
-      <Integrity>8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=</Integrity>
-=======
-      <Fingerprint>ik5k2xf1l1</Fingerprint>
-      <Integrity>zhD2AJuy9ketX6DUJM4SkfClNZgmpfShZqLkTrO/+IM=</Integrity>
->>>>>>> 6ace2d0 (laptop merge)
+      <Fingerprint>f9lfd9ze77</Fingerprint>
+      <Integrity>Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\events.js'))</OriginalItemSpec>
