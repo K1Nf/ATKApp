@@ -695,7 +695,6 @@ const BasicInfo_NameDataDeskEventFormLink = ({
               </section>
             </>
               )}
-             : (
               <>
                 {/* Для всех остальных тем показываем дефолтные поля */}
                 {/* Исполнитель */}
