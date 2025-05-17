@@ -1,19 +1,25 @@
 ﻿namespace ATKApplication.Models
 {
-    public class EventForm4 : EventBase
+    public partial class EventForm4 : EventBase
     {
         public EventForm4() { }
 
-        public EventForm4(Guid id, string actor, string name, string content, DateOnly date, Guid organizerId, Guid themeId,
-                          string direct, int materialsCount, string result)
+        public EventForm4(string actor, string name, string content, 
+                        DateOnly date, Guid organizerId, Guid themeId,
+                        bool directToNAC, string directToSubjects, string equalToEqual)
+
             : base(actor, name, content, date, organizerId, themeId)
         {
-            Direct = direct;
-            MaterialsCount = materialsCount;
-            Result = result;
+            DirectToNAC = directToNAC;
+            DirectToSubjects = directToSubjects;
+            EqualToEqual = equalToEqual;
         }
-        public string Direct { get; set; }
-        public int MaterialsCount { get; set; }
-        public string Result { get; set; }
+
+        public bool DirectToNAC { get; set; }
+        public string? DirectToSubjects { get; set; }
+        public string EqualToEqual { get; set; }
+
+
+        public List<Agreement> Agreements { get; set; }
     }
 }

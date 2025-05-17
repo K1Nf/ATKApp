@@ -1,11 +1,13 @@
 ﻿namespace ATKApplication.Models
 {
-    public class EventForm3 : EventBase
+    public class EventForm2 : EventBase
     {
-        public EventForm3() { }
+        public EventForm2() { }
 
-        public EventForm3(string actor, string name, string content, DateOnly date, Guid organizerId, 
-                        Guid themeId, string request, string description, string resultDescription, string participant)
+        public EventForm2(string actor, string name, string content, 
+                        DateOnly date, Guid organizerId, Guid themeId, 
+                        string request, string description, 
+                        string resultDescription, string participant)
             : base(name, actor, content, date, organizerId, themeId)
         {
             Request = request;

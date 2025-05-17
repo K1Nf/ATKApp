@@ -6,6 +6,7 @@ namespace ATKApplication.Models
 {
     public class EventBase
     {
+        public EventBase() {}
         protected EventBase(string name, string actor, string content, DateOnly date, Guid organizerId, Guid themeId)
         {
             Id = Guid.NewGuid();
@@ -15,10 +16,8 @@ namespace ATKApplication.Models
             Date = date;
             OrganizerId = organizerId;
             ThemeId = themeId;
-            
         }
 
-        public EventBase() {}
 
         public Guid Id { get; init; }
         public string Actor { get; set; }

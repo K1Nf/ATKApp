@@ -36,13 +36,13 @@ namespace ATKApplication.Controllers
 
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreateEventRequest CreateEventRequest)
+        public async Task<IActionResult> Create([FromBody] CreateEventBaseRequest CreateEventRequest)
         {
             //Console.WriteLine("creating new event...");
 
 
             Guid tokenId = Guid.Parse("77e86bc1-1974-44ca-adb1-d96672dcd27d");
-            var result = await _eventService.Create(tokenId, CreateEventRequest);
+            var result = await _eventService.CreateBase(tokenId, CreateEventRequest);
 
             if (result.IsSuccess)
             {

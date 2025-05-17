@@ -12,5 +12,7 @@ namespace ATKApplication.Enums
         Opros,
         [EnumMember(Value = "Интервью")]
         Interview,
+        [EnumMember(Value = "Другое")]
+        Other,
     }
 }

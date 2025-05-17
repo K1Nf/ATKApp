@@ -1,16 +1,41 @@
-﻿namespace ATKApplication.Models
+﻿using ATKApplication.Contracts.Request;
+using BenchmarkDotNet.Diagnosers;
+using Microsoft.Extensions.Logging;
+
+namespace ATKApplication.Models
 {
-    public class InterAgencyCooperation(Guid eventId, string? organization, string? type, string? description)
+    public class InterAgencyCooperation
     {
-        public Guid Id { get; init; } = Guid.NewGuid();
-        public string? Organization {  get; set; } = organization;
-        public string? Type { get; set; } = type;
-        public string? Description { get; set; } = description;
+        public InterAgencyCooperation() {}
+        private InterAgencyCooperation(string? organization, CoOpOrganiations organizationEnum,
+                                        PerformanceType type, string? description, Guid eventId)
+        {
+            Id = Guid.NewGuid();
+            Organization = organization;
+            CoOpOrganiation = organizationEnum;
+            Type = type;
+            Description = description;
+            EventId = eventId;
+        }
+
+        public Guid Id { get; init; }
+        public string? Organization {  get; set; } // if custom
+        public CoOpOrganiations CoOpOrganiation { get; set; } // if selected
+        public PerformanceType Type { get; set; }
+        public string? Description { get; set; }
         
         
 
         [Newtonsoft.Json.JsonIgnore]
-        public EventForm2? Event { get; set; }
-        public Guid EventId { get; init; } = eventId;
+        public EventForm1? Event { get; set; }
+        public Guid EventId { get; init; }
+
+
+        public static InterAgencyCooperation? Create(string? organization, CoOpOrganiations organizationEnum,
+                                                     PerformanceType type, string? description, Guid eventId)
+        {
+            
+            return new InterAgencyCooperation(organization, organizationEnum, type, description, eventId);
+        }
     }
 }

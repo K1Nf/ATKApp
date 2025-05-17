@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ATKApplication.Configurations
 {
-    public class EventForm2Configuration : IEntityTypeConfiguration<EventForm2>
+    public class EventForm2Configuration : IEntityTypeConfiguration<EventForm1>
     {
-        public void Configure(EntityTypeBuilder<EventForm2> builder)
+        public void Configure(EntityTypeBuilder<EventForm1> builder)
         {
             builder.HasOne(e => e.FeedBack)
                 .WithOne(f => f.Event)

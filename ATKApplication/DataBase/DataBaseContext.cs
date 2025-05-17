@@ -9,10 +9,10 @@ namespace ATKApplication.DataBase
     public class DataBaseContext : DbContext
     {
         public DbSet<EventBase> EventsBase { get; set; }
+        public DbSet<EventForm1> EventForm1s { get; set; }
         public DbSet<EventForm2> EventForm2s { get; set; }
         public DbSet<EventForm3> EventForm3s { get; set; }
         public DbSet<EventForm4> EventForm4s { get; set; }
-        public DbSet<EventForm5> EventForm5s { get; set; }
 
 
         public DbSet<Organization> Organizations { get; set; }
