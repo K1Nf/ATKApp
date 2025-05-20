@@ -19,12 +19,14 @@ const BasicInfo_NameDataDeskEventFormLink = ({
   setExecutor,
   link,
   setLink,
+  hideLink,
 }) => {
   const handleEventNameChange = (e) => setEventName(e.target.value);
   const handleEventDateChange = (e) => setEventDate(e.target.value);
   const handleEventDescriptionChange = (e) => setEventDescription(e.target.value);
   const handleLinkChange = (e) => setLink(e.target.value);
   const [executorTitle, setExecutorTitle] = useState("Исполнитель");
+
 
 
   useEffect(() => {
@@ -191,187 +193,29 @@ const BasicInfo_NameDataDeskEventFormLink = ({
           </section>
 
           {/* Ссылка на СМИ/СМК */}
-            <section>
-              <label htmlFor="link">
-                Ссылка на СМИ/СМК
-                <span className="required">*</span>
-                <span className="tooltip">
-                  <span className="question-icon">?</span>
-                  <span className="tooltiptext">Это обязательное поле</span>
-                </span>
-              </label>
-              <input
-                type="text"
-                id="link"
-                name="link"
-                value={link}
-                onChange={handleLinkChange}
-                maxLength={200}
-                placeholder="Введите одну или несколько ссылок через запятую, например: https://example1.com, https://example2.com"
-                required
-              />
-            </section>
+          {!hideLink && (
+              <section>
+                <label htmlFor="link">
+                  Ссылка <span className="required">*</span>
+                  <span className="tooltip">
+                    <span className="question-icon">?</span>
+                    <span className="tooltiptext">Это обязательное поле</span>
+                  </span>
+                </label>
+                <input
+                  type="text"
+                  id="link"
+                  name="link"
+                  value={link}
+                  onChange={handleLinkChange}
+                  maxLength={200}
+                  placeholder="Введите одну или несколько ссылок через запятую"
+                  required
+                />
+              </section>
+            )}
         </>
-      ) : selectedTopic === "2.7.1" ? (
-        <>
-          {/* Исполнитель */}
-          <section>
-            <label htmlFor="executor">
-              Исполнитель
-              <span className="required">*</span>
-              <span className="tooltip">
-                <span className="question-icon">?</span>
-                <span className="tooltiptext">Это обязательное поле</span>
-              </span>
-            </label>
-            <input
-              type="text"
-              id="executor"
-              name="executor"
-              maxLength={100}
-              value={executor}
-              onChange={(e) => setExecutor(e.target.value)}  // Обработчик изменения
-              placeholder="Введите исполнителя"
-              required
-            />
-          </section>
-
-          {/* Наименование мероприятия */}
-          <section>
-            <label htmlFor="event_name">
-              {fieldTitle} {/* Показываем заголовок, который обновляется */}
-              <span className="required">*</span>
-              <span className="tooltip">
-                <span className="question-icon">?</span>
-                <span className="tooltiptext">Это обязательное поле</span>
-              </span>
-            </label>
-            <input
-              type="text"
-              id="event_name"
-              name="event_name"
-              maxLength={100}
-              value={eventName} // Значение должно быть передано через состояние
-              onChange={handleEventNameChange} // Обработчик изменения
-              placeholder={namePlaceholder} // Используем переданный пропс
-              required
-            />
-          </section>
-
-          {/* Дата проведения */}
-          <section>
-            <label htmlFor="event_date">
-              Дата проведения
-              <span className="required">*</span>
-              <span className="tooltip">
-                <span className="question-icon">?</span>
-                <span className="tooltiptext">Это обязательное поле</span>
-              </span>
-            </label>
-            <input
-              type="date"
-              id="event_date"
-              name="event_date"
-              value={eventDate}
-              onChange={handleEventDateChange}
-              min={`${new Date().getFullYear()}-01-01`}
-              max={`${new Date().getFullYear()}-12-31`}
-              className={dateHasError ? "error" : ""}
-              required
-            />
-          </section>
-          <section>
-            <h3>Виды оказанной помощи</h3>
-
-            {/* Психологическая помощь */}
-            <div>
-              <label>
-                Психологическая помощь
-                <input
-                  type="checkbox"
-                  name="psychological"
-                  checked={helpTypes.psychological}
-                  onChange={handleCheckboxChange}
-                />
-              </label>
-              {helpTypes.psychological && (
-                <textarea
-                  name="psychological"
-                  value={descriptions.psychological}
-                  onChange={handleDescriptionChange}
-                  placeholder="Опишите психологическую помощь"
-                  maxLength={200}
-                />
-              )}
-            </div>
-
-            {/* Юридическая помощь */}
-            <div>
-              <label>
-                Юридическая помощь
-                <input
-                  type="checkbox"
-                  name="legal"
-                  checked={helpTypes.legal}
-                  onChange={handleCheckboxChange}
-                />
-              </label>
-              {helpTypes.legal && (
-                <textarea
-                  name="legal"
-                  value={descriptions.legal}
-                  onChange={handleDescriptionChange}
-                  placeholder="Опишите юридическую помощь"
-                  maxLength={200}
-                />
-              )}
-            </div>
-
-            {/* Информационная помощь */}
-            <div>
-              <label>
-                Информационная помощь
-                <input
-                  type="checkbox"
-                  name="informational"
-                  checked={helpTypes.informational}
-                  onChange={handleCheckboxChange}
-                />
-              </label>
-              {helpTypes.informational && (
-                <textarea
-                  name="informational"
-                  value={descriptions.informational}
-                  onChange={handleDescriptionChange}
-                  placeholder="Опишите информационную помощь"
-                  maxLength={200}
-                />
-              )}
-            </div>
-
-            {/* Другая помощь */}
-            <div>
-              <label>
-                Другое
-                <input
-                  type="checkbox"
-                  name="other"
-                  checked={helpTypes.other}
-                  onChange={handleCheckboxChange}
-                />
-              </label>
-              {helpTypes.other && (
-                <textarea
-                  name="other"
-                  value={descriptions.other}
-                  onChange={handleDescriptionChange}
-                  placeholder="Опишите другую помощь"
-                  maxLength={200}
-                />
-              )}
-            </div>
-          </section>
-        </>
+    
         ) : selectedTopic === "2.7.1" ? (
           <>
             {/* Исполнитель */}
@@ -442,117 +286,27 @@ const BasicInfo_NameDataDeskEventFormLink = ({
             </section>
 
                 {/* Ссылка на СМИ/СМК */}
-          <section>
-            <label htmlFor="link">
-              Ссылка на СМИ/СМК
-              <span className="required">*</span>
-              <span className="tooltip">
-                <span className="question-icon">?</span>
-                <span className="tooltiptext">Это обязательное поле</span>
-              </span>
-            </label>
-            <input
-              type="text"
-              id="link"
-              name="link"
-              value={link}
-              onChange={handleLinkChange}
-              maxLength={200}
-              placeholder="Введите одну или несколько ссылок через запятую, например: https://example1.com, https://example2.com"
-              required
-            />
-          </section>
-            <section>
-              <h3>Виды оказанной помощи</h3>
-  
-              {/* Психологическая помощь */}
-              <div>
-                <label>
-                  Психологическая помощь
-                  <input
-                    type="checkbox"
-                    name="psychological"
-                    checked={helpTypes.psychological}
-                    onChange={handleCheckboxChange}
-                  />
+                {!hideLink && (
+              <section>
+                <label htmlFor="link">
+                  Ссылка <span className="required">*</span>
+                  <span className="tooltip">
+                    <span className="question-icon">?</span>
+                    <span className="tooltiptext">Это обязательное поле</span>
+                  </span>
                 </label>
-                {helpTypes.psychological && (
-                  <textarea
-                    name="psychological"
-                    value={descriptions.psychological}
-                    onChange={handleDescriptionChange}
-                    placeholder="Опишите психологическую помощь"
-                    maxLength={200}
-                  />
-                )}
-              </div>
-  
-              {/* Юридическая помощь */}
-              <div>
-                <label>
-                  Юридическая помощь
-                  <input
-                    type="checkbox"
-                    name="legal"
-                    checked={helpTypes.legal}
-                    onChange={handleCheckboxChange}
-                  />
-                </label>
-                {helpTypes.legal && (
-                  <textarea
-                    name="legal"
-                    value={descriptions.legal}
-                    onChange={handleDescriptionChange}
-                    placeholder="Опишите юридическую помощь"
-                    maxLength={200}
-                  />
-                )}
-              </div>
-  
-              {/* Информационная помощь */}
-              <div>
-                <label>
-                  Информационная помощь
-                  <input
-                    type="checkbox"
-                    name="informational"
-                    checked={helpTypes.informational}
-                    onChange={handleCheckboxChange}
-                  />
-                </label>
-                {helpTypes.informational && (
-                  <textarea
-                    name="informational"
-                    value={descriptions.informational}
-                    onChange={handleDescriptionChange}
-                    placeholder="Опишите информационную помощь"
-                    maxLength={200}
-                  />
-                )}
-              </div>
-  
-              {/* Другая помощь */}
-              <div>
-                <label>
-                  Другое
-                  <input
-                    type="checkbox"
-                    name="other"
-                    checked={helpTypes.other}
-                    onChange={handleCheckboxChange}
-                  />
-                </label>
-                {helpTypes.other && (
-                  <textarea
-                    name="other"
-                    value={descriptions.other}
-                    onChange={handleDescriptionChange}
-                    placeholder="Опишите другую помощь"
-                    maxLength={200}
-                  />
-                )}
-              </div>
-            </section>
+                <input
+                  type="text"
+                  id="link"
+                  name="link"
+                  value={link}
+                  onChange={handleLinkChange}
+                  maxLength={200}
+                  placeholder="Введите одну или несколько ссылок через запятую"
+                  required
+                />
+              </section>
+            )}
           </>
       ) : (
         <>
@@ -626,26 +380,27 @@ const BasicInfo_NameDataDeskEventFormLink = ({
               </section>
 
               {/* Ссылка на СМИ/СМК */}
-              <section>
-                <label htmlFor="link">
-                  Ссылка на СМИ/СМК
-                  <span className="required">*</span>
-                  <span className="tooltip">
-                    <span className="question-icon">?</span>
-                    <span className="tooltiptext">Это обязательное поле</span>
-                  </span>
-                </label>
-                <input
-                  type="text"
-                  id="link"
-                  name="link"
-                  value={link}
-                  onChange={handleLinkChange}
-                  maxLength={200}
-                  placeholder="Введите одну или несколько ссылок через запятую, например: https://example1.com, https://example2.com"
-                  required
-                />
-              </section>
+              {!hideLink && (
+                <section>
+                  <label htmlFor="link">
+                    Ссылка <span className="required">*</span>
+                    <span className="tooltip">
+                      <span className="question-icon">?</span>
+                      <span className="tooltiptext">Это обязательное поле</span>
+                    </span>
+                  </label>
+                  <input
+                    type="text"
+                    id="link"
+                    name="link"
+                    value={link}
+                    onChange={handleLinkChange}
+                    maxLength={200}
+                    placeholder="Введите одну или несколько ссылок через запятую"
+                    required
+                  />
+                </section>
+              )}
 
               {/* Секшион для типа мероприятия */}
               <section>
@@ -695,6 +450,7 @@ const BasicInfo_NameDataDeskEventFormLink = ({
               </section>
             </>
               )}
+             : (
               <>
                 {/* Для всех остальных тем показываем дефолтные поля */}
                 {/* Исполнитель */}
@@ -786,26 +542,27 @@ const BasicInfo_NameDataDeskEventFormLink = ({
                 </section>
 
                 {/* Ссылка на СМИ/СМК */}
-                <section>
-                  <label htmlFor="link">
-                    Ссылка на СМИ/СМК
-                    <span className="required">*</span>
-                    <span className="tooltip">
-                      <span className="question-icon">?</span>
-                      <span className="tooltiptext">Это обязательное поле</span>
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    id="link"
-                    name="link"
-                    value={link}
-                    onChange={handleLinkChange}
-                    maxLength={200}
-                    placeholder="Введите одну или несколько ссылок через запятую, например: https://example1.com, https://example2.com"
-                    required
-                  />
-                </section>
+                {!hideLink && (
+                  <section>
+                    <label htmlFor="link">
+                      Ссылка <span className="required">*</span>
+                      <span className="tooltip">
+                        <span className="question-icon">?</span>
+                        <span className="tooltiptext">Это обязательное поле</span>
+                      </span>
+                    </label>
+                    <input
+                      type="text"
+                      id="link"
+                      name="link"
+                      value={link}
+                      onChange={handleLinkChange}
+                      maxLength={200}
+                      placeholder="Введите одну или несколько ссылок через запятую"
+                      required
+                    />
+                  </section>
+                )}
               </>  
         </>
       )}

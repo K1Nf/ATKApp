@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HrqBVc16NXbxCiaDAJBxzdcPvT9n+vfsymaH6SGjGZQ=",
+  "Hash": "f7Q03FaFwJbQC8GsmMX47H4TRs+xxJ499rY+dShO5pg=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -31,19 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3ijug50hbl",
-      "Integrity": "O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0=",
+      "Fingerprint": "x5hugsd5fq",
+      "Integrity": "ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\events-DlZwj7pn.css"
     },
     {
-      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
+      "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-C6EkhA0g.css",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
-      "RelativePath": "assets/css/Sidebar-G10zORfr#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/Sidebar-C6EkhA0g#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,11 +52,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ptlsncuehh",
-      "Integrity": "feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=",
+      "Fingerprint": "b935epcr9x",
+      "Integrity": "v/GWxOyElmAvKYjKM/akwTCeZMu7bZc8tFDn5iqlVW8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\css\\Sidebar-G10zORfr.css"
+      "OriginalItemSpec": "wwwroot\\assets\\css\\Sidebar-C6EkhA0g.css"
     },
     {
       "Identity": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u4u6vy72f6",
-      "Integrity": "DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw=",
+      "Fingerprint": "738usrmbe9",
+      "Integrity": "jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\toastr-PcHlmDLb.css"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sg654sj2bl",
-      "Integrity": "/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo=",
+      "Fingerprint": "98up48zmx2",
+      "Integrity": "t0Yg8a5NKsuwt6Ub3HAPMXBns+vwWMLjo+LaDFmwNno=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0hlk7hc8jp",
-      "Integrity": "TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs=",
+      "Fingerprint": "403tvx8ece",
+      "Integrity": "jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\eventCard.js"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f9lfd9ze77",
-      "Integrity": "Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI=",
+      "Fingerprint": "1ndouzvtln",
+      "Integrity": "8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\events.js"
@@ -178,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nftbdtxkyg",
-      "Integrity": "wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA=",
+      "Fingerprint": "4vi3m0hi2f",
+      "Integrity": "wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\Sidebar-chunk.js"
@@ -199,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "khkt731ym1",
-      "Integrity": "+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c=",
+      "Fingerprint": "3qoivlzl8q",
+      "Integrity": "q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\toastr.min-chunk.js"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "77776arxuz",
-      "Integrity": "Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw=",
+      "Fingerprint": "vinodjxrxm",
+      "Integrity": "6Unc7qrjXIiHqBQjIMTNwjAFDBAKA92EHjimCsrqs5M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -283,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "16h5gnzva3",
-      "Integrity": "112eR3+scxy2u9xp6vxCGsO1searXCucGYzEeKHfSB0=",
+      "Fingerprint": "jc6lpolnoy",
+      "Integrity": "ncMsNmgJNxXhSCLQNBQdz3fv7qbKF62ZxrPc4vwSIKk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\eventCard\\eventCard.html"
@@ -304,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2yjsg5s0ri",
-      "Integrity": "Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE=",
+      "Fingerprint": "ii4iz3f9u3",
+      "Integrity": "WgYaoOwu4zJiQAHkmAStyUeL0XQH+NYVTQgvn9FcSCg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\table\\indexTable.html"
@@ -334,51 +334,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "assets/css/events-DlZwj7pn.3ijug50hbl.css",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1988"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3ijug50hbl"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/events-DlZwj7pn.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0="
-        }
-      ]
-    },
-    {
       "Route": "assets/css/events-DlZwj7pn.css",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
       "Selectors": [],
@@ -389,7 +344,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1988"
+          "Value": "1987"
         },
         {
           "Name": "Content-Type",
@@ -397,11 +352,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0=\""
+          "Value": "\"ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -411,13 +366,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-O0LmPx/fwz8zBzb/p7YPd1kRsqBWELxRAyrgp3fcyb0="
+          "Value": "sha256-ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY="
         }
       ]
     },
     {
-      "Route": "assets/css/Sidebar-G10zORfr.css",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
+      "Route": "assets/css/events-DlZwj7pn.x5hugsd5fq.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -426,7 +381,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9978"
+          "Value": "1987"
         },
         {
           "Name": "Content-Type",
@@ -434,48 +389,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=\""
+          "Value": "\"ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/Sidebar-G10zORfr.ptlsncuehh.css",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-G10zORfr.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9978"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:26:22 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -485,15 +403,142 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ptlsncuehh"
+          "Value": "x5hugsd5fq"
         },
         {
           "Name": "label",
-          "Value": "assets/css/Sidebar-G10zORfr.css"
+          "Value": "assets/css/events-DlZwj7pn.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-feRxO0aC78Io1sgXt80F2eQQ9IgHCDx0zX+7vEOTz1k="
+          "Value": "sha256-ZcI7bn6NMJko70d5S5ud5wJ1OHEcoySfTWb2uqk/tEY="
+        }
+      ]
+    },
+    {
+      "Route": "assets/css/Sidebar-C6EkhA0g.b935epcr9x.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-C6EkhA0g.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10209"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v/GWxOyElmAvKYjKM/akwTCeZMu7bZc8tFDn5iqlVW8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b935epcr9x"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/css/Sidebar-C6EkhA0g.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-v/GWxOyElmAvKYjKM/akwTCeZMu7bZc8tFDn5iqlVW8="
+        }
+      ]
+    },
+    {
+      "Route": "assets/css/Sidebar-C6EkhA0g.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-C6EkhA0g.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10209"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v/GWxOyElmAvKYjKM/akwTCeZMu7bZc8tFDn5iqlVW8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-v/GWxOyElmAvKYjKM/akwTCeZMu7bZc8tFDn5iqlVW8="
+        }
+      ]
+    },
+    {
+      "Route": "assets/css/toastr-PcHlmDLb.738usrmbe9.css",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7365"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "738usrmbe9"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/css/toastr-PcHlmDLb.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks="
         }
       ]
     },
@@ -508,7 +553,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7366"
+          "Value": "7365"
         },
         {
           "Name": "Content-Type",
@@ -516,11 +561,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw=\""
+          "Value": "\"jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -530,52 +575,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/toastr-PcHlmDLb.u4u6vy72f6.css",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7366"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "u4u6vy72f6"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/toastr-PcHlmDLb.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DhVGcG21MXYZ/Oyh93iE+bY97GNr9bS6DiIW/VfOksw="
+          "Value": "sha256-jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks="
         }
       ]
     },
@@ -602,7 +602,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -647,7 +647,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -662,6 +662,51 @@
       ]
     },
     {
+      "Route": "assets/js/createEvent.98up48zmx2.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "90044"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t0Yg8a5NKsuwt6Ub3HAPMXBns+vwWMLjo+LaDFmwNno=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "98up48zmx2"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/createEvent.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t0Yg8a5NKsuwt6Ub3HAPMXBns+vwWMLjo+LaDFmwNno="
+        }
+      ]
+    },
+    {
       "Route": "assets/js/createEvent.js",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
@@ -672,7 +717,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "88748"
+          "Value": "90044"
         },
         {
           "Name": "Content-Type",
@@ -680,11 +725,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo=\""
+          "Value": "\"t0Yg8a5NKsuwt6Ub3HAPMXBns+vwWMLjo+LaDFmwNno=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:52:11 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -694,57 +739,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo="
+          "Value": "sha256-t0Yg8a5NKsuwt6Ub3HAPMXBns+vwWMLjo+LaDFmwNno="
         }
       ]
     },
     {
-      "Route": "assets/js/createEvent.sg654sj2bl.js",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "88748"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:52:11 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sg654sj2bl"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/createEvent.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/NPtq5OdRe9FDk6exp8P9waOT2tgpSpvkbI2+NpcCYo="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/eventCard.0hlk7hc8jp.js",
+      "Route": "assets/js/eventCard.403tvx8ece.js",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -754,7 +754,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6253"
+          "Value": "6252"
         },
         {
           "Name": "Content-Type",
@@ -762,11 +762,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs=\""
+          "Value": "\"jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:52:11 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -776,7 +776,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "0hlk7hc8jp"
+          "Value": "403tvx8ece"
         },
         {
           "Name": "label",
@@ -784,7 +784,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs="
+          "Value": "sha256-jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU="
         }
       ]
     },
@@ -799,7 +799,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6253"
+          "Value": "6252"
         },
         {
           "Name": "Content-Type",
@@ -807,11 +807,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs=\""
+          "Value": "\"jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:52:11 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -821,12 +821,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TEtrNF0OT9CwPB0gZiRax6ngqCJC5rwW7BhzK1sP/zs="
+          "Value": "sha256-jKgNKsVOztWMx/q1qoCUkjNRc0gYgsi+AqDu1SIGXXU="
         }
       ]
     },
     {
-      "Route": "assets/js/events.f9lfd9ze77.js",
+      "Route": "assets/js/events.1ndouzvtln.js",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -836,7 +836,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2465"
+          "Value": "2464"
         },
         {
           "Name": "Content-Type",
@@ -844,11 +844,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI=\""
+          "Value": "\"8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:52:11 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -858,7 +858,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f9lfd9ze77"
+          "Value": "1ndouzvtln"
         },
         {
           "Name": "label",
@@ -866,7 +866,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI="
+          "Value": "sha256-8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g="
         }
       ]
     },
@@ -881,7 +881,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2465"
+          "Value": "2464"
         },
         {
           "Name": "Content-Type",
@@ -889,11 +889,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI=\""
+          "Value": "\"8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:52:11 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -903,7 +903,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Y7rhMja5SFtVDgW4ktAR4lExo8TQGpsPhvudBOdKtLI="
+          "Value": "sha256-8ypYV7tmM92MtBH2LcibssNDwrGZ06SJd/qmjbbxa6g="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/Sidebar-chunk.4vi3m0hi2f.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "187346"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4vi3m0hi2f"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/Sidebar-chunk.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c="
         }
       ]
     },
@@ -918,7 +963,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "187395"
+          "Value": "187346"
         },
         {
           "Name": "Content-Type",
@@ -926,11 +971,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA=\""
+          "Value": "\"wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -940,13 +985,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA="
+          "Value": "sha256-wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c="
         }
       ]
     },
     {
-      "Route": "assets/js/Sidebar-chunk.nftbdtxkyg.js",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Route": "assets/js/toastr.min-chunk.3qoivlzl8q.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -955,7 +1000,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "187395"
+          "Value": "93079"
         },
         {
           "Name": "Content-Type",
@@ -963,11 +1008,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA=\""
+          "Value": "\"q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -977,15 +1022,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nftbdtxkyg"
+          "Value": "3qoivlzl8q"
         },
         {
           "Name": "label",
-          "Value": "assets/js/Sidebar-chunk.js"
+          "Value": "assets/js/toastr.min-chunk.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wzr654FjvZNUIR/s03KMkejADhXLWaDTz70M5s5hoKA="
+          "Value": "sha256-q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs="
         }
       ]
     },
@@ -1000,7 +1045,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "93092"
+          "Value": "93079"
         },
         {
           "Name": "Content-Type",
@@ -1008,11 +1053,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c=\""
+          "Value": "\"q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1022,52 +1067,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/toastr.min-chunk.khkt731ym1.js",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "93092"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 08:24:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "khkt731ym1"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/toastr.min-chunk.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+O+1u3uXSpZfVK/IaT25E2JGLFZrz9kffxhKKLEmM0c="
+          "Value": "sha256-q7ARrjYuJwZb0D5BFiQbdAOmXqHowwBkawmULlPRXBs="
         }
       ]
     },
@@ -1236,51 +1236,6 @@
       ]
     },
     {
-      "Route": "index.77776arxuz.html",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "700"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "77776arxuz"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw="
-        }
-      ]
-    },
-    {
       "Route": "index.html",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\index.html",
       "Selectors": [],
@@ -1299,11 +1254,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw=\""
+          "Value": "\"6Unc7qrjXIiHqBQjIMTNwjAFDBAKA92EHjimCsrqs5M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1313,13 +1268,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Mz5QBMDcVQ1QzW4017Uoqc8TmfF4vSpT6X6g9kl4Pnw="
+          "Value": "sha256-6Unc7qrjXIiHqBQjIMTNwjAFDBAKA92EHjimCsrqs5M="
         }
       ]
     },
     {
-      "Route": "src/eventCard/eventCard.16h5gnzva3.html",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
+      "Route": "index.vinodjxrxm.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1328,7 +1283,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "841"
+          "Value": "700"
         },
         {
           "Name": "Content-Type",
@@ -1336,11 +1291,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"112eR3+scxy2u9xp6vxCGsO1searXCucGYzEeKHfSB0=\""
+          "Value": "\"6Unc7qrjXIiHqBQjIMTNwjAFDBAKA92EHjimCsrqs5M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1350,15 +1305,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "16h5gnzva3"
+          "Value": "vinodjxrxm"
         },
         {
           "Name": "label",
-          "Value": "src/eventCard/eventCard.html"
+          "Value": "index.html"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-112eR3+scxy2u9xp6vxCGsO1searXCucGYzEeKHfSB0="
+          "Value": "sha256-6Unc7qrjXIiHqBQjIMTNwjAFDBAKA92EHjimCsrqs5M="
         }
       ]
     },
@@ -1381,11 +1336,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"112eR3+scxy2u9xp6vxCGsO1searXCucGYzEeKHfSB0=\""
+          "Value": "\"ncMsNmgJNxXhSCLQNBQdz3fv7qbKF62ZxrPc4vwSIKk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 28 Apr 2025 09:45:24 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1395,13 +1350,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-112eR3+scxy2u9xp6vxCGsO1searXCucGYzEeKHfSB0="
+          "Value": "sha256-ncMsNmgJNxXhSCLQNBQdz3fv7qbKF62ZxrPc4vwSIKk="
         }
       ]
     },
     {
-      "Route": "src/table/indexTable.2yjsg5s0ri.html",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "Route": "src/eventCard/eventCard.jc6lpolnoy.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1410,7 +1365,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "749"
+          "Value": "841"
         },
         {
           "Name": "Content-Type",
@@ -1418,11 +1373,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE=\""
+          "Value": "\"ncMsNmgJNxXhSCLQNBQdz3fv7qbKF62ZxrPc4vwSIKk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1432,15 +1387,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "2yjsg5s0ri"
+          "Value": "jc6lpolnoy"
         },
         {
           "Name": "label",
-          "Value": "src/table/indexTable.html"
+          "Value": "src/eventCard/eventCard.html"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE="
+          "Value": "sha256-ncMsNmgJNxXhSCLQNBQdz3fv7qbKF62ZxrPc4vwSIKk="
         }
       ]
     },
@@ -1463,11 +1418,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE=\""
+          "Value": "\"WgYaoOwu4zJiQAHkmAStyUeL0XQH+NYVTQgvn9FcSCg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:31:22 GMT"
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1477,7 +1432,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Bqiz/x/cD2bue/AI8xSQGhFfo14hRoNvgB4EUXNtlKE="
+          "Value": "sha256-WgYaoOwu4zJiQAHkmAStyUeL0XQH+NYVTQgvn9FcSCg="
+        }
+      ]
+    },
+    {
+      "Route": "src/table/indexTable.ii4iz3f9u3.html",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WgYaoOwu4zJiQAHkmAStyUeL0XQH+NYVTQgvn9FcSCg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 10:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ii4iz3f9u3"
+        },
+        {
+          "Name": "label",
+          "Value": "src/table/indexTable.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WgYaoOwu4zJiQAHkmAStyUeL0XQH+NYVTQgvn9FcSCg="
         }
       ]
     },

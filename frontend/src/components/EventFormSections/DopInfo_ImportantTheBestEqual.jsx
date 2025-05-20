@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-const DopInfo_ImportantTheBestEqual = ({ equalFormat, setEqualFormat, equalFormatDescription, setEqualFormatDescription, bestEvent, 
-                                          setBestEvent, importantEvent, setImportantEvent }) => {
-  console.log("BESTEVENT: " + bestEvent);
+const DopInfo_ImportantTheBestEqual = ({ equalFormat, setEqualFormat, equalFormatDescription, setEqualFormatDescription, bestEvent, setBestEvent, importantEvent, setImportantEvent }) => {
+
   // Обработчики изменения состояния
   const handleEqualFormatChange = () => {
     setEqualFormat(!equalFormat);
   };
 
   const handleBestEventChange = () => {
-    console.log(bestEvent);
     setBestEvent(!bestEvent);
   };
 

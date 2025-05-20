@@ -23,10 +23,11 @@ namespace ATKApplication.DataBase
 
         public DbSet<FeedBack> FeedBacks { get; set; }
         public DbSet<Finance> Finances { get; set; }
+        public DbSet<Audience> Audiences { get; set; }
+        public DbSet<Support> Supports { get; set; }
 
 
         public DbSet<InterAgencyCooperation> InterAgencyCooperations { get; set; }
-        public DbSet<Support> Supports { get; set; }
         public DbSet<Agreement> Agreements { get; set; }
 
 
@@ -45,10 +46,22 @@ namespace ATKApplication.DataBase
         {
             modelBuilder.ApplyConfiguration(new EventBaseConfiguration());
             modelBuilder.ApplyConfiguration(new EventForm2Configuration());
-            modelBuilder.ApplyConfiguration(new EventForm5Configuration());
+            modelBuilder.ApplyConfiguration(new EventForm4Configuration());
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
             modelBuilder.ApplyConfiguration(new ThemeConfiguration());
 
+            modelBuilder.Entity<EventBase>().ToTable("EventsBase");
+            modelBuilder.Entity<EventForm1>().ToTable("EventsForm1");
+            modelBuilder.Entity<EventForm2>().ToTable("EventsForm2");
+            modelBuilder.Entity<EventForm3>().ToTable("EventsForm3");
+            modelBuilder.Entity<EventForm4>().ToTable("EventsForm4");
+
+
+            //modelBuilder.Entity<EventBase>()
+            //    .Navigation(x => x.Categories)
+            //    .AutoInclude();
+            
+            
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -2,20 +2,28 @@
 
 namespace ATKApplication.Contracts.Request
 {
-    public record CreateInterAgencyCooperationRequest(List<CoopOrgs> Content);
+    public record CreateInterAgencyCooperationRequest(Dictionary<string, SelectedOrganizations> SelectedOrganizations, 
+                                                        List<CustomOrganizations> CustomOrganizations);
 
-    public class CoopOrgs
+    public class SelectedOrganizations
     {
-        public CoOpOrganiations CoOpOrganiations { get; set; }
-        public string CustomOrganizationName { get; set; }
-        public PerformanceType Type { get; set; }
+        public string Role { get; set; }
         public string Description { get; set; }
     }
+
+
+    public class CustomOrganizations
+    {
+        public string Name { get; set; }
+        public string Role { get; set; }
+        public string Description { get; set; }
+    }
+
 
     public enum CoOpOrganiations
     {
         [EnumMember(Value = "Другое")]
-        Other = 0,
+        Custom = 0,
         [EnumMember(Value = "Аппарат АТК-ХМАО")]
         ATK_KHMAO = 1,
         [EnumMember(Value = "Аппарат АТК-ОНСУ")]
@@ -30,13 +38,15 @@ namespace ATKApplication.Contracts.Request
         LOMY = 6,
         [EnumMember(Value = "Представители религиозных организаций традиционных для России конфессий")]
         Religia = 7,
+        [EnumMember(Value = "Не определено")]
+        Undefined = 8,
     }
 
-    public enum PerformanceType
-    {
-        [EnumMember(Value = "Участие")]
-        TakePart = 1,
-        [EnumMember(Value = "Выступление")]
-        Perform = 2,
-    }
+    //public enum PerformanceType
+    //{
+    //    [EnumMember(Value = "Участие")]
+    //    TakePart = 1,
+    //    [EnumMember(Value = "Выступление")]
+    //    Perform = 2,
+    //}
 }

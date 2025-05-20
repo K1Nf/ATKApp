@@ -11,7 +11,6 @@ namespace ATKApplication.Contracts.Response
         public string DateTime { get; init; }
         public EventType EventType { get; init; }
         public LevelType LevelType { get; init; }
-        //public EventStatus EventStatus { get; init; }
         public string IsSystematic { get; init; } 
         public string IsValuable { get; init; }
         public string IsBestPractice { get; init; }

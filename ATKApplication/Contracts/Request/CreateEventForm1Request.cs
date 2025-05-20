@@ -9,10 +9,12 @@ namespace ATKApplication.Contracts.Request
                             string Date, EventType Form, LevelType Level, 
                             string ThemeCode, bool IsValuable, bool IsBestPractice,
                             string Result, string Decision,
-                            string? EqualToEqualRequest,
+                            string? EqualToEqual,
                             CreateMediaLinkRequest? CreateMediaLinkRequest, 
                             CreateFinanceRequest? CreateFinanceRequest, 
                             CreateFeedBackRequest? CreateFeedBackRequest,
+                            CreateSupportRequest? CreateSupportRequest,
                             CreateParticipantsRequest? CreateParticipantsRequest, 
+                            CreateAudienceRequest? CreateAudienceRequest, 
                             CreateInterAgencyCooperationRequest? CreateInterAgencyCooperationRequest);
 }

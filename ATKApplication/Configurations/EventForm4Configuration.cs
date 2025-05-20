@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ATKApplication.Configurations
 {
-    public class EventForm5Configuration : IEntityTypeConfiguration<EventForm4>
+    public class EventForm4Configuration : IEntityTypeConfiguration<EventForm4>
     {
         public void Configure(EntityTypeBuilder<EventForm4> builder)
         {
-            builder.HasOne(e => e.Agreement)
+            builder.HasMany(e => e.Agreements)
                 .WithOne(c => c.Event)
                 .OnDelete(DeleteBehavior.Cascade);
         }

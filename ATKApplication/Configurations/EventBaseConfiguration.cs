@@ -16,7 +16,7 @@ namespace ATKApplication.Configurations
             builder.Property(e => e.Content)
                 .HasMaxLength(150);
 
-
+            
 
             builder.HasOne(e => e.Organizer)
                 .WithMany(e => e.Events);
@@ -32,7 +32,6 @@ namespace ATKApplication.Configurations
             builder.HasMany(e => e.Categories)
                 .WithOne(f => f.Event)
                 .OnDelete(DeleteBehavior.Cascade);
-
         }
     }
 }

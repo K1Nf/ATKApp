@@ -1,5 +1,5 @@
 wwwroot\assets\css\events-DlZwj7pn.css
-wwwroot\assets\css\Sidebar-G10zORfr.css
+wwwroot\assets\css\Sidebar-C6EkhA0g.css
 wwwroot\assets\css\toastr-PcHlmDLb.css
 wwwroot\assets\images\hanty-mansijskogo-BB2EWD9-.png
 wwwroot\assets\js\createEvent.js

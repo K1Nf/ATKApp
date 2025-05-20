@@ -54,14 +54,78 @@
   {
     "ContainingType": "ATKApplication.Controllers.EventsController",
     "Method": "Create",
-    "RelativePath": "api/ref/Events/Create",
+    "RelativePath": "api/ref/Events/Createbase",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "CreateEventRequest",
-        "Type": "ATKApplication.Contracts.Request.CreateEventRequest",
+        "Type": "ATKApplication.Contracts.Request.CreateEventBaseRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Create1",
+    "RelativePath": "api/ref/Events/Createform1",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEventForm1Request",
+        "Type": "ATKApplication.Contracts.Request.CreateEventForm1Request",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Create2",
+    "RelativePath": "api/ref/Events/Createform2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEventForm2Request",
+        "Type": "ATKApplication.Contracts.Request.CreateEventForm2Request",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Create3",
+    "RelativePath": "api/ref/Events/Createform3",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEventForm3Request",
+        "Type": "ATKApplication.Contracts.Request.CreateEventForm3Request",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.EventsController",
+    "Method": "Create4",
+    "RelativePath": "api/ref/Events/Createform4",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEventForm4Request",
+        "Type": "ATKApplication.Contracts.Request.CreateEventForm4Request",
         "IsRequired": true
       }
     ],

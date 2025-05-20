@@ -5,7 +5,9 @@ using ATKApplication.Enums;
 using ATKApplication.Extensions;
 using ATKApplication.Models;
 using CSharpFunctionalExtensions;
+using Microsoft.Diagnostics.Tracing.Parsers.Clr;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Linq.Expressions;
 using System.Text;
 using System.Transactions;
@@ -13,243 +15,80 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ATKApplication.Services
 {
-    
-    public class EventService(DataBaseContext _dB)
+
+    public class EventService(DataBaseContext _dB, ILogger<EventService> _logger)
     {
-        private readonly static Guid Event1Id = Guid.NewGuid();
-        private readonly static Guid Event2Id = Guid.NewGuid();
-        //private readonly static List<EventForm1> EventForms = [
-        //    new EventForm1{
-        //        Actor = "Исполнитель №1",
 
-        //        Categories = [new Category {
-        //            Count = 15,
-        //            Name = "Студенты"
-        //        },
-        //        new Category {
-        //            Count = 40,
-        //            Name = "Школьники"
-        //        }],
-
-        //        Content = "Содержание антитеррористического модуля мероприятия или его краткое описание",
-        //        Date = new DateOnly(2025,05,25),
-        //        Name = "Название мероприятия",
-        //        Decision = "Описание принятых решений по мероприятию",
-        //        EqualToEqualDescription = "Какое-то описание формата 'равный равному' №1",
-        //        EventType = EventType.Action,
-        //        Id = Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"),
-        //        //IsSystematic = true,
-        //        IsBestPractice = true,
-        //        IsValuable = true,
-        //        LevelType = LevelType.regional,
-        //        Result = "Описание результата мероприятия №1",
-        //        InterAgencyCooperations = [new InterAgencyCooperation(Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"), "Организация 1", "Выступление", "Описание выступления")],
-        //        FeedBack = new FeedBack{
-        //            Id = Guid.NewGuid(),
-        //            Description = "Описание результатов сбора обратной связи по мероприятию №1",
-        //            HasInternet = true,
-        //            HasGuestionnaire = true,
-        //            HasInterview = false,
-        //            HasOpros = false,
-        //            EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
-        //            HasOther = false
-        //        },
-        //        Finance = new Finance(10000, 7500, 25000, 5000, Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"), "Описание дополнительного источника финансирования №1"),
-        //        Theme = new Theme{
-        //            Code = "1.1.1",
-        //            Description = "Проведение мероприятий, посвященных Дню защитника Отечества (23 февраля), Дню солидарности в борьбе с терроризмом (3 сентября), Дню Героев Отечества (9 декабря) с привлечением военнослужащих, сотрудников правоохранительных органов и гражданских лиц, участвовавших в борьбе с терроризмом, экспертов, журналистов, общественных деятелей, очевидцев террористических актов и пострадавших от действий террористов",
-        //        },
-        //        MediaLinks = [new MediaLink {
-        //            Content = "https://link.example.ru",
-        //            EventId = Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"),
-        //            Id = Guid.NewGuid()
-        //        }, new MediaLink {
-        //            Content = "https://link2.example.ru",
-        //            EventId = Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"),
-        //            Id = Guid.NewGuid()
-        //        }, new MediaLink {
-        //            Content = "https://link3.example.ru",
-        //            EventId = Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"),
-        //            Id = Guid.NewGuid()
-        //        }]
-        //    },
-
-
-        //    new EventForm1{
-        //        Actor = "Исполнитель 2 ",
-
-        //        Categories = [new Category {
-        //            Count = 25,
-        //            Name = "Студенты"
-        //        },
-        //        new Category {
-        //            Count = 30,
-        //            Name = "Школьники"
-        //        },
-        //        new Category {
-        //            Count = 10,
-        //            Name = "Работающая молодежь"
-        //        }],
-
-        //        Content = "Содержание антитеррористического модуля мероприятия или его краткое описание",
-        //        Date = new DateOnly(2025,06,22),
-        //        Name = "Название мероприятия",
-        //        Decision = "Принятые решения по мероприятию",
-        //        EqualToEqualDescription = "Какое-то описание формата 'равный равному' №2",
-        //        EventType = EventType.Lecture,
-        //        Id = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
-        //        //IsSystematic = true,
-        //        IsBestPractice = false,
-        //        IsValuable = true,
-        //        LevelType = LevelType.intermunicipality,
-        //        Result = "Описание результата мероприятия №2",
-        //        InterAgencyCooperations = [new InterAgencyCooperation(Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"), "Организация 1", "Приняли участие", ""),
-        //            new InterAgencyCooperation(Guid.Parse("7505d4ff-7dcc-4696-bc10-3d8fad516553"), "Организация 2", "Выступление", "Описание выступления организации 2")
-        //        ],
-        //        FeedBack = new FeedBack{
-        //            Id = Guid.NewGuid(),
-        //            Description = "Описание результатов сбора обратной связи",
-        //            HasInternet = true,
-        //            HasGuestionnaire = false,
-        //            HasInterview = true,
-        //            HasOpros = false,
-        //            EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
-        //            HasOther = false
-        //        },
-        //        Finance = new Finance(15000, 2500, 35000, 4000, Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"), "Описание дополнительного источника финансирования №2"),
-        //        Theme = new Theme{
-        //            Code = "1.1.2",
-        //            Description = "Присвоение улицам, скверам, школам и т.д. имен Героев Российской Федерации, а также иных лиц, отличившихся в борьбе с терроризмом, прежде всего с украинскими националистическими и неонацистскими военизированными формированиями, признанными террористическими организациями"
-        //        },
-        //        MediaLinks = [new MediaLink {
-        //            Content = "https://link.example.ru",
-        //            EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
-        //            Id = Guid.NewGuid()
-        //        }, new MediaLink {
-        //            Content = "https://link2.example.ru",
-        //             EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
-        //            Id = Guid.NewGuid()
-        //        }, new MediaLink {
-        //            Content = "https://link3.example.ru",
-        //             EventId = Guid.Parse("640fe214-155d-432f-8898-5f125359d40e"),
-        //            Id = Guid.NewGuid()
-        //        }]
-        //    },
-
-        //];
-        
-        public async Task<Result<EventResponse>> Get(Guid id)
+        public async Task<object?> Get(Guid id)
         {
-            //var @event = await _dB.EventsBase
-            //    //.Include(e => e.Finance)
-            //    .Include(e => e.Organizer)
-            //    .Include(e => e.Theme)
-            //    //.Include(e => e.FeedBack)
-            //    //.Include(e => e.InterAgencyCooperations)
-            //    .Include(e => e.MediaLinks)
-            //    .Include(e => e.Categories)
-            //    .AsNoTracking()
-            //    .FirstOrDefaultAsync(e => e.Id == Id);
+            var eventForm1 = await _dB.EventForm1s
+                .WithBaseIncludes()
+                .Include(x => x.Finance)
+                .Include(x => x.FeedBack)
+                .Include(x => x.InterAgencyCooperations)
+                .Include(x => x.Support)
+                .Include(x => x.Audiences)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
-            //var @event = await _dB.EventsBase
-            //    .Include(x => x.Categories)
-            //    .Include(x => x.MediaLinks)
-            //    .Include(x => x.Organizer)
-            //    .FirstOrDefaultAsync(x => x.Id == id);
-
-            //if (@event == null)
-            //{
-            //    return Result.Failure<EventResponse>("Мероприятие не найден");
-            //}
+            if(eventForm1 != null)
+                return eventForm1;
 
 
-            //var dateO = @event.Date;
+            var eventForm2 = await _dB.EventForm2s
+                .WithBaseIncludes()
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (eventForm2 != null)
+                return eventForm2;
 
 
-            //var sb = new StringBuilder();
-            //foreach (var item in @event.MediaLinks)
-            //{
-            //    sb.AppendLine(item.Content);
-            //}
+            var eventForm3 = await _dB.EventForm3s
+                .WithBaseIncludes()
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (eventForm3 != null)
+                return eventForm3;
 
 
-            //string month = dateO.Month switch
-            //{
-            //    1 => "январь",
-            //    2 => "февраль",
-            //    3 => "март",
-            //    4 => "апрель",
-            //    5 => "май",
-            //    6 => "июнь",
-            //    7 => "июль",
-            //    8 => "август",
-            //    9 => "сентябрь",
-            //    10 => "октябрь",
-            //    11 => "ноябрь",
-            //    _ => "декабрь"
-            //};
-            //var eventRespone = new EventResponse()
-            //{
-            //    Id = @event.Id,
-            //    Content = @event.Content!,
-            //    Name = @event.Name!,
-            //    DateTime = dateO.Day + " " + month + " " + dateO.Year,
+            var eventForm4 = await _dB.EventForm4s
+                .WithBaseIncludes()
+                .Include(x => x.Agreements)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
-            //    InterAgencyCooperations = @event.InterAgencyCooperations,           // Взаимодействие
-            //    FeedBack = @event.FeedBack,                                         // Обратная связь
-            //    EqualToEqual = @event.EqualToEqualDescription ?? "Нет",             // Равный равному
-            //    Link = sb.ToString().TrimEnd(),                                     // Ссылки
-            //    Finance = @event.Finance,                                           // Финансирование
-            //    Organizer = @event.Organizer,                                       // Организатор
-            //    Theme = @event.Theme,                                               // Тема
-            //    //Category = @event.Categories,                                         // Участники
+            if (eventForm4 != null)
+                return eventForm4;
 
-            //    //EventStatus = EventStatus.Planned,
-            //    EventType = @event.EventType,
-            //    LevelType = @event.LevelType,
 
-            //    IsBestPractice = @event.IsBestPractice ? "Да" : "Нет",
-            //    IsSystematic = @event.IsSystematic ? "Да" : "Нет",
-            //    IsValuable = @event.IsValuable ? "Да" : "Нет",
-            //};
+            var eventBase = await _dB.EventsBase
+                .WithBaseIncludes()
+                .FirstOrDefaultAsync(x => x.Id == id);
 
-            return new EventResponse();
-            //return eventRespone;
+            if (eventBase != null)
+                return eventBase;
+
+            return null;
         }
+
 
 
         public async Task<Result<List<ShortEventResponse>>> GetAll()
         {
-            //var events = await _dB.EventsBase
-            //    .Include(e => e.Organizer)
-            //    .Include(e => e.Theme)
-            //    .Include(e => e.Categories)
-            //    .AsNoTracking()
-            //    .ToListAsync();
+            var events = await _dB.EventsBase
+                .WithBaseIncludes()
+                .Select(x => new ShortEventResponse
+                {
+                    Id = x.Id,
+                    ThemeCode = x.Theme!.Code,
+                    Name = x.Name,
+                    Date = $"{x.Date.Day} {GetMonth(x.Date.Month)} {x.Date.Year}",
+                    ParticipantsCount = x.Categories!.Sum(x => x.Count),
+                    Content = x.Content,
+                    Links = x.MediaLinks.Select(x => x.Content).ToArray(),
+                    OrganizerName = x.Organizer!.Name
+                })
+                .ToListAsync();
 
-
-
-            //List<ShortEventResponse> shortEventsResponse = [.. EventForms.Select(x => new ShortEventResponse
-            //{
-            //    Id = x.Id,
-            //    Name = x.Name!,
-            //    //OrganizerName = x.Organizer!.Name,
-            //    ThemeCode = x.Theme!.Code,
-            //    EventType = x.EventType,
-            //    Content = x.Content,
-            //    LevelType = x.LevelType,
-            //    OrganizerName = "Департамент Х",
-            //    Actor = x.Actor,
-            //    Date = x.Date,
-            //    ParticipantsCount = x.Categories?.Sum(x => x.Count) ?? 0,
-            //    Links = [.. x.MediaLinks.Select(x => x.Content)],
-            //    IsBestPractice = x.IsBestPractice,
-            //    //IsSystematic = x.IsSystematic,
-            //    IsValuable = x.IsValuable
-            //})];
-
-            return new Result<List<ShortEventResponse>>();
-            //return shortEventsResponse;
+            return Result.Success(events);
         }
 
 
@@ -263,11 +102,25 @@ namespace ATKApplication.Services
                 createEventBaseRequest.Content, eventDate, tokenId, themeId);
 
 
-            await CreateMediaLinkAsync(createEventBaseRequest.CreateMediaLinkRequest, newEvent.Id);
-            await CreateParticipantsAsync(createEventBaseRequest.CreateParticipantsRequest, newEvent.Id);
+            using var transaction = await _dB.Database.BeginTransactionAsync();
 
+            try
+            {
+                await CreateMediaLinkAsync(createEventBaseRequest.CreateMediaLinkRequest, newEvent.Id);
+                await CreateParticipantsAsync(createEventBaseRequest.CreateParticipantsRequest, newEvent.Id);
 
-            return Result.Failure<EventBase>("Не удалось создать мероприятие");
+                await _dB.EventsBase.AddAsync(newEvent);
+                await _dB.SaveChangesAsync();
+                await transaction.CommitAsync();
+            }
+            catch (TransactionAbortedException ex)
+            {
+                await transaction.RollbackAsync();
+                _logger.LogError($"Транзакция по созданию мероприятия типа {typeof(EventBase)} провалилась с сообщением: {ex.Message}");
+                return Result.Failure<EventBase>("Не удалось создать мероприятие");
+            }
+
+            return Result.Success(newEvent);
         }
 
 
@@ -284,80 +137,40 @@ namespace ATKApplication.Services
 
 
             // begin transaction
+            using var transaction = await _dB.Database.BeginTransactionAsync();
 
-            // medialinks, finance, feedback, participants, interagency
-
-            await CreateMediaLinkAsync(createEventForm1Request.CreateMediaLinkRequest, eventForm1.Id);
-            await CreateParticipantsAsync(createEventForm1Request.CreateParticipantsRequest, eventForm1.Id);
-
-
-            if (createEventForm1Request.CreateFinanceRequest is not null)
+            try
             {
-                var finance = new Finance(createEventForm1Request.CreateFinanceRequest.MunicipalBudget,
-                    createEventForm1Request.CreateFinanceRequest.RegionalBudget,
-                    createEventForm1Request.CreateFinanceRequest.GranteBudget,
-                    createEventForm1Request.CreateFinanceRequest.OtherBudget,
-                    createEventForm1Request.CreateFinanceRequest.Description,
-                    eventForm1.Id);
+                // medialinks, participants, finance, feedback, interagency
+                await CreateMediaLinkAsync(createEventForm1Request.CreateMediaLinkRequest, eventForm1.Id);
+                await CreateParticipantsAsync(createEventForm1Request.CreateParticipantsRequest, eventForm1.Id);
 
-                if (finance != null)
-                    await _dB.Finances.AddAsync(finance);
-            }
-
-
-            if (createEventForm1Request.CreateFeedBackRequest is not null)
-            {
-                bool hasInterview = createEventForm1Request.CreateFeedBackRequest
-                    .FeedBackTypes.Contains(FeedBackTypes.Interview);
-
-                bool hasGuestionnare = createEventForm1Request.CreateFeedBackRequest
-                    .FeedBackTypes.Contains(FeedBackTypes.Guestionnaire);
-
-                bool hasOnline = createEventForm1Request.CreateFeedBackRequest
-                    .FeedBackTypes.Contains(FeedBackTypes.Internet);
-
-                bool hasOpros = createEventForm1Request.CreateFeedBackRequest
-                    .FeedBackTypes.Contains(FeedBackTypes.Opros);
+                await CreateFinanceAsync(createEventForm1Request.CreateFinanceRequest, eventForm1.Id);
+                await CreateFeedBackAsync(createEventForm1Request.CreateFeedBackRequest, eventForm1.Id);
+                await CreateInterAgencyCoopAsync(createEventForm1Request.CreateInterAgencyCooperationRequest, eventForm1.Id);
                 
-                bool hasOther = createEventForm1Request.CreateFeedBackRequest
-                    .FeedBackTypes.Contains(FeedBackTypes.Other);
-
-                string? description = createEventForm1Request.CreateFeedBackRequest.Description;
-
-                var feedBack = FeedBack.Create(hasInterview, hasGuestionnare, 
-                                               hasOnline, hasOpros, 
-                                               hasOther, description,
-                                               eventForm1.Id);
+                await CreateSupportAsync(createEventForm1Request.CreateSupportRequest, eventForm1.Id);
+                await CreateAudienceAsync(createEventForm1Request.CreateAudienceRequest, eventForm1.Id);
 
 
-                if (feedBack != null)
-                    await _dB.FeedBacks.AddAsync(feedBack);
+
+                await _dB.EventForm1s.AddAsync(eventForm1);
+
+                await _dB.SaveChangesAsync();
+                await transaction.CommitAsync();
+
             }
-
-
-            if(createEventForm1Request.CreateInterAgencyCooperationRequest is not null &&
-                createEventForm1Request.CreateInterAgencyCooperationRequest.Content.Count > 0)
+            catch (TransactionAbortedException ex)
             {
-                foreach(var interAgencyCoopRequest in createEventForm1Request.CreateInterAgencyCooperationRequest.Content)
-                {
-                    var interAgencyCooperation = InterAgencyCooperation.Create(interAgencyCoopRequest.CustomOrganizationName,
-                                                        interAgencyCoopRequest.CoOpOrganiations, interAgencyCoopRequest.Type,
-                                                        interAgencyCoopRequest.Description, eventForm1.Id);
+                await transaction.RollbackAsync();
 
-                    if(interAgencyCooperation != null)
-                        await _dB.InterAgencyCooperations.AddAsync(interAgencyCooperation);
-                }
+                _logger.LogError($"ERROR - {DateTime.Now}: Транзакция по созданию мероприятия типа " +
+                    $"{typeof(EventForm1)} провалилась с сообщением: {ex.Message}");
+
+                return Result.Failure<EventForm1>("Не удалось создать мероприятие");
             }
 
-
-            await _dB.EventForm1s.AddAsync(eventForm1);
-            await _dB.SaveChangesAsync();
-
-            // commit transaction
-
-            // catch exceptions
-            
-            return Result.Failure<EventForm1>("Не удалось создать мероприятие");
+            return Result.Success(eventForm1);
         }
 
 
@@ -366,21 +179,36 @@ namespace ATKApplication.Services
         {
             var (eventDate, themeId) = GetThemeIdAndDate(createEventForm2Request.Date, createEventForm2Request.ThemeCode);
 
-            var eventForm2 = new EventForm2(createEventForm2Request.Actor, createEventForm2Request.Name, 
-                                          createEventForm2Request.Content, eventDate, tokenId, themeId, 
+            var eventForm2 = new EventForm2(createEventForm2Request.Actor, createEventForm2Request.Name,
+                                          createEventForm2Request.Content, eventDate, tokenId, themeId,
                                           createEventForm2Request.Request, createEventForm2Request.Description,
                                           createEventForm2Request.ResultDescription, createEventForm2Request.Participant);
 
+            using var transaction = await _dB.Database.BeginTransactionAsync();
 
-            await CreateMediaLinkAsync(createEventForm2Request.CreateMediaLinkRequest, eventForm2.Id);
-            await CreateParticipantsAsync(createEventForm2Request.CreateParticipantsRequest, eventForm2.Id);
+            try
+            {
+                await CreateMediaLinkAsync(createEventForm2Request.CreateMediaLinkRequest, eventForm2.Id);
+                await CreateParticipantsAsync(createEventForm2Request.CreateParticipantsRequest, eventForm2.Id);
+
+                await _dB.EventForm2s.AddAsync(eventForm2);
 
 
-            await _dB.EventForm2s.AddAsync(eventForm2);
-            await _dB.SaveChangesAsync();
+                await _dB.SaveChangesAsync();
+                await transaction.CommitAsync();
 
+            }
+            catch (TransactionAbortedException ex)
+            {
+                await transaction.RollbackAsync();
 
-            return Result.Failure<EventForm2>("Не удалось создать мероприятие");
+                _logger.LogError($"ERROR - {DateTime.Now}: Транзакция по созданию мероприятия типа " +
+                    $"{typeof(EventForm2)} провалилась с сообщением: {ex.Message}");
+
+                return Result.Failure<EventForm2>("Не удалось создать мероприятие");
+            }
+
+            return Result.Success(eventForm2);
         }
 
 
@@ -389,20 +217,36 @@ namespace ATKApplication.Services
         {
             var (eventDate, themeId) = GetThemeIdAndDate(createEventForm3Request.Date, createEventForm3Request.ThemeCode);
 
-            var eventForm3 = new EventForm3(createEventForm3Request.Actor, createEventForm3Request.Name, 
-                                        createEventForm3Request.Content, eventDate, tokenId, 
-                                        themeId, createEventForm3Request.Direct, 
+            var eventForm3 = new EventForm3(createEventForm3Request.Actor, createEventForm3Request.Name,
+                                        createEventForm3Request.Content, eventDate, tokenId,
+                                        themeId, createEventForm3Request.Direct,
                                         createEventForm3Request.MaterialsCount, createEventForm3Request.Result);
+            
+
+            using var transaction = await _dB.Database.BeginTransactionAsync();
+            
+            try
+            {
+                await CreateMediaLinkAsync(createEventForm3Request.CreateMediaLinkRequest, eventForm3.Id);
+                await CreateParticipantsAsync(createEventForm3Request.CreateParticipantsRequest, eventForm3.Id);
+                await _dB.EventForm3s.AddAsync(eventForm3);
 
 
-            await CreateMediaLinkAsync(createEventForm3Request.CreateMediaLinkRequest, eventForm3.Id);
-            await CreateParticipantsAsync(createEventForm3Request.CreateParticipantsRequest, eventForm3.Id);
+                await _dB.SaveChangesAsync();
+                await transaction.CommitAsync();
 
+            }
+            catch (TransactionAbortedException ex)
+            {
+                await transaction.RollbackAsync();
 
-            await _dB.EventForm3s.AddAsync(eventForm3);
-            await _dB.SaveChangesAsync();
+                _logger.LogError($"ERROR - {DateTime.Now}: Транзакция по созданию мероприятия типа " +
+                    $"{typeof(EventForm3)} провалилась с сообщением: {ex.Message}");
 
-            return Result.Failure<EventForm3>("Не удалось создать мероприятие");
+                return Result.Failure<EventForm3>("Не удалось создать мероприятие");
+            }
+
+            return Result.Success(eventForm3);
         }
 
 
@@ -417,27 +261,32 @@ namespace ATKApplication.Services
                                         createEventForm4Request.DirectToSubjects,
                                         createEventForm4Request.EqualToEqual);
 
+            using var transaction = await _dB.Database.BeginTransactionAsync();
 
-            await CreateMediaLinkAsync(createEventForm4Request.CreateMediaLinkRequest, eventForm4.Id);
-            await CreateParticipantsAsync(createEventForm4Request.CreateParticipantsRequest, eventForm4.Id);
-
-
-            if (createEventForm4Request.CreateAgreementRequest is not null &&
-                createEventForm4Request.CreateAgreementRequest.AgreementRequests.Count > 0)
+            try
             {
-                foreach (var agreementRequest in createEventForm4Request.CreateAgreementRequest.AgreementRequests)
-                {
-                    var agreement = Agreement.Create(agreementRequest.Description, agreementRequest.OrganizationEnum, eventForm4.Id);
+                await CreateMediaLinkAsync(createEventForm4Request.CreateMediaLinkRequest, eventForm4.Id);
+                await CreateParticipantsAsync(createEventForm4Request.CreateParticipantsRequest, eventForm4.Id);
+                await CreateAgreementAsync(createEventForm4Request.CreateAgreementRequest, eventForm4.Id);
 
-                    if (agreement != null)
-                        await _dB.Agreements.AddAsync(agreement);
-                }
+                await _dB.EventForm4s.AddAsync(eventForm4);
+
+
+                await _dB.SaveChangesAsync();
+                await transaction.CommitAsync();
+
+            }
+            catch (TransactionAbortedException ex)
+            {
+                await transaction.RollbackAsync();
+
+                _logger.LogError($"ERROR - {DateTime.Now}: Транзакция по созданию мероприятия типа " +
+                    $"{typeof(EventForm4)} провалилась с сообщением: {ex.Message}");
+
+                return Result.Failure<EventForm4>("Не удалось создать мероприятие");
             }
 
-            await _dB.EventForm4s.AddAsync(eventForm4);
-            await _dB.SaveChangesAsync();
-
-            return Result.Failure<EventForm4>("Не удалось создать мероприятие");
+            return Result.Success(eventForm4);
         }
 
 
@@ -457,16 +306,10 @@ namespace ATKApplication.Services
             }
             catch (TransactionAbortedException ex)
             {
+                await transaction.RollbackAsync();
                 Console.WriteLine("Ошибка при удалении мероприятия (транзакция прервана): " + ex.Message);
+                return Result.Failure("Что-то пошло не так!");
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-
-
-            await transaction.RollbackAsync();
-            return Result.Failure("Что-то пошло не так!");
         }
 
 
@@ -502,9 +345,9 @@ namespace ATKApplication.Services
             //}
             //if (filter.ThemeCode != null)
             //{
-//#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
+            //#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
             //    eventsQuery = eventsQuery.Where(x => x.Theme.Code.Equals(filter.ThemeCode, StringComparison.CurrentCultureIgnoreCase));
-//#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
+            //#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
             //}
 
 
@@ -556,9 +399,9 @@ namespace ATKApplication.Services
         public async Task<List<Theme>> GetThemes() => await _dB.Themes
             .OrderBy(t => t.Code)
             .ToListAsync();
-        
-        
-        
+
+
+
         private static IOrderedQueryable<EventBase> ApplyOrdering(IQueryable<EventBase> query, IOrderedQueryable<EventBase>? orderedQuery, Expression<Func<EventBase, dynamic>> expression, bool orderBy, ref bool isFirst)
         {
             if (isFirst)
@@ -611,12 +454,26 @@ namespace ATKApplication.Services
         {
             if (createParticipantsRequest is not null)
             {
-                if (createParticipantsRequest.Categories.Count > 0)
+                if (createParticipantsRequest.SelectedCategories.Count > 0)                 // Для фиксированных выбранных категорий
                 {
-                    foreach (CategoryInfoRequest categoryRequest in createParticipantsRequest?.Categories!)
+                    foreach (SelectedCategory categoryRequest in createParticipantsRequest?.SelectedCategories!)
                     {
-                        Category? category = Category.Create(categoryRequest.Name, categoryRequest.Category,
+                        var resultCategory = EnumHelper.GetEnumValueFromEnumMemberValue<Categories>(categoryRequest.Name);
+
+
+                        Category? category = Category.Create(categoryRequest.Name, resultCategory ?? Categories.NoCategory,
                             categoryRequest.Count, eventId);
+                        
+                        if (category != null)
+                            await _dB.Categories.AddAsync(category);
+                    }
+                }
+                else if (createParticipantsRequest.CustomCategories.Count > 0)              // Для созданных кастомных категорий
+                {
+                    foreach (CustomCategory customCategory in createParticipantsRequest?.CustomCategories!)
+                    {
+                        Category? category = Category.Create(customCategory.Label, Categories.Custom,
+                            customCategory.Count, eventId);
 
                         if (category != null)
                             await _dB.Categories.AddAsync(category);
@@ -625,7 +482,7 @@ namespace ATKApplication.Services
                 else
                 {
                     // add just total row info into db
-                    Category? category = Category.Create(null, Categories.NoCategory,
+                    Category? category = Category.Create("TOTAL", Categories.NoCategory,
                         createParticipantsRequest.Total, eventId);
 
                     if (category != null)
@@ -633,7 +490,175 @@ namespace ATKApplication.Services
                 }
             }
         }
+
+
+
+        private async Task CreateFinanceAsync(CreateFinanceRequest? createFinanceRequest, Guid eventId)
+        {
+            if (createFinanceRequest is not null)
+            {
+                var finance = new Finance(createFinanceRequest.MunicipalBudget,
+                    createFinanceRequest.RegionalBudget,
+                    createFinanceRequest.GranteBudget,
+                    createFinanceRequest.OtherBudget,
+                    createFinanceRequest.Description,
+                    eventId);
+
+                if (finance != null)
+                    await _dB.Finances.AddAsync(finance);
+            }
+        }
+
+
+
+        private async Task CreateFeedBackAsync(CreateFeedBackRequest? createFeedBackRequest, Guid eventId)
+        {
+            if (createFeedBackRequest is not null)
+            {
+                bool hasInterview = createFeedBackRequest
+                    .FeedBackTypes.Contains(FeedBackTypes.Interview);
+
+                bool hasGuestionnare = createFeedBackRequest
+                    .FeedBackTypes.Contains(FeedBackTypes.Guestionnaire);
+
+                bool hasOnline = createFeedBackRequest
+                    .FeedBackTypes.Contains(FeedBackTypes.Internet);
+
+                bool hasOpros = createFeedBackRequest
+                    .FeedBackTypes.Contains(FeedBackTypes.Opros);
+
+                bool hasOther = createFeedBackRequest
+                    .FeedBackTypes.Contains(FeedBackTypes.Other);
+
+                string? description = createFeedBackRequest.Description;
+
+                var feedBack = FeedBack.Create(hasInterview, hasGuestionnare,
+                                               hasOnline, hasOpros,
+                                               hasOther, description,
+                                               eventId);
+
+
+                if (feedBack != null)
+                    await _dB.FeedBacks.AddAsync(feedBack);
+            }
+        }
+
+
+
+        private async Task CreateInterAgencyCoopAsync(CreateInterAgencyCooperationRequest? createInterAgencyCoopRequest, 
+            Guid eventId)
+        {
+            if (createInterAgencyCoopRequest is not null)
+            {
+                if (createInterAgencyCoopRequest.CustomOrganizations.Count > 0)             // custom организации
+                {
+                    foreach (var interAgencyCoopRequest in createInterAgencyCoopRequest.CustomOrganizations)
+                    {
+                        var interAgencyCoop = InterAgencyCooperation.Create(interAgencyCoopRequest.Name, CoOpOrganiations.Custom,
+                            interAgencyCoopRequest.Role, interAgencyCoopRequest.Description, eventId);
+                        
+                        if(interAgencyCoop != null)
+                            await _dB.InterAgencyCooperations.AddAsync(interAgencyCoop);
+                    }
+                }
+
+
+                if (createInterAgencyCoopRequest.SelectedOrganizations.Count > 0)           // выбранные фиксированные организации
+                {
+                    foreach (var interAgencyCoopRequest in createInterAgencyCoopRequest.SelectedOrganizations)
+                    {
+                        var resultAgency = EnumHelper.GetEnumValueFromEnumMemberValue<CoOpOrganiations>(interAgencyCoopRequest.Key);
+
+                        var interAgencyCoop = InterAgencyCooperation.Create(interAgencyCoopRequest.Key ?? null, 
+                            resultAgency ?? CoOpOrganiations.Undefined,
+                            interAgencyCoopRequest.Value.Role, 
+                            interAgencyCoopRequest.Value.Description, 
+                            eventId);
+
+                        if (interAgencyCoop != null)
+                            await _dB.InterAgencyCooperations.AddAsync(interAgencyCoop);
+                    }
+                }
+            }
+        }
+
+
+
+        private async Task CreateAgreementAsync(CreateAgreementRequest? createAgreementRequest, Guid eventId)
+        {
+            if (createAgreementRequest is not null &&
+                createAgreementRequest.AgreementRequests.Count > 0)
+            {
+                foreach (var agreementRequest in createAgreementRequest.AgreementRequests)
+                {
+                    var agreement = Agreement.Create(agreementRequest.Description, 
+                                                    agreementRequest.OrganizationEnum, 
+                                                    eventId);
+
+                    if (agreement != null)
+                        await _dB.Agreements.AddAsync(agreement);
+                }
+            }
+        }
+
+
+
+        private async Task CreateAudienceAsync(CreateAudienceRequest? createAudienceRequest, Guid eventId)
+        {
+            if (createAudienceRequest is not null)
+            {
+                foreach (var audienceEnum in createAudienceRequest.Audiences)
+                {
+                    string? description = createAudienceRequest.Descripton;
+                    var audience = new Audience(audienceEnum, string.IsNullOrEmpty(description) ? null : description, eventId);
+
+                    if (audience != null)
+                        await _dB.Audiences.AddAsync(audience);
+                }
+
+            }
+        }
+
+
+
+        private async Task CreateSupportAsync(CreateSupportRequest? createSupportRequest, Guid eventId)
+        {
+            if (createSupportRequest is not null)
+            {
+                createSupportRequest.Supports.TryGetValue(SupportType.Information, out string? informationDescription);
+                createSupportRequest.Supports.TryGetValue(SupportType.Organizational, out string? organizationalDescription);
+                createSupportRequest.Supports.TryGetValue(SupportType.Financial, out string? financialDescription);
+                createSupportRequest.Supports.TryGetValue(SupportType.Methodological, out string? methodologicalDescription);
+                createSupportRequest.Supports.TryGetValue(SupportType.Other, out string? otherDescription);
+
+                var support = new Support(createSupportRequest.Supported, informationDescription,
+                                            methodologicalDescription, organizationalDescription,
+                                            financialDescription, otherDescription, eventId);
+
+                if(support != null)
+                    await _dB.Supports.AddAsync(support);
+            }
+        }
+
+
+
+        private static string GetMonth(int month)
+        {
+            return month switch
+            {
+                1 => "января",
+                2 => "феврая",
+                3 => "марта",
+                4 => "апреля",
+                5 => "мая",
+                6 => "июня",
+                7 => "июля",
+                8 => "августа",
+                9 => "сентября",
+                10 => "октября",
+                11 => "ноября",
+                _ => "декабря"
+            };
+        }
     }
 }
-
-

@@ -2,22 +2,25 @@
 
 namespace ATKApplication.Contracts.Request
 {
-    public record CreateParticipantsRequest(List<CategoryInfoRequest> Categories, int Total);
+    public record CreateParticipantsRequest(List<CustomCategory> CustomCategories, List<SelectedCategory> SelectedCategories, int Total);
 
-    public class CategoryInfoRequest
+    public class CustomCategory
     {
-        public int Id { get; set; }
-        public Categories Category { get; set; } // if selected
+        public string? Label { get; set; } // if custom
+        public int Count { get; set; }
+    }
+
+    public class SelectedCategory
+    {
         public string? Name { get; set; } // if custom
         public int Count { get; set; }
     }
 
 
-
     public enum Categories 
     {
         [EnumMember(Value = "Другое")] // custom
-        Others = 0,
+        Custom = 0,
         
         [EnumMember(Value = "Школьники")]
         SchoolKids = 1,
@@ -64,7 +67,7 @@ namespace ATKApplication.Contracts.Request
         [EnumMember(Value = "Молодежь с суиц. наклонностями")]
         SuicidalChildren = 15,
 
-        [EnumMember(Value = "Молодежь с суиц. наклонностями")]
+        [EnumMember(Value = "Без категории/тотал. количество")]
         NoCategory = 20, // if only total
     }
 }
