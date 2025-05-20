@@ -98,20 +98,20 @@ const EventCard = () => {
           <label>Описание темы</label>
           <p>{data.theme.description}</p>
         </section>
+
+        <section>
+          <label>Исполнитель</label>
+          <p>{data.actor}</p>
+        </section>
         
         <section>
           <label>Наименование мероприятия:</label>
           <p>{data.name}</p>
         </section>
-        
-        {/* <section>
-          <label>Статус:</label>
-          <p>{data.eventStatus}</p>
-        </section> */}
 
         <section>
           <label>Дата проведения:</label>
-          <p>{data.dateTime}</p>
+          <p>{data.date}</p>
         </section>
         
         <section>
@@ -133,7 +133,14 @@ const EventCard = () => {
         
         <section>
           <label>Ссылка на СМИ/СМК:</label>
-          <a href="https://news.example.com" target="_blank" rel="noopener noreferrer">https://news.example.com</a>
+
+          {data.mediaLinks.map((link) => (
+            <tr key={link.id}>
+              <a href={link.content} target="_blank" rel="noopener noreferrer">{link.content}</a>
+            </tr>
+          ))}
+
+          
         </section>
 
 
@@ -184,7 +191,7 @@ const EventCard = () => {
               {data.interAgencyCooperations.map((element) => ( // ✅ исправили forEach на map
                 <tr key={element.id} style={{color:"black", border:"2px black solid"}}>
                   <td style={{color:"black", border:"2px black solid"}}>{element.organization}</td>
-                  <td style={{color:"black", border:"2px black solid"}}>{element.type}</td>
+                  <td style={{color:"black", border:"2px black solid"}}>{element.role}</td>
                   <td style={{color:"black", border:"2px black solid"}}>{element.description}</td>
                 </tr>
               ))}
@@ -196,8 +203,8 @@ const EventCard = () => {
         <section>
           <h2>Дополнительные характеристики</h2>
           <p><strong>Значимое мероприятие: </strong> {data.isValuable}</p>
-          <p><strong>Включено в сборник лучших практик: </strong> {data.isBestPractice}</p>
-          <p><strong>Формат равный равному: </strong> {data.equalToEqual ?? "Нет"}</p>
+          <p><strong>Включено в сборник лучших практик: </strong> {data.isBestPractice ? "Да" : "Нет"}</p>
+          <p><strong>Формат равный равному: </strong> {data.equalToEqualDescription ? "Да" : "Нет"}</p>
 
         </section>
         {/* <button className = "edit" type="button">Редактировать</button> */}

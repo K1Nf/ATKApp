@@ -468,7 +468,7 @@ namespace ATKApplication.Services
                             await _dB.Categories.AddAsync(category);
                     }
                 }
-                else if (createParticipantsRequest.CustomCategories.Count > 0)              // Для созданных кастомных категорий
+                if (createParticipantsRequest.CustomCategories.Count > 0)              // Для созданных кастомных категорий
                 {
                     foreach (CustomCategory customCategory in createParticipantsRequest?.CustomCategories!)
                     {
