@@ -202,9 +202,9 @@ const EventCard = () => {
 
         <section>
           <h2>Дополнительные характеристики</h2>
-          <p><strong>Значимое мероприятие: </strong> {data.isValuable}</p>
+          <p><strong>Значимое мероприятие: </strong> {data.isValuable ? "Да" : "Нет"}</p>
           <p><strong>Включено в сборник лучших практик: </strong> {data.isBestPractice ? "Да" : "Нет"}</p>
-          <p><strong>Формат равный равному: </strong> {data.equalToEqualDescription ? "Да" : "Нет"}</p>
+          <p><strong>Формат равный равному: </strong> {data.equalToEqualDescription}</p>
 
         </section>
         {/* <button className = "edit" type="button">Редактировать</button> */}

@@ -131,7 +131,7 @@ namespace ATKApplication.Services
 
 
             var eventForm1 = new EventForm1(createEventForm1Request.Name, createEventForm1Request.Actor,
-                createEventForm1Request.Content, eventDate, tokenId, themeId, createEventForm1Request.Content,
+                createEventForm1Request.Content, eventDate, tokenId, themeId, createEventForm1Request.EqualToEqual,
                 createEventForm1Request.Result, createEventForm1Request.Decision, createEventForm1Request.Form, createEventForm1Request.Level,
                 createEventForm1Request.IsValuable, createEventForm1Request.IsBestPractice);
 
