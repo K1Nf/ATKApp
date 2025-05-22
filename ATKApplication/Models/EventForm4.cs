@@ -5,7 +5,7 @@
         public EventForm4() { }
 
         public EventForm4(string actor, string name, string content, 
-                        DateOnly date, Guid organizerId, Guid themeId,
+                        DateOnly? date, Guid organizerId, Guid themeId,
                         bool directToNAC, string directToSubjects, string equalToEqual)
 
             : base(actor, name, content, date, organizerId, themeId)

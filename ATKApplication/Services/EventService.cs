@@ -80,11 +80,18 @@ namespace ATKApplication.Services
                     Id = x.Id,
                     ThemeCode = x.Theme!.Code,
                     Name = x.Name,
-                    Date = $"{x.Date.Day} {GetMonth(x.Date.Month)} {x.Date.Year}",
                     ParticipantsCount = x.Categories!.Sum(x => x.Count),
                     Content = x.Content,
-                    Links = x.MediaLinks.Select(x => x.Content).ToArray(),
-                    OrganizerName = x.Organizer!.Name
+                    OrganizerName = x.Organizer!.Name,
+                    
+                    Date = x.Date == null ? 
+                        string.Empty : 
+                        $"{x.Date.Value.Day} {GetMonth(x.Date.Value.Month)} {x.Date.Value.Year}",
+                    
+                    Links = x.MediaLinks
+                        .Select(x => x.Content)
+                        .ToArray(),
+
                 })
                 .ToListAsync();
 
@@ -298,8 +305,8 @@ namespace ATKApplication.Services
             try
             {
                 await _dB.EventsBase
-                .Where(x => x.Id == eventId)
-                .ExecuteDeleteAsync();
+                    .Where(x => x.Id == eventId)
+                    .ExecuteDeleteAsync();
 
                 await transaction.CommitAsync();
                 return Result.Success();
@@ -419,16 +426,19 @@ namespace ATKApplication.Services
 
 
 
-        private (DateOnly, Guid) GetThemeIdAndDate(string dateRequest, string themeCode)
+        private (DateOnly?, Guid) GetThemeIdAndDate(string? dateRequest, string themeCode)
         {
-            DateOnly eventDate = DateOnly.Parse(dateRequest);
+            var canParseDate = DateOnly.TryParse(dateRequest, out DateOnly eventDate);
 
             Guid themeId = _dB.Themes
                 .AsNoTracking()
                 .SingleOrDefault(t => t.Code == themeCode)!
                 .Id;
 
-            return (eventDate, themeId);
+            if (canParseDate)
+                return (eventDate, themeId);
+
+            return (null, themeId);
         }
 
 
@@ -657,7 +667,8 @@ namespace ATKApplication.Services
                 9 => "сентября",
                 10 => "октября",
                 11 => "ноября",
-                _ => "декабря"
+                12 => "декабря",
+                _ => string.Empty,
             };
         }
     }

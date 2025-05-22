@@ -1,32 +1,8 @@
 import React, { useState } from "react";
 
 
-const DopInfo_Support = ({}) => {
-  // Состояния для всех типов поддержек
-  const [supportTypes, setSupportTypes] = useState({
-    info: false,
-    method: false,
-    org: false,
-    other: false,
-    financing: false,
-    competition: false
-  });
-
-  // Состояния для описаний
-  const [descriptions, setDescriptions] = useState({
-    infoDescription: "",
-    methodDescription: "",
-    orgDescription: "",
-    otherDescription: "",
-    competitionDescription: "",
-    winnerDetails: "",
-    financingDescription: "",
-  });
-
+const DopInfo_Support = ({supportTypes, supportTypesDescription, setSupportTypes, setsupportTypesDescription}) => {
   
-  // Результаты участия
-  const [participationResult, setParticipationResult] = useState("");
-
   // Обработчик изменения состояния чекбоксов
   const handleCheckboxChange = (type) => {
     setSupportTypes((prev) => ({ ...prev, [type]: !prev[type] }));
@@ -34,7 +10,7 @@ const DopInfo_Support = ({}) => {
 
   // Обработчик изменения текстовых полей
   const handleDescriptionChange = (type, value) => {
-    setDescriptions((prev) => ({ ...prev, [type]: value }));
+    setsupportTypesDescription((prev) => ({ ...prev, [type]: value }));
   };
 
   return (
@@ -55,7 +31,7 @@ const DopInfo_Support = ({}) => {
           <textarea
             maxLength={200}
             placeholder="Описание информационной поддержки проекта (не более 200 символов)"
-            value={descriptions.infoDescription}
+            value={supportTypesDescription.infoDescription}
             onChange={(e) => handleDescriptionChange("infoDescription", e.target.value)}
           />
         )}
@@ -75,7 +51,7 @@ const DopInfo_Support = ({}) => {
           <textarea
             maxLength={200}
             placeholder="Описание методической поддержки проекта (не более 200 символов)"
-            value={descriptions.methodDescription}
+            value={supportTypesDescription.methodDescription}
             onChange={(e) => handleDescriptionChange("methodDescription", e.target.value)}
           />
         )}
@@ -95,7 +71,7 @@ const DopInfo_Support = ({}) => {
           <textarea
             maxLength={200}
             placeholder="Описание организационной поддержки проекта (не более 200 символов)"
-            value={descriptions.orgDescription}
+            value={supportTypesDescription.orgDescription}
             onChange={(e) => handleDescriptionChange("orgDescription", e.target.value)}
           />
         )}
@@ -115,7 +91,7 @@ const DopInfo_Support = ({}) => {
          <textarea
          maxLength={200}
          placeholder="Описание финансовой поддержки проекта (не более 200 символов)"
-         value={descriptions.financing}
+         value={supportTypesDescription.financing}
          onChange={(e) => handleDescriptionChange("financingDescription", e.target.value)}
        />
         )}
@@ -135,7 +111,7 @@ const DopInfo_Support = ({}) => {
           <textarea
             maxLength={200}
             placeholder="Описание других видов поддержки  (не более 200 символов)"
-            value={descriptions.otherDescription}
+            value={supportTypesDescription.otherDescription}
             onChange={(e) => handleDescriptionChange("otherDescription", e.target.value)}
           />
         )}

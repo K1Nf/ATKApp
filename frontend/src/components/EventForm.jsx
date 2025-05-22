@@ -25,6 +25,13 @@ import Info_SourceOfDistribution from "../components/EventFormSections/Info_Sour
 import Info_DistrictCompetition from "../components/EventFormSections/Info_DistrictCompetition"
 import DopInfo_Support from "../components/EventFormSections/DopInfo_Support"
 import Info_ExecutorAndDescription from "../components/EventFormSections/Info_ExecutorAndDescription"
+
+
+import { handleBaseFormSubmit1 } from "../components/EventFormHandlers/EventForm1Handler"; // путь подстраивай под себя
+import { handleBaseFormSubmit16 } from "../components/EventFormHandlers/EventForm16Handler"; // путь подстраивай под себя
+
+
+
 const EventForm = () => {
 
 
@@ -272,6 +279,32 @@ const EventForm = () => {
   const [isWorkSchoolAndVolodejDescription, setisWorkSchoolAndVolodejDescription] = useState("");
 
 
+// Состояния для всех типов поддержек
+  const [supportTypes, setSupportTypes] = useState({
+    info: false,
+    method: false,
+    org: false,
+    other: false,
+    financing: false,
+    competition: false
+  });
+
+  // Состояния для описаний
+  const [supportTypesDescription, setsupportTypesDescription] = useState({
+    infoDescription: "",
+    methodDescription: "",
+    orgDescription: "",
+    otherDescription: "",
+    competitionDescription: "",
+    winnerDetails: "",
+    financingDescription: "",
+  });
+
+  
+  // Результаты участия
+  //const [participationResult, setParticipationResult] = useState("");
+
+
 
 
 
@@ -316,19 +349,19 @@ const EventForm = () => {
     let cleanedCustomOrganizations = isCooperation ? otherOrganizations : {};
 
 
-    let cleanedPeerFormat = equalFormat ? equalFormatDescription  : ""; //peerFormatDescription
+    let cleanedPeerFormat = equalFormat ? equalFormatDescription : ""; //peerFormatDescription
 
 
     let cleanedParticipants = detailedInput ? participants : []; //customParticipants
-    
-    
+
+
     const resultCustomCategories = Object.entries(cleanedParticipants)
-    .filter(([_, count]) => Number(count) > 0)
-    .map(([name, count]) => ({
-      name,
-      count: Number(count)
-    }));
-    
+      .filter(([_, count]) => Number(count) > 0)
+      .map(([name, count]) => ({
+        name,
+        count: Number(count)
+      }));
+
     let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
 
 
@@ -432,8 +465,8 @@ const EventForm = () => {
       },
 
       createParticipantsRequest: {
-        selectedCategories: resultCustomCategories, //,
-        customCategories: cleanedCustomParticipants, 
+        selectedCategories: resultCustomCategories,
+        customCategories: cleanedCustomParticipants,
         total: totalParticipants
       },
 
@@ -447,43 +480,6 @@ const EventForm = () => {
 
     const backCreateUrl = `/api/ref/events/createform1`;
 
-
-
-    // Получаем список тем при монтировании компонента
-    // useEffect(() => {
-    //   const fetchTopics = async () => {
-    //     try {
-    //       const response = await fetch('/api/ref/themes');
-    //       const data = await response.json();
-    //       setTopics(data);  // Сохраняем полученные данные в состояние
-    //     } catch (error) {
-    //       console.error('Ошибка при получении тем:', error);
-    //     }
-    //   };
-
-    //   fetchTopics();  // Вызовем функцию для получения данных
-    // }, []); // Зависимость [] — запрос только при первом рендере компонента
-
-
-
-    // useEffect(() => {
-    //   const fetchSubThemes = async () => {
-    //     try {
-    //       // Измененный URL для получения подтем
-    //       const response = await fetch(`/api/ref/subthemes?topic=${selectedTopic}`);
-    //       const data = await response.json();
-    //       setSubThemes(data);  // Сохраняем подтемы в состояние
-    //     } catch (error) {
-    //       console.error("Ошибка при получении подтем:", error);
-    //     }
-    //   };
-
-    //   if (selectedTopic) {
-    //     fetchSubThemes();  // Запрашиваем подтемы только если тема выбрана
-    //   }
-    // }, [selectedTopic]);  // Запрос подтем происходит при изменении выбранной темы
-
-    // отправка нового мероприятия на сервер
 
 
 
@@ -619,7 +615,6 @@ const EventForm = () => {
 
   return (
     <div>
-      {/* <form onSubmit={handleFormSubmit}> */}
       <div>
         {/* Элемент, который будет находиться "над" контейнером */}
         <div className="centered-container" id="above-container">
@@ -647,7 +642,37 @@ const EventForm = () => {
           {formType === 1 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleBaseFormSubmit1({
+                e,
+                selectedTopic,
+                formType,
+                feedbackCollected,
+                selectedFeedbackTypes,
+                feedbackDescription,
+                hasFinancing,
+                financing,
+                financingOtherDescription,
+                isCooperation,
+                selectedOrganizations,
+                otherOrganizations,
+                equalFormat,
+                equalFormatDescription,
+                detailedInput,
+                participants,
+                customParticipants,
+                eventDate,
+                eventDescription,
+                eventName,
+                executor,
+                level,
+                formConducted,
+                bestEvent,
+                importantEvent,
+                resultDescription,
+                uprDescription,
+                totalParticipants,
+                link
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -672,7 +697,7 @@ const EventForm = () => {
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
                     link={link}
-                    setLink={setLink} ы
+                    setLink={setLink}
                   />
 
 
@@ -680,7 +705,7 @@ const EventForm = () => {
                   <BasicInfo_LevelFormat
                     level={level}
                     setLevel={setLevel}
-                    link = {link}
+                    link={link}
                     setLink={setLink}
                     isOtherDescriptionVisible={isOtherDescriptionVisible}
                     setIsOtherDescriptionVisible={setIsOtherDescriptionVisible}
@@ -775,7 +800,27 @@ const EventForm = () => {
           {formType === 2 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleForm2Submit({
+                e,
+                selectedTopic,
+                equalFormat,
+                equalFormatDescription,
+                detailedInput,
+                participants,
+                customParticipants,
+                eventDate,
+                eventDescription,
+                eventName,
+                executor,
+                level,
+                formConducted,
+                bestEvent,
+                importantEvent,
+                totalParticipants,
+                link,
+                supportTypes,
+                supportTypesDescription,
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -806,7 +851,7 @@ const EventForm = () => {
                   <BasicInfo_LevelFormat
                     level={level}
                     setLevel={setLevel}
-                    link = {link}
+                    link={link}
                     setLink={setLink}
                     isOtherDescriptionVisible={isOtherDescriptionVisible}
                     setIsOtherDescriptionVisible={setIsOtherDescriptionVisible}
@@ -849,9 +894,14 @@ const EventForm = () => {
                     setFinancing={setFinancing}
                   />
 
-                  <DopInfo_Support />
+                  <DopInfo_Support
+                    supportTypes = {supportTypes} 
+                    supportTypesDescription = {supportTypesDescription} 
+                    setSupportTypes = {setSupportTypes}
+                    setsupportTypesDescription = {setsupportTypesDescription}
+                  />
 
-                  {/* Количество участников */}
+                  {/* Количество участников */}``
                   <DopInfo_Participants
                     participantsCategories={participantsCategories}
                     setParticipantsCategories={setParticipantsCategories}
@@ -974,7 +1024,13 @@ const EventForm = () => {
 
                   />
 
-                  <DopInfo_Support />
+                  <DopInfo_Support
+                    supportTypes = {supportTypes} 
+                    supportTypesDescription = {supportTypesDescription} 
+                    setSupportTypes = {setSupportTypes}
+                    setsupportTypesDescription = {setsupportTypesDescription}
+                  />
+
                 </section>
                 <button type="submit" id="save_button">
                   Сохранить
@@ -1017,7 +1073,7 @@ const EventForm = () => {
                   <BasicInfo_LevelFormat
                     level={level}
                     setLevel={setLevel}
-                    link = {link}
+                    link={link}
                     setLink={setLink}
                     isOtherDescriptionVisible={isOtherDescriptionVisible}
                     setIsOtherDescriptionVisible={setIsOtherDescriptionVisible}
@@ -1479,7 +1535,13 @@ const EventForm = () => {
                     {/* Целевая аудитория */}
                     <Info_TargetAudience />
 
-                    <DopInfo_Support />
+                    <DopInfo_Support
+                      supportTypes = {supportTypes} 
+                      supportTypesDescription = {supportTypesDescription} 
+                      setSupportTypes = {setSupportTypes}
+                      setsupportTypesDescription = {setsupportTypesDescription}
+                    />
+
                   </div>
                 </section>
 
@@ -1525,6 +1587,10 @@ const EventForm = () => {
                   <h2>Дополнительная информация о мероприятии</h2>
                   <div>
                     <DopInfo_ImportantTheBestEqual
+                      equalFormat={equalFormat}
+                      setEqualFormat={setEqualFormat}
+                      equalFormatDescription={equalFormatDescription}
+                      setEqualFormatDescription={setEqualFormatDescription}
                       bestEvent={bestEvent}
                       setBestEvent={setBestEvent}
                       importantEvent={importantEvent}
@@ -1575,6 +1641,10 @@ const EventForm = () => {
                   <h2>Дополнительная информация о мероприятии</h2>
                   <div>
                     <DopInfo_ImportantTheBestEqual
+                      equalFormat={equalFormat}
+                      setEqualFormat={setEqualFormat}
+                      equalFormatDescription={equalFormatDescription}
+                      setEqualFormatDescription={setEqualFormatDescription}
                       bestEvent={bestEvent}
                       setBestEvent={setBestEvent}
                       importantEvent={importantEvent}
@@ -1596,7 +1666,13 @@ const EventForm = () => {
 
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit} id="eventForm">
+              <form id="eventForm" onSubmit={(e) => handleBaseFormSubmit16({
+                e,
+                selectedTopic,
+                eventDescription,
+                executor,
+              })}>
+
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -1605,8 +1681,8 @@ const EventForm = () => {
                   <Info_ExecutorAndDescription
                     executor={executor}
                     setExecutor={setExecutor}
-                    description={executorDescription}
-                    setDescription={setExecutorDescription}
+                    description={eventDescription}
+                    setDescription={setEventDescription}
                   />
                 </section>
 
@@ -1687,19 +1763,345 @@ const EventForm = () => {
               </form>
             </div>
           )}
-
-          {/* Кнопка сохранения */}
-          {/* {formType && (
-                <button type="submit" id="save_button">
-                  Сохранить
-                </button>
-              )} */}
-
         </div>
       </div>
-      {/* </form> */}
     </div>
   );
 }
 
 export default EventForm;
+
+
+
+
+
+
+
+
+
+
+
+
+// Функция для проверки обязательных полей и ссылок
+const handleBaseFormSubmit = async (e) => {
+  console.log("Нажата кнопка отправки формы");
+
+  e.preventDefault();
+  if (!selectedTopic) {
+    toastr.error("Пожалуйста, выберите тему", "Ошибка");
+    return;
+  }
+
+
+  let cleanedParticipants = detailedInput ? participants : []; //customParticipants
+
+
+  const resultCustomCategories = Object.entries(cleanedParticipants)
+    .filter(([_, count]) => Number(count) > 0)
+    .map(([name, count]) => ({
+      name,
+      count: Number(count)
+    }));
+
+  let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
+
+
+  // Проверка даты
+  const dateElement = document.getElementById("event_date");
+  const selectedDate = new Date(eventDate);
+  const currentYear = new Date().getFullYear();
+
+  if (selectedDate.getFullYear() !== currentYear) {
+    dateElement?.classList.add("error");
+    dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
+    alert("Дата должна быть в пределах текущего года.");
+    return;
+  } else {
+    dateElement?.classList.remove("error");
+  }
+
+
+  e.preventDefault();
+
+  let hasError = false;
+
+  const requiredFields = [
+    //{ value: eventName, id: "event_name" },
+    //{ value: projectName, id: "event_name" },
+    //{ value: eventDate, id: "event_date" },
+    { value: eventDescription, id: "event_description" },
+  ];
+
+  if (formType !== "2.7" && formType !== "2.7.2") {
+    requiredFields.push({ value: link, id: "link" });
+  }
+
+  // Проверка обязательных полей
+  requiredFields.forEach((field) => {
+    const element = document.getElementById(field.id);
+    if (!field.value.trim()) {
+      element.classList.add("error"); // Добавляем красный стиль
+      hasError = true;
+      element.scrollIntoView({ behavior: "smooth", block: "center" }); // Прокручиваем к первому незаполненному полю
+    } else {
+      element.classList.remove("error"); // Убираем красный стиль, если поле заполнено
+    }
+  });
+
+
+
+  // ----------ДОБАВИТЬ ПРОВЕРКУ НА НОМЕЕ ТЕМЫ??? В ЗАВИСИМОСТИ ОТ НОМЕРА ТЕМЫ ВАЛИДИРУЕМ ССЫЛКИ ИЛИ НЕТ----------
+
+
+
+  // Проверка на корректность ссылки
+  const linkElement = document.getElementById("link");
+  const links = link.split(',').map((l) => l.trim());
+
+  // Проверка каждой ссылки
+  const invalidLinks = links.filter((l) => !/^(https?|http):\/\/[^\s$.?#].[^\s]*$/.test(l));
+
+  if (invalidLinks.length > 0) {
+    linkElement.classList.add("error"); // Добавляем красный стиль
+    linkElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    alert(`Некорректные ссылки: ${invalidLinks.join(', ')}`);
+    hasError = true;
+  }
+
+  if (hasError) {
+    alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
+    return;
+  }
+
+
+
+  let createEventBaseRequest = {
+    themeCode: selectedTopic,
+    name: eventName,
+    actor: executor,
+    content: eventDescription,
+    date: eventDate,
+
+    createMediaLinkRequest: {
+      content: link.split(',').map(l => l.trim())
+    },
+
+    createParticipantsRequest: {
+      selectedCategories: resultCustomCategories, //,
+      customCategories: cleanedCustomParticipants,
+      total: totalParticipants
+    },
+  };
+
+
+  console.log("---------------");
+  console.log(createEventBaseRequest);
+  console.log("---------------");
+
+
+  try {
+    const response = await fetch(`/api/ref/events/createbase`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(createEventRequest)
+    });
+
+    if (!response.ok) {
+      throw new Error("Ошибка при создании события");
+    }
+
+    const data = await response.text();
+    console.log("Событие создано:", data);
+
+    //Показать уведомление
+    toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
+
+  } catch (error) {
+    console.error("Ошибка:", error);
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+const handleForm2Submit = async ({
+  e,
+  selectedTopic,
+  equalFormat,
+  equalFormatDescription,
+  detailedInput,
+  participants,
+  customParticipants,
+  eventDate,
+  eventDescription,
+  eventName,
+  executor,
+  level,
+  formConducted,
+  bestEvent,
+  importantEvent,
+  totalParticipants,
+  link,
+  supportTypes,
+  supportTypesDescription,
+  
+  }) => {
+  e.preventDefault();
+    console.log("Нажата кнопка отправки формы 2");
+
+    if (!selectedTopic) {
+      toastr.error("Пожалуйста, выберите тему", "Ошибка");
+      return;
+    }
+
+    
+    let cleanedPeerFormat = equalFormat ? equalFormatDescription : ""; //peerFormatDescription
+
+    let cleanedParticipants = detailedInput ? participants : []; //customParticipants
+
+    const resultCustomCategories = Object.entries(cleanedParticipants)
+      .filter(([_, count]) => Number(count) > 0)
+      .map(([name, count]) => ({
+        name,
+        count: Number(count)
+      }));
+
+    let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
+
+
+
+
+    // Проверка даты
+    const dateElement = document.getElementById("event_date");
+    const selectedDate = new Date(eventDate);
+    const currentYear = new Date().getFullYear();
+
+    if (selectedDate.getFullYear() !== currentYear) {
+      dateElement?.classList.add("error");
+      dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
+      alert("Дата должна быть в пределах текущего года.");
+      return;
+    } else {
+      dateElement?.classList.remove("error");
+    }
+
+
+    let hasError = false;
+
+    const requiredFields = [
+      //{ value: eventName, id: "event_name" },
+      //{ value: projectName, id: "event_name" },
+      { value: eventDate, id: "event_date" },
+      { value: eventDescription, id: "event_description" },
+    ];
+
+    requiredFields.push({ value: link, id: "link" });
+
+    // Проверка обязательных полей
+    requiredFields.forEach((field) => {
+      const element = document.getElementById(field.id);
+      if (!field.value.trim()) {
+        element.classList.add("error"); // Добавляем красный стиль
+        hasError = true;
+        element.scrollIntoView({ behavior: "smooth", block: "center" }); // Прокручиваем к первому незаполненному полю
+      } else {
+        element.classList.remove("error"); // Убираем красный стиль, если поле заполнено
+      }
+    });
+
+    // Проверка на корректность ссылки
+    const linkElement = document.getElementById("link");
+    const links = link.split(',').map((l) => l.trim());
+
+    // Проверка каждой ссылки
+    const invalidLinks = links.filter((l) => !/^(https?|http):\/\/[^\s$.?#].[^\s]*$/.test(l));
+
+    if (invalidLinks.length > 0) {
+      linkElement.classList.add("error"); // Добавляем красный стиль
+      linkElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      alert(`Некорректные ссылки: ${invalidLinks.join(', ')}`);
+      hasError = true;
+    }
+
+    if (hasError) {
+      alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
+      return;
+    }
+
+
+
+    let createEventForm1Request = {
+      themeCode: selectedTopic,
+      name: eventName,
+      actor: executor,
+      content: eventDescription,
+      date: eventDate,
+      level: level,
+      form: formConducted,
+      isBestPractice: bestEvent,
+      isValuable: importantEvent,
+      equalToEqual: cleanedPeerFormat,
+
+      createMediaLinkRequest: {
+        content: link.split(',').map(l => l.trim())
+      },
+
+      createParticipantsRequest: {
+        selectedCategories: resultCustomCategories,
+        customCategories: cleanedCustomParticipants,
+        total: totalParticipants
+      },
+
+      createSupportRequest: {
+        supportTypes: supportTypes,
+        descriptions: supportTypesDescription,
+      },
+    };
+    //alert(JSON.stringify(createEventRequest, null, 2));
+
+    console.log("---------------");
+    console.log(createEventForm1Request);
+    console.log("---------------");
+
+    const backCreateUrl = `/api/ref/events/createform1`;
+
+
+
+
+    // try {
+    //   const response = await fetch(backCreateUrl, {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify(createEventRequest)
+    //   });
+
+    //   if (!response.ok) {
+    //     throw new Error("Ошибка при создании события");
+    //   }
+
+    //   const data = await response.text();
+    //   console.log("Событие создано:", data);
+
+    //   //Показать уведомление
+    //   toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
+
+    // } catch (error) {
+    //   console.error("Ошибка:", error);
+    // }
+  };
+
+
+
+

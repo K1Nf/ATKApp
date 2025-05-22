@@ -4,8 +4,8 @@
     {
         public EventForm2() { }
 
-        public EventForm2(string actor, string name, string content, 
-                        DateOnly date, Guid organizerId, Guid themeId, 
+        public EventForm2(string actor, string? name, string content, 
+                        DateOnly? date, Guid organizerId, Guid themeId, 
                         string request, string description, 
                         string resultDescription, string participant)
             : base(name, actor, content, date, organizerId, themeId)

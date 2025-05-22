@@ -5,7 +5,7 @@
         public EventForm3() { }
 
         public EventForm3(string actor, string name, 
-                            string content, DateOnly date, Guid organizerId, 
+                            string content, DateOnly? date, Guid organizerId, 
                             Guid themeId, string direct, 
                             int materialsCount, string result)
             : base(actor, name, content, date, organizerId, themeId)
