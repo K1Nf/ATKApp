@@ -27,10 +27,10 @@ import DopInfo_Support from "../components/EventFormSections/DopInfo_Support"
 import Info_ExecutorAndDescription from "../components/EventFormSections/Info_ExecutorAndDescription"
 
 
-import { handleBaseFormSubmit1 } from "../components/EventFormHandlers/EventForm1Handler"; // путь подстраивай под себя
+import { handleFormSubmit1 } from "../components/EventFormHandlers/EventForm1Handler"; // путь подстраивай под себя
+import { handleFormSubmit2 } from "../components/EventFormHandlers/EventForm2Handler"; // путь подстраивай под себя
+import { handleFormSubmit3 } from "../components/EventFormHandlers/EventForm3Handler"; // путь подстраивай под себя
 import { handleFormSubmit4 } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
-//import { handleFormSubmit5 } from "../components/EventFormHandlers/EventForm5Handler"; // путь подстраивай под себя
-//import { handleFormSubmit6 } from "../components/EventFormHandlers/EventForm6Handler"; // путь подстраивай под себя
 
 
 
@@ -281,7 +281,7 @@ const EventForm = () => {
   const [isWorkSchoolAndVolodejDescription, setisWorkSchoolAndVolodejDescription] = useState("");
 
 
-// Состояния для всех типов поддержек
+  // Состояния для всех типов поддержек
   const [supportTypes, setSupportTypes] = useState({
     info: false,
     method: false,
@@ -301,13 +301,13 @@ const EventForm = () => {
     financingDescription: "",
   });
 
-  
+
   // Результаты участия
   //const [participationResult, setParticipationResult] = useState("");
 
 
 
-const [helpTypes, setHelpTypes] = useState({
+  const [helpTypes, setHelpTypes] = useState({
     psychological: false,
     legal: false,
     informational: false,
@@ -525,10 +525,32 @@ const [helpTypes, setHelpTypes] = useState({
   };
 
 
+  const [isWorkUseChecked, setIsWorkUseChecked] = useState(false);
+  const [workUseDescription, setWorkUseDescription] = useState("");
+  const [sendNAK, setSendNAK] = useState(false);
 
 
+  // Состояния для чекбоксов и связанных с ними данных
+  const [isMaterialAgreementChecked, setIsMaterialAgreementChecked] = useState(false);
 
+  // Состояния для категорий/организаций
+  const [categories, setCategories] = useState([]);
 
+  // Состояние для отслеживания, была ли нажата кнопка добавления категории
+  const [isCategoryAdded, setIsCategoryAdded] = useState(false);
+
+  // Состояния для выбора результата
+  const [isATKOMSUChecked, setIsATKOMSUChecked] = useState(false);
+  const [ATKOMSUResult, setATKOMSUResult] = useState("");
+  const [ATKOMSUDescription, setATKOMSUDescription] = useState("");
+
+  const [isATKKhmaoChecked, setIsATKKhmaoChecked] = useState(false);
+  const [ATKKhmaoResult, setATKKhmaoResult] = useState("");
+  const [ATKKhmaoDescription, setATKKhmaoDescription] = useState("");
+
+  const [isExpertCouncilChecked, setIsExpertCouncilChecked] = useState(false);
+  const [expertCouncilResult, setExpertCouncilResult] = useState("");
+  const [expertCouncilDescription, setExpertCouncilDescription] = useState("");
 
 
 
@@ -659,7 +681,7 @@ const [helpTypes, setHelpTypes] = useState({
           {formType === 1 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={(e) => handleBaseFormSubmit1({
+              <form onSubmit={(e) => handleFormSubmit1({
                 e,
                 selectedTopic,
                 formType,
@@ -817,7 +839,7 @@ const [helpTypes, setHelpTypes] = useState({
           {formType === 2 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={(e) => handleForm2Submit({
+              <form onSubmit={(e) => handleFormSubmit2({
                 e,
                 selectedTopic,
                 equalFormat,
@@ -825,6 +847,7 @@ const [helpTypes, setHelpTypes] = useState({
                 detailedInput,
                 participants,
                 customParticipants,
+                totalParticipants,
                 eventDate,
                 eventDescription,
                 eventName,
@@ -833,7 +856,6 @@ const [helpTypes, setHelpTypes] = useState({
                 formConducted,
                 bestEvent,
                 importantEvent,
-                totalParticipants,
                 link,
                 supportTypes,
                 supportTypesDescription,
@@ -912,10 +934,10 @@ const [helpTypes, setHelpTypes] = useState({
                   />
 
                   <DopInfo_Support
-                    supportTypes = {supportTypes} 
-                    supportTypesDescription = {supportTypesDescription} 
-                    setSupportTypes = {setSupportTypes}
-                    setsupportTypesDescription = {setsupportTypesDescription}
+                    supportTypes={supportTypes}
+                    supportTypesDescription={supportTypesDescription}
+                    setSupportTypes={setSupportTypes}
+                    setsupportTypesDescription={setsupportTypesDescription}
                   />
 
                   {/* Количество участников */}``
@@ -961,7 +983,34 @@ const [helpTypes, setHelpTypes] = useState({
           {formType === 3 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleFormSubmit3({
+                e,
+                selectedTopic,
+                eventDate,
+                eventDescription,
+                eventName,
+                executor,
+                link,
+                isWorkUseChecked,
+                workUseDescription,
+                sendNAK,
+
+                isMaterialAgreementChecked,
+                categories, 
+                isCategoryAdded, 
+
+                isATKOMSUChecked, 
+                ATKOMSUResult, 
+                ATKOMSUDescription, 
+                
+                isATKKhmaoChecked, 
+                ATKKhmaoResult, 
+                ATKKhmaoDescription, 
+                
+                isExpertCouncilChecked, 
+                expertCouncilResult, 
+                expertCouncilDescription
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -994,10 +1043,44 @@ const [helpTypes, setHelpTypes] = useState({
                   <h2>Дополнительная информация о мероприятии</h2>
 
                   {/* Подключение компонента BaseInfo_TeachMaterials */}
-                  <BaseInfo_TeachMaterials />
+                  <BaseInfo_TeachMaterials
+                    isMaterialAgreementChecked={isMaterialAgreementChecked}
+                    categories={categories}
+                    isCategoryAdded={isCategoryAdded}
+                    isATKOMSUChecked={isATKOMSUChecked}
+                    ATKOMSUResult={ATKOMSUResult}
+                    ATKOMSUDescription={ATKOMSUDescription}
+                    isATKKhmaoChecked={isATKKhmaoChecked}
+                    ATKKhmaoResult={ATKKhmaoResult}
+                    ATKKhmaoDescription={ATKKhmaoDescription}
+                    isExpertCouncilChecked={isExpertCouncilChecked}
+                    expertCouncilResult={expertCouncilResult}
+                    expertCouncilDescription={expertCouncilDescription}
+
+                    setIsATKOMSUChecked = {setIsATKOMSUChecked}
+                    setATKOMSUResult = {setATKOMSUResult}
+                    setATKOMSUDescription = {setATKOMSUDescription}
+                    setIsATKKhmaoChecked = {setIsATKKhmaoChecked}
+                    setATKKhmaoResult = {setATKKhmaoResult}
+                    setATKKhmaoDescription = {setATKKhmaoDescription}
+                    setIsExpertCouncilChecked = {setIsExpertCouncilChecked}
+                    setExpertCouncilResult = {setExpertCouncilResult}
+                    setExpertCouncilDescription = {setExpertCouncilDescription}
+
+                    setIsMaterialAgreementChecked = {setIsMaterialAgreementChecked}
+                    setCategories = {setCategories}
+                    setIsCategoryAdded = {setIsCategoryAdded}
+                  />
 
 
-                  <DopInfo_Materials />
+                  <DopInfo_Materials
+                    isWorkUseChecked={isWorkUseChecked}
+                    setIsWorkUseChecked={setIsWorkUseChecked}
+                    workUseDescription={workUseDescription}
+                    setWorkUseDescription={setWorkUseDescription}
+                    sendNAK={sendNAK}
+                    setSendNAK={setSendNAK}
+                  />
 
 
 
@@ -1051,17 +1134,17 @@ const [helpTypes, setHelpTypes] = useState({
                     link={link}
                     setLink={setLink}
                     hideLink={["2.7.2", "3.2.1"].includes(selectedTopic)}
-                    helpTypes = {helpTypes}
-                    helpTypesDescriptions = {helpTypesDescription}
-                    setHelpTypesDescriptions = {setHelpTypesDescriptions}
-                    setHelpTypes = {setHelpTypes}
+                    helpTypes={helpTypes}
+                    helpTypesDescriptions={helpTypesDescription}
+                    setHelpTypesDescriptions={setHelpTypesDescriptions}
+                    setHelpTypes={setHelpTypes}
                   />
 
                   <DopInfo_Support
-                    supportTypes = {supportTypes} 
-                    supportTypesDescription = {supportTypesDescription} 
-                    setSupportTypes = {setSupportTypes}
-                    setsupportTypesDescription = {setsupportTypesDescription}
+                    supportTypes={supportTypes}
+                    supportTypesDescription={supportTypesDescription}
+                    setSupportTypes={setSupportTypes}
+                    setsupportTypesDescription={setsupportTypesDescription}
                   />
 
                 </section>
@@ -1603,10 +1686,10 @@ const [helpTypes, setHelpTypes] = useState({
                     <Info_TargetAudience />
 
                     <DopInfo_Support
-                      supportTypes = {supportTypes} 
-                      supportTypesDescription = {supportTypesDescription} 
-                      setSupportTypes = {setSupportTypes}
-                      setsupportTypesDescription = {setsupportTypesDescription}
+                      supportTypes={supportTypes}
+                      supportTypesDescription={supportTypesDescription}
+                      setSupportTypes={setSupportTypes}
+                      setsupportTypesDescription={setsupportTypesDescription}
                     />
 
                   </div>
@@ -1849,146 +1932,145 @@ export default EventForm;
 
 
 
-// Функция для проверки обязательных полей и ссылок
-const handleBaseFormSubmit = async (e) => {
-  console.log("Нажата кнопка отправки формы");
+// // Функция для проверки обязательных полей и ссылок
+// const handleBaseFormSubmit = async (e) => {
+//   console.log("Нажата кнопка отправки формы");
 
-  e.preventDefault();
-  if (!selectedTopic) {
-    toastr.error("Пожалуйста, выберите тему", "Ошибка");
-    return;
-  }
+//   e.preventDefault();
+//   if (!selectedTopic) {
+//     toastr.error("Пожалуйста, выберите тему", "Ошибка");
+//     return;
+//   }
 
 
-  let cleanedParticipants = detailedInput ? participants : []; //customParticipants
+//   let cleanedParticipants = detailedInput ? participants : []; //customParticipants
 
 
-  const resultCustomCategories = Object.entries(cleanedParticipants)
-    .filter(([_, count]) => Number(count) > 0)
-    .map(([name, count]) => ({
-      name,
-      count: Number(count)
-    }));
+//   const resultCustomCategories = Object.entries(cleanedParticipants)
+//     .filter(([_, count]) => Number(count) > 0)
+//     .map(([name, count]) => ({
+//       name,
+//       count: Number(count)
+//     }));
 
-  let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
+//   let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
 
 
-  // Проверка даты
-  const dateElement = document.getElementById("event_date");
-  const selectedDate = new Date(eventDate);
-  const currentYear = new Date().getFullYear();
+//   // Проверка даты
+//   const dateElement = document.getElementById("event_date");
+//   const selectedDate = new Date(eventDate);
+//   const currentYear = new Date().getFullYear();
 
-  if (selectedDate.getFullYear() !== currentYear) {
-    dateElement?.classList.add("error");
-    dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
-    alert("Дата должна быть в пределах текущего года.");
-    return;
-  } else {
-    dateElement?.classList.remove("error");
-  }
+//   if (selectedDate.getFullYear() !== currentYear) {
+//     dateElement?.classList.add("error");
+//     dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
+//     alert("Дата должна быть в пределах текущего года.");
+//     return;
+//   } else {
+//     dateElement?.classList.remove("error");
+//   }
 
 
-  e.preventDefault();
+//   e.preventDefault();
 
-  let hasError = false;
+//   let hasError = false;
 
-  const requiredFields = [
-    //{ value: eventName, id: "event_name" },
-    //{ value: projectName, id: "event_name" },
-    //{ value: eventDate, id: "event_date" },
-    { value: eventDescription, id: "event_description" },
-  ];
+//   const requiredFields = [
+//     //{ value: eventName, id: "event_name" },
+//     //{ value: projectName, id: "event_name" },
+//     //{ value: eventDate, id: "event_date" },
+//     { value: eventDescription, id: "event_description" },
+//   ];
 
-  if (formType !== "2.7" && formType !== "2.7.2") {
-    requiredFields.push({ value: link, id: "link" });
-  }
+//   if (formType !== "2.7" && formType !== "2.7.2") {
+//     requiredFields.push({ value: link, id: "link" });
+//   }
 
-  // Проверка обязательных полей
-  requiredFields.forEach((field) => {
-    const element = document.getElementById(field.id);
-    if (!field.value.trim()) {
-      element.classList.add("error"); // Добавляем красный стиль
-      hasError = true;
-      element.scrollIntoView({ behavior: "smooth", block: "center" }); // Прокручиваем к первому незаполненному полю
-    } else {
-      element.classList.remove("error"); // Убираем красный стиль, если поле заполнено
-    }
-  });
+//   // Проверка обязательных полей
+//   requiredFields.forEach((field) => {
+//     const element = document.getElementById(field.id);
+//     if (!field.value.trim()) {
+//       element.classList.add("error"); // Добавляем красный стиль
+//       hasError = true;
+//       element.scrollIntoView({ behavior: "smooth", block: "center" }); // Прокручиваем к первому незаполненному полю
+//     } else {
+//       element.classList.remove("error"); // Убираем красный стиль, если поле заполнено
+//     }
+//   });
 
 
 
-  // ----------ДОБАВИТЬ ПРОВЕРКУ НА НОМЕЕ ТЕМЫ??? В ЗАВИСИМОСТИ ОТ НОМЕРА ТЕМЫ ВАЛИДИРУЕМ ССЫЛКИ ИЛИ НЕТ----------
 
+//   // Проверка на корректность ссылки
+//   const linkElement = document.getElementById("link");
+//   const links = link.split(',').map((l) => l.trim());
 
+//   // Проверка каждой ссылки
+//   const invalidLinks = links.filter((l) => !/^(https?|http):\/\/[^\s$.?#].[^\s]*$/.test(l));
 
-  // Проверка на корректность ссылки
-  const linkElement = document.getElementById("link");
-  const links = link.split(',').map((l) => l.trim());
+//   if (invalidLinks.length > 0) {
+//     linkElement.classList.add("error"); // Добавляем красный стиль
+//     linkElement.scrollIntoView({ behavior: "smooth", block: "center" });
+//     alert(`Некорректные ссылки: ${invalidLinks.join(', ')}`);
+//     hasError = true;
+//   }
 
-  // Проверка каждой ссылки
-  const invalidLinks = links.filter((l) => !/^(https?|http):\/\/[^\s$.?#].[^\s]*$/.test(l));
+//   if (hasError) {
+//     alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
+//     return;
+//   }
 
-  if (invalidLinks.length > 0) {
-    linkElement.classList.add("error"); // Добавляем красный стиль
-    linkElement.scrollIntoView({ behavior: "smooth", block: "center" });
-    alert(`Некорректные ссылки: ${invalidLinks.join(', ')}`);
-    hasError = true;
-  }
 
-  if (hasError) {
-    alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
-    return;
-  }
 
+//   let createEventBaseRequest = {
+//     themeCode: selectedTopic,
+//     name: eventName,
+//     actor: executor,
+//     content: eventDescription,
+//     date: eventDate,
 
+//     createMediaLinkRequest: {
+//       content: link.split(',').map(l => l.trim())
+//     },
 
-  let createEventBaseRequest = {
-    themeCode: selectedTopic,
-    name: eventName,
-    actor: executor,
-    content: eventDescription,
-    date: eventDate,
+//     createParticipantsRequest: {
+//       selectedCategories: resultCustomCategories, //,
+//       customCategories: cleanedCustomParticipants,
+//       total: totalParticipants
+//     },
+//   };
 
-    createMediaLinkRequest: {
-      content: link.split(',').map(l => l.trim())
-    },
 
-    createParticipantsRequest: {
-      selectedCategories: resultCustomCategories, //,
-      customCategories: cleanedCustomParticipants,
-      total: totalParticipants
-    },
-  };
+//   console.log("---------------");
+//   console.log(createEventBaseRequest);
+//   console.log("---------------");
 
 
-  console.log("---------------");
-  console.log(createEventBaseRequest);
-  console.log("---------------");
+//   try {
+//     const response = await fetch(`/api/ref/events/createbase`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify(createEventRequest)
+//     });
 
+//     if (!response.ok) {
+//       throw new Error("Ошибка при создании события");
+//     }
 
-  try {
-    const response = await fetch(`/api/ref/events/createbase`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(createEventRequest)
-    });
+//     const data = await response.text();
+//     console.log("Событие создано:", data);
 
-    if (!response.ok) {
-      throw new Error("Ошибка при создании события");
-    }
+//     //Показать уведомление
+//     toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
 
-    const data = await response.text();
-    console.log("Событие создано:", data);
+//   } catch (error) {
+//     console.error("Ошибка:", error);
+//   }
+// };
 
-    //Показать уведомление
-    toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
 
-  } catch (error) {
-    console.error("Ошибка:", error);
-  }
-};
 
 
 
@@ -1999,175 +2081,173 @@ const handleBaseFormSubmit = async (e) => {
 
 
 
+// const handleForm2Submit = async ({
+//   e,
+//   selectedTopic,
+//   equalFormat,
+//   equalFormatDescription,
+//   detailedInput,
+//   participants,
+//   customParticipants,
+//   eventDate,
+//   eventDescription,
+//   eventName,
+//   executor,
+//   level,
+//   formConducted,
+//   bestEvent,
+//   importantEvent,
+//   totalParticipants,
+//   link,
+//   supportTypes,
+//   supportTypesDescription,
 
+// }) => {
+//   e.preventDefault();
+//   console.log("Нажата кнопка отправки формы 2");
 
-const handleForm2Submit = async ({
-  e,
-  selectedTopic,
-  equalFormat,
-  equalFormatDescription,
-  detailedInput,
-  participants,
-  customParticipants,
-  eventDate,
-  eventDescription,
-  eventName,
-  executor,
-  level,
-  formConducted,
-  bestEvent,
-  importantEvent,
-  totalParticipants,
-  link,
-  supportTypes,
-  supportTypesDescription,
-  
-  }) => {
-  e.preventDefault();
-    console.log("Нажата кнопка отправки формы 2");
+//   if (!selectedTopic) {
+//     toastr.error("Пожалуйста, выберите тему", "Ошибка");
+//     return;
+//   }
 
-    if (!selectedTopic) {
-      toastr.error("Пожалуйста, выберите тему", "Ошибка");
-      return;
-    }
 
-    
-    let cleanedPeerFormat = equalFormat ? equalFormatDescription : ""; //peerFormatDescription
+//   let cleanedPeerFormat = equalFormat ? equalFormatDescription : ""; //peerFormatDescription
 
-    let cleanedParticipants = detailedInput ? participants : []; //customParticipants
-
-    const resultCustomCategories = Object.entries(cleanedParticipants)
-      .filter(([_, count]) => Number(count) > 0)
-      .map(([name, count]) => ({
-        name,
-        count: Number(count)
-      }));
+//   let cleanedParticipants = detailedInput ? participants : []; //customParticipants
 
-    let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
+//   const resultCustomCategories = Object.entries(cleanedParticipants)
+//     .filter(([_, count]) => Number(count) > 0)
+//     .map(([name, count]) => ({
+//       name,
+//       count: Number(count)
+//     }));
 
+//   let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
 
 
 
-    // Проверка даты
-    const dateElement = document.getElementById("event_date");
-    const selectedDate = new Date(eventDate);
-    const currentYear = new Date().getFullYear();
 
-    if (selectedDate.getFullYear() !== currentYear) {
-      dateElement?.classList.add("error");
-      dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
-      alert("Дата должна быть в пределах текущего года.");
-      return;
-    } else {
-      dateElement?.classList.remove("error");
-    }
+//   // Проверка даты
+//   const dateElement = document.getElementById("event_date");
+//   const selectedDate = new Date(eventDate);
+//   const currentYear = new Date().getFullYear();
 
+//   if (selectedDate.getFullYear() !== currentYear) {
+//     dateElement?.classList.add("error");
+//     dateElement?.scrollIntoView({ behavior: "smooth", block: "center" });
+//     alert("Дата должна быть в пределах текущего года.");
+//     return;
+//   } else {
+//     dateElement?.classList.remove("error");
+//   }
 
-    let hasError = false;
 
-    const requiredFields = [
-      //{ value: eventName, id: "event_name" },
-      //{ value: projectName, id: "event_name" },
-      { value: eventDate, id: "event_date" },
-      { value: eventDescription, id: "event_description" },
-    ];
+//   let hasError = false;
 
-    requiredFields.push({ value: link, id: "link" });
+//   const requiredFields = [
+//     //{ value: eventName, id: "event_name" },
+//     //{ value: projectName, id: "event_name" },
+//     { value: eventDate, id: "event_date" },
+//     { value: eventDescription, id: "event_description" },
+//   ];
 
-    // Проверка обязательных полей
-    requiredFields.forEach((field) => {
-      const element = document.getElementById(field.id);
-      if (!field.value.trim()) {
-        element.classList.add("error"); // Добавляем красный стиль
-        hasError = true;
-        element.scrollIntoView({ behavior: "smooth", block: "center" }); // Прокручиваем к первому незаполненному полю
-      } else {
-        element.classList.remove("error"); // Убираем красный стиль, если поле заполнено
-      }
-    });
+//   requiredFields.push({ value: link, id: "link" });
 
-    // Проверка на корректность ссылки
-    const linkElement = document.getElementById("link");
-    const links = link.split(',').map((l) => l.trim());
+//   // Проверка обязательных полей
+//   requiredFields.forEach((field) => {
+//     const element = document.getElementById(field.id);
+//     if (!field.value.trim()) {
+//       element.classList.add("error"); // Добавляем красный стиль
+//       hasError = true;
+//       element.scrollIntoView({ behavior: "smooth", block: "center" }); // Прокручиваем к первому незаполненному полю
+//     } else {
+//       element.classList.remove("error"); // Убираем красный стиль, если поле заполнено
+//     }
+//   });
 
-    // Проверка каждой ссылки
-    const invalidLinks = links.filter((l) => !/^(https?|http):\/\/[^\s$.?#].[^\s]*$/.test(l));
+//   // Проверка на корректность ссылки
+//   const linkElement = document.getElementById("link");
+//   const links = link.split(',').map((l) => l.trim());
 
-    if (invalidLinks.length > 0) {
-      linkElement.classList.add("error"); // Добавляем красный стиль
-      linkElement.scrollIntoView({ behavior: "smooth", block: "center" });
-      alert(`Некорректные ссылки: ${invalidLinks.join(', ')}`);
-      hasError = true;
-    }
+//   // Проверка каждой ссылки
+//   const invalidLinks = links.filter((l) => !/^(https?|http):\/\/[^\s$.?#].[^\s]*$/.test(l));
 
-    if (hasError) {
-      alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
-      return;
-    }
+//   if (invalidLinks.length > 0) {
+//     linkElement.classList.add("error"); // Добавляем красный стиль
+//     linkElement.scrollIntoView({ behavior: "smooth", block: "center" });
+//     alert(`Некорректные ссылки: ${invalidLinks.join(', ')}`);
+//     hasError = true;
+//   }
 
+//   if (hasError) {
+//     alert("Пожалуйста, заполните все обязательные поля и исправьте ошибки.");
+//     return;
+//   }
 
 
-    let createEventForm1Request = {
-      themeCode: selectedTopic,
-      name: eventName,
-      actor: executor,
-      content: eventDescription,
-      date: eventDate,
-      level: level,
-      form: formConducted,
-      isBestPractice: bestEvent,
-      isValuable: importantEvent,
-      equalToEqual: cleanedPeerFormat,
 
-      createMediaLinkRequest: {
-        content: link.split(',').map(l => l.trim())
-      },
+//   let createEventForm1Request = {
+//     themeCode: selectedTopic,
+//     name: eventName,
+//     actor: executor,
+//     content: eventDescription,
+//     date: eventDate,
+//     level: level,
+//     form: formConducted,
+//     isBestPractice: bestEvent,
+//     isValuable: importantEvent,
+//     equalToEqual: cleanedPeerFormat,
 
-      createParticipantsRequest: {
-        selectedCategories: resultCustomCategories,
-        customCategories: cleanedCustomParticipants,
-        total: totalParticipants
-      },
+//     createMediaLinkRequest: {
+//       content: link.split(',').map(l => l.trim())
+//     },
 
-      createSupportRequest: {
-        supportTypes: supportTypes,
-        descriptions: supportTypesDescription,
-      },
-    };
-    //alert(JSON.stringify(createEventRequest, null, 2));
+//     createParticipantsRequest: {
+//       selectedCategories: resultCustomCategories,
+//       customCategories: cleanedCustomParticipants,
+//       total: totalParticipants
+//     },
 
-    console.log("---------------");
-    console.log(createEventForm1Request);
-    console.log("---------------");
+//     createSupportRequest: {
+//       supportTypes: supportTypes,
+//       descriptions: supportTypesDescription,
+//     },
+//   };
+//   //alert(JSON.stringify(createEventRequest, null, 2));
 
-    const backCreateUrl = `/api/ref/events/createform1`;
+//   console.log("---------------");
+//   console.log(createEventForm1Request);
+//   console.log("---------------");
 
+//   const backCreateUrl = `/api/ref/events/createform1`;
 
 
 
-    // try {
-    //   const response = await fetch(backCreateUrl, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify(createEventRequest)
-    //   });
 
-    //   if (!response.ok) {
-    //     throw new Error("Ошибка при создании события");
-    //   }
+//   // try {
+//   //   const response = await fetch(backCreateUrl, {
+//   //     method: "POST",
+//   //     headers: {
+//   //       "Content-Type": "application/json"
+//   //     },
+//   //     body: JSON.stringify(createEventRequest)
+//   //   });
 
-    //   const data = await response.text();
-    //   console.log("Событие создано:", data);
+//   //   if (!response.ok) {
+//   //     throw new Error("Ошибка при создании события");
+//   //   }
 
-    //   //Показать уведомление
-    //   toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
+//   //   const data = await response.text();
+//   //   console.log("Событие создано:", data);
 
-    // } catch (error) {
-    //   console.error("Ошибка:", error);
-    // }
-  };
+//   //   //Показать уведомление
+//   //   toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
+
+//   // } catch (error) {
+//   //   console.error("Ошибка:", error);
+//   // }
+// };
 
 
 

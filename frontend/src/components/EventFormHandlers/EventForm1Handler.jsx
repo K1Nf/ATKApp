@@ -1,6 +1,6 @@
 // src/utils/eventFormHandlers.js
 
-export const  handleBaseFormSubmit1 = async ({
+export const  handleFormSubmit1 = async ({
   e,
   selectedTopic,
   formType,

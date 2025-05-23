@@ -1,27 +1,33 @@
 // src/utils/eventFormHandlers.js
 
-export const handleFormSubmit2 = async ({
+export const handleFormSubmit3 = async ({
   e,
   selectedTopic,
-  equalFormat,
-  equalFormatDescription,
-  detailedInput,
-  participants,
-  customParticipants,
-  totalParticipants,
   eventDate,
   eventDescription,
   eventName,
   executor,
-  level,
-  formConducted,
-  bestEvent,
-  importantEvent,
   link,
-  supportTypes,
-  supportTypesDescription,
-  // пропс описания конкурса
-  // пропс описания результата участия в конкурсе
+  isWorkUseChecked,
+  workUseDescription,
+  sendNAK,
+
+  isMaterialAgreementChecked,
+  categories, 
+  isCategoryAdded, 
+
+
+  isATKOMSUChecked, 
+  ATKOMSUResult, 
+  ATKOMSUDescription, 
+  
+  isATKKhmaoChecked, 
+  ATKKhmaoResult, 
+  ATKKhmaoDescription, 
+  
+  isExpertCouncilChecked, 
+  expertCouncilResult, 
+  expertCouncilDescription
 }) => {
   e.preventDefault();
 
@@ -29,23 +35,6 @@ export const handleFormSubmit2 = async ({
     toastr.error("Пожалуйста, выберите тему", "Ошибка");
     return;
   }
-
-
-
-
-  let cleanedPeerFormat = equalFormat ? equalFormatDescription : ""; //peerFormatDescription
-
-  let cleanedParticipants = detailedInput ? participants : []; //customParticipants
-
-
-  const resultCustomCategories = Object.entries(cleanedParticipants)
-    .filter(([_, count]) => Number(count) > 0)
-    .map(([name, count]) => ({
-      name,
-      count: Number(count)
-    }));
-
-  let cleanedCustomParticipants = detailedInput ? customParticipants : []; //customParticipants
 
 
   // Проверка даты
@@ -70,9 +59,9 @@ export const handleFormSubmit2 = async ({
     //{ value: projectName, id: "event_name" },
     { value: eventDate, id: "event_date" },
     { value: eventDescription, id: "event_description" },
+    { value: link, id: "link" }
   ];
 
-  requiredFields.push({ value: link, id: "link" });
 
   // Проверка обязательных полей
   requiredFields.forEach((field) => {
@@ -105,79 +94,98 @@ export const handleFormSubmit2 = async ({
     return;
   }
 
-  const buildSupportMap = (flags, descriptions) => {
-    const result = [];
-    for (const key in flags) {
-      if (flags[key]) {
-        let descKey;
-        descKey = `${key}Description`;
+//   let sendToSubjects = isWorkUseChecked? workUseDescription : null;
 
-        console.log("descKey: " + descKey);
-        console.log("flags[key]: " + flags[key]);
+//   let createEventRequest = {
+//     themeCode: selectedTopic,
+//     name: eventName,
+//     actor: executor,
+//     date: eventDate,
+//     content: eventDescription,
 
-        let description = descriptions[descKey]; 
+//     createMediaLinkRequest: {
+//       content: link.split(',').map(l => l.trim())
+//     },
 
-        if(description == "" || description == undefined)
-        {
-          console.log("descripitons was null or undefined");
-          descKey = key;
-          description = descriptions[descKey];
-        }
+//     directToNAK: sendNAK,
+//     sendToSubjects: sendToSubjects
+//   };
 
-        console.log(description); // даже не выводит
-        if (description?.trim()) {
-          result.push({key, description});
-        }
-      }
-    }
-    return result;
-  };
-
-
-  const selectedSupportTypes = buildSupportMap(supportTypes, supportTypesDescription);
-
-  let createEventRequest = {
-    themeCode: selectedTopic,
-    name: eventName,
-    actor: executor,
-    content: eventDescription,
-    date: eventDate,
-    level: level,
-    form: formConducted,
-    isBestPractice: bestEvent,
-    isValuable: importantEvent,
-    equalToEqual: cleanedPeerFormat,
-
-
-    createMediaLinkRequest: {
-      content: link.split(',').map(l => l.trim())
-    },
-
-    createSupportrequest: {
-      supports: selectedSupportTypes,
-      supported: ""
-    },
-
-    createParticipantsRequest: {
-      selectedCategories: resultCustomCategories,
-      customCategories: cleanedCustomParticipants,
-      total: totalParticipants
-    },
-
-    createConcourseRequest: {
-    // concourseDescription: *пропс описания конкурса*
-    // concourseResultDescription: *пропс описания результата участия в конкурсе*
-    }
-
-  };
-  console.log("---------------");
-  console.log(createEventRequest);
-  console.log("---------------");
+//   console.log("---------------");
+//   console.log(createEventRequest);
+//   console.log("---------------");
 
   const backCreateUrl = `/api/ref/events/createform1`;
 
 
+console.log("isMaterialAgreementChecked: " + isMaterialAgreementChecked);
+console.log("categories: ");
+console.log(categories);
+console.log("isCategoryAdded: " + isCategoryAdded);
 
+
+
+let organizationsConfirmedBy = [];
+
+    if(isExpertCouncilChecked)
+    { 
+        organizationsConfirmedBy.push(
+            {
+                org: "expertSoviet", 
+                result: expertCouncilResult, 
+                resultDescription: expertCouncilDescription
+            }
+        );
+    }
+
+    if(isATKOMSUChecked)
+    { 
+        organizationsConfirmedBy.push(
+            {
+                org: "atkomsu", 
+                result: ATKOMSUResult, 
+                resultDescription: ATKOMSUDescription
+            }
+        );
+    }
+
+    if(isATKKhmaoChecked)
+    { 
+        organizationsConfirmedBy.push(
+            {
+                org: "atkkhmao", 
+                result: ATKKhmaoResult, 
+                resultDescription: ATKKhmaoDescription
+            });
+    }
+
+let selectedOrgs = isMaterialAgreementChecked ? [
+    ...organizationsConfirmedBy,
+    ...categories
+  ]: []
+
+
+console.log("selectedOrgs: ");
+console.log(selectedOrgs);
+// console.log(organizationsConfirmedBy);
+// console.log(categories);
+
+// привести organizationsConfirmedBy и categories к одному списку
+
+
+
+
+// console.log("isATKOMSUChecked: " + isATKOMSUChecked);
+// console.log("ATKOMSUResult: " + ATKOMSUResult);
+// console.log("ATKOMSUDescription: " + ATKOMSUDescription);
+
+// console.log("isATKKhmaoChecked: " + isATKKhmaoChecked);
+// console.log("ATKKhmaoResult: " + ATKKhmaoResult);
+// console.log("ATKKhmaoDescription: " + ATKKhmaoDescription);
+
+// console.log("isExpertCouncilChecked: " + isExpertCouncilChecked);
+// console.log("expertCouncilResult: " + expertCouncilResult);
+// console.log("expertCouncilDescription: " + expertCouncilDescription);
 
   // try {
   //   const response = await fetch(backCreateUrl, {

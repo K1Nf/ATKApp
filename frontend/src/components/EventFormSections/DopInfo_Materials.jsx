@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
-const DopInfo_Materials = ({}) => {
+const DopInfo_Materials = ({
+  isWorkUseChecked,
+  setIsWorkUseChecked,
+  workUseDescription,
+  setWorkUseDescription,
+  sendNAK,
+  setSendNAK
+}) => {
 
   // Новая логика для использования в работе
-  const [isWorkUseChecked, setIsWorkUseChecked] = useState(false);
-  const [workUseDescription, setWorkUseDescription] = useState("");
-
-  const [sendNAK, setSendNAK] = useState(false);
+  
    // Функция для изменения состояния чекбокса
    const handlesendNAKChange = () => {
     setSendNAK(!sendNAK);

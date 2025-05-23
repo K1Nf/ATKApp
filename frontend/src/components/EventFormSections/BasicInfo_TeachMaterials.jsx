@@ -1,32 +1,59 @@
 import React, { useState } from "react";
 
-const BaseInfo_TeachMaterials = ({}) => {
+const BaseInfo_TeachMaterials = ({
+  isMaterialAgreementChecked,
+  categories, 
+  isCategoryAdded, 
+
+  isATKOMSUChecked, 
+  ATKOMSUResult, 
+  ATKOMSUDescription, 
+  
+  isATKKhmaoChecked, 
+  ATKKhmaoResult, 
+  ATKKhmaoDescription, 
+  
+  isExpertCouncilChecked, 
+  expertCouncilResult, 
+  expertCouncilDescription,
+
+  setIsATKOMSUChecked,
+  setATKOMSUResult,
+  setATKOMSUDescription,
+  setIsATKKhmaoChecked,
+  setATKKhmaoResult,
+  setATKKhmaoDescription,
+  setIsExpertCouncilChecked,
+  setExpertCouncilResult,
+  setExpertCouncilDescription,
+
+  setIsMaterialAgreementChecked,
+  setCategories,
+  setIsCategoryAdded
+
+  }) => {
   // Состояния для чекбоксов и связанных с ними данных
-  const [isMaterialAgreementChecked, setIsMaterialAgreementChecked] = useState(false);
+  // const [isMaterialAgreementChecked, setIsMaterialAgreementChecked] = useState(false);
 
-  // Состояния для категорий/организаций
-  const [categories, setCategories] = useState([]);
+  // // Состояния для категорий/организаций
+  // const [categories, setCategories] = useState([]);
 
-  // Состояние для отслеживания, была ли нажата кнопка добавления категории
-  const [isCategoryAdded, setIsCategoryAdded] = useState(false);
+  // // Состояние для отслеживания, была ли нажата кнопка добавления категории
+  // const [isCategoryAdded, setIsCategoryAdded] = useState(false);
 
-  // Состояния для выбора результата
-  const [isATKOMSUChecked, setIsATKOMSUChecked] = useState(false);
-  const [ATKOMSUResult, setATKOMSUResult] = useState("");
-  const [ATKOMSUDescription, setATKOMSUDescription] = useState("");
+  // // Состояния для выбора результата
+  // const [isATKOMSUChecked, setIsATKOMSUChecked] = useState(false);
+  // const [ATKOMSUResult, setATKOMSUResult] = useState("");
+  // const [ATKOMSUDescription, setATKOMSUDescription] = useState("");
 
-  const [isATKKhmaoChecked, setIsATKKhmaoChecked] = useState(false);
-  const [ATKKhmaoResult, setATKKhmaoResult] = useState("");
-  const [ATKKhmaoDescription, setATKKhmaoDescription] = useState("");
+  // const [isATKKhmaoChecked, setIsATKKhmaoChecked] = useState(false);
+  // const [ATKKhmaoResult, setATKKhmaoResult] = useState("");
+  // const [ATKKhmaoDescription, setATKKhmaoDescription] = useState("");
 
-  const [isExpertCouncilChecked, setIsExpertCouncilChecked] = useState(false);
-  const [expertCouncilResult, setExpertCouncilResult] = useState("");
-  const [expertCouncilDescription, setExpertCouncilDescription] = useState("");
+  // const [isExpertCouncilChecked, setIsExpertCouncilChecked] = useState(false);
+  // const [expertCouncilResult, setExpertCouncilResult] = useState("");
+  // const [expertCouncilDescription, setExpertCouncilDescription] = useState("");
 
-
-  // Новая логика для использования в работе
-  const [isWorkUseChecked, setIsWorkUseChecked] = useState(false);
-  const [workUseDescription, setWorkUseDescription] = useState("");
 
   // Логика для добавления и удаления категорий
   const handleCategoryChange = (index, key, value) => {
@@ -43,12 +70,6 @@ const BaseInfo_TeachMaterials = ({}) => {
   const handleRemoveCategory = (index) => {
     const updatedCategories = categories.filter((_, i) => i !== index);
     setCategories(updatedCategories);
-  };
-
-  const [sendNAK, setSendNAK] = useState(false);
-   // Функция для изменения состояния чекбокса
-   const handlesendNAKChange = () => {
-    setSendNAK(!sendNAK);
   };
 
   return (
