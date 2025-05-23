@@ -5,10 +5,10 @@ using System.Globalization;
 
 namespace ATKApplication.Contracts.Request
 {
-    public record CreateEventForm1Request(string Name, string Content, string Actor, 
-                            string Date, EventType Form, LevelType Level, 
-                            string ThemeCode, bool IsValuable, bool IsBestPractice,
-                            string Result, string Decision,
+    public record CreateEventForm1Request(string? Name, string? Content, string? Actor, 
+                            string? Date, EventType? Form, LevelType? Level, 
+                            string ThemeCode, bool? IsValuable, bool? IsBestPractice,
+                            string? Result, string? Decision,
                             string? EqualToEqual,
                             CreateMediaLinkRequest? CreateMediaLinkRequest, 
                             CreateFinanceRequest? CreateFinanceRequest, 

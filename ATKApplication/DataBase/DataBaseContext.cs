@@ -45,7 +45,7 @@ namespace ATKApplication.DataBase
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EventBaseConfiguration());
-            modelBuilder.ApplyConfiguration(new EventForm2Configuration());
+            modelBuilder.ApplyConfiguration(new EventForm1Configuration());
             modelBuilder.ApplyConfiguration(new EventForm4Configuration());
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
             modelBuilder.ApplyConfiguration(new ThemeConfiguration());

@@ -97,7 +97,7 @@ export const  handleBaseFormSubmit1 = async ({
       { value: eventDescription, id: "event_description" },
     ];
 
-    if (formType !== "2.7" && formType !== "2.7.2") {
+    if (formType !== "3.2.1" && formType !== "2.7.2") {
       requiredFields.push({ value: link, id: "link" });
     }
 

@@ -26,7 +26,7 @@ namespace ATKApplication.Services
                 .Include(x => x.Finance)
                 .Include(x => x.FeedBack)
                 .Include(x => x.InterAgencyCooperations)
-                .Include(x => x.Support)
+                .Include(x => x.Supports)
                 .Include(x => x.Audiences)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
@@ -635,18 +635,15 @@ namespace ATKApplication.Services
         {
             if (createSupportRequest is not null)
             {
-                createSupportRequest.Supports.TryGetValue(SupportType.Information, out string? informationDescription);
-                createSupportRequest.Supports.TryGetValue(SupportType.Organizational, out string? organizationalDescription);
-                createSupportRequest.Supports.TryGetValue(SupportType.Financial, out string? financialDescription);
-                createSupportRequest.Supports.TryGetValue(SupportType.Methodological, out string? methodologicalDescription);
-                createSupportRequest.Supports.TryGetValue(SupportType.Other, out string? otherDescription);
+                var supportsDTOList = createSupportRequest.Supports;
 
-                var support = new Support(createSupportRequest.Supported, informationDescription,
-                                            methodologicalDescription, organizationalDescription,
-                                            financialDescription, otherDescription, eventId);
-
-                if(support != null)
-                    await _dB.Supports.AddAsync(support);
+                foreach (var supportDTO in supportsDTOList)
+                {
+                    var support = new Support(createSupportRequest.Supported, supportDTO.Key, supportDTO.Description, eventId);
+                
+                    if(support != null)
+                        await _dB.Supports.AddAsync(support);
+                }
             }
         }
 

@@ -20,27 +20,15 @@ const BasicInfo_NameDataDeskEventFormLink = ({
   link,
   setLink,
   hideLink,
+  helpTypes,
+  helpTypesDescriptions, 
+  setHelpTypesDescriptions,
+  setHelpTypes
 }) => {
   const handleChange = (setter) => (e) => setter(e.target.value);
 
   const [executorTitle, setExecutorTitle] = useState("Исполнитель");
-  const [helpTypes, setHelpTypes] = useState({
-    psychological: false,
-    legal: false,
-    informational: false,
-    other: false,
-    socialSupport: false,
-    infoEvent: false,
-  });
-
-  const [descriptions, setDescriptions] = useState({
-    psychological: "",
-    legal: "",
-    informational: "",
-    other: "",
-    socialSupport: "",
-    infoEvent: "",
-  });
+  
 
   const handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
@@ -49,7 +37,7 @@ const BasicInfo_NameDataDeskEventFormLink = ({
 
   const handleDescriptionChange = (e) => {
     const { name, value } = e.target;
-    setDescriptions((prev) => ({ ...prev, [name]: value }));
+    setHelpTypesDescriptions((prev) => ({ ...prev, [name]: value }));
   };
 
   useEffect(() => {
@@ -121,7 +109,7 @@ const BasicInfo_NameDataDeskEventFormLink = ({
           {helpTypes.socialSupport && (
             <textarea
               name="socialSupport"
-              value={descriptions.socialSupport}
+              value={helpTypesDescriptions.socialSupport}
               onChange={handleDescriptionChange}
               placeholder="Опишите оказание социальной поддержки"
             />
@@ -144,7 +132,7 @@ const BasicInfo_NameDataDeskEventFormLink = ({
           {helpTypes.infoEvent && (
             <textarea
               name="infoEvent"
-              value={descriptions.infoEvent}
+              value={helpTypesDescriptions.infoEvent}
               onChange={handleDescriptionChange}
               placeholder="Опишите мероприятие информационно-разъяснительного характера"
             />

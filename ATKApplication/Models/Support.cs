@@ -1,37 +1,31 @@
-﻿using ATKApplication.Models;
+﻿using ATKApplication.Enums;
+using ATKApplication.Models;
 
 namespace ATKApplication.Models
 {
     public class Support
     {
-        public Support(string? receiver, string? information, 
-                    string? methodological, string? organizational, 
-                    string? financial, string? other,
-                    Guid eventId)
+        public Support() {}
+        public Support(string? receiver, SupportType type, 
+                    string? description, Guid eventId)
         {
             Id = Guid.NewGuid();
+            SupportType = type;
+            Description = description;
             Receiver = receiver;
-            Information = information;
-            Methodological = methodological;
-            Organizational = organizational;
-            Financial = financial;
-            Other = other;
             EventId = eventId;
         }
 
 
         public Guid Id { get; set; }
         public string? Receiver { get; set; }
-        public string? Information { get; set; }
-        public string? Methodological { get; set; }
-        public string? Organizational { get; set; }
-        public string? Financial { get; set; }
-        public string? Other { get; set; }
+        public SupportType SupportType { get; set; }
+        public string? Description { get; set; }
 
 
 
         [Newtonsoft.Json.JsonIgnore]
-        public EventBase? Event { get; set; }
-        public Guid EventId { get; set; }
+        public EventForm1? Event { get; set; }
+        public Guid EventId { get; init; }
     }
 }

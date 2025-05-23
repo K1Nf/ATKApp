@@ -1,4 +1,4 @@
-﻿namespace ATKApplication.Contracts.Request
+﻿namespace ATKApplication.Enums
 {
     public enum Audiences
     {

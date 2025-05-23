@@ -1,4 +1,4 @@
-﻿using ATKApplication.Contracts.Request;
+﻿using ATKApplication.Enums;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;

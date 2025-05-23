@@ -3,6 +3,7 @@ using System;
 using ATKApplication.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ATKApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250523071929_MadeColumnsInEventsNullable")]
+    partial class MadeColumnsInEventsNullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -272,17 +275,29 @@ namespace ATKApplication.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("text");
-
                     b.Property<Guid>("EventId")
                         .HasColumnType("uuid");
+
+                    b.Property<string>("Financial")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Information")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Methodological")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Organizational")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Other")
+                        .HasColumnType("text");
 
                     b.Property<string>("Receiver")
                         .HasColumnType("text");
 
-                    b.Property<int>("SupportType")
-                        .HasColumnType("integer");
+                    b.Property<string>("SocialSupport")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -337,6 +352,11 @@ namespace ATKApplication.Migrations
 
                     b.Property<string>("Result")
                         .HasColumnType("text");
+
+                    b.Property<Guid?>("SupportId")
+                        .HasColumnType("uuid");
+
+                    b.HasIndex("SupportId");
 
                     b.ToTable("EventsForm1", (string)null);
                 });
@@ -501,8 +521,8 @@ namespace ATKApplication.Migrations
 
             modelBuilder.Entity("ATKApplication.Models.Support", b =>
                 {
-                    b.HasOne("ATKApplication.Models.EventForm1", "Event")
-                        .WithMany("Supports")
+                    b.HasOne("ATKApplication.Models.EventBase", "Event")
+                        .WithMany()
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -517,6 +537,12 @@ namespace ATKApplication.Migrations
                         .HasForeignKey("ATKApplication.Models.EventForm1", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("ATKApplication.Models.Support", "Support")
+                        .WithMany()
+                        .HasForeignKey("SupportId");
+
+                    b.Navigation("Support");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.EventForm2", b =>
@@ -572,8 +598,6 @@ namespace ATKApplication.Migrations
                     b.Navigation("Finance");
 
                     b.Navigation("InterAgencyCooperations");
-
-                    b.Navigation("Supports");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.EventForm4", b =>

@@ -28,7 +28,9 @@ import Info_ExecutorAndDescription from "../components/EventFormSections/Info_Ex
 
 
 import { handleBaseFormSubmit1 } from "../components/EventFormHandlers/EventForm1Handler"; // путь подстраивай под себя
-import { handleBaseFormSubmit16 } from "../components/EventFormHandlers/EventForm16Handler"; // путь подстраивай под себя
+import { handleFormSubmit4 } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
+//import { handleFormSubmit5 } from "../components/EventFormHandlers/EventForm5Handler"; // путь подстраивай под себя
+//import { handleFormSubmit6 } from "../components/EventFormHandlers/EventForm6Handler"; // путь подстраивай под себя
 
 
 
@@ -296,7 +298,6 @@ const EventForm = () => {
     orgDescription: "",
     otherDescription: "",
     competitionDescription: "",
-    winnerDetails: "",
     financingDescription: "",
   });
 
@@ -306,7 +307,23 @@ const EventForm = () => {
 
 
 
+const [helpTypes, setHelpTypes] = useState({
+    psychological: false,
+    legal: false,
+    informational: false,
+    other: false,
+    socialSupport: false,
+    infoEvent: false,
+  });
 
+  const [helpTypesDescription, setHelpTypesDescriptions] = useState({
+    psychologicalDescription: "",
+    legalDescription: "",
+    informationalDescription: "",
+    otherDescription: "",
+    socialSupportDescription: "",
+    infoEventDescription: "",
+  });
 
 
 
@@ -994,7 +1011,20 @@ const EventForm = () => {
           {formType === 4 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleFormSubmit4({
+                e,
+                selectedTopic,
+                eventDate,
+                eventDescription,
+                eventName,
+                executor,
+                supportTypes,
+                supportTypesDescription,
+                helpTypes,
+                helpTypesDescription,
+                link,
+                formType
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -1021,7 +1051,10 @@ const EventForm = () => {
                     link={link}
                     setLink={setLink}
                     hideLink={["2.7.2", "3.2.1"].includes(selectedTopic)}
-
+                    helpTypes = {helpTypes}
+                    helpTypesDescriptions = {helpTypesDescription}
+                    setHelpTypesDescriptions = {setHelpTypesDescriptions}
+                    setHelpTypes = {setHelpTypes}
                   />
 
                   <DopInfo_Support
@@ -1042,7 +1075,11 @@ const EventForm = () => {
           {formType === 5 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleFormSubmit5({
+                e,
+                selectedTopic,
+
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -1136,7 +1173,37 @@ const EventForm = () => {
           {formType === 6 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleFormSubmit6({
+                e,
+                selectedTopic,
+                formType,
+                feedbackCollected,
+                selectedFeedbackTypes,
+                feedbackDescription,
+                hasFinancing,
+                financing,
+                financingOtherDescription,
+                isCooperation,
+                selectedOrganizations,
+                otherOrganizations,
+                equalFormat,
+                equalFormatDescription,
+                detailedInput,
+                participants,
+                customParticipants,
+                eventDate,
+                eventDescription,
+                eventName,
+                executor,
+                level,
+                formConducted,
+                bestEvent,
+                importantEvent,
+                resultDescription,
+                uprDescription,
+                totalParticipants,
+                link
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">

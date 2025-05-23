@@ -3,6 +3,7 @@ using System;
 using ATKApplication.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ATKApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250523094616_ChanegEREventForm1AndSupport")]
+    partial class ChanegEREventForm1AndSupport
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -275,6 +278,9 @@ namespace ATKApplication.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("EventForm1Id")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid>("EventId")
                         .HasColumnType("uuid");
 
@@ -286,7 +292,7 @@ namespace ATKApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EventId");
+                    b.HasIndex("EventForm1Id");
 
                     b.ToTable("Supports");
                 });
@@ -501,13 +507,11 @@ namespace ATKApplication.Migrations
 
             modelBuilder.Entity("ATKApplication.Models.Support", b =>
                 {
-                    b.HasOne("ATKApplication.Models.EventForm1", "Event")
-                        .WithMany("Supports")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("ATKApplication.Models.EventForm1", "EventForm1")
+                        .WithMany("Support")
+                        .HasForeignKey("EventForm1Id");
 
-                    b.Navigation("Event");
+                    b.Navigation("EventForm1");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.EventForm1", b =>
@@ -573,7 +577,7 @@ namespace ATKApplication.Migrations
 
                     b.Navigation("InterAgencyCooperations");
 
-                    b.Navigation("Supports");
+                    b.Navigation("Support");
                 });
 
             modelBuilder.Entity("ATKApplication.Models.EventForm4", b =>

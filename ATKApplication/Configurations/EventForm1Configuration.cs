@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ATKApplication.Configurations
 {
-    public class EventForm2Configuration : IEntityTypeConfiguration<EventForm1>
+    public class EventForm1Configuration : IEntityTypeConfiguration<EventForm1>
     {
         public void Configure(EntityTypeBuilder<EventForm1> builder)
         {
@@ -18,8 +18,13 @@ namespace ATKApplication.Configurations
                 .WithOne(f => f.Event)
                 .HasForeignKey(typeof(Finance))
                 .OnDelete(DeleteBehavior.Cascade);
-            
-            
+
+
+            builder.HasMany(e => e.Supports)
+                .WithOne(s => s.Event)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
             builder.HasMany(e => e.InterAgencyCooperations)
                 .WithOne(c => c.Event)
                 .OnDelete(DeleteBehavior.Cascade);
