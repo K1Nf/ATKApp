@@ -619,7 +619,7 @@ namespace ATKApplication.Services
             {
                 foreach (var audienceCategory in createAudienceRequest.Audiences)
                 {
-                    var audience = new Audience(audienceCategory, eventId);
+                    var audience = Audience.Create(audienceCategory, eventId);
 
                     if (audience != null)
                         await _dB.Audiences.AddAsync(audience);

@@ -33,6 +33,7 @@ import { handleForm3Submit } from "../components/EventFormHandlers/EventForm3Han
 import { handleForm4Submit } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
 import { handleForm7Submit } from "../components/EventFormHandlers/EventForm7Handler"; // путь подстраивай под себя
 
+import { handleForm13Submit } from "../components/EventFormHandlers/EventForm13Handler"; // путь подстраивай под себя
 import { handleForm14Submit } from "../components/EventFormHandlers/EventForm14Handler"; // путь подстраивай под себя
 import { handleForm16Submit } from "../components/EventFormHandlers/EventForm16Handler"; // путь подстраивай под себя
 import { handleForm17Submit } from "../components/EventFormHandlers/EventForm17Handler"; // путь подстраивай под себя
@@ -1673,7 +1674,20 @@ const EventForm = () => {
           {formType === 13 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleForm13Submit({
+                e,
+                selectedTopic,
+                executor,
+                eventName,
+                eventDate,
+                eventDescription,
+                link,
+                audience,
+                otherAudienceDescription,
+                supportTypes,
+                supportTypesDescription,
+                recipient
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">

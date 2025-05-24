@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\models\\audience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\audience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\contracts\\request\\createsupportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\request\\createsupportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\models\\audience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\audience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,33 +34,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "CreateSupportRequest.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
+              "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T14:32:04.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EventService.cs",
               "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Services\\EventService.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Services\\EventService.cs",
               "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Services\\EventService.cs",
               "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA5wCAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFoCAAAAAAAAAAAowGsCAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T13:41:24.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Audience.cs",
               "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\Audience.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Models\\Audience.cs",
               "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\Audience.cs",
               "RelativeToolTip": "ATKApplication\\Models\\Audience.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T12:07:44.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EventController.cs",
               "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
