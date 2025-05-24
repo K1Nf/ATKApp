@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "olszUZn6C0pdi8RQ+/7wa9PYwvIhts8PxfggiQWPVeI=",
+  "Hash": "XIO6hxeuSG7tekbQ29TzlJZjGGroXPCrDQXNJSzo2xw=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "namxfot5gw",
-      "Integrity": "4THMiX8JRG7hcbSyYwjw1TiJaiSBnWLPVKcsPh2hyos=",
+      "Fingerprint": "15q9ppvf2y",
+      "Integrity": "a6b7oSUoug7ZiIuThygFTdLBUt3ZBTYYYChBc1YHK1Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
@@ -356,7 +356,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -393,7 +393,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -438,7 +438,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -483,7 +483,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -520,7 +520,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -565,7 +565,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -602,7 +602,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -647,7 +647,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -662,6 +662,51 @@
       ]
     },
     {
+      "Route": "assets/js/createEvent.15q9ppvf2y.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105800"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a6b7oSUoug7ZiIuThygFTdLBUt3ZBTYYYChBc1YHK1Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "15q9ppvf2y"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/createEvent.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-a6b7oSUoug7ZiIuThygFTdLBUt3ZBTYYYChBc1YHK1Y="
+        }
+      ]
+    },
+    {
       "Route": "assets/js/createEvent.js",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
@@ -672,7 +717,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "101546"
+          "Value": "105800"
         },
         {
           "Name": "Content-Type",
@@ -680,11 +725,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4THMiX8JRG7hcbSyYwjw1TiJaiSBnWLPVKcsPh2hyos=\""
+          "Value": "\"a6b7oSUoug7ZiIuThygFTdLBUt3ZBTYYYChBc1YHK1Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -694,52 +739,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4THMiX8JRG7hcbSyYwjw1TiJaiSBnWLPVKcsPh2hyos="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/createEvent.namxfot5gw.js",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "101546"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4THMiX8JRG7hcbSyYwjw1TiJaiSBnWLPVKcsPh2hyos=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "namxfot5gw"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/createEvent.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4THMiX8JRG7hcbSyYwjw1TiJaiSBnWLPVKcsPh2hyos="
+          "Value": "sha256-a6b7oSUoug7ZiIuThygFTdLBUt3ZBTYYYChBc1YHK1Y="
         }
       ]
     },
@@ -766,7 +766,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -811,7 +811,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -848,7 +848,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -893,7 +893,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -930,7 +930,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -975,7 +975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1012,7 +1012,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1057,7 +1057,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1258,7 +1258,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1295,7 +1295,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1340,7 +1340,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1377,7 +1377,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1422,7 +1422,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1459,7 +1459,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 12:27:23 GMT"
+          "Value": "Sat, 24 May 2025 14:04:29 GMT"
         },
         {
           "Name": "Cache-Control",
