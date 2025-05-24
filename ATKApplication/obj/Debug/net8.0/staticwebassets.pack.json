@@ -1,63 +1,63 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-C6EkhA0g.css",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-C6EkhA0g.css",
       "PackagePath": "staticwebassets\\assets\\css\\Sidebar-C6EkhA0g.css"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-DlZwj7pn.css",
       "PackagePath": "staticwebassets\\assets\\css\\events-DlZwj7pn.css"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
       "PackagePath": "staticwebassets\\assets\\css\\toastr-PcHlmDLb.css"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
       "PackagePath": "staticwebassets\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
       "PackagePath": "staticwebassets\\assets\\js\\Sidebar-chunk.js"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "PackagePath": "staticwebassets\\assets\\js\\createEvent.js"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
       "PackagePath": "staticwebassets\\assets\\js\\eventCard.js"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\events.js",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "PackagePath": "staticwebassets\\assets\\js\\events.js"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
       "PackagePath": "staticwebassets\\assets\\js\\toastr.min-chunk.js"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\images\\hanty-mansijskogo.png",
       "PackagePath": "staticwebassets\\images\\hanty-mansijskogo.png"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\images\\АТК.png",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\images\\АТК.png",
       "PackagePath": "staticwebassets\\images\\АТК.png"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\index.html",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
       "PackagePath": "staticwebassets\\src\\eventCard\\eventCard.html"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
       "PackagePath": "staticwebassets\\src\\table\\indexTable.html"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\vite.svg",
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\vite.svg",
       "PackagePath": "staticwebassets\\vite.svg"
     },
     {

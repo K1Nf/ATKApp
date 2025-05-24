@@ -334,10 +334,15 @@ const EventForm = () => {
 
 
 
-
-
-
-
+//1.3.4 
+const [descriptions, setDescriptions] = useState({
+  infoDescription: "",
+  methodDescription: "",
+  orgDescription: "",
+  otherDescription: "",
+  competitionDescription: "",
+  winnerDetails: ""
+});
 
 
 

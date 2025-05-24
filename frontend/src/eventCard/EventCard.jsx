@@ -125,10 +125,13 @@ const EventCard = () => {
         </section>
 
 
-        <section>
-          <h2>Форма проведения</h2>
-          <p>{data.eventType}</p>
-        </section>
+       {data.eventType && (
+          <section>
+            <h2>Форма проведения</h2>
+            <p>{data.eventType}</p>
+          </section>
+        )}
+
         
         
         <section>

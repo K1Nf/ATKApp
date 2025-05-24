@@ -1,155 +1,100 @@
 import { useState } from "react";
 
-const Info_DestrCont = ({
-  selectedUMVD, setSelectedUMVD,
-  selectedProsecutor, setSelectedProsecutor,
-  selectedRoskomnadzor, setSelectedRoskomnadzor,
-  selectedFSB, setSelectedFSB,
-  umvdStatus, setUmvdStatus,
-  prosecutorStatus, setProsecutorStatus,
-  roskomnadzorStatus, setRoskomnadzorStatus,
-  fsbStatus, setFsbStatus,
-  numMaterialsSent, setNumMaterialsSent,
-  numMaterialsBlocked, setNumMaterialsBlocked
-}) => {
+const Info_DestrCont = () => {
+  const departments = [
+    { key: "umvd", label: "УМВД" },
+    { key: "prosecutor", label: "Прокуратура" },
+    { key: "roskomnadzor", label: "Роскомнадзор" },
+    { key: "fsb", label: "РУФСБ" }
+  ];
 
-  // Функция изменения значения selectedUMVD
+  const [departmentStates, setDepartmentStates] = useState(
+    Object.fromEntries(
+      departments.map(({ key }) => [
+        key,
+        {
+          checked: false,
+          sentCount: "",
+          blockedCount: ""
+        }
+      ])
+    )
+  );
 
-  // Обработчики для изменения числовых значений
-  const handleNumMaterialsSentChange = (e) => {
-    // Разрешаем только ввод цифр
-    const value = e.target.value.replace(/[^0-9]/g, '');
-    setNumMaterialsSent(value);
+  const handleCheckboxChange = (key) => {
+    setDepartmentStates((prev) => ({
+      ...prev,
+      [key]: {
+        ...prev[key],
+        checked: !prev[key].checked
+      }
+    }));
   };
 
-  const handleNumMaterialsBlockedChange = (e) => {
-    // Разрешаем только ввод цифр
-    const value = e.target.value.replace(/[^0-9]/g, '');
-    setNumMaterialsBlocked(value);
+  const handleFieldChange = (key, field, value) => {
+    if ((field === "sentCount" || field === "blockedCount") && value !== "" && !/^[0-9\b]+$/.test(value)) return;
+    setDepartmentStates((prev) => ({
+      ...prev,
+      [key]: {
+        ...prev[key],
+        [field]: value
+      }
+    }));
   };
+
+  const totalSent = Object.values(departmentStates)
+    .filter((d) => d.checked)
+    .reduce((sum, d) => sum + Number(d.sentCount || 0), 0);
+
+  const totalBlocked = Object.values(departmentStates)
+    .filter((d) => d.checked)
+    .reduce((sum, d) => sum + Number(d.blockedCount || 0), 0);
 
   return (
     <div>
       <h3>Куда направлен материал</h3>
 
-      {/* Чекбокс УМВД */}
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={selectedUMVD}
-            onChange={() => setSelectedUMVD(!selectedUMVD)}
-          />
-          УМВД
-        </label>
-        {selectedUMVD && (
-          <select
-          value={umvdStatus} 
-          onChange={(e) => setUmvdStatus(e.target.value)}
-        >
-          <option value="">Выберите статус</option>
-          <option value="no_response">Ответ не поступил</option>
-          <option value="measures_taken">Меры приняты</option>
-        </select>
-        )}
-      </div>
+      {departments.map(({ key, label }) => (
+        <div key={key}>
+          <label>
+            <input
+              type="checkbox"
+              checked={departmentStates[key].checked}
+              onChange={() => handleCheckboxChange(key)}
+            />
+            {label}
+          </label>
 
-      {/* Чекбокс Прокуратура */}
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={selectedProsecutor}
-            onChange={() => setSelectedProsecutor(!selectedProsecutor)}
-          />
-          Прокуратура
-        </label>
-        {selectedProsecutor && (
-          <select
-            value={prosecutorStatus}
-            onChange={(e) => setProsecutorStatus(e.target.value)}
-          >
-            <option value="">Выберите статус</option>
-            <option value="no_response">Ответ не поступил</option>
-            <option value="measures_taken">Меры приняты</option>
-          </select>
-        )}
-      </div>
+          {departmentStates[key].checked && (
+            <section style={{ margin: "15px 0", padding: "10px", border: "1px solid #ccc", borderRadius: "6px"}}>
+              <label>
+                Кол-во направленных материалов:
+                <input
+                  type="text"
+                  value={departmentStates[key].sentCount}
+                  onChange={(e) => handleFieldChange(key, "sentCount", e.target.value)}
+                  placeholder="Введите только цифры"
+                />
+              </label>
+              <br />
+              <label>
+                Кол-во заблокированных из них:
+                <input
+                  type="text"
+                  value={departmentStates[key].blockedCount}
+                  onChange={(e) => handleFieldChange(key, "blockedCount", e.target.value)}
+                  placeholder="Введите только цифры"
+                />
+              </label>
+            </section>
+          )}
+        </div>
+      ))}
 
-      {/* Чекбокс Роскомнадзор */}
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={selectedRoskomnadzor}
-            onChange={() => setSelectedRoskomnadzor(!selectedRoskomnadzor)}
-          />
-          Роскомнадзор
-        </label>
-        {selectedRoskomnadzor && (
-          <select
-            value={roskomnadzorStatus}
-            onChange={(e) => setRoskomnadzorStatus(e.target.value)}
-          >
-            <option value="">Выберите статус</option>
-            <option value="no_response">Ответ не поступил</option>
-            <option value="measures_taken">Меры приняты</option>
-          </select>
-        )}
-      </div>
-
-      {/* Чекбокс РУФСБ */}
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={selectedFSB}
-            onChange={() => setSelectedFSB(!selectedFSB)}
-          />
-          РУФСБ
-        </label>
-        {selectedFSB && (
-          <select
-            value={fsbStatus}
-            onChange={(e) => setFsbStatus(e.target.value)}
-          >
-            <option value="">Выберите статус</option>
-            <option value="no_response">Ответ не поступил</option>
-            <option value="measures_taken">Меры приняты</option>
-          </select>
-        )}
-      </div>
-
-      {/* Поле для ввода количества направленных материалов */}
       <section>
-        <label htmlFor="numMaterialsSent">
-          Кол-во направленных материалов
-        </label>
-        <input
-          type="text"
-          id="numMaterialsSent"
-          name="numMaterialsSent"
-          value={numMaterialsSent}
-          onChange={handleNumMaterialsSentChange}
-          placeholder="Введите только цифры"
-          required
-        />
-      </section>
-
-      {/* Поле для ввода количества заблокированных материалов */}
-      <section>
-        <label htmlFor="numMaterialsBlocked">
-          Кол-во заблокированных материалов
-        </label>
-        <input
-          type="text"
-          id="numMaterialsBlocked"
-          name="numMaterialsBlocked"
-          value={numMaterialsBlocked}
-          onChange={handleNumMaterialsBlockedChange}
-          placeholder="Введите только цифры"
-          required
-        />
+        <h2>Итог</h2>
+        <p>Общее количество направленных материалов: <strong>{totalSent}</strong></p>
+        <p>Общее количество заблокированных материалов: <strong>{totalBlocked}</strong></p>
       </section>
     </div>
   );
