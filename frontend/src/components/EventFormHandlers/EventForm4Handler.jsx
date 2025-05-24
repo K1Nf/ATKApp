@@ -1,7 +1,7 @@
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 
-export const handleFormSubmit4 = async ({
+export const handleForm4Submit = async ({
   e,
   selectedTopic,
   eventDate,
@@ -124,13 +124,15 @@ export const handleFormSubmit4 = async ({
     content: eventDescription,
     date: eventDate,
     name: eventName,
+    
     createSupportrequest: {
       supports: combinedSupport,
       supported: ""
     },
+
     createMediaLinkRequest: {
         content: link.split(',').map(l => l.trim())
-      },
+    },
   };
 
 

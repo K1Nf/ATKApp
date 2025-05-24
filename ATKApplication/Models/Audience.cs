@@ -8,21 +8,23 @@ namespace ATKApplication.Models
     public class Audience
     {
         public Audience() {}
-        public Audience(Audiences audiences, string? description, Guid eventId)
+        public Audience(string category, Guid eventId /*Audiences audiences, string? description,*/)
         {
             Id = Guid.NewGuid();
-            Audiences = audiences;
-            Description = description;
+            Category = category;
+            //Audiences = audiences;
+            //Description = description;
             EventId = eventId;
         }
 
         public Guid Id { get; set; }
-        public Audiences Audiences { get; }
-        public string? Description { get; }
+        public string Category { get; set; }
+        //public Audiences Audiences { get; }
+        //public string? Description { get; }
 
 
         [Newtonsoft.Json.JsonIgnore]
-        public EventBase? Event { get; set; }
-        public Guid EventId { get; set; }
+        public EventForm1? Event { get; set; }
+        public Guid EventId { get; init; }
     }
 }

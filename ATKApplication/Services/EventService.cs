@@ -265,9 +265,7 @@ namespace ATKApplication.Services
             var eventForm4 = new EventForm4(createEventForm4Request.Actor, createEventForm4Request.Name,
                                         createEventForm4Request.Content, eventDate, tokenId, themeId,
                                         createEventForm4Request.DirectToNAC,
-                                        createEventForm4Request.SendToSubjects,
-                                        null
-                                        /*createEventForm4Request.EqualToEqual*/);
+                                        createEventForm4Request.SendToSubjects);
 
             using var transaction = await _dB.Database.BeginTransactionAsync();
 
@@ -619,10 +617,9 @@ namespace ATKApplication.Services
         {
             if (createAudienceRequest is not null)
             {
-                foreach (var audienceEnum in createAudienceRequest.Audiences)
+                foreach (var audienceCategory in createAudienceRequest.Audiences)
                 {
-                    string? description = createAudienceRequest.Descripton;
-                    var audience = new Audience(audienceEnum, string.IsNullOrEmpty(description) ? null : description, eventId);
+                    var audience = new Audience(audienceCategory, eventId);
 
                     if (audience != null)
                         await _dB.Audiences.AddAsync(audience);

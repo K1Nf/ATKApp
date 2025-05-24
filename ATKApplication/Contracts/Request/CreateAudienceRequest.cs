@@ -2,5 +2,5 @@
 
 namespace ATKApplication.Contracts.Request
 {
-    public record CreateAudienceRequest(Audiences[] Audiences, string? Descripton);
+    public record CreateAudienceRequest(string[] Audiences);
 }

@@ -27,10 +27,12 @@ import DopInfo_Support from "../components/EventFormSections/DopInfo_Support"
 import Info_ExecutorAndDescription from "../components/EventFormSections/Info_ExecutorAndDescription"
 
 
-import { handleFormSubmit1 } from "../components/EventFormHandlers/EventForm1Handler"; // путь подстраивай под себя
-import { handleFormSubmit2 } from "../components/EventFormHandlers/EventForm2Handler"; // путь подстраивай под себя
-import { handleFormSubmit3 } from "../components/EventFormHandlers/EventForm3Handler"; // путь подстраивай под себя
-import { handleFormSubmit4 } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
+import { handleForm1Submit } from "../components/EventFormHandlers/EventForm1Handler"; // путь подстраивай под себя
+import { handleForm2Submit } from "../components/EventFormHandlers/EventForm2Handler"; // путь подстраивай под себя
+import { handleForm3Submit } from "../components/EventFormHandlers/EventForm3Handler"; // путь подстраивай под себя
+import { handleForm4Submit } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
+import { handleForm16Submit } from "../components/EventFormHandlers/EventForm16Handler"; // путь подстраивай под себя
+import { handleForm17Submit } from "../components/EventFormHandlers/EventForm17Handler"; // путь подстраивай под себя
 
 
 
@@ -277,8 +279,8 @@ const EventForm = () => {
   };
 
 
-  const [isWorkSchoolAndVolodejChecked, setisWorkSchoolAndVolodejChecked] = useState(false);
-  const [isWorkSchoolAndVolodejDescription, setisWorkSchoolAndVolodejDescription] = useState("");
+  const [isWorkSchoolAndMolodejChecked, setisWorkSchoolAndMolodejChecked] = useState(false);
+  const [isWorkSchoolAndMolodejDescription, setisWorkSchoolAndMolodejDescription] = useState("");
 
 
   // Состояния для всех типов поддержек
@@ -552,7 +554,17 @@ const EventForm = () => {
   const [expertCouncilResult, setExpertCouncilResult] = useState("");
   const [expertCouncilDescription, setExpertCouncilDescription] = useState("");
 
+  const [audience, setAudience] = useState({
+    preschoolers: false,
+    schoolChildren: false,
+    youth: false,
+    pensioners: false,
+    workingPopulation: false,
+    other: false
+  });
 
+  // Состояние для текстового поля "Другое"
+  const [otherAudienceDescription, setOtherAudienceDescription] = useState("");
 
 
 
@@ -681,7 +693,7 @@ const EventForm = () => {
           {formType === 1 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={(e) => handleFormSubmit1({
+              <form onSubmit={(e) => handleForm1Submit({
                 e,
                 selectedTopic,
                 formType,
@@ -839,7 +851,7 @@ const EventForm = () => {
           {formType === 2 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={(e) => handleFormSubmit2({
+              <form onSubmit={(e) => handleForm2Submit({
                 e,
                 selectedTopic,
                 equalFormat,
@@ -983,7 +995,7 @@ const EventForm = () => {
           {formType === 3 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={(e) => handleFormSubmit3({
+              <form onSubmit={(e) => handleForm3Submit({
                 e,
                 selectedTopic,
                 eventDate,
@@ -1094,7 +1106,7 @@ const EventForm = () => {
           {formType === 4 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={(e) => handleFormSubmit4({
+              <form onSubmit={(e) => handleForm4Submit({
                 e,
                 selectedTopic,
                 eventDate,
@@ -1448,17 +1460,17 @@ const EventForm = () => {
                       <label>
                         <input
                           type="checkbox"
-                          checked={isWorkSchoolAndVolodejChecked}
-                          onChange={() => setisWorkSchoolAndVolodejChecked(!isWorkSchoolAndVolodejChecked)}
+                          checked={isWorkSchoolAndMolodejChecked}
+                          onChange={() => setisWorkSchoolAndMolodejChecked(!isWorkSchoolAndMolodejChecked)}
                         />
                         Создан при участии школьников и молодежи
                       </label>
 
-                      {isWorkSchoolAndVolodejChecked && (
+                      {isWorkSchoolAndMolodejChecked && (
                         <div>
                           <textarea
-                            value={isWorkSchoolAndVolodejDescription}
-                            onChange={(e) => setisWorkSchoolAndVolodejDescription(e.target.value)}
+                            value={isWorkSchoolAndMolodejDescription}
+                            onChange={(e) => setisWorkSchoolAndMolodejDescription(e.target.value)}
                             placeholder="Описание участия данной категории, не более 200 символов"
                             maxLength={200}
                           />
@@ -1481,7 +1493,12 @@ const EventForm = () => {
                   </section>
 
 
-                  <Info_TargetAudience />
+                  <Info_TargetAudience
+                    audience = {audience}
+                    setAudience = {setAudience}
+                    otherAudienceDescription = {otherAudienceDescription}
+                    setOtherAudienceDescription = {setOtherAudienceDescription} 
+                  />
 
                 </section>
                 <button type="submit" id="save_button">
@@ -1592,7 +1609,12 @@ const EventForm = () => {
                     />
 
                     {/* Целевая аудитория */}
-                    <Info_TargetAudience />
+                    <Info_TargetAudience
+                      audience = {audience}
+                      setAudience = {setAudience}
+                      otherAudienceDescription = {otherAudienceDescription}
+                      setOtherAudienceDescription = {setOtherAudienceDescription} 
+                    />
 
                     {/* Источник распространения */}
                     <Info_SourceOfDistribution />
@@ -1683,7 +1705,12 @@ const EventForm = () => {
                   <h2>Дополнительная информация о мероприятии</h2>
                   <div>
                     {/* Целевая аудитория */}
-                    <Info_TargetAudience />
+                      <Info_TargetAudience
+                      audience = {audience}
+                      setAudience = {setAudience}
+                      otherAudienceDescription = {otherAudienceDescription}
+                      setOtherAudienceDescription = {setOtherAudienceDescription} 
+                    />
 
                     <DopInfo_Support
                       supportTypes={supportTypes}
@@ -1816,7 +1843,7 @@ const EventForm = () => {
 
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form id="eventForm" onSubmit={(e) => handleBaseFormSubmit16({
+              <form id="eventForm" onSubmit={(e) => handleForm16Submit({
                 e,
                 selectedTopic,
                 eventDescription,
@@ -1850,7 +1877,19 @@ const EventForm = () => {
 
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleForm17Submit({
+                e,
+                selectedTopic,
+                executor,
+                eventName,
+                eventDate,
+                eventDescription,
+                link,
+                isWorkSchoolAndMolodejChecked,
+                isWorkSchoolAndMolodejDescription,
+                audience,
+                otherAudienceDescription
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -1873,6 +1912,8 @@ const EventForm = () => {
                     setNamePlaceholder={setNamePlaceholder}
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
+                    link={link}
+                    setLink={setLink}
                   />
                 </section>
 
@@ -1887,17 +1928,17 @@ const EventForm = () => {
                       <label>
                         <input
                           type="checkbox"
-                          checked={isWorkSchoolAndVolodejChecked}
-                          onChange={() => setisWorkSchoolAndVolodejChecked(!isWorkSchoolAndVolodejChecked)}
+                          checked={isWorkSchoolAndMolodejChecked}
+                          onChange={() => setisWorkSchoolAndMolodejChecked(!isWorkSchoolAndMolodejChecked)}
                         />
                         Создан при участии школьников и молодежи
                       </label>
 
-                      {isWorkSchoolAndVolodejChecked && (
+                      {isWorkSchoolAndMolodejChecked && (
                         <div>
                           <textarea
-                            value={isWorkSchoolAndVolodejDescription}
-                            onChange={(e) => setisWorkSchoolAndVolodejDescription(e.target.value)}
+                            value={isWorkSchoolAndMolodejDescription}
+                            onChange={(e) => setisWorkSchoolAndMolodejDescription(e.target.value)}
                             placeholder="Описание участия данной категории, не более 200 символов"
                             maxLength={200}
                           />
@@ -1905,7 +1946,12 @@ const EventForm = () => {
                       )}
                     </div>
                   </section>
-                  <Info_TargetAudience />
+                  <Info_TargetAudience
+                    audience = {audience}
+                    setAudience = {setAudience}
+                    otherAudienceDescription = {otherAudienceDescription}
+                    setOtherAudienceDescription = {setOtherAudienceDescription} 
+                  />
                 </section>
                 <button type="submit" id="save_button">
                   Сохранить

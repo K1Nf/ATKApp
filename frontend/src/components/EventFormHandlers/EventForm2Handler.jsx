@@ -1,7 +1,7 @@
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 
-export const handleFormSubmit2 = async ({
+export const handleForm2Submit = async ({
   e,
   selectedTopic,
   equalFormat,

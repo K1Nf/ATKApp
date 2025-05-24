@@ -3,6 +3,7 @@ using System;
 using ATKApplication.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ATKApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250524121004_UpdatedAudienceTable")]
+    partial class UpdatedAudienceTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,10 +61,15 @@ namespace ATKApplication.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("EventForm1Id")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid>("EventId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EventForm1Id");
 
                     b.HasIndex("EventId");
 
@@ -410,8 +418,12 @@ namespace ATKApplication.Migrations
 
             modelBuilder.Entity("ATKApplication.Models.Audience", b =>
                 {
-                    b.HasOne("ATKApplication.Models.EventForm1", "Event")
+                    b.HasOne("ATKApplication.Models.EventForm1", null)
                         .WithMany("Audiences")
+                        .HasForeignKey("EventForm1Id");
+
+                    b.HasOne("ATKApplication.Models.EventBase", "Event")
+                        .WithMany()
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

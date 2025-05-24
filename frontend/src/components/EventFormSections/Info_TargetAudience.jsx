@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 
-const Info_TargetAudience = () => {
+const Info_TargetAudience = ({
+  audience, 
+  setAudience,
+  otherAudienceDescription,
+  setOtherAudienceDescription
+}) => {
   // Состояние для чекбоксов
-  const [audience, setAudience] = useState({
-    preschoolers: false,
-    schoolChildren: false,
-    youth: false,
-    pensioners: false,
-    workingPopulation: false,
-    other: false
-  });
+  // const [audience, setAudience] = useState({
+  //   preschoolers: false,
+  //   schoolChildren: false,
+  //   youth: false,
+  //   pensioners: false,
+  //   workingPopulation: false,
+  //   other: false
+  // });
 
-  // Состояние для текстового поля "Другое"
-  const [otherDescription, setOtherDescription] = useState("");
+  // // Состояние для текстового поля "Другое"
+  // const [otherDescription, setOtherDescription] = useState("");
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
@@ -23,7 +28,7 @@ const Info_TargetAudience = () => {
   };
 
   const handleOtherDescriptionChange = (event) => {
-    setOtherDescription(event.target.value);
+    setOtherAudienceDescription(event.target.value);
   };
 
   return (
@@ -110,7 +115,7 @@ const Info_TargetAudience = () => {
         {audience.other && (
           <div>
             <textarea
-              value={otherDescription}
+              value={otherAudienceDescription}
               onChange={handleOtherDescriptionChange}
               placeholder="Введите описание"
             />
