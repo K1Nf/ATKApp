@@ -265,8 +265,9 @@ namespace ATKApplication.Services
             var eventForm4 = new EventForm4(createEventForm4Request.Actor, createEventForm4Request.Name,
                                         createEventForm4Request.Content, eventDate, tokenId, themeId,
                                         createEventForm4Request.DirectToNAC,
-                                        createEventForm4Request.DirectToSubjects,
-                                        createEventForm4Request.EqualToEqual);
+                                        createEventForm4Request.SendToSubjects,
+                                        null
+                                        /*createEventForm4Request.EqualToEqual*/);
 
             using var transaction = await _dB.Database.BeginTransactionAsync();
 
@@ -597,12 +598,13 @@ namespace ATKApplication.Services
         private async Task CreateAgreementAsync(CreateAgreementRequest? createAgreementRequest, Guid eventId)
         {
             if (createAgreementRequest is not null &&
-                createAgreementRequest.AgreementRequests.Count > 0)
+                createAgreementRequest.Agreements.Count > 0)
             {
-                foreach (var agreementRequest in createAgreementRequest.AgreementRequests)
+                foreach (var agreementRequest in createAgreementRequest.Agreements)
                 {
                     var agreement = Agreement.Create(agreementRequest.Description, 
-                                                    agreementRequest.OrganizationEnum, 
+                                                    agreementRequest.Name,
+                                                    agreementRequest.Result,
                                                     eventId);
 
                     if (agreement != null)

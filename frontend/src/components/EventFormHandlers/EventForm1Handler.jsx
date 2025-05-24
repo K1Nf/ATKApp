@@ -1,4 +1,5 @@
-// src/utils/eventFormHandlers.js
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 export const  handleFormSubmit1 = async ({
   e,
@@ -207,7 +208,11 @@ export const  handleFormSubmit1 = async ({
 
       //Показать уведомление
       toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
-
+      window.setTimeout(function () {
+        // Move to a new location or you can do something else
+        window.location.href = "/";
+      }, 3000);
+      
     } catch (error) {
       console.error("Ошибка:", error);
     }

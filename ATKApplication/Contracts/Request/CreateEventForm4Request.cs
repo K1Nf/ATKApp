@@ -5,20 +5,20 @@ using System.Diagnostics.Eventing.Reader;
 namespace ATKApplication.Contracts.Request
 {
     public record CreateEventForm4Request(string Name, string Content, string Actor, 
-                                          string Date, bool DirectToNAC, string DirectToSubjects,
-                                          string EqualToEqual, string ThemeCode,
+                                          string Date, bool DirectToNAC, 
+                                          string? SendToSubjects, string ThemeCode,
                                           CreateAgreementRequest? CreateAgreementRequest,
                                           CreateMediaLinkRequest? CreateMediaLinkRequest,
                                           CreateParticipantsRequest? CreateParticipantsRequest
        );
 
 
-    public record CreateAgreementRequest(List<AgreementRequest> AgreementRequests);
+    public record CreateAgreementRequest(List<AgreementRequest> Agreements);
 
     public class AgreementRequest
     {
-        public OrganizationEnum OrganizationEnum { get; set; }
+        public string Name { get; set; }
         public ResultEnum Result {get; set;}
-        public string Description {get; set;}    
+        public string? Description {get; set;}    
     }
 }

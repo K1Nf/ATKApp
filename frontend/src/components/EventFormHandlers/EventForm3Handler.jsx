@@ -1,4 +1,5 @@
-// src/utils/eventFormHandlers.js
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 export const handleFormSubmit3 = async ({
   e,
@@ -13,20 +14,20 @@ export const handleFormSubmit3 = async ({
   sendNAK,
 
   isMaterialAgreementChecked,
-  categories, 
-  isCategoryAdded, 
+  categories,
+  isCategoryAdded,
 
 
-  isATKOMSUChecked, 
-  ATKOMSUResult, 
-  ATKOMSUDescription, 
-  
-  isATKKhmaoChecked, 
-  ATKKhmaoResult, 
-  ATKKhmaoDescription, 
-  
-  isExpertCouncilChecked, 
-  expertCouncilResult, 
+  isATKOMSUChecked,
+  ATKOMSUResult,
+  ATKOMSUDescription,
+
+  isATKKhmaoChecked,
+  ATKKhmaoResult,
+  ATKKhmaoDescription,
+
+  isExpertCouncilChecked,
+  expertCouncilResult,
   expertCouncilDescription
 }) => {
   e.preventDefault();
@@ -94,119 +95,119 @@ export const handleFormSubmit3 = async ({
     return;
   }
 
-//   let sendToSubjects = isWorkUseChecked? workUseDescription : null;
-
-//   let createEventRequest = {
-//     themeCode: selectedTopic,
-//     name: eventName,
-//     actor: executor,
-//     date: eventDate,
-//     content: eventDescription,
-
-//     createMediaLinkRequest: {
-//       content: link.split(',').map(l => l.trim())
-//     },
-
-//     directToNAK: sendNAK,
-//     sendToSubjects: sendToSubjects
-//   };
-
-//   console.log("---------------");
-//   console.log(createEventRequest);
-//   console.log("---------------");
-
-  const backCreateUrl = `/api/ref/events/createform1`;
 
 
-console.log("isMaterialAgreementChecked: " + isMaterialAgreementChecked);
-console.log("categories: ");
-console.log(categories);
-console.log("isCategoryAdded: " + isCategoryAdded);
+  let sendToSubjects = isWorkUseChecked ? workUseDescription : null;
 
 
 
-let organizationsConfirmedBy = [];
+  let organizationsConfirmedBy = [];
 
-    if(isExpertCouncilChecked)
-    { 
-        organizationsConfirmedBy.push(
-            {
-                org: "expertSoviet", 
-                result: expertCouncilResult, 
-                resultDescription: expertCouncilDescription
-            }
-        );
-    }
+  if (isExpertCouncilChecked) {
+    organizationsConfirmedBy.push(
+      {
+        org: "expertSoviet",
+        result: expertCouncilResult,
+        resultDescription: expertCouncilDescription
+      }
+    );
+  }
 
-    if(isATKOMSUChecked)
-    { 
-        organizationsConfirmedBy.push(
-            {
-                org: "atkomsu", 
-                result: ATKOMSUResult, 
-                resultDescription: ATKOMSUDescription
-            }
-        );
-    }
+  if (isATKOMSUChecked) {
+    organizationsConfirmedBy.push(
+      {
+        org: "atkomsu",
+        result: ATKOMSUResult,
+        resultDescription: ATKOMSUDescription
+      }
+    );
+  }
 
-    if(isATKKhmaoChecked)
-    { 
-        organizationsConfirmedBy.push(
-            {
-                org: "atkkhmao", 
-                result: ATKKhmaoResult, 
-                resultDescription: ATKKhmaoDescription
-            });
-    }
+  if (isATKKhmaoChecked) {
+    organizationsConfirmedBy.push(
+      {
+        org: "atkkhmao",
+        result: ATKKhmaoResult,
+        resultDescription: ATKKhmaoDescription
+      });
+  }
 
-let selectedOrgs = isMaterialAgreementChecked ? [
+  let selectedOrgs = isMaterialAgreementChecked ? [
     ...organizationsConfirmedBy,
     ...categories
-  ]: []
-
-
-console.log("selectedOrgs: ");
-console.log(selectedOrgs);
-// console.log(organizationsConfirmedBy);
-// console.log(categories);
-
-// привести organizationsConfirmedBy и categories к одному списку
+  ] : []
 
 
 
 
-// console.log("isATKOMSUChecked: " + isATKOMSUChecked);
-// console.log("ATKOMSUResult: " + ATKOMSUResult);
-// console.log("ATKOMSUDescription: " + ATKOMSUDescription);
+  function transform(item) {
+    return {
+      name: item.org || item.name || "",
+      result: item.result === "approved" ? 1 : 0, // 1 - approved, 0 - rejected
+      description: item.result === "approved" ? item.resultDescription || item.docDescription || "" : ""
+    };
+  }
 
-// console.log("isATKKhmaoChecked: " + isATKKhmaoChecked);
-// console.log("ATKKhmaoResult: " + ATKKhmaoResult);
-// console.log("ATKKhmaoDescription: " + ATKKhmaoDescription);
+  // Пример
+  const combined = selectedOrgs.map(transform);
 
-// console.log("isExpertCouncilChecked: " + isExpertCouncilChecked);
-// console.log("expertCouncilResult: " + expertCouncilResult);
-// console.log("expertCouncilDescription: " + expertCouncilDescription);
+  console.log("После трансформации: ");
+  console.log(combined);
 
-  // try {
-  //   const response = await fetch(backCreateUrl, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(createEventRequest)
-  //   });
 
-  //   if (!response.ok) {
-  //     throw new Error("Ошибка при создании события");
-  //   }
 
-  //   const data = await response.text();
-  //   console.log("Событие создано:", data);
 
-  //   //Показать уведомление
-  //   toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
+  let createEventRequest = {
+    themeCode: selectedTopic,
+    name: eventName,
+    actor: executor,
+    date: eventDate,
+    content: eventDescription,
+    directToNAC: sendNAK,
+    sendToSubjects: sendToSubjects,
 
-  // } catch (error) {
-  //   console.error("Ошибка:", error);
-  // }
+    createMediaLinkRequest: {
+      content: link.split(',').map(l => l.trim())
+    },
+
+    createAgreementRequest: {
+      agreements: combined,
+    }
+  };
+
+  console.log("---------------");
+  console.log(createEventRequest);
+  console.log("---------------");
+
+  const backCreateUrl = `/api/ref/events/createform4`;
+
+
+
+
+  try {
+    const response = await fetch(backCreateUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(createEventRequest)
+    });
+
+    if (!response.ok) {
+      throw new Error("Ошибка при создании события");
+    }
+
+    const data = await response.text();
+    console.log("Событие создано:", data);
+
+    //Показать уведомление
+    toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
+    window.setTimeout(function () {
+      // Move to a new location or you can do something else
+      window.location.href = "/";
+    }, 3000);
+    
+  } catch (error) {
+    console.error("Ошибка:", error);
+  }
 };
