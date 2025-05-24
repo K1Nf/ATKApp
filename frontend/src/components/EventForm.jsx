@@ -31,6 +31,8 @@ import { handleForm1Submit } from "../components/EventFormHandlers/EventForm1Han
 import { handleForm2Submit } from "../components/EventFormHandlers/EventForm2Handler"; // путь подстраивай под себя
 import { handleForm3Submit } from "../components/EventFormHandlers/EventForm3Handler"; // путь подстраивай под себя
 import { handleForm4Submit } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
+import { handleForm7Submit } from "../components/EventFormHandlers/EventForm7Handler"; // путь подстраивай под себя
+
 import { handleForm16Submit } from "../components/EventFormHandlers/EventForm16Handler"; // путь подстраивай под себя
 import { handleForm17Submit } from "../components/EventFormHandlers/EventForm17Handler"; // путь подстраивай под себя
 
@@ -1268,7 +1270,7 @@ const EventForm = () => {
           {formType === 6 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={(e) => handleFormSubmit6({
+              <form onSubmit={(e) => handleForm6Submit({
                 e,
                 selectedTopic,
                 formType,
@@ -1321,6 +1323,8 @@ const EventForm = () => {
                     setNamePlaceholder={setNamePlaceholder}
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
+                    link={link}
+                    setLink={setLink}
                     hideLink={["3.4.3"].includes(selectedTopic)}
 
                   />
@@ -1361,7 +1365,19 @@ const EventForm = () => {
           {formType === 7 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleForm7Submit({
+                e,
+                selectedTopic,
+                executor,
+                eventName,
+                eventDate,
+                eventDescription,
+                link,
+                detailedInput,
+                participants,
+                customParticipants,
+                totalParticipants,
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -1384,6 +1400,8 @@ const EventForm = () => {
                     setNamePlaceholder={setNamePlaceholder}
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
+                    link={link}
+                    setLink={setLink}
                   />
                 </section>
 
@@ -1446,6 +1464,8 @@ const EventForm = () => {
                     setNamePlaceholder={setNamePlaceholder}
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
+                    link={link}
+                    setLink={setLink}
                   />
                 </section>
 
@@ -1582,6 +1602,8 @@ const EventForm = () => {
                       setNamePlaceholder={setNamePlaceholder}
                       descriptionTitle={descriptionTitle}
                       setDescriptionTitle={setDescriptionTitle}
+                      link={link}
+                      setLink={setLink}
                     />
                   </div>
                 </section>
@@ -1698,6 +1720,8 @@ const EventForm = () => {
                     setNamePlaceholder={setNamePlaceholder}
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
+                    link={link}
+                    setLink={setLink}
                   />
                 </section>
 
@@ -1757,6 +1781,8 @@ const EventForm = () => {
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
                     hideLink={selectedTopic === "1.1.3"}
+                    link={link}
+                    setLink={setLink}
                   />
                 </section>
 

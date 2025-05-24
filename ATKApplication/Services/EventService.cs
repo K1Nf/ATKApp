@@ -18,7 +18,6 @@ namespace ATKApplication.Services
 
     public class EventService(DataBaseContext _dB, ILogger<EventService> _logger)
     {
-
         public async Task<object?> Get(Guid id)
         {
             var eventForm1 = await _dB.EventForm1s
@@ -93,6 +92,7 @@ namespace ATKApplication.Services
                         .ToArray(),
 
                 })
+                .OrderBy(x => x.ThemeCode)
                 .ToListAsync();
 
             return Result.Success(events);
