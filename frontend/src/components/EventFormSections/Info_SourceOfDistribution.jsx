@@ -1,44 +1,17 @@
 import React, { useState } from "react";
 
-const Info_SourceOfDistribution = () => {
+const Info_SourceOfDistribution = ({
+  sources, 
+  setSources, 
+  links, 
+  setLinks,
+  otherDescription, 
+  setOtherDescription, 
+  errors, 
+  setErrors
+}) => {
   // Состояния для чекбоксов
-  const [sources, setSources] = useState({
-    localMedia: false,
-    regionalMedia: false,
-    sonko: false,
-    religiousOrg: false,
-    bloggers: false,
-    atcOmsu: false,
-    atcKhmao: false,
-    other: false
-  });
-
-  // Состояния для ссылок
-  const [links, setLinks] = useState({
-    localMediaLink: "",
-    regionalMediaLink: "",
-    sonkoLink: "",
-    religiousOrgLink: "",
-    bloggersLink: "",
-    atcOmsuLink: "",
-    atcKhmaoLink: "",
-    otherLink: ""
-  });
-
-  // Состояние для описания, если выбрано "Другое"
-  const [otherDescription, setOtherDescription] = useState("");
-
-  // Состояние для ошибок (для валидации ссылок)
-  const [errors, setErrors] = useState({
-    localMedia: "",
-    regionalMedia: "",
-    sonko: "",
-    religiousOrg: "",
-    bloggers: "",
-    atcOmsu: "",
-    atcKhmao: "",
-    other: ""
-  });
+  
 
   // Функция для проверки корректности ссылки
   const validateLink = (link) => {

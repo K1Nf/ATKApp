@@ -160,9 +160,10 @@ namespace ATKApplication.Services
                 await CreateSupportAsync(createEventForm1Request.CreateSupportRequest, eventForm1.Id);
                 await CreateAudienceAsync(createEventForm1Request.CreateAudienceRequest, eventForm1.Id);
 
-
+                await CreateSourceOfDestinationAsync(createEventForm1Request.CreateSourcesOfDistributionRequest, eventForm1.Id);
 
                 await _dB.EventForm1s.AddAsync(eventForm1);
+
 
                 await _dB.SaveChangesAsync();
                 await transaction.CommitAsync();
@@ -464,7 +465,7 @@ namespace ATKApplication.Services
             {
                 foreach (string link in createMediaLinkRequest?.Content!)
                 {
-                    var mediaLink = MediaLink.Create(link, eventId);
+                    var mediaLink = MediaLink.Create(link, null, eventId);
 
                     if (mediaLink != null)
                         await _dB.MediaLinks.AddAsync(mediaLink);
@@ -663,6 +664,23 @@ namespace ATKApplication.Services
 
 
 
+        private async Task CreateSourceOfDestinationAsync(CreateSourcesOfDistributionRequest? createSourcesOfDistributionRequest, Guid eventId)
+        {
+            if (createSourcesOfDistributionRequest is not null &&
+                createSourcesOfDistributionRequest.Links.Count > 0)
+            {
+                foreach (var linkDto in createSourcesOfDistributionRequest.Links)
+                {
+                    var mediaLink = MediaLink.Create(linkDto.Link, linkDto.Name, eventId);
+
+                    if (mediaLink != null)
+                        await _dB.MediaLinks.AddAsync(mediaLink);
+                }
+            }
+        }
+        
+
+        
         private async Task CreateViolationAsync(CreateViolationsRequest? createViolationsRequest, Guid eventId)
         {
             if (createViolationsRequest is not null)

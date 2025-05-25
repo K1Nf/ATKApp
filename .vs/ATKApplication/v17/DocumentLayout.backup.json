@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\contracts\\request\\createinteragencycooperationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\request\\createinteragencycooperationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\contracts\\request\\createsourceofdistributionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\request\\createsourceofdistributionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\contracts\\request\\createviolationsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\request\\createviolationsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\contracts\\request\\violationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\request\\violationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\contracts\\request\\createeventform1request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\request\\createeventform1request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\models\\violation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\violation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\models\\eventform3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\eventform3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\models\\medialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\medialink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,80 +42,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ViolationDTO.cs",
-              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\ViolationDTO.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\ViolationDTO.cs",
-              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\ViolationDTO.cs",
-              "RelativeToolTip": "ATKApplication\\Contracts\\Request\\ViolationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T09:21:08.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Violation.cs",
-              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\Violation.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Models\\Violation.cs",
-              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\Violation.cs",
-              "RelativeToolTip": "ATKApplication\\Models\\Violation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T08:07:06.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "EventForm3.cs",
-              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\EventForm3.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Models\\EventForm3.cs",
-              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\EventForm3.cs",
-              "RelativeToolTip": "ATKApplication\\Models\\EventForm3.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAlwCEAAAAIAAAAAAAAAA==",
+              "Title": "MediaLink.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\MediaLink.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Models\\MediaLink.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\MediaLink.cs",
+              "RelativeToolTip": "ATKApplication\\Models\\MediaLink.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wCIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T08:05:56.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateViolationsRequest.cs",
-              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateViolationsRequest.cs",
-              "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateViolationsRequest.cs",
-              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateViolationsRequest.cs",
-              "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateViolationsRequest.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T07:56:26.007Z",
+              "WhenOpened": "2025-05-25T11:19:51.44Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CreateSourceOfDistributionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateSourceOfDistributionRequest.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateSourceOfDistributionRequest.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateSourceOfDistributionRequest.cs",
+              "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateSourceOfDistributionRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:14:31.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateEventForm1Request.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateEventForm1Request.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateEventForm1Request.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateEventForm1Request.cs",
+              "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateEventForm1Request.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:13:28.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EventService.cs",
               "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Services\\EventService.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Services\\EventService.cs",
               "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Services\\EventService.cs",
               "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAhwCwAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAgwKIAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T04:38:26.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "EventController.cs",
               "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
               "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Controllers\\EventController.cs",
               "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAowFMAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAADwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T04:38:26.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateInterAgencyCooperationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateInterAgencyCooperationRequest.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateInterAgencyCooperationRequest.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateInterAgencyCooperationRequest.cs",
+              "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateInterAgencyCooperationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T11:26:31.938Z",
               "EditorCaption": ""
             }
           ]

@@ -16,5 +16,6 @@ namespace ATKApplication.Contracts.Request
                             CreateSupportRequest? CreateSupportRequest,
                             CreateParticipantsRequest? CreateParticipantsRequest, 
                             CreateAudienceRequest? CreateAudienceRequest, 
-                            CreateInterAgencyCooperationRequest? CreateInterAgencyCooperationRequest);
+                            CreateInterAgencyCooperationRequest? CreateInterAgencyCooperationRequest,
+                            CreateSourcesOfDistributionRequest? CreateSourcesOfDistributionRequest); 
 }

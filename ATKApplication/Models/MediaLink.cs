@@ -2,10 +2,11 @@
 
 public class MediaLink
 {
-    private MediaLink(string content, Guid eventId)
+    private MediaLink(string content, string? orgName, Guid eventId)
     {
         Id = Guid.NewGuid();
         Content = content;
+        OrganizationName = orgName;
         EventId = eventId;
     }
 
@@ -15,6 +16,7 @@ public class MediaLink
     }
     public Guid Id { get; init; }
     public string Content { get; set; }
+    public string? OrganizationName { get; set; }
 
 
 
@@ -24,15 +26,19 @@ public class MediaLink
 
     
 
-    public static MediaLink? Create(string content, Guid eventId)
+    public static MediaLink? Create(string content, string? orgName, Guid eventId)
     {
         if(!content.StartsWith("https://"))
         {
             Console.WriteLine("Неправильная ссылка");
             return null;
-            //throw new NullReferenceException("Неправильная ссылка");
         }
         Console.WriteLine("Создали новую ссылку");
-        return new (content, eventId);
+
+        orgName = string.IsNullOrEmpty(orgName) ?
+            null :
+            orgName;
+
+        return new (content, orgName, eventId);
     }
 }

@@ -16,6 +16,7 @@ namespace ATKApplication.Models
             Date = date;
             OrganizerId = organizerId;
             ThemeId = themeId;
+            CreatedAt = DateTime.UtcNow;
         }
 
 
@@ -24,6 +25,7 @@ namespace ATKApplication.Models
         public string? Name { get; set; }
         public string? Content { get; set; }
         public DateOnly? Date { get; set; }
+        public DateTime CreatedAt { get; set; }
         
 
 

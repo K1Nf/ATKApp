@@ -35,6 +35,7 @@ import { handleForm6Submit } from "../components/EventFormHandlers/EventForm6Han
 import { handleForm7Submit } from "../components/EventFormHandlers/EventForm7Handler"; // путь подстраивай под себя
 import { handleForm9Submit } from "../components/EventFormHandlers/EventForm9Handler"; // путь подстраивай под себя
 
+import { handleForm11Submit } from "../components/EventFormHandlers/EventForm11Handler"; // путь подстраивай под себя
 import { handleForm13Submit } from "../components/EventFormHandlers/EventForm13Handler"; // путь подстраивай под себя
 import { handleForm14Submit } from "../components/EventFormHandlers/EventForm14Handler"; // путь подстраивай под себя
 import { handleForm16Submit } from "../components/EventFormHandlers/EventForm16Handler"; // путь подстраивай под себя
@@ -628,7 +629,43 @@ const [descriptions, setDescriptions] = useState({
   );
 
 
+  const [sourcesSourceOfDistribution, setSourceOfDistribution] = useState({
+    localMedia: false,
+    regionalMedia: false,
+    sonko: false,
+    religiousOrg: false,
+    bloggers: false,
+    atcOmsu: false,
+    atcKhmao: false,
+    other: false
+  });
 
+  // Состояния для ссылок
+  const [linksSourceOfDistribution, setLinksSourceOfDistribution] = useState({
+    localMediaLink: "",
+    regionalMediaLink: "",
+    sonkoLink: "",
+    religiousOrgLink: "",
+    bloggersLink: "",
+    atcOmsuLink: "",
+    atcKhmaoLink: "",
+    otherLink: ""
+  });
+
+  // Состояние для описания, если выбрано "Другое"
+  const [otherSourceOfDistributionDescription, setotherSourceOfDistributionDescription] = useState("");
+
+  // Состояние для ошибок (для валидации ссылок)
+  const [errorsSourceOfDistribution, setErrors] = useState({
+    localMedia: "",
+    regionalMedia: "",
+    sonko: "",
+    religiousOrg: "",
+    bloggers: "",
+    atcOmsu: "",
+    atcKhmao: "",
+    other: ""
+  });
 
 
 
@@ -1622,7 +1659,29 @@ const [descriptions, setDescriptions] = useState({
           {formType === 11 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleForm11Submit({
+                e,
+                selectedTopic,
+                executor,
+                eventName,
+                eventDate,
+                eventDescription,
+                link,
+
+                hasFinancing,
+                financing,
+                financingOtherDescription,
+                isCooperation,
+                selectedOrganizations,
+                otherOrganizations,
+
+                audience,
+                otherAudienceDescription,
+
+                sourcesSourceOfDistribution,
+                linksSourceOfDistribution,
+                otherSourceOfDistributionDescription
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
@@ -1682,8 +1741,16 @@ const [descriptions, setDescriptions] = useState({
                     />
 
                     {/* Источник распространения */}
-                    <Info_SourceOfDistribution />
-
+                    <Info_SourceOfDistribution
+                      sources = {sourcesSourceOfDistribution} 
+                      setSources = {setSourceOfDistribution} 
+                      links = {linksSourceOfDistribution} 
+                      setLinks = {setLinksSourceOfDistribution}
+                      otherDescription = {otherSourceOfDistributionDescription} 
+                      setOtherDescription = {setotherSourceOfDistributionDescription} 
+                      errors = {errorsSourceOfDistribution} 
+                      setErrors = {setErrors}
+                    />
                   </div>
                 </section>
 
