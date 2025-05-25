@@ -31,6 +31,7 @@ import { handleForm1Submit } from "../components/EventFormHandlers/EventForm1Han
 import { handleForm2Submit } from "../components/EventFormHandlers/EventForm2Handler"; // путь подстраивай под себя
 import { handleForm3Submit } from "../components/EventFormHandlers/EventForm3Handler"; // путь подстраивай под себя
 import { handleForm4Submit } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
+import { handleForm6Submit } from "../components/EventFormHandlers/EventForm6Handler"; // путь подстраивай под себя
 import { handleForm7Submit } from "../components/EventFormHandlers/EventForm7Handler"; // путь подстраивай под себя
 import { handleForm9Submit } from "../components/EventFormHandlers/EventForm9Handler"; // путь подстраивай под себя
 
@@ -606,7 +607,25 @@ const [descriptions, setDescriptions] = useState({
     )
   );
 
+  const departments = [
+    { key: "umvd", label: "УМВД" },
+    { key: "prosecutor", label: "Прокуратура" },
+    { key: "roskomnadzor", label: "Роскомнадзор" },
+    { key: "fsb", label: "РУФСБ" }
+  ];
 
+  const [departmentStates, setDepartmentStates] = useState(
+    Object.fromEntries(
+      departments.map(({ key }) => [
+        key,
+        {
+          checked: false,
+          sentCount: "",
+          blockedCount: ""
+        }
+      ])
+    )
+  );
 
 
 
@@ -1307,9 +1326,12 @@ const [descriptions, setDescriptions] = useState({
               <form onSubmit={(e) => handleForm6Submit({
                 e,
                 selectedTopic,
-                
+                executor,
+                eventName,
+                eventDate,
+                eventDescription,
+                departmentStates
               })}>
-
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
                   <h2>Основная информация о мероприятии</h2>
@@ -1334,7 +1356,6 @@ const [descriptions, setDescriptions] = useState({
                     link={link}
                     setLink={setLink}
                     hideLink={["3.4.3"].includes(selectedTopic)}
-
                   />
                 </section>
 
@@ -1362,6 +1383,9 @@ const [descriptions, setDescriptions] = useState({
                     setProsecutorStatus={setProsecutorStatus}
                     umvdStatus={umvdStatus}  // передаем состояние
                     setUmvdStatus={setUmvdStatus}  // передаем функцию для изменения состояния
+                    departmentStates = {departmentStates}
+                    setDepartmentStates = {setDepartmentStates}
+                    departments = {departments}
                   />
                 </section>
                 <button type="submit" id="save_button">

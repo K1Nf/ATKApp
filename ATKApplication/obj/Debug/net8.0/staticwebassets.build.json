@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Dg6jkkJwfU4tJBL7qwIG7HzYxu7A1dszwyQTyqIeYpI=",
+  "Hash": "1KTQ8QsqLSfR3xKd4ZjOVCkx9VV2OAuSPpFBdPZyiXQ=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x6iq7adt6d",
-      "Integrity": "mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI=",
+      "Fingerprint": "whjvm8hz9g",
+      "Integrity": "dDrLHchzb+w1ZUv1AQgux93yhZDqn/ILfeCnB0MgP2Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
@@ -356,7 +356,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -393,7 +393,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -438,7 +438,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -483,7 +483,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -520,7 +520,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -565,7 +565,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -602,7 +602,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -647,7 +647,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -672,7 +672,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107914"
+          "Value": "109495"
         },
         {
           "Name": "Content-Type",
@@ -680,11 +680,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI=\""
+          "Value": "\"dDrLHchzb+w1ZUv1AQgux93yhZDqn/ILfeCnB0MgP2Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -694,12 +694,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI="
+          "Value": "sha256-dDrLHchzb+w1ZUv1AQgux93yhZDqn/ILfeCnB0MgP2Q="
         }
       ]
     },
     {
-      "Route": "assets/js/createEvent.x6iq7adt6d.js",
+      "Route": "assets/js/createEvent.whjvm8hz9g.js",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -709,7 +709,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107914"
+          "Value": "109495"
         },
         {
           "Name": "Content-Type",
@@ -717,11 +717,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI=\""
+          "Value": "\"dDrLHchzb+w1ZUv1AQgux93yhZDqn/ILfeCnB0MgP2Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -731,7 +731,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "x6iq7adt6d"
+          "Value": "whjvm8hz9g"
         },
         {
           "Name": "label",
@@ -739,7 +739,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI="
+          "Value": "sha256-dDrLHchzb+w1ZUv1AQgux93yhZDqn/ILfeCnB0MgP2Q="
         }
       ]
     },
@@ -766,7 +766,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -803,7 +803,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -848,7 +848,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -893,7 +893,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -930,7 +930,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -975,7 +975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1012,7 +1012,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1057,7 +1057,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1258,7 +1258,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1295,7 +1295,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1340,7 +1340,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1377,7 +1377,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1422,7 +1422,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1459,7 +1459,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+          "Value": "Sun, 25 May 2025 09:39:27 GMT"
         },
         {
           "Name": "Cache-Control",

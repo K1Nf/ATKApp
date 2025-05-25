@@ -1,26 +1,11 @@
 import { useState } from "react";
 
-const Info_DestrCont = () => {
-  const departments = [
-    { key: "umvd", label: "УМВД" },
-    { key: "prosecutor", label: "Прокуратура" },
-    { key: "roskomnadzor", label: "Роскомнадзор" },
-    { key: "fsb", label: "РУФСБ" }
-  ];
-
-  const [departmentStates, setDepartmentStates] = useState(
-    Object.fromEntries(
-      departments.map(({ key }) => [
-        key,
-        {
-          checked: false,
-          sentCount: "",
-          blockedCount: ""
-        }
-      ])
-    )
-  );
-
+const Info_DestrCont = ({
+  departmentStates,
+  setDepartmentStates,
+  departments
+  }) => {
+  
   const handleCheckboxChange = (key) => {
     setDepartmentStates((prev) => ({
       ...prev,

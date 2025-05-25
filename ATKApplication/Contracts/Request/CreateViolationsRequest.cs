@@ -6,6 +6,18 @@ namespace ATKApplication.Contracts.Request
 
     public enum Violations
     {
+        [EnumMember(Value = "УМВД")]
+        umvd,
+
+        [EnumMember(Value = "РУФСБ")]
+        fsb,
+
+        [EnumMember(Value = "Прокуратура")]
+        prosecutor,
+
+        [EnumMember(Value = "Роскомнадзор")]
+        roskomnadzor,
+
         [EnumMember(Value = "1. Включенные в Федеральный список запрещенной экстремистской литературы.")]
         law_15_1,
         
