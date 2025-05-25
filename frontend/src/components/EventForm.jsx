@@ -32,6 +32,7 @@ import { handleForm2Submit } from "../components/EventFormHandlers/EventForm2Han
 import { handleForm3Submit } from "../components/EventFormHandlers/EventForm3Handler"; // путь подстраивай под себя
 import { handleForm4Submit } from "../components/EventFormHandlers/EventForm4Handler"; // путь подстраивай под себя
 import { handleForm7Submit } from "../components/EventFormHandlers/EventForm7Handler"; // путь подстраивай под себя
+import { handleForm9Submit } from "../components/EventFormHandlers/EventForm9Handler"; // путь подстраивай под себя
 
 import { handleForm13Submit } from "../components/EventFormHandlers/EventForm13Handler"; // путь подстраивай под себя
 import { handleForm14Submit } from "../components/EventFormHandlers/EventForm14Handler"; // путь подстраивай под себя
@@ -574,6 +575,36 @@ const [descriptions, setDescriptions] = useState({
 
   // Состояние для текстового поля "Другое"
   const [otherAudienceDescription, setOtherAudienceDescription] = useState("");
+
+
+
+  const lawArticles = [
+    { key: "law_15_1", label: "1. Включенные в Федеральный список запрещенной экстремистской литературы." },
+    { key: "law_15_1_k", label: "2. Пункт к) статьи 15.1 — Изготовление ВВ, оружия и боеприпасов (кроме гражданского)" },
+    { key: "law_15_3_1", label: "3. Пункт 1) статьи 15.3 — Призывы к массовым беспорядкам, экстремизму" },
+    { key: "law_15_3_2", label: "4. Пункт 2) статьи 15.3 — Ложные сообщения об актах терроризма" },
+    { key: "law_15_3_3", label: "5. Пункт 3) статьи 15.3 — Недостоверная информация об использовании ВС РФ" },
+    { key: "law_15_3_4", label: "6. Пункт 4) статьи 15.3 — Финансирование противника" },
+    { key: "law_15_3_6", label: "7. Пункт 6) статьи 15.3 — Оправдание/обоснование экстремистской деятельности" },
+    { key: "law_15_3_8", label: "8. Пункт 8) статьи 15.3 — Материалы организаций, признанных нежелательными в РФ" },
+    { key: "law_other", label: "9. Другая информация" }
+  ];
+
+  const [laws, setLaws] = useState(
+    Object.fromEntries(
+      lawArticles.map(({ key }) => [
+        key,
+        {
+          checked: false,
+          decision: null,
+          orderNumber: null,
+          sentCount: 0,
+          blockedCount: 0,
+          otherText: ""
+        }
+      ])
+    )
+  );
 
 
 
@@ -1276,33 +1307,7 @@ const [descriptions, setDescriptions] = useState({
               <form onSubmit={(e) => handleForm6Submit({
                 e,
                 selectedTopic,
-                formType,
-                feedbackCollected,
-                selectedFeedbackTypes,
-                feedbackDescription,
-                hasFinancing,
-                financing,
-                financingOtherDescription,
-                isCooperation,
-                selectedOrganizations,
-                otherOrganizations,
-                equalFormat,
-                equalFormatDescription,
-                detailedInput,
-                participants,
-                customParticipants,
-                eventDate,
-                eventDescription,
-                eventName,
-                executor,
-                level,
-                formConducted,
-                bestEvent,
-                importantEvent,
-                resultDescription,
-                uprDescription,
-                totalParticipants,
-                link
+                
               })}>
 
                 {/* Основная информация о мероприятии */}
@@ -1534,14 +1539,25 @@ const [descriptions, setDescriptions] = useState({
           {formType === 9 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleForm9Submit({
+                e,
+                selectedTopic,
+                executor,
+                lawArticles,
+                laws,
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
                   <h2>Основная информация о мероприятии</h2>
 
-                  <Info_BlockMaterial />
-
+                  <Info_BlockMaterial
+                    executor = {executor}
+                    setExecutor = {setExecutor}
+                    lawArticles = {lawArticles}
+                    laws = {laws}
+                    setLaws = {setLaws}
+                  />
 
                 </section>
                 <button type="submit" id="save_button">

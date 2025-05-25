@@ -1,22 +1,36 @@
-﻿namespace ATKApplication.Models
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace ATKApplication.Models
 {
     public class EventForm3 : EventBase
     {
         public EventForm3() { }
 
-        public EventForm3(string actor, string name, 
-                            string content, DateOnly? date, Guid organizerId, 
-                            Guid themeId, string direct, 
-                            int materialsCount, string result)
-            : base(actor, name, content, date, organizerId, themeId)
+        private EventForm3(string actor, string? name, string? content, 
+                        DateOnly? date, Guid organizerId, Guid themeId, 
+                        int sendTotal, int blockedTotal)
+            : base(name, actor, content, date, organizerId, themeId)
         {
-            Direct = direct;
-            MaterialsCount = materialsCount;
-            Result = result;
+            SendTotal = sendTotal;
+            BlockedTotal = blockedTotal;
         }
 
-        public string Direct { get; set; }
-        public int MaterialsCount { get; set; }
-        public string Result { get; set; }
+        public int SendTotal { get; set; }
+        public int BlockedTotal { get; set; }
+
+        public List<Violation> Violations { get; set; } = [];
+
+
+        public static EventForm3? Create(string actor, string? name, string? content,
+                        DateOnly? date, Guid organizerId, Guid themeId,
+                        int sendTotal, int blockedTotal)
+        {
+            if (blockedTotal > sendTotal)
+                return null;
+
+            return new(actor, name, content,
+                        date, organizerId, themeId,
+                        sendTotal, blockedTotal);
+        }
     }
 }

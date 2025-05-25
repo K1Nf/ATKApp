@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PsqXLZ94kCxrpWyZj5nBXXmlfYqe7erf8HJEWyH7Sx4=",
+  "Hash": "Dg6jkkJwfU4tJBL7qwIG7HzYxu7A1dszwyQTyqIeYpI=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "aqwggsfloh",
-      "Integrity": "TsaWmOlHluOpdzfNLEaOIzNuEwxRBA9GUUT97AxNvkI=",
+      "Fingerprint": "x6iq7adt6d",
+      "Integrity": "mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6t30rdsdpl",
-      "Integrity": "tp014kEvM/qnlMsPhT2WqQj1cBbZhs5MbsRFc19KOeU=",
+      "Fingerprint": "ye39umizso",
+      "Integrity": "ik9/JVu6fVkFL/g/5paeqqurpobHaz6PgMhpAJVnFtM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\eventCard.js"
@@ -356,7 +356,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -393,7 +393,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -438,7 +438,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -483,7 +483,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -520,7 +520,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -565,7 +565,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -602,7 +602,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -647,7 +647,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -662,51 +662,6 @@
       ]
     },
     {
-      "Route": "assets/js/createEvent.aqwggsfloh.js",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "107322"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TsaWmOlHluOpdzfNLEaOIzNuEwxRBA9GUUT97AxNvkI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 04:37:33 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "aqwggsfloh"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/createEvent.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TsaWmOlHluOpdzfNLEaOIzNuEwxRBA9GUUT97AxNvkI="
-        }
-      ]
-    },
-    {
       "Route": "assets/js/createEvent.js",
       "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
@@ -717,7 +672,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107322"
+          "Value": "107914"
         },
         {
           "Name": "Content-Type",
@@ -725,11 +680,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TsaWmOlHluOpdzfNLEaOIzNuEwxRBA9GUUT97AxNvkI=\""
+          "Value": "\"mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 25 May 2025 04:37:33 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -739,13 +694,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-TsaWmOlHluOpdzfNLEaOIzNuEwxRBA9GUUT97AxNvkI="
+          "Value": "sha256-mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI="
         }
       ]
     },
     {
-      "Route": "assets/js/eventCard.6t30rdsdpl.js",
-      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
+      "Route": "assets/js/createEvent.x6iq7adt6d.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -754,7 +709,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6408"
+          "Value": "107914"
         },
         {
           "Name": "Content-Type",
@@ -762,11 +717,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tp014kEvM/qnlMsPhT2WqQj1cBbZhs5MbsRFc19KOeU=\""
+          "Value": "\"mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -776,15 +731,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6t30rdsdpl"
+          "Value": "x6iq7adt6d"
         },
         {
           "Name": "label",
-          "Value": "assets/js/eventCard.js"
+          "Value": "assets/js/createEvent.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tp014kEvM/qnlMsPhT2WqQj1cBbZhs5MbsRFc19KOeU="
+          "Value": "sha256-mb0LI0y3GF4hxrqk+HulV22xGxgIldtp7oW0HLqv+HI="
         }
       ]
     },
@@ -799,7 +754,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6408"
+          "Value": "6421"
         },
         {
           "Name": "Content-Type",
@@ -807,11 +762,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tp014kEvM/qnlMsPhT2WqQj1cBbZhs5MbsRFc19KOeU=\""
+          "Value": "\"ik9/JVu6fVkFL/g/5paeqqurpobHaz6PgMhpAJVnFtM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -821,7 +776,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tp014kEvM/qnlMsPhT2WqQj1cBbZhs5MbsRFc19KOeU="
+          "Value": "sha256-ik9/JVu6fVkFL/g/5paeqqurpobHaz6PgMhpAJVnFtM="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/eventCard.ye39umizso.js",
+      "AssetFile": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ik9/JVu6fVkFL/g/5paeqqurpobHaz6PgMhpAJVnFtM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ye39umizso"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/eventCard.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ik9/JVu6fVkFL/g/5paeqqurpobHaz6PgMhpAJVnFtM="
         }
       ]
     },
@@ -848,7 +848,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -893,7 +893,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -930,7 +930,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -975,7 +975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1012,7 +1012,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1057,7 +1057,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1258,7 +1258,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1295,7 +1295,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1340,7 +1340,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1377,7 +1377,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1422,7 +1422,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1459,7 +1459,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 14:43:03 GMT"
+          "Value": "Sun, 25 May 2025 08:06:58 GMT"
         },
         {
           "Name": "Cache-Control",

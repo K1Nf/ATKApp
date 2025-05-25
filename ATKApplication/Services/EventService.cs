@@ -43,6 +43,7 @@ namespace ATKApplication.Services
 
             var eventForm3 = await _dB.EventForm3s
                 .WithBaseIncludes()
+                .Include(x => x.Violations)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             if (eventForm3 != null)
@@ -224,18 +225,30 @@ namespace ATKApplication.Services
         {
             var (eventDate, themeId) = GetThemeIdAndDate(createEventForm3Request.Date, createEventForm3Request.ThemeCode);
 
-            var eventForm3 = new EventForm3(createEventForm3Request.Actor, createEventForm3Request.Name,
+            var createViolationsRequest = createEventForm3Request.CreateViolationsRequest;
+
+
+            int sendMaterialsTotal = createViolationsRequest.Violations
+                .Sum(x => x.Value.SentCount);
+
+            int blockedMaterialsTotal = createViolationsRequest.Violations
+                .Sum(x => x.Value.BlockedCount);
+
+
+            var eventForm3 = EventForm3.Create(createEventForm3Request.Actor, createEventForm3Request.Name,
                                         createEventForm3Request.Content, eventDate, tokenId,
-                                        themeId, createEventForm3Request.Direct,
-                                        createEventForm3Request.MaterialsCount, createEventForm3Request.Result);
+                                        themeId, sendMaterialsTotal, blockedMaterialsTotal);
             
+
+            if (eventForm3 == null)
+                return Result.Failure<EventForm3>("Количество заблокированных материалов не может быть больше отправленных");
+
 
             using var transaction = await _dB.Database.BeginTransactionAsync();
             
             try
             {
-                await CreateMediaLinkAsync(createEventForm3Request.CreateMediaLinkRequest, eventForm3.Id);
-                await CreateParticipantsAsync(createEventForm3Request.CreateParticipantsRequest, eventForm3.Id);
+                await CreateViolationAsync(createViolationsRequest, eventForm3.Id);
                 await _dB.EventForm3s.AddAsync(eventForm3);
 
 
@@ -303,9 +316,11 @@ namespace ATKApplication.Services
 
             try
             {
-                await _dB.EventsBase
-                    .Where(x => x.Id == eventId)
-                    .ExecuteDeleteAsync();
+                var @event = await _dB.EventsBase
+                    .FirstOrDefaultAsync(x => x.Id == eventId);
+
+                if(@event != null)
+                    _dB.Remove(@event);
 
                 await transaction.CommitAsync();
                 return Result.Success();
@@ -642,6 +657,33 @@ namespace ATKApplication.Services
                 
                     if(support != null)
                         await _dB.Supports.AddAsync(support);
+                }
+            }
+        }
+
+
+
+        private async Task CreateViolationAsync(CreateViolationsRequest? createViolationsRequest, Guid eventId)
+        {
+            if (createViolationsRequest is not null)
+            {
+                var violationsDTOList = createViolationsRequest.Violations;
+
+                foreach (var violationsDTO in violationsDTOList)
+                {
+                    string key = 
+                        violationsDTO.Key == Violations.law_other ? 
+                        violationsDTO.Value.OtherText ?? "" : 
+                        violationsDTO.Key.ToString();
+
+
+                    var violation = Violation.Create(key,
+                        violationsDTO.Value.SentCount, violationsDTO.Value.BlockedCount, 
+                        violationsDTO.Value.OrderNumber, eventId);
+
+
+                    if (violation != null)
+                        await _dB.Violations.AddAsync(violation);
                 }
             }
         }
