@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tellu\\vkr-atk-app\\",
+  "WorkspaceRootPath": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\tellu\\vkr-atk-app\\atkapplication\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\tellu\\vkr-atk-app\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\tellu\\vkr-atk-app\\atkapplication\\models\\audience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\models\\audience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\models\\audience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\tellu\\vkr-atk-app\\atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\tellu\\vkr-atk-app\\atkapplication\\contracts\\request\\createsupportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\1\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\atkapp\\atkapplication\\contracts\\request\\createsupportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\contracts\\request\\createsupportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,70 +30,124 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DataBaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\DataBase\\DataBaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\DataBase\\DataBaseContext.cs",
               "RelativeDocumentMoniker": "ATKApplication\\DataBase\\DataBaseContext.cs",
-              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\DataBase\\DataBaseContext.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\DataBase\\DataBaseContext.cs",
               "RelativeToolTip": "ATKApplication\\DataBase\\DataBaseContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAADwvygAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCQAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T17:48:35.836Z",
+              "WhenOpened": "2025-05-25T04:38:26.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "CreateSupportRequest.cs",
-              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
-              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
               "RelativeToolTip": "ATKApplication\\Contracts\\Request\\CreateSupportRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T14:32:04.562Z"
+              "WhenOpened": "2025-05-25T04:38:26.146Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "EventService.cs",
-              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Services\\EventService.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Services\\EventService.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Services\\EventService.cs",
-              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Services\\EventService.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Services\\EventService.cs",
               "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
               "ViewState": "AgIAAFoCAAAAAAAAAAAowGsCAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T13:41:24.099Z"
+              "WhenOpened": "2025-05-25T04:38:26.151Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Audience.cs",
-              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Models\\Audience.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\Audience.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Models\\Audience.cs",
-              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Models\\Audience.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Models\\Audience.cs",
               "RelativeToolTip": "ATKApplication\\Models\\Audience.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T12:07:44.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T04:38:26.154Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
+              "DocumentMoniker": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
+              "ToolTip": "C:\\Users\\1\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\AtkApp\\ATKApplication\\Controllers\\EventController.cs",
               "RelativeToolTip": "ATKApplication\\Controllers\\EventController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T12:02:48.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T04:38:26.156Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 171,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 74,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 672,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1883,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }
