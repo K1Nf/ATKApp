@@ -36,6 +36,7 @@ import { handleForm7Submit } from "../components/EventFormHandlers/EventForm7Han
 import { handleForm9Submit } from "../components/EventFormHandlers/EventForm9Handler"; // путь подстраивай под себя
 
 import { handleForm11Submit } from "../components/EventFormHandlers/EventForm11Handler"; // путь подстраивай под себя
+import { handleForm12Submit } from "../components/EventFormHandlers/EventForm12Handler"; // путь подстраивай под себя
 import { handleForm13Submit } from "../components/EventFormHandlers/EventForm13Handler"; // путь подстраивай под себя
 import { handleForm14Submit } from "../components/EventFormHandlers/EventForm14Handler"; // путь подстраивай под себя
 import { handleForm16Submit } from "../components/EventFormHandlers/EventForm16Handler"; // путь подстраивай под себя
@@ -347,8 +348,13 @@ const [descriptions, setDescriptions] = useState({
   winnerDetails: ""
 });
 
+  // Состояния для обязательных полей
+  const [concourseParticipant, setConcourseParticipant] = useState("");
+  const [applicationName, setApplicationName] = useState("");
+  const [awardName, setAwardName] = useState("");
 
-
+  // Состояние для результата участия
+  const [takePartResult, setTakePartResult] = useState("");
 
 
 
@@ -950,23 +956,31 @@ const [descriptions, setDescriptions] = useState({
               <form onSubmit={(e) => handleForm2Submit({
                 e,
                 selectedTopic,
-                equalFormat,
-                equalFormatDescription,
+                executor,
+                eventName,
+                eventDate,
+                eventDescription,
+                link,
+                level,
+                formConducted,
+                
+                isCompetitionDirectionChecked,
+                competitionDescription,
+                participationResult,
+                winnerDetails,
+                
+                supportTypes,
+                supportTypesDescription,
+                
                 detailedInput,
                 participants,
                 customParticipants,
                 totalParticipants,
-                eventDate,
-                eventDescription,
-                eventName,
-                executor,
-                level,
-                formConducted,
-                bestEvent,
+                
                 importantEvent,
-                link,
-                supportTypes,
-                supportTypesDescription,
+                bestEvent,
+                equalFormat,
+                equalFormatDescription,
               })}>
 
                 {/* Основная информация о мероприятии */}
@@ -1764,14 +1778,31 @@ const [descriptions, setDescriptions] = useState({
           {formType === 12 && (
             <div id="form_theme_1" className="form-block">
               <h1>Форма создания мероприятия</h1>
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={(e) => handleForm12Submit({
+                e,
+                selectedTopic,
+
+                concourseParticipant,
+                applicationName,
+                awardName,
+                takePartResult
+              })}>
 
                 {/* Основная информация о мероприятии */}
                 <section className="form-section1">
                   <h2>Основная информация о мероприятии</h2>
                   {/* Наименование, дата, краткое описание*/}
 
-                  <Info_DistrictCompetition />
+                  <Info_DistrictCompetition
+                    participant = {concourseParticipant}
+                    setParticipant = {setConcourseParticipant}
+                    applicationName = {applicationName}
+                    setApplicationName = {setApplicationName}
+                    awardName = {awardName}
+                    setAwardName = {setAwardName}
+                    result = {takePartResult}
+                    setResult = {setTakePartResult}
+                  />
 
 
 

@@ -4,25 +4,32 @@ import "toastr/build/toastr.min.css";
 export const handleForm2Submit = async ({
   e,
   selectedTopic,
-  equalFormat,
-  equalFormatDescription,
+  executor,
+  eventName,
+  eventDate,
+  eventDescription,
+  link,
+  level,
+  formConducted,
+
+  isCompetitionDirectionChecked,
+  competitionDescription,
+  participationResult,
+  winnerDetails,
+
+  supportTypes,
+  supportTypesDescription,
+
   detailedInput,
   participants,
   customParticipants,
   totalParticipants,
-  eventDate,
-  eventDescription,
-  eventName,
-  executor,
-  level,
-  formConducted,
-  bestEvent,
+
   importantEvent,
-  link,
-  supportTypes,
-  supportTypesDescription,
-  // пропс описания конкурса
-  // пропс описания результата участия в конкурсе
+  bestEvent,
+  equalFormat,
+  equalFormatDescription,
+
 }) => {
   e.preventDefault();
 
@@ -71,9 +78,9 @@ export const handleForm2Submit = async ({
     //{ value: projectName, id: "event_name" },
     { value: eventDate, id: "event_date" },
     { value: eventDescription, id: "event_description" },
+    { value: link, id: "link" }
   ];
 
-  requiredFields.push({ value: link, id: "link" });
 
   // Проверка обязательных полей
   requiredFields.forEach((field) => {
@@ -116,10 +123,9 @@ export const handleForm2Submit = async ({
         console.log("descKey: " + descKey);
         console.log("flags[key]: " + flags[key]);
 
-        let description = descriptions[descKey]; 
+        let description = descriptions[descKey];
 
-        if(description == "" || description == undefined)
-        {
+        if (description == "" || description == undefined) {
           console.log("descripitons was null or undefined");
           descKey = key;
           description = descriptions[descKey];
@@ -127,7 +133,7 @@ export const handleForm2Submit = async ({
 
         console.log(description); // даже не выводит
         if (description?.trim()) {
-          result.push({key, description});
+          result.push({ key, description });
         }
       }
     }
@@ -137,12 +143,25 @@ export const handleForm2Submit = async ({
 
   const selectedSupportTypes = buildSupportMap(supportTypes, supportTypesDescription);
 
-  let createEventRequest = {
+
+  // обработка направления на конкурс
+  
+  // проверка, нажати ли вообще галочка
+  competitionDescription = isCompetitionDirectionChecked ? competitionDescription : null;
+  participationResult = isCompetitionDirectionChecked ? participationResult : null;
+  winnerDetails = isCompetitionDirectionChecked ? winnerDetails : null;
+
+  // проверка на результат
+  winnerDetails = participationResult === "participant" ? null : winnerDetails
+
+
+  let createEventForm1Request = {
     themeCode: selectedTopic,
-    name: eventName,
     actor: executor,
-    content: eventDescription,
+    name: eventName,
     date: eventDate,
+    content: eventDescription,
+
     level: level,
     form: formConducted,
     isBestPractice: bestEvent,
@@ -166,44 +185,41 @@ export const handleForm2Submit = async ({
     },
 
     createConcourseRequest: {
-    // concourseDescription: *пропс описания конкурса*
-    // concourseResultDescription: *пропс описания результата участия в конкурсе*
+      description: competitionDescription,
+      result: participationResult,
+      details: winnerDetails,
     }
 
   };
   console.log("---------------");
-  console.log(createEventRequest);
+  console.log(createEventForm1Request);
   console.log("---------------");
 
-  const backCreateUrl = `/api/ref/events/createform1`;
 
+  try {
+    const response = await fetch(`/api/ref/events/createform1`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(createEventForm1Request)
+    });
 
+    if (!response.ok) {
+      throw new Error("Ошибка при создании события");
+    }
 
+    const data = await response.text();
+    console.log("Событие создано:", data);
 
-  // try {
-  //   const response = await fetch(backCreateUrl, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(createEventRequest)
-  //   });
+    //Показать уведомление
+    toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
+    window.setTimeout(function () {
+        // Move to a new location or you can do something else
+        window.location.href = "/";
+      }, 3000);
 
-  //   if (!response.ok) {
-  //     throw new Error("Ошибка при создании события");
-  //   }
-
-  //   const data = await response.text();
-  //   console.log("Событие создано:", data);
-
-  //   //Показать уведомление
-  //   toastr.success("Данные успешно сохранены и добавлены в таблицу!", "Успех");
-  //   window.setTimeout(function () {
-  //       // Move to a new location or you can do something else
-  //       window.location.href = "/";
-  //     }, 3000);
-
-  // } catch (error) {
-  //   console.error("Ошибка:", error);
-  // }
+  } catch (error) {
+    console.error("Ошибка:", error);
+  }
 };

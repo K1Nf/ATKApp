@@ -24,6 +24,7 @@ namespace ATKApplication.Services
                 .WithBaseIncludes()
                 .Include(x => x.Finance)
                 .Include(x => x.FeedBack)
+                .Include(x => x.Concourse)
                 .Include(x => x.InterAgencyCooperations)
                 .Include(x => x.Supports)
                 .Include(x => x.Audiences)
@@ -161,6 +162,7 @@ namespace ATKApplication.Services
                 await CreateAudienceAsync(createEventForm1Request.CreateAudienceRequest, eventForm1.Id);
 
                 await CreateSourceOfDestinationAsync(createEventForm1Request.CreateSourcesOfDistributionRequest, eventForm1.Id);
+                await CreateConcourseAsync(createEventForm1Request.CreateConcourseRequest, eventForm1.Id);
 
                 await _dB.EventForm1s.AddAsync(eventForm1);
 
@@ -706,6 +708,22 @@ namespace ATKApplication.Services
             }
         }
 
+
+
+        private async Task CreateConcourseAsync(CreateConcourseRequest? createConcourseRequest, Guid eventId)
+        {
+            if (createConcourseRequest is not null)
+            {
+                var concourse = new Concourse(createConcourseRequest.Description, 
+                    createConcourseRequest.Result, 
+                    createConcourseRequest.Details,
+                    eventId);
+                
+                if (concourse != null)
+                        await _dB.Concourses.AddAsync(concourse);
+            }
+        }
+        
 
 
         private static string GetMonth(int month)

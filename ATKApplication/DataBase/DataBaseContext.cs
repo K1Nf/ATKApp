@@ -26,6 +26,7 @@ namespace ATKApplication.DataBase
         public DbSet<Audience> Audiences { get; set; }
         public DbSet<Support> Supports { get; set; }
         public DbSet<Violation> Violations { get; set; }
+        public DbSet<Concourse> Concourses { get; set; }
 
 
         public DbSet<InterAgencyCooperation> InterAgencyCooperations { get; set; }

@@ -2,8 +2,8 @@
 
 namespace ATKApplication.Contracts.Request
 {
-    public record CreateInterAgencyCooperationRequest(Dictionary<string, SelectedOrganizations>? SelectedOrganizations, 
-                                                        List<CustomOrganizations?>? CustomOrganizations);
+    public record CreateInterAgencyCooperationRequest(Dictionary<string, SelectedOrganizations> SelectedOrganizations, 
+                                                        List<CustomOrganizations> CustomOrganizations);
 
     public class SelectedOrganizations
     {

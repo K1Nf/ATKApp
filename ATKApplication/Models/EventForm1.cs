@@ -34,6 +34,7 @@ namespace ATKApplication.Models
 
         public Finance? Finance { get; set; }
         public FeedBack? FeedBack { get; set; }
+        public Concourse? Concourse { get; set; }
         public List<Support> Supports { get; set; } = [];
         public List<Audience> Audiences { get; set; } = [];
         public List<InterAgencyCooperation> InterAgencyCooperations { get; set; } = [];

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 
-const Info_DistrictCompetition = () => {
-  // Состояния для обязательных полей
-  const [participant, setParticipant] = useState("");
-  const [applicationName, setApplicationName] = useState("");
-  const [awardName, setAwardName] = useState("");
+const Info_DistrictCompetition = ({
+  participant, 
+  setParticipant, 
+  applicationName, 
+  setApplicationName, 
+  awardName, 
+  setAwardName, 
+  result, 
+  setResult, 
+}) => {
 
-  // Состояние для результата участия
-  const [result, setResult] = useState("");
 
   // Ошибки
   const [errorParticipant, setErrorParticipant] = useState("");

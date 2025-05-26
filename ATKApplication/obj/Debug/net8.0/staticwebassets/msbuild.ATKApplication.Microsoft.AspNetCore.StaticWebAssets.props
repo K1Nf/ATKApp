@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dbi6k87t33</Fingerprint>
-      <Integrity>x/n/oUCqMeLKBh01vq/LSAY0Kc3RLqnpznxAx/ffRN8=</Integrity>
+      <Fingerprint>75no8tn72g</Fingerprint>
+      <Integrity>1ahs1Jr9UvC7vdDY0w++7zdf9OUN2BPAqGM4Bumlv4Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</OriginalItemSpec>
