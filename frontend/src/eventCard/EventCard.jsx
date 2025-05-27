@@ -5,48 +5,48 @@ import "toastr/build/toastr.min.css";
 
 const EventCard = () => {
   // Модальное окно и логика удаления
-    const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-    const handleDelete = async () => {
-      // Здесь логика удаления
+  const handleDelete = async () => {
+    // Здесь логика удаления
 
-      let pathToDelete = "/api/ref/events/delete/" + data.id;
-      try {
-        const response = await fetch(pathToDelete, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-    
-        if (!response.ok) {
-            throw new Error("Ошибка при удалении события");
-            // обработка ошибки
+    let pathToDelete = "/api/ref/events/delete/" + data.id;
+    try {
+      const response = await fetch(pathToDelete, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
         }
-    
-        if(response.status == 204){
+      });
 
-          // сделать кнопки disabled (не доступными для клика)
-          
+      if (!response.ok) {
+        throw new Error("Ошибка при удалении события");
+        // обработка ошибки
+      }
 
-          const data = await response.text();
-          //console.log("Событие удалено с сообщением:", data);
+      if (response.status == 204) {
 
-          //  Показать уведомление
-          toastr.success("Мероприятие успешно удалено из системы!", "Удалено");
-
-          setTimeout(() => {
-            window.location.href="/events";
-          }, 3000);
-        }
-        
-      } catch (error) {
-          console.error("Ошибка:", error);
-      } 
+        // сделать кнопки disabled (не доступными для клика)
 
 
-      setShowModal(false);
-    };
+        const data = await response.text();
+        //console.log("Событие удалено с сообщением:", data);
+
+        //  Показать уведомление
+        toastr.success("Мероприятие успешно удалено из системы!", "Удалено");
+
+        setTimeout(() => {
+          window.location.href = "/events";
+        }, 3000);
+      }
+
+    } catch (error) {
+      console.error("Ошибка:", error);
+    }
+
+
+    setShowModal(false);
+  };
 
 
   const [data, setData] = useState(null);
@@ -88,10 +88,10 @@ const EventCard = () => {
   return (
     <div className="container">
       <div className="event-card">
-        <h2>Основная информация о мероприятии "{data.name}"</h2>
+        <h2>Основная информация о мероприятии {data.name ?? ""}</h2>
         <section>
-          <label>Номер темы:</label>
-          <p>"№ {data.theme.code}</p>
+          <label>Номер темы: {data.theme.code}</label>
+          {/* <p></p> */}
         </section>
 
         <section>
@@ -99,129 +99,232 @@ const EventCard = () => {
           <p>{data.theme.description}</p>
         </section>
 
-        <section>
-          <label>Исполнитель</label>
-          <p>{data.actor}</p>
-        </section>
-        
-        <section>
-          <label>Наименование мероприятия:</label>
-          <p>{data.name}</p>
-        </section>
 
-        <section>
-          <label>Дата проведения:</label>
-          <p>{data.date}</p>
-        </section>
-        
-        <section>
-          <label>Краткое описание мероприятия:</label>
-          <p>{data.content}</p>
-        </section>
-        
-        <section>
-          <label>Уровень мероприятия:</label>
-          <p>{data.levelType}</p>
-        </section>
-
-
-       {data.eventType && (
+        {data.actor && (
           <section>
-            <h2>Форма проведения</h2>
+            <label>Исполнитель</label>
+            <p>{data.actor}</p>
+          </section>
+        )}
+
+
+        {data.name && (
+          <section>
+            <label>Наименование мероприятия:</label>
+            <p>{data.name}</p>
+          </section>
+        )}
+
+
+        {data.date && (
+          <section>
+            <label>Дата проведения:</label>
+            <p>{data.date}</p>
+          </section>
+        )}
+
+
+        {data.content && (
+          <section>
+            <label>Краткое описание мероприятия:</label>
+            <p>{data.content}</p>
+          </section>
+        )}
+
+
+        {data.levelType && (
+          <section>
+            <label>Уровень мероприятия:</label>
+            <p>{data.levelType}</p>
+          </section>
+        )}
+
+        {data.eventType && (
+          <section>
+            <label>Форма проведения</label>
             <p>{data.eventType}</p>
           </section>
         )}
 
-        
-        
-        <section>
-          <label>Ссылка на СМИ/СМК:</label>
 
-          {data.mediaLinks.map((link) => (
-            <tr key={link.id}>
-              <a href={link.content} target="_blank" rel="noopener noreferrer">{link.content}</a>
-            </tr>
-          ))}
+        {data.mediaLinks && data.mediaLinks.length > 0 && (
+          <section>
+            <label>Ссылка на СМИ/СМК:</label>
 
-          
-        </section>
+            {data.mediaLinks.map((link) => (
+              <tr key={link.id}>
 
-
-        {/* <section>
-          <h2>Количество участников</h2>
-          <p><strong>Школьники:</strong> {data.category.schools}</p>
-          <p><strong>Студенты:</strong> {data.category.students}</p>
-          <p><strong>Работающая молодежь:</strong> {data.category.workingYouth}</p>
-          <p><strong>Неработающая молодежь:</strong> {data.category.notWorkingYouth}</p>
-          <p><strong>Мигранты:</strong> {data.category.migrants}</p>
-          <p><strong>На учете:</strong> {data.category.registrated}</p>
-          <p><strong>Общее количество: {data.category.total} </strong></p>
-        </section> */}
-
-       
-        <section>
-          <h2>Финансирование</h2>
-          <p><strong>Муниципальный бюджет:</strong> {data.finance.municipalBudget} руб.</p>
-          <p><strong>Окружной бюджет:</strong> {data.finance.regionalBudget} руб.</p>
-          <p><strong>Гранты/Субсидии:</strong> {data.finance.granteBudget} руб.</p>
-          <p><strong>Другое:</strong> {data.finance.otherBudget} руб.</p>
-          <p><strong>ИТОГО: {data.finance.total} руб. </strong></p>
-        </section>
-
-
-        <section>
-          <h2>Обратная связь</h2>
-          <p><strong>Опрос:</strong> {data.feedBack.hasOpros ? "Да" : "Нет"}</p>
-          <p><strong>Онлайн-опрос:</strong> {data.feedBack.hasInternet ? "Да" : "Нет"}</p>
-          <p><strong>Анкетирование:</strong> {data.feedBack.hasGuestionnaire ? "Да" : "Нет"}</p>
-          <p><strong>Интервью:</strong> {data.feedBack.hasInterview ? "Да" : "Нет"}</p>
-          <p><strong>Другое:</strong> {data.feedBack.hasOther ? "Да" : "Нет"}</p>
-          <p><strong>Описание:</strong> {data.feedBack.description}</p>
-        </section>
-        
-        
-        <section>
-          <h2>Взаимодействие</h2>
-          <table style={{color:"black", border:"2px black solid"}}>
-            <thead style={{color:"black", border:"2px black solid"}}>
-              <tr style={{color:"black", border:"2px black solid"}}>
-                <td style={{color:"black", border:"2px black solid"}}>Организация</td>
-                <td style={{color:"black", border:"2px black solid"}}>Тип участия</td>
-                <td style={{color:"black", border:"2px black solid"}}>Описание</td>
+                {link.organizationName && (
+                  <label>СМИ: {link.organizationName}</label>
+                )}
+                <a href={link.content} target="_blank" rel="noopener noreferrer">{link.content}</a>
               </tr>
-            </thead>
-            <tbody style={{color:"black", border:"2px black solid"}}>
-              {data.interAgencyCooperations.map((element) => ( // ✅ исправили forEach на map
-                <tr key={element.id} style={{color:"black", border:"2px black solid"}}>
-                  <td style={{color:"black", border:"2px black solid"}}>{element.organization}</td>
-                  <td style={{color:"black", border:"2px black solid"}}>{element.role}</td>
-                  <td style={{color:"black", border:"2px black solid"}}>{element.description}</td>
+            ))}
+
+          </section>
+        )}
+
+
+        {data.categories && data.categories.length > 0 && (
+          <section>
+            <h2>Участники мероприятия</h2>
+            {data.categories.map((category) => (
+              <tr key={category.id}>
+                <p><strong>{category.name}: </strong>{category.count}</p>
+              </tr>
+            ))}
+          </section>
+        )}
+
+
+        {data.finance && (
+          <section>
+            <h2>Финансирование</h2>
+            <p><strong>Муниципальный бюджет:</strong> {data.finance?.municipalBudget} руб.</p>
+            <p><strong>Окружной бюджет:</strong> {data.finance?.regionalBudget} руб.</p>
+            <p><strong>Гранты/Субсидии:</strong> {data.finance?.granteBudget} руб.</p>
+            <p><strong>Другое:</strong> {data.finance?.otherBudget} руб.</p>
+            <p><strong>ИТОГО: {data.finance?.total} руб. </strong></p>
+          </section>
+        )}
+
+
+        {data.feedBack && (
+          <section>
+            <h2>Обратная связь</h2>
+            <p><strong>Опрос:</strong> {data.feedBack.hasOpros ? "Да" : "Нет"}</p>
+            <p><strong>Онлайн-опрос:</strong> {data.feedBack.hasInternet ? "Да" : "Нет"}</p>
+            <p><strong>Анкетирование:</strong> {data.feedBack.hasGuestionnaire ? "Да" : "Нет"}</p>
+            <p><strong>Интервью:</strong> {data.feedBack.hasInterview ? "Да" : "Нет"}</p>
+            <p><strong>Другое:</strong> {data.feedBack.hasOther ? "Да" : "Нет"}</p>
+            <p><strong>Описание:</strong> {data.feedBack.description}</p>
+          </section>
+        )}
+
+
+        {data.interAgencyCooperations && data.interAgencyCooperations.length > 0 && (
+          <section>
+            <h2>Взаимодействие</h2>
+            <table style={{ color: "black", border: "1px black solid" }}>
+              <thead style={{ color: "black", border: "1px black solid" }}>
+                <tr style={{ color: "black", border: "1px black solid" }}>
+                  <td style={{ color: "black", border: "1px black solid" }}>Организация</td>
+                  <td style={{ color: "black", border: "1px black solid" }}>Тип участия</td>
+                  <td style={{ color: "black", border: "1px black solid" }}>Описание</td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
+              </thead>
+              <tbody style={{ color: "black", border: "1px black solid" }}>
+                {data.interAgencyCooperations.map((element) => ( // ✅ исправили forEach на map
+                  <tr key={element.id} style={{ color: "black", border: "1px black solid" }}>
+                    <td style={{ color: "black", border: "1px black solid" }}>{element.organization}</td>
+                    <td style={{ color: "black", border: "1px black solid" }}>{element.role}</td>
+                    <td style={{ color: "black", border: "1px black solid" }}>{element.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
 
 
-        <section>
-          <h2>Дополнительные характеристики</h2>
-          <p><strong>Значимое мероприятие: </strong> {data.isValuable ? "Да" : "Нет"}</p>
-          <p><strong>Включено в сборник лучших практик: </strong> {data.isBestPractice ? "Да" : "Нет"}</p>
-          <p><strong>Формат равный равному: </strong> {data.equalToEqualDescription}</p>
+        {/* фиксануть хранение в БД  */}
+        {data.supports && data.supports.length > 0 && (
+          <section>
+            
+            <h2>Поддержка</h2>
+            {data.supports.map((support) => (
+              <tr key={support.id}>
+                <p><strong>{support.supportType}: </strong>{support.description}</p>
+              </tr>
+            ))}
+          </section>
+        )}
 
-        </section>
-        {/* <button className = "edit" type="button">Редактировать</button> */}
-        <button className = "delete" type="button" onClick={() => setShowModal(true)}>Удалить</button>
+
+        {data.audiences && data.audiences.length > 0 && (
+          <section>
+            <h2>Целевая аудитория</h2>
+            {data.audiences.map((audience) => (
+              <tr key={audience.id}>
+                <p><strong>  {audience.category}</strong></p>
+              </tr>
+            ))}
+          </section>
+        )}
+
+
+        {data.theme.code === "1.3.5" && (
+          <section>
+            <h2>Отправка</h2>
+            <p><strong>Отправка в НАК: {data.directToNAC ? "Да" : "Нет"}</strong></p>
+            <p><strong>Отправка в субъекты: {data.directToSubjects ?? "Нет"}</strong></p>
+          </section>
+        )}
+
+
+        {data.agreements && data.agreements.length > 0 && (
+          <section>
+            <h2>Согласования</h2>
+            {data.agreements.map((agreement) => (
+              <tr key={agreement.id}>
+                <p><strong>Организация: {agreement.organization}</strong></p>
+                <p><strong>Результат: {agreement.result}</strong></p>
+                <p><strong>Описание: {agreement.description?? "Нет"}</strong></p>
+              </tr>
+            ))}
+          </section>
+        )}
+        
+        
+        {data.violations && data.violations.length > 0 && (
+          <section>
+            <h2>Выявленные нарушения и блокировки: </h2>
+            {data.violations.map((violation) => (
+              <tr key={violation.id}>
+                <p><strong>Орган власти или статья: {violation.name}</strong></p>
+                <p><strong>Количество заблокированных/отправленных материалов: {violation.blocked}/{violation.send}</strong></p>
+                {/* <p><strong>Количество отправленных материалов: {violation.send}</strong></p> */}
+
+                {violation.order && (
+                  <p><strong>Соответствующий приказ: {violation.order}</strong></p>
+                )}
+              </tr>
+            ))}
+          </section>
+        )}
+        
+        
+        {data.concourse && (
+          <section>
+            <h2>Направление на участие в конкурсе</h2>
+            <p><strong>Название/описание конкурса: </strong> {data.concourse.description}</p>
+            <p><strong>Результат конкурса: </strong> {data.concourse.result}</p>
+            <p><strong>Описание результата конкурса: </strong> {data.concourse.details ?? ""}</p>
+          </section>
+        )}
+
+
+        {/* СДЕЛАТЬ ЧТОБЫ ПОКАЗЫВАЛОСЬ ТОЛЬКО ТАМ, ГДЕ ПРИХОДИТ В API, ДАЖЕ ЕСЛИ FALSE ИЛИ NULL */}
+        {data.isValuable !== null || data.isValuable && (
+          <section>
+            <h2>Дополнительные характеристики</h2>
+              <p><strong>Значимое мероприятие: </strong> {data.isValuable ? "Да" : "Нет"}</p>
+              <p><strong>Включено в сборник лучших практик: </strong> {data.isBestPractice ? "Да" : "Нет"}</p>
+              <p><strong>Формат равный равному: </strong> {data.equalToEqualDescription ?? "Нет"}</p>
+          </section>
+        )}
+
+
+        <button className="delete" type="button" onClick={() => setShowModal(true)}>Удалить</button>
         <DeleteConfirmationModal
-        isOpen={showModal}
-        onConfirm={handleDelete}
-        onCancel={() => setShowModal(false)}
-      />
-        <button className = "back" type="button" onClick={() => window.history.back()}> Назад</button>
+          isOpen={showModal}
+          onConfirm={handleDelete}
+          onCancel={() => setShowModal(false)}
+        />
+        <button className="back" type="button" onClick={() => window.history.back()}> Назад</button>
       </div>
     </div>
   );
 };
-  
+
 export default EventCard;
-  

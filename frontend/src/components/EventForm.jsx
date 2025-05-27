@@ -383,7 +383,7 @@ const [descriptions, setDescriptions] = useState({
     let cleanedFinancingOther = hasFinancing ? financingOtherDescription : "";
 
     let cleanedOrganizations = isCooperation ? selectedOrganizations : {};
-    let cleanedCustomOrganizations = isCooperation ? otherOrganizations : {};
+    let cleanedCustomOrganizations = isCooperation ? otherOrganizations : [];
 
 
     let cleanedPeerFormat = equalFormat ? equalFormatDescription : ""; //peerFormatDescription

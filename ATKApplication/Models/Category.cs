@@ -13,17 +13,17 @@ namespace ATKApplication.Models
     {
         public Category() {}
 
-        private Category(string? name, Categories categories, int count, Guid eventId)
+        private Category(string? name, int count, Guid eventId)
         {
             Id = Guid.NewGuid();
             Name  = name;
             Count = count;
-            CategoryEnum = categories;
+            //CategoryEnum = categories;
             EventId = eventId;
         }
         public Guid Id { get; init; }
         public string? Name { get; set; } = null;
-        public Categories CategoryEnum { get; set; } 
+        //public Categories CategoryEnum { get; set; } 
         public int? Count { get; set; }
 
 
@@ -33,9 +33,9 @@ namespace ATKApplication.Models
         public Guid EventId { get; set; }
 
 
-        public static Category? Create(string? name, Categories categories, int count, Guid eventId)
+        public static Category? Create(string? name, int count, Guid eventId)
         {
-            return new Category(name, categories, count, eventId);
+            return new Category(name, count, eventId);
         }
     }
 }

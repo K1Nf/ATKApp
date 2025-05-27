@@ -8,7 +8,7 @@ namespace ATKApplication.Controllers
     public class PagesController : ControllerBase
     {
         [HttpGet("/create")]
-        public async Task GetEventsPage()
+        public async Task GetCreateEventPage()
         {
             Response.Headers.ContentType = "text/html";
             await Response.SendFileAsync("wwwroot/index.html");
@@ -34,7 +34,7 @@ namespace ATKApplication.Controllers
 
 
         [HttpGet("/events/{Id:guid}")]
-        public async Task GetEventsTablePage(Guid Id)
+        public async Task GetEventsPage()
         {
             Response.Headers.ContentType = "text/html";
             await Response.SendFileAsync("wwwroot/src/eventCard/eventCard.html");

@@ -225,7 +225,7 @@
   },
   {
     "ContainingType": "ATKApplication.Controllers.PagesController",
-    "Method": "GetEventsPage",
+    "Method": "GetCreateEventPage",
     "RelativePath": "create",
     "HttpMethod": "GET",
     "IsController": true,
@@ -257,7 +257,7 @@
   },
   {
     "ContainingType": "ATKApplication.Controllers.PagesController",
-    "Method": "GetEventsTablePage",
+    "Method": "GetEventsPage",
     "RelativePath": "events/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -265,7 +265,7 @@
     "Parameters": [
       {
         "Name": "Id",
-        "Type": "System.Guid",
+        "Type": "",
         "IsRequired": true
       }
     ],

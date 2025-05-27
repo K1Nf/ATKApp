@@ -8,9 +8,11 @@ using CSharpFunctionalExtensions;
 using Microsoft.Diagnostics.Tracing.Parsers.Clr;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Linq.Expressions;
 using System.Text;
 using System.Transactions;
+using System.Xml.Linq;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ATKApplication.Services
@@ -483,13 +485,13 @@ namespace ATKApplication.Services
             {
                 if (createParticipantsRequest.SelectedCategories.Count > 0)                 // Для фиксированных выбранных категорий
                 {
-                    foreach (SelectedCategory categoryRequest in createParticipantsRequest?.SelectedCategories!)
+                    foreach (SelectedCategory categoryRequest in createParticipantsRequest.SelectedCategories)
                     {
-                        var resultCategory = EnumHelper.GetEnumValueFromEnumMemberValue<Categories>(categoryRequest.Name);
+                        //Categories? resultCategory = EnumHelper.GetEnumValueFromEnumMemberValue<Categories>(categoryRequest.Name);
+                        string? resultCategory = EnumHelper.GetEnumMemberValueByName<Categories>(categoryRequest.Name);
 
 
-                        Category? category = Category.Create(categoryRequest.Name, resultCategory ?? Categories.NoCategory,
-                            categoryRequest.Count, eventId);
+                        Category? category = Category.Create(resultCategory ?? "undefined", categoryRequest.Count, eventId);
                         
                         if (category != null)
                             await _dB.Categories.AddAsync(category);
@@ -499,8 +501,7 @@ namespace ATKApplication.Services
                 {
                     foreach (CustomCategory customCategory in createParticipantsRequest?.CustomCategories!)
                     {
-                        Category? category = Category.Create(customCategory.Label, Categories.Custom,
-                            customCategory.Count, eventId);
+                        Category? category = Category.Create(customCategory.Label, customCategory.Count, eventId);
 
                         if (category != null)
                             await _dB.Categories.AddAsync(category);
@@ -509,8 +510,7 @@ namespace ATKApplication.Services
                 else
                 {
                     // add just total row info into db
-                    Category? category = Category.Create("TOTAL", Categories.NoCategory,
-                        createParticipantsRequest.Total, eventId);
+                    Category? category = Category.Create("TOTAL", createParticipantsRequest.Total, eventId);
 
                     if (category != null)
                         await _dB.Categories.AddAsync(category);
@@ -618,8 +618,10 @@ namespace ATKApplication.Services
             {
                 foreach (var agreementRequest in createAgreementRequest.Agreements)
                 {
-                    var agreement = Agreement.Create(agreementRequest.Description, 
-                                                    agreementRequest.Name,
+                    string? resultAgreement = EnumHelper.GetEnumMemberValueByName<OrganizationEnum>(agreementRequest.Name);
+
+                    var agreement = Agreement.Create(agreementRequest.Description,
+                                                    resultAgreement ?? agreementRequest.Name,
                                                     agreementRequest.Result,
                                                     eventId);
 
@@ -637,7 +639,9 @@ namespace ATKApplication.Services
             {
                 foreach (var audienceCategory in createAudienceRequest.Audiences)
                 {
-                    var audience = Audience.Create(audienceCategory, eventId);
+                    string? resultAudience = EnumHelper.GetEnumMemberValueByName<Audiences>(audienceCategory);
+
+                    var audience = Audience.Create(resultAudience ?? audienceCategory, eventId);
 
                     if (audience != null)
                         await _dB.Audiences.AddAsync(audience);
@@ -691,13 +695,18 @@ namespace ATKApplication.Services
 
                 foreach (var violationsDTO in violationsDTOList)
                 {
-                    string key = 
-                        violationsDTO.Key == Violations.law_other ? 
-                        violationsDTO.Value.OtherText ?? "" : 
-                        violationsDTO.Key.ToString();
+
+                    //string key = 
+                    //    violationsDTO.Key == Violations.law_other ? 
+                    //    violationsDTO.Value.OtherText ?? "" : 
+                    //    violationsDTO.Key.ToString();
 
 
-                    var violation = Violation.Create(key,
+                    string? resultViolation = EnumHelper.GetEnumMemberValueByName<Violations>(violationsDTO.Key.ToString());
+
+
+
+                    var violation = Violation.Create(resultViolation ?? violationsDTO.Value.OtherText ?? "",
                         violationsDTO.Value.SentCount, violationsDTO.Value.BlockedCount, 
                         violationsDTO.Value.OrderNumber, eventId);
 

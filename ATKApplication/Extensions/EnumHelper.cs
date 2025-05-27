@@ -1,5 +1,7 @@
-﻿using System.Reflection;
+﻿using ATKApplication.Contracts.Request;
+using System.Reflection;
 using System.Runtime.Serialization;
+using System.Xml.Linq;
 
 namespace ATKApplication.Extensions
 {
@@ -11,14 +13,33 @@ namespace ATKApplication.Extensions
 
             foreach (var field in typeof(TEnum).GetFields())
             {
-                var attribute = field.GetCustomAttribute<EnumMemberAttribute>();
-                if (attribute != null && attribute.Value == value)
+                if (value == field.Name)
                 {
-                    return (TEnum)field.GetValue(null)!;
+                    TEnum res = (TEnum)field.GetValue(null)!;
+
+                    return res;
                 }
             }
-
             return null; // или throw, если значение обязательно
+        }
+
+        public static string? GetEnumMemberValueByName<TEnum>(string enumName) where TEnum : Enum
+        {
+            var type = typeof(TEnum);
+            var member = type.GetMember(enumName).FirstOrDefault();
+            if (member == null) return null;
+
+
+            string str1 = member.Name;
+            string str2 = Violations.law_other.ToString();
+            if (str1 == str2) 
+                
+                return null;
+
+
+
+            var attr = member.GetCustomAttribute<EnumMemberAttribute>();
+            return attr?.Value;
         }
     }
 }
