@@ -1,5 +1,6 @@
-// ControlPanel.jsx
 import React, { useState } from 'react';
+import { FiSearch, FiFilter, FiPlus } from 'react-icons/fi';
+import './EventForm.css';
 
 const ControlPanel = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -8,24 +9,26 @@ const ControlPanel = () => {
   const handleSearchChange = (e) => setSearchQuery(e.target.value);
   const handleFilterChange = (e) => setFilter(e.target.value);
 
-
   return (
     <header className="control-panel">
-      <input
-        type="text"
-        placeholder="Поиск мероприятий..."
-        value={searchQuery}
-        onChange={handleSearchChange}
-      />
-      <select value={filter} onChange={handleFilterChange}>
-        <option value="">Фильтрация по статусу</option>
-        <option value="active">Активные</option>
-        <option value="closed">Завершенные</option>
-      </select>
-      {/* <button type="button" onClick={handleCreateEvent}> */}
-    <button type="button" onClick={() => window.location.href = '/create'}>
-        Создать мероприятие    
-    </button>
+    
+        <input
+          type="text"
+          placeholder="Поиск мероприятий..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
+      
+        <select value={filter} onChange={handleFilterChange}>
+          <option value="">Фильтрация по статусу</option>
+          <option value="active">Важные</option>
+          <option value="closed">Сборник лучших практик</option>
+        </select>
+     
+
+      <button type="button" onClick={() => window.location.href = '/create'}>
+        Создать мероприятие
+      </button>
     </header>
   );
 };

@@ -4258,23 +4258,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\1\\.nuget\\packages\\": {},
+    "C:\\Users\\tellu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\ATKApplication.csproj",
+      "projectUniqueName": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\ATKApplication.csproj",
       "projectName": "ATKApplication",
-      "projectPath": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\ATKApplication.csproj",
-      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\obj\\",
+      "projectPath": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\ATKApplication.csproj",
+      "packagesPath": "C:\\Users\\tellu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tellu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4283,7 +4283,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

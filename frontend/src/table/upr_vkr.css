@@ -147,3 +147,110 @@ td:not(:last-child) {
   background-color: #3395f7;
 }
 
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 4px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  background-color: #3490dc;
+  color: white;
+  border-color: #3490dc;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 4px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  background-color: #3490dc;
+  color: white;
+  border-color: #3490dc;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.control-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* ВАЖНО: центровка по вертикали */
+  gap: 16px;
+  padding: 16px 24px;
+  background-color: #e0f2fe;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+  height: 70px;
+}
+
+/* Одинаковая высота, внешний вид */
+.control-panel input,
+.control-panel select,
+.control-panel button {
+  height: 42px;
+  font-size: 14px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Input + Select */
+.control-panel input,
+.control-panel select {
+  padding: 10px 14px;
+  min-width: 200px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #1e293b;
+  appearance: none; /* убираем стрелку select в Safari */
+}
+
+.control-panel input::placeholder {
+  color: #94a3b8;
+}
+
+/* Button */
+.control-panel button {
+  padding: 0 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+.control-panel button:hover {
+  background-color: #2563eb;
+}
+
+.control-panel button:active {
+  background-color: #1d4ed8;
+  transform: scale(0.97);
+}
+
