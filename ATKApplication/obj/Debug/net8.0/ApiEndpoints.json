@@ -276,5 +276,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.PagesController",
+    "Method": "GetLoginPage",
+    "RelativePath": "login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

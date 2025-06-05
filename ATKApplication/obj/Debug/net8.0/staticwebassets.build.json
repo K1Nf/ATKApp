@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HUvvFcrG2RRdfUPmUGFAfI5tBZuFi9ei4RbsXtbMQD8=",
+  "Hash": "E9l/cUH8a2wYeTUWvxBGPOhmvAUb5SnGUCxiehTrnfo=",
   "Source": "ATKApplication",
   "BasePath": "_content/ATKApplication",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-C3GYnDW0.css",
+      "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-BPyNfkQN.css",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
-      "RelativePath": "assets/css/events-C3GYnDW0#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/events-BPyNfkQN#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,19 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8uhrqjgqy2",
-      "Integrity": "EJklJAEXhzwD3oCHMyDQdiXO4nFofsTxRdmiYagPEsk=",
+      "Fingerprint": "996tmkcnfh",
+      "Integrity": "ExUj3gpa9MqOmt07eoa+hlxScZaHNI/OIdBpAHT8mK4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\css\\events-C3GYnDW0.css"
+      "OriginalItemSpec": "wwwroot\\assets\\css\\events-BPyNfkQN.css"
     },
     {
-      "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-BKHFsfTm.css",
+      "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-CoMxQe3V.css",
       "SourceId": "ATKApplication",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\",
       "BasePath": "_content/ATKApplication",
-      "RelativePath": "assets/css/Sidebar-BKHFsfTm#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/Sidebar-CoMxQe3V#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,11 +52,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "y7lc8dy4lv",
-      "Integrity": "ko1lq2yiosi9EWJNBAZgFPjJlb4KOyZELRh4/sWWdsM=",
+      "Fingerprint": "pyc4ouufhs",
+      "Integrity": "oQo0D0zgBOE7Sj3i9dnpcrGwvHYwG76s5rGBSmFskzM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\css\\Sidebar-BKHFsfTm.css"
+      "OriginalItemSpec": "wwwroot\\assets\\css\\Sidebar-CoMxQe3V.css"
     },
     {
       "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "atjv5fkk3j",
-      "Integrity": "DncvbP+PQscT1QpWkNoUqstCAiGOh9UK2QwAOfwt1o4=",
+      "Fingerprint": "h9ks0au9tv",
+      "Integrity": "ld0LPPDy0aNLWSz2e1bbpPIcWoI3pdy9pihaoPCLEPI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\createEvent.js"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vnksggt4b4",
-      "Integrity": "m3dR88wCcPpl4MJGBK2OZF2c9Q9i+NOgm32UYZ2ene0=",
+      "Fingerprint": "ykqh6zom2j",
+      "Integrity": "0tKrREKOeZMSAvTxz24xJguZRZttZL6jgnoXUtTxDsM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\eventCard.js"
@@ -157,11 +157,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "q7bf3v307t",
-      "Integrity": "eipWxJGISoq/pg/LI4nVTv2fwaXOk/ei6ySchcRkluA=",
+      "Fingerprint": "vizsauxpmn",
+      "Integrity": "13TLIwFlSy8/8UZtjs3rfVuamfPMKfnrzlT878DCVD4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\events.js"
+    },
+    {
+      "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\jsx-runtime-chunk.js",
+      "SourceId": "ATKApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\",
+      "BasePath": "_content/ATKApplication",
+      "RelativePath": "assets/js/jsx-runtime-chunk#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1vrogd1egj",
+      "Integrity": "82jne8HZzKaF2yBk3fuxFZqfgu3U2dMaPCx11ki6W+8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\jsx-runtime-chunk.js"
     },
     {
       "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
@@ -178,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4vi3m0hi2f",
-      "Integrity": "wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=",
+      "Fingerprint": "n5moivwjgp",
+      "Integrity": "K3TthHDnXV4zfclgws+MYfPVSMqRpTu70Tw6tssKC+w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\Sidebar-chunk.js"
@@ -262,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r0a2a2ydin",
-      "Integrity": "xW5xrNreVfXfZ7IOdk8WU0wwzcjlWkgHyjlFpZB+yGU=",
+      "Fingerprint": "rj86spo8xn",
+      "Integrity": "OW+rHNTzJtu2IJNOUZjUsdwj9KgyctMWPAlPkUEcSmQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -283,11 +304,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5fy2d01uyr",
-      "Integrity": "Pyi4Kofxc2/ogX5t7ym67Mvu+lSPjhZydgpWCcsSMHc=",
+      "Fingerprint": "5qo3zbtzoz",
+      "Integrity": "E8GrvJnfvJubqK7afPhLjY19QOmnkusKQeRNT461Y70=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\eventCard\\eventCard.html"
+    },
+    {
+      "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\Login\\LoginPage.html",
+      "SourceId": "ATKApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\",
+      "BasePath": "_content/ATKApplication",
+      "RelativePath": "src/Login/LoginPage#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hb99bnatkv",
+      "Integrity": "bR5Z/hw4LsIhpY+0cA/Y48tPcLsIOE0JRFJwl3OxCkU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\Login\\LoginPage.html"
     },
     {
       "Identity": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
@@ -304,8 +346,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9t4wb9wb89",
-      "Integrity": "o7CknwFWIpO4xZ8ew2rpBco50QC2dFY/4w6wUN8EL90=",
+      "Fingerprint": "d449goevcp",
+      "Integrity": "HY08APxZTx9e9jJN9kpvIcFc2LQzSu7OR31N+zG2t3w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\table\\indexTable.html"
@@ -334,8 +376,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "assets/css/events-C3GYnDW0.8uhrqjgqy2.css",
-      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-C3GYnDW0.css",
+      "Route": "assets/css/events-BPyNfkQN.996tmkcnfh.css",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-BPyNfkQN.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -344,7 +386,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4265"
+          "Value": "4501"
         },
         {
           "Name": "Content-Type",
@@ -352,11 +394,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EJklJAEXhzwD3oCHMyDQdiXO4nFofsTxRdmiYagPEsk=\""
+          "Value": "\"ExUj3gpa9MqOmt07eoa+hlxScZaHNI/OIdBpAHT8mK4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -366,21 +408,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8uhrqjgqy2"
+          "Value": "996tmkcnfh"
         },
         {
           "Name": "label",
-          "Value": "assets/css/events-C3GYnDW0.css"
+          "Value": "assets/css/events-BPyNfkQN.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EJklJAEXhzwD3oCHMyDQdiXO4nFofsTxRdmiYagPEsk="
+          "Value": "sha256-ExUj3gpa9MqOmt07eoa+hlxScZaHNI/OIdBpAHT8mK4="
         }
       ]
     },
     {
-      "Route": "assets/css/events-C3GYnDW0.css",
-      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-C3GYnDW0.css",
+      "Route": "assets/css/events-BPyNfkQN.css",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-BPyNfkQN.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -389,7 +431,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4265"
+          "Value": "4501"
         },
         {
           "Name": "Content-Type",
@@ -397,11 +439,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EJklJAEXhzwD3oCHMyDQdiXO4nFofsTxRdmiYagPEsk=\""
+          "Value": "\"ExUj3gpa9MqOmt07eoa+hlxScZaHNI/OIdBpAHT8mK4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -411,13 +453,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EJklJAEXhzwD3oCHMyDQdiXO4nFofsTxRdmiYagPEsk="
+          "Value": "sha256-ExUj3gpa9MqOmt07eoa+hlxScZaHNI/OIdBpAHT8mK4="
         }
       ]
     },
     {
-      "Route": "assets/css/Sidebar-BKHFsfTm.css",
-      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-BKHFsfTm.css",
+      "Route": "assets/css/Sidebar-CoMxQe3V.css",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-CoMxQe3V.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -426,7 +468,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11672"
+          "Value": "12275"
         },
         {
           "Name": "Content-Type",
@@ -434,11 +476,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ko1lq2yiosi9EWJNBAZgFPjJlb4KOyZELRh4/sWWdsM=\""
+          "Value": "\"oQo0D0zgBOE7Sj3i9dnpcrGwvHYwG76s5rGBSmFskzM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -448,13 +490,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ko1lq2yiosi9EWJNBAZgFPjJlb4KOyZELRh4/sWWdsM="
+          "Value": "sha256-oQo0D0zgBOE7Sj3i9dnpcrGwvHYwG76s5rGBSmFskzM="
         }
       ]
     },
     {
-      "Route": "assets/css/Sidebar-BKHFsfTm.y7lc8dy4lv.css",
-      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-BKHFsfTm.css",
+      "Route": "assets/css/Sidebar-CoMxQe3V.pyc4ouufhs.css",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-CoMxQe3V.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -463,7 +505,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11672"
+          "Value": "12275"
         },
         {
           "Name": "Content-Type",
@@ -471,11 +513,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ko1lq2yiosi9EWJNBAZgFPjJlb4KOyZELRh4/sWWdsM=\""
+          "Value": "\"oQo0D0zgBOE7Sj3i9dnpcrGwvHYwG76s5rGBSmFskzM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -485,15 +527,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "y7lc8dy4lv"
+          "Value": "pyc4ouufhs"
         },
         {
           "Name": "label",
-          "Value": "assets/css/Sidebar-BKHFsfTm.css"
+          "Value": "assets/css/Sidebar-CoMxQe3V.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ko1lq2yiosi9EWJNBAZgFPjJlb4KOyZELRh4/sWWdsM="
+          "Value": "sha256-oQo0D0zgBOE7Sj3i9dnpcrGwvHYwG76s5rGBSmFskzM="
         }
       ]
     },
@@ -520,7 +562,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -565,7 +607,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -602,7 +644,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -647,7 +689,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -662,7 +704,7 @@
       ]
     },
     {
-      "Route": "assets/js/createEvent.atjv5fkk3j.js",
+      "Route": "assets/js/createEvent.h9ks0au9tv.js",
       "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -672,7 +714,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115007"
+          "Value": "115043"
         },
         {
           "Name": "Content-Type",
@@ -680,11 +722,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DncvbP+PQscT1QpWkNoUqstCAiGOh9UK2QwAOfwt1o4=\""
+          "Value": "\"ld0LPPDy0aNLWSz2e1bbpPIcWoI3pdy9pihaoPCLEPI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -694,7 +736,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "atjv5fkk3j"
+          "Value": "h9ks0au9tv"
         },
         {
           "Name": "label",
@@ -702,7 +744,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DncvbP+PQscT1QpWkNoUqstCAiGOh9UK2QwAOfwt1o4="
+          "Value": "sha256-ld0LPPDy0aNLWSz2e1bbpPIcWoI3pdy9pihaoPCLEPI="
         }
       ]
     },
@@ -717,7 +759,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115007"
+          "Value": "115043"
         },
         {
           "Name": "Content-Type",
@@ -725,11 +767,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DncvbP+PQscT1QpWkNoUqstCAiGOh9UK2QwAOfwt1o4=\""
+          "Value": "\"ld0LPPDy0aNLWSz2e1bbpPIcWoI3pdy9pihaoPCLEPI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -739,7 +781,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DncvbP+PQscT1QpWkNoUqstCAiGOh9UK2QwAOfwt1o4="
+          "Value": "sha256-ld0LPPDy0aNLWSz2e1bbpPIcWoI3pdy9pihaoPCLEPI="
         }
       ]
     },
@@ -754,7 +796,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9450"
+          "Value": "9486"
         },
         {
           "Name": "Content-Type",
@@ -762,11 +804,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"m3dR88wCcPpl4MJGBK2OZF2c9Q9i+NOgm32UYZ2ene0=\""
+          "Value": "\"0tKrREKOeZMSAvTxz24xJguZRZttZL6jgnoXUtTxDsM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -776,12 +818,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-m3dR88wCcPpl4MJGBK2OZF2c9Q9i+NOgm32UYZ2ene0="
+          "Value": "sha256-0tKrREKOeZMSAvTxz24xJguZRZttZL6jgnoXUtTxDsM="
         }
       ]
     },
     {
-      "Route": "assets/js/eventCard.vnksggt4b4.js",
+      "Route": "assets/js/eventCard.ykqh6zom2j.js",
       "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\eventCard.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -791,7 +833,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9450"
+          "Value": "9486"
         },
         {
           "Name": "Content-Type",
@@ -799,11 +841,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"m3dR88wCcPpl4MJGBK2OZF2c9Q9i+NOgm32UYZ2ene0=\""
+          "Value": "\"0tKrREKOeZMSAvTxz24xJguZRZttZL6jgnoXUtTxDsM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -813,7 +855,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vnksggt4b4"
+          "Value": "ykqh6zom2j"
         },
         {
           "Name": "label",
@@ -821,7 +863,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-m3dR88wCcPpl4MJGBK2OZF2c9Q9i+NOgm32UYZ2ene0="
+          "Value": "sha256-0tKrREKOeZMSAvTxz24xJguZRZttZL6jgnoXUtTxDsM="
         }
       ]
     },
@@ -836,7 +878,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7226"
+          "Value": "9073"
         },
         {
           "Name": "Content-Type",
@@ -844,11 +886,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eipWxJGISoq/pg/LI4nVTv2fwaXOk/ei6ySchcRkluA=\""
+          "Value": "\"13TLIwFlSy8/8UZtjs3rfVuamfPMKfnrzlT878DCVD4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -858,12 +900,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eipWxJGISoq/pg/LI4nVTv2fwaXOk/ei6ySchcRkluA="
+          "Value": "sha256-13TLIwFlSy8/8UZtjs3rfVuamfPMKfnrzlT878DCVD4="
         }
       ]
     },
     {
-      "Route": "assets/js/events.q7bf3v307t.js",
+      "Route": "assets/js/events.vizsauxpmn.js",
       "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -873,7 +915,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7226"
+          "Value": "9073"
         },
         {
           "Name": "Content-Type",
@@ -881,11 +923,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eipWxJGISoq/pg/LI4nVTv2fwaXOk/ei6ySchcRkluA=\""
+          "Value": "\"13TLIwFlSy8/8UZtjs3rfVuamfPMKfnrzlT878DCVD4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -895,7 +937,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "q7bf3v307t"
+          "Value": "vizsauxpmn"
         },
         {
           "Name": "label",
@@ -903,13 +945,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eipWxJGISoq/pg/LI4nVTv2fwaXOk/ei6ySchcRkluA="
+          "Value": "sha256-13TLIwFlSy8/8UZtjs3rfVuamfPMKfnrzlT878DCVD4="
         }
       ]
     },
     {
-      "Route": "assets/js/Sidebar-chunk.4vi3m0hi2f.js",
-      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Route": "assets/js/jsx-runtime-chunk.1vrogd1egj.js",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\jsx-runtime-chunk.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -918,7 +960,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "187346"
+          "Value": "1435"
         },
         {
           "Name": "Content-Type",
@@ -926,11 +968,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=\""
+          "Value": "\"82jne8HZzKaF2yBk3fuxFZqfgu3U2dMaPCx11ki6W+8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -940,15 +982,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4vi3m0hi2f"
+          "Value": "1vrogd1egj"
         },
         {
           "Name": "label",
-          "Value": "assets/js/Sidebar-chunk.js"
+          "Value": "assets/js/jsx-runtime-chunk.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c="
+          "Value": "sha256-82jne8HZzKaF2yBk3fuxFZqfgu3U2dMaPCx11ki6W+8="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/jsx-runtime-chunk.js",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\jsx-runtime-chunk.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1435"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"82jne8HZzKaF2yBk3fuxFZqfgu3U2dMaPCx11ki6W+8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-82jne8HZzKaF2yBk3fuxFZqfgu3U2dMaPCx11ki6W+8="
         }
       ]
     },
@@ -963,7 +1042,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "187346"
+          "Value": "185898"
         },
         {
           "Name": "Content-Type",
@@ -971,11 +1050,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=\""
+          "Value": "\"K3TthHDnXV4zfclgws+MYfPVSMqRpTu70Tw6tssKC+w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -985,7 +1064,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c="
+          "Value": "sha256-K3TthHDnXV4zfclgws+MYfPVSMqRpTu70Tw6tssKC+w="
+        }
+      ]
+    },
+    {
+      "Route": "assets/js/Sidebar-chunk.n5moivwjgp.js",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\Sidebar-chunk.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "185898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K3TthHDnXV4zfclgws+MYfPVSMqRpTu70Tw6tssKC+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n5moivwjgp"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/js/Sidebar-chunk.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K3TthHDnXV4zfclgws+MYfPVSMqRpTu70Tw6tssKC+w="
         }
       ]
     },
@@ -1012,7 +1136,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1057,7 +1181,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1246,7 +1370,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "832"
+          "Value": "914"
         },
         {
           "Name": "Content-Type",
@@ -1254,11 +1378,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xW5xrNreVfXfZ7IOdk8WU0wwzcjlWkgHyjlFpZB+yGU=\""
+          "Value": "\"OW+rHNTzJtu2IJNOUZjUsdwj9KgyctMWPAlPkUEcSmQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1268,12 +1392,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xW5xrNreVfXfZ7IOdk8WU0wwzcjlWkgHyjlFpZB+yGU="
+          "Value": "sha256-OW+rHNTzJtu2IJNOUZjUsdwj9KgyctMWPAlPkUEcSmQ="
         }
       ]
     },
     {
-      "Route": "index.r0a2a2ydin.html",
+      "Route": "index.rj86spo8xn.html",
       "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1283,7 +1407,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "832"
+          "Value": "914"
         },
         {
           "Name": "Content-Type",
@@ -1291,11 +1415,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xW5xrNreVfXfZ7IOdk8WU0wwzcjlWkgHyjlFpZB+yGU=\""
+          "Value": "\"OW+rHNTzJtu2IJNOUZjUsdwj9KgyctMWPAlPkUEcSmQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1305,7 +1429,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "r0a2a2ydin"
+          "Value": "rj86spo8xn"
         },
         {
           "Name": "label",
@@ -1313,12 +1437,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xW5xrNreVfXfZ7IOdk8WU0wwzcjlWkgHyjlFpZB+yGU="
+          "Value": "sha256-OW+rHNTzJtu2IJNOUZjUsdwj9KgyctMWPAlPkUEcSmQ="
         }
       ]
     },
     {
-      "Route": "src/eventCard/eventCard.5fy2d01uyr.html",
+      "Route": "src/eventCard/eventCard.5qo3zbtzoz.html",
       "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1328,7 +1452,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "841"
+          "Value": "923"
         },
         {
           "Name": "Content-Type",
@@ -1336,11 +1460,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Pyi4Kofxc2/ogX5t7ym67Mvu+lSPjhZydgpWCcsSMHc=\""
+          "Value": "\"E8GrvJnfvJubqK7afPhLjY19QOmnkusKQeRNT461Y70=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1350,7 +1474,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5fy2d01uyr"
+          "Value": "5qo3zbtzoz"
         },
         {
           "Name": "label",
@@ -1358,7 +1482,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Pyi4Kofxc2/ogX5t7ym67Mvu+lSPjhZydgpWCcsSMHc="
+          "Value": "sha256-E8GrvJnfvJubqK7afPhLjY19QOmnkusKQeRNT461Y70="
         }
       ]
     },
@@ -1373,7 +1497,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "841"
+          "Value": "923"
         },
         {
           "Name": "Content-Type",
@@ -1381,11 +1505,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Pyi4Kofxc2/ogX5t7ym67Mvu+lSPjhZydgpWCcsSMHc=\""
+          "Value": "\"E8GrvJnfvJubqK7afPhLjY19QOmnkusKQeRNT461Y70=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1395,13 +1519,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Pyi4Kofxc2/ogX5t7ym67Mvu+lSPjhZydgpWCcsSMHc="
+          "Value": "sha256-E8GrvJnfvJubqK7afPhLjY19QOmnkusKQeRNT461Y70="
         }
       ]
     },
     {
-      "Route": "src/table/indexTable.9t4wb9wb89.html",
-      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "Route": "src/Login/LoginPage.hb99bnatkv.html",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\Login\\LoginPage.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1410,7 +1534,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "814"
+          "Value": "520"
         },
         {
           "Name": "Content-Type",
@@ -1418,11 +1542,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"o7CknwFWIpO4xZ8ew2rpBco50QC2dFY/4w6wUN8EL90=\""
+          "Value": "\"bR5Z/hw4LsIhpY+0cA/Y48tPcLsIOE0JRFJwl3OxCkU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1432,7 +1556,89 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9t4wb9wb89"
+          "Value": "hb99bnatkv"
+        },
+        {
+          "Name": "label",
+          "Value": "src/Login/LoginPage.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bR5Z/hw4LsIhpY+0cA/Y48tPcLsIOE0JRFJwl3OxCkU="
+        }
+      ]
+    },
+    {
+      "Route": "src/Login/LoginPage.html",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\Login\\LoginPage.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "520"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bR5Z/hw4LsIhpY+0cA/Y48tPcLsIOE0JRFJwl3OxCkU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bR5Z/hw4LsIhpY+0cA/Y48tPcLsIOE0JRFJwl3OxCkU="
+        }
+      ]
+    },
+    {
+      "Route": "src/table/indexTable.d449goevcp.html",
+      "AssetFile": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\table\\indexTable.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "896"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HY08APxZTx9e9jJN9kpvIcFc2LQzSu7OR31N+zG2t3w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d449goevcp"
         },
         {
           "Name": "label",
@@ -1440,7 +1646,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-o7CknwFWIpO4xZ8ew2rpBco50QC2dFY/4w6wUN8EL90="
+          "Value": "sha256-HY08APxZTx9e9jJN9kpvIcFc2LQzSu7OR31N+zG2t3w="
         }
       ]
     },
@@ -1455,7 +1661,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "814"
+          "Value": "896"
         },
         {
           "Name": "Content-Type",
@@ -1463,11 +1669,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"o7CknwFWIpO4xZ8ew2rpBco50QC2dFY/4w6wUN8EL90=\""
+          "Value": "\"HY08APxZTx9e9jJN9kpvIcFc2LQzSu7OR31N+zG2t3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Jun 2025 21:32:36 GMT"
+          "Value": "Thu, 05 Jun 2025 12:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1477,7 +1683,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-o7CknwFWIpO4xZ8ew2rpBco50QC2dFY/4w6wUN8EL90="
+          "Value": "sha256-HY08APxZTx9e9jJN9kpvIcFc2LQzSu7OR31N+zG2t3w="
         }
       ]
     },

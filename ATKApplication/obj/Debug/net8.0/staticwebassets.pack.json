@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-BKHFsfTm.css",
-      "PackagePath": "staticwebassets\\assets\\css\\Sidebar-BKHFsfTm.css"
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\Sidebar-CoMxQe3V.css",
+      "PackagePath": "staticwebassets\\assets\\css\\Sidebar-CoMxQe3V.css"
     },
     {
-      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-C3GYnDW0.css",
-      "PackagePath": "staticwebassets\\assets\\css\\events-C3GYnDW0.css"
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\events-BPyNfkQN.css",
+      "PackagePath": "staticwebassets\\assets\\css\\events-BPyNfkQN.css"
     },
     {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\events.js"
     },
     {
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\jsx-runtime-chunk.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jsx-runtime-chunk.js"
+    },
+    {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",
       "PackagePath": "staticwebassets\\assets\\js\\toastr.min-chunk.js"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\Login\\LoginPage.html",
+      "PackagePath": "staticwebassets\\src\\Login\\LoginPage.html"
     },
     {
       "Id": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\src\\eventCard\\eventCard.html",

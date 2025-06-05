@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\tellu\\vkr-atk-app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\tellu\\vkr-atk-app\\atkapplication\\controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\controllers\\pagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|c:\\users\\tellu\\vkr-atk-app\\atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F9725-EA26-4E76-898A-AEEA6E32580A}|ATKApplication\\ATKApplication.csproj|solutionrelative:atkapplication\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,11 +82,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "PagesController.cs",
+              "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\PagesController.cs",
+              "RelativeDocumentMoniker": "ATKApplication\\Controllers\\PagesController.cs",
+              "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\PagesController.cs",
+              "RelativeToolTip": "ATKApplication\\Controllers\\PagesController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T12:12:29.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DataBaseContext.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\DataBase\\DataBaseContext.cs",
               "RelativeDocumentMoniker": "ATKApplication\\DataBase\\DataBaseContext.cs",
@@ -94,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CreateEventForm4Request.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Contracts\\Request\\CreateEventForm4Request.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateEventForm4Request.cs",
@@ -106,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CreateEventForm3Request.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Contracts\\Request\\CreateEventForm3Request.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateEventForm3Request.cs",
@@ -118,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ResultEnum.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Enums\\ResultEnum.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Enums\\ResultEnum.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "OrganizationEnum.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Enums\\OrganizationEnum.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Enums\\OrganizationEnum.cs",
@@ -142,20 +159,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EventService.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Services\\EventService.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Services\\EventService.cs",
               "ToolTip": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Services\\EventService.cs",
               "RelativeToolTip": "ATKApplication\\Services\\EventService.cs",
-              "ViewState": "AgIAANYCAAAAAAAAAAAIwOsCAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAANYCAAAAAAAAAAAIwN4CAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T04:38:26.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EventController.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Controllers\\EventController.cs",
@@ -167,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EnumHelper.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Extensions\\EnumHelper.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Extensions\\EnumHelper.cs",
@@ -179,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CreateAgreementRequest.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Contracts\\Request\\CreateAgreementRequest.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateAgreementRequest.cs",
@@ -191,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "20250520071250_AddedAudienceAndSupport.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Migrations\\20250520071250_AddedAudienceAndSupport.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Migrations\\20250520071250_AddedAudienceAndSupport.cs",
@@ -203,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "20250518081343_RestructuredEventTables.Designer.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Migrations\\20250518081343_RestructuredEventTables.Designer.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Migrations\\20250518081343_RestructuredEventTables.Designer.cs",
@@ -215,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "20250518081343_RestructuredEventTables.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Migrations\\20250518081343_RestructuredEventTables.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Migrations\\20250518081343_RestructuredEventTables.cs",
@@ -227,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Violation.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Models\\Violation.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Models\\Violation.cs",
@@ -239,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "createEvent.js",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
               "RelativeDocumentMoniker": "ATKApplication\\wwwroot\\assets\\js\\createEvent.js",
@@ -251,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CreateViolationsRequest.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Contracts\\Request\\CreateViolationsRequest.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateViolationsRequest.cs",
@@ -263,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "EventForm3.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Models\\EventForm3.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Models\\EventForm3.cs",
@@ -275,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "CreateInterAgencyCooperationRequest.cs",
               "DocumentMoniker": "C:\\Users\\tellu\\vkr-atk-app\\ATKApplication\\Contracts\\Request\\CreateInterAgencyCooperationRequest.cs",
               "RelativeDocumentMoniker": "ATKApplication\\Contracts\\Request\\CreateInterAgencyCooperationRequest.cs",

@@ -1,1 +1,2 @@
-C:\Users\tellu\vkr-atk-app\ATKApplication\wwwroot\assets\css\events-C3GYnDW0.css
+C:\Users\tellu\vkr-atk-app\ATKApplication\wwwroot\assets\css\Sidebar-CoMxQe3V.css
+C:\Users\tellu\vkr-atk-app\ATKApplication\wwwroot\assets\js\jsx-runtime-chunk.js

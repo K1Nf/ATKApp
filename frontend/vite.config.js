@@ -11,7 +11,8 @@ export default defineConfig({
       input: {
         createEvent: path.resolve(__dirname, 'index.html'),
         events: path.resolve(__dirname, 'src/table/indexTable.html'),
-        eventCard: path.resolve(__dirname, 'src/eventCard/eventCard.html')
+        eventCard: path.resolve(__dirname, 'src/eventCard/eventCard.html'),
+        loginPage: path.resolve(__dirname, 'src/Login/LoginPage.html')
       },
       output: {
         entryFileNames: 'assets/js/[name].js',

@@ -1,40 +1,40 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-C3GYnDW0.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-BPyNfkQN.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ATKApplication</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ATKApplication</BasePath>
-      <RelativePath>assets/css/events-C3GYnDW0.css</RelativePath>
+      <RelativePath>assets/css/events-BPyNfkQN.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8uhrqjgqy2</Fingerprint>
-      <Integrity>EJklJAEXhzwD3oCHMyDQdiXO4nFofsTxRdmiYagPEsk=</Integrity>
+      <Fingerprint>996tmkcnfh</Fingerprint>
+      <Integrity>ExUj3gpa9MqOmt07eoa+hlxScZaHNI/OIdBpAHT8mK4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-C3GYnDW0.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-BPyNfkQN.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-BKHFsfTm.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-CoMxQe3V.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ATKApplication</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ATKApplication</BasePath>
-      <RelativePath>assets/css/Sidebar-BKHFsfTm.css</RelativePath>
+      <RelativePath>assets/css/Sidebar-CoMxQe3V.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>y7lc8dy4lv</Fingerprint>
-      <Integrity>ko1lq2yiosi9EWJNBAZgFPjJlb4KOyZELRh4/sWWdsM=</Integrity>
+      <Fingerprint>pyc4ouufhs</Fingerprint>
+      <Integrity>oQo0D0zgBOE7Sj3i9dnpcrGwvHYwG76s5rGBSmFskzM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-BKHFsfTm.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\Sidebar-CoMxQe3V.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\toastr-PcHlmDLb.css'))">
       <SourceType>Package</SourceType>
@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>atjv5fkk3j</Fingerprint>
-      <Integrity>DncvbP+PQscT1QpWkNoUqstCAiGOh9UK2QwAOfwt1o4=</Integrity>
+      <Fingerprint>h9ks0au9tv</Fingerprint>
+      <Integrity>ld0LPPDy0aNLWSz2e1bbpPIcWoI3pdy9pihaoPCLEPI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vnksggt4b4</Fingerprint>
-      <Integrity>m3dR88wCcPpl4MJGBK2OZF2c9Q9i+NOgm32UYZ2ene0=</Integrity>
+      <Fingerprint>ykqh6zom2j</Fingerprint>
+      <Integrity>0tKrREKOeZMSAvTxz24xJguZRZttZL6jgnoXUtTxDsM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\eventCard.js'))</OriginalItemSpec>
@@ -120,11 +120,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q7bf3v307t</Fingerprint>
-      <Integrity>eipWxJGISoq/pg/LI4nVTv2fwaXOk/ei6ySchcRkluA=</Integrity>
+      <Fingerprint>vizsauxpmn</Fingerprint>
+      <Integrity>13TLIwFlSy8/8UZtjs3rfVuamfPMKfnrzlT878DCVD4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\events.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\jsx-runtime-chunk.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ATKApplication</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ATKApplication</BasePath>
+      <RelativePath>assets/js/jsx-runtime-chunk.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1vrogd1egj</Fingerprint>
+      <Integrity>82jne8HZzKaF2yBk3fuxFZqfgu3U2dMaPCx11ki6W+8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\jsx-runtime-chunk.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\Sidebar-chunk.js'))">
       <SourceType>Package</SourceType>
@@ -138,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4vi3m0hi2f</Fingerprint>
-      <Integrity>wBer1pQfgV2R4aXn9Q1SnDpusuYYW/TWHBNwUSadn/c=</Integrity>
+      <Fingerprint>n5moivwjgp</Fingerprint>
+      <Integrity>K3TthHDnXV4zfclgws+MYfPVSMqRpTu70Tw6tssKC+w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\Sidebar-chunk.js'))</OriginalItemSpec>
@@ -210,8 +228,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r0a2a2ydin</Fingerprint>
-      <Integrity>xW5xrNreVfXfZ7IOdk8WU0wwzcjlWkgHyjlFpZB+yGU=</Integrity>
+      <Fingerprint>rj86spo8xn</Fingerprint>
+      <Integrity>OW+rHNTzJtu2IJNOUZjUsdwj9KgyctMWPAlPkUEcSmQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -228,11 +246,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5fy2d01uyr</Fingerprint>
-      <Integrity>Pyi4Kofxc2/ogX5t7ym67Mvu+lSPjhZydgpWCcsSMHc=</Integrity>
+      <Fingerprint>5qo3zbtzoz</Fingerprint>
+      <Integrity>E8GrvJnfvJubqK7afPhLjY19QOmnkusKQeRNT461Y70=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\eventCard\eventCard.html'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\Login\LoginPage.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ATKApplication</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ATKApplication</BasePath>
+      <RelativePath>src/Login/LoginPage.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hb99bnatkv</Fingerprint>
+      <Integrity>bR5Z/hw4LsIhpY+0cA/Y48tPcLsIOE0JRFJwl3OxCkU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\Login\LoginPage.html'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\table\indexTable.html'))">
       <SourceType>Package</SourceType>
@@ -246,8 +282,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9t4wb9wb89</Fingerprint>
-      <Integrity>o7CknwFWIpO4xZ8ew2rpBco50QC2dFY/4w6wUN8EL90=</Integrity>
+      <Fingerprint>d449goevcp</Fingerprint>
+      <Integrity>HY08APxZTx9e9jJN9kpvIcFc2LQzSu7OR31N+zG2t3w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\table\indexTable.html'))</OriginalItemSpec>

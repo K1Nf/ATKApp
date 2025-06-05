@@ -1,4 +1,4 @@
-import{g as $r}from"./Sidebar-chunk.js";var pn={exports:{}},Pt={exports:{}};/*!
+import{g as $r}from"./EventForm-chunk.js";var pn={exports:{}},Pt={exports:{}};/*!
  * jQuery JavaScript Library v3.7.1
  * https://jquery.com/
  *

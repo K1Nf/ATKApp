@@ -32,6 +32,15 @@ namespace ATKApplication.Controllers
         }
 
 
+        [HttpGet("/login")]
+        public async Task GetLoginPage()
+        {
+            Response.Headers.ContentType = "text/html";
+            await Response.SendFileAsync("wwwroot/src/Login/LoginPage.html");
+        }
+
+
+
 
         [HttpGet("/events/{Id:guid}")]
         public async Task GetEventsPage()
