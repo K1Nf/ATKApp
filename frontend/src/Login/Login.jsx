@@ -4,14 +4,19 @@ import "../components/EventForm.css";
 const Login = () => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    window.location.href = path;
+    setActivePath(path);
+  };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Простая проверка (заменить на fetch к API)
     if (login === 'admin' && password === '1234') {
-      navigate('/events'); // или /table
+      handleNavigate('/events') // или /table
     } else {
       alert('Неверный логин или пароль');
     }

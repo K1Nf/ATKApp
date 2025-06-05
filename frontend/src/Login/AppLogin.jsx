@@ -1,16 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import EventTable from './components/EventTable';
+import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react'
+import Login from './Login.jsx';
 
-function AppLogin() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/events" element={<EventTable />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default AppLogin;
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Login />
+  </StrictMode>,
+)
