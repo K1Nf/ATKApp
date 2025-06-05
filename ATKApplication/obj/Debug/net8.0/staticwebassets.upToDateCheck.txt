@@ -1,11 +1,11 @@
+wwwroot\assets\css\EventForm-CoMxQe3V.css
 wwwroot\assets\css\events-BPyNfkQN.css
-wwwroot\assets\css\Sidebar-CoMxQe3V.css
 wwwroot\assets\css\toastr-PcHlmDLb.css
 wwwroot\assets\images\hanty-mansijskogo-BB2EWD9-.png
 wwwroot\assets\js\createEvent.js
 wwwroot\assets\js\eventCard.js
+wwwroot\assets\js\EventForm-chunk.js
 wwwroot\assets\js\events.js
-wwwroot\assets\js\jsx-runtime-chunk.js
 wwwroot\assets\js\Sidebar-chunk.js
 wwwroot\assets\js\toastr.min-chunk.js
 wwwroot\images\hanty-mansijskogo.png
