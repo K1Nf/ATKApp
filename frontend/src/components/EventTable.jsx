@@ -1,39 +1,84 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GetEvents from '/Api/GetEvents'; // Путь к компоненту загрузки событий
+import ControlPanel from './ControlPanel';
 
 const EventTable = () => {
+  const [filteredEvents, setFilteredEvents] = useState(null);
+  const itemsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
+
+
+
+  const handleFilter = (filters, allEvents) => {
+    const result = allEvents.filter(event => {
+      return (
+        (!filters.search || event.name?.toLowerCase().includes(filters.search.toLowerCase())) &&
+        (!filters.municipality || event.municipality === filters.municipality) &&
+        (!filters.organization || event.organization === filters.organization) &&
+        (!filters.level || event.level === filters.level) &&
+        (!filters.important || event.isImportant === true) &&
+        (!filters.peerFormat || event.peerFormat === true) &&
+        (!filters.bestPractice || event.bestPractice === true) &&
+        (!filters.interagency || event.interagency === true) &&
+        (!filters.feedback || event.feedback === true) &&
+        (!filters.funding || event.funding === true) &&
+        (!filters.theme || event.themeCode === filters.theme) &&
+        (!filters.dateFrom || new Date(event.date) >= new Date(filters.dateFrom))
+
+      );
+    });
+
+    setFilteredEvents(result);
+  };
+
   return (
     <div className="table-container">
-      <GetEvents itemsPerPage={10}>
+      <GetEvents itemsPerPage={100000}>
         {({ events, currentPage, setCurrentPage, totalPages, loading, error }) => {
+          const displayedEvents = filteredEvents ?? events;
+           const totalPagesReal = displayedEvents ? Math.ceil(displayedEvents.length / itemsPerPage) : 1;
+           const currentItems = displayedEvents
+            ? displayedEvents.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+            : [];
+
           // Индикатор загрузки
           if (loading) {
             return (
-              <table>
-                <tbody>
-                  <tr>
-                    <td colSpan="10">Загрузка данных c сервера...</td>
-                  </tr>
-                </tbody>
-              </table>
+              <>
+                <ControlPanel onFilter={(filters) => handleFilter(filters, events)} />
+                <table>
+                  <tbody>
+                    <tr>
+                      <td colSpan="10">Загрузка данных c сервера...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </>
             );
           }
 
           // Сообщение об ошибке
           if (error) {
             return (
-              <table>
-                <tbody>
-                  <tr>
-                    <td colSpan="10">Ошибка: {error}</td>
-                  </tr>
-                </tbody>
-              </table>
+              <>
+                <ControlPanel onFilter={(filters) => handleFilter(filters, events)} />
+                <table>
+                  <tbody>
+                    <tr>
+                      <td colSpan="10">Ошибка: {error}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </>
             );
           }
 
           return (
             <>
+              <ControlPanel onFilter={(filters) => handleFilter(filters, events)} />
+
               <table>
                 <thead>
                   <tr>
@@ -47,7 +92,7 @@ const EventTable = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {events.map((event) => (
+                  {currentItems.map((event) => (
                     <tr key={event.id}>
                       <td>{event.themeCode ?? '—'}</td>
                       <td>{event.name ?? '—'}</td>
@@ -78,53 +123,52 @@ const EventTable = () => {
                 </tbody>
               </table>
 
-              {/* Пагинация */}
-            <div className="pagination">
-                <button
-                  onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                  disabled={currentPage === 1}
-                >
-                  ◀
-                </button>
-
-                {currentPage > 2 && (
-                  <>
-                    <button onClick={() => setCurrentPage(1)}>1</button>
-                    {currentPage > 3 && <span>...</span>}
-                  </>
-                )}
-
-                {currentPage > 1 && (
-                  <button onClick={() => setCurrentPage(currentPage - 1)}>
-                    {currentPage - 1}
+             {/* Пагинация */}
+                <div className="pagination">
+                  <button
+                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                  >
+                    ◀
                   </button>
-                )}
 
-                <button className="active">{currentPage}</button>
+                  {currentPage > 2 && (
+                    <>
+                      <button onClick={() => setCurrentPage(1)}>1</button>
+                      {currentPage > 3 && <span>...</span>}
+                    </>
+                  )}
 
-                {currentPage < totalPages && (
-                  <button onClick={() => setCurrentPage(currentPage + 1)}>
-                    {currentPage + 1}
+                  {currentPage > 1 && (
+                    <button onClick={() => setCurrentPage(currentPage - 1)}>
+                      {currentPage - 1}
+                    </button>
+                  )}
+
+                  <button className="active">{currentPage}</button>
+
+                  {currentPage < totalPagesReal && (
+                    <button onClick={() => setCurrentPage(currentPage + 1)}>
+                      {currentPage + 1}
+                    </button>
+                  )}
+
+                  {currentPage < totalPagesReal - 1 && (
+                    <>
+                      {currentPage < totalPagesReal - 2 && <span>...</span>}
+                      <button onClick={() => setCurrentPage(totalPagesReal)}>{totalPagesReal}</button>
+                    </>
+                  )}
+
+                  <button
+                    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPagesReal))}
+                    disabled={currentPage === totalPagesReal}
+                  >
+                    ▶
                   </button>
-                )}
-
-                {currentPage < totalPages - 1 && (
-                  <>
-                    {currentPage < totalPages - 2 && <span>...</span>}
-                    <button onClick={() => setCurrentPage(totalPages)}>{totalPages}</button>
-                  </>
-                )}
-
-                <button
-                  onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-                  disabled={currentPage === totalPages}
-                >
-                  ▶
-                </button>
-              </div>
-
-                </>
-              );
+                </div>
+            </>
+          );
         }}
       </GetEvents>
     </div>

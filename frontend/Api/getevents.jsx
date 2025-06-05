@@ -7,6 +7,25 @@ export default function GetEvents({ itemsPerPage = 10, children }) {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1); // Текущая страница
 
+  function normalizeDate(raw) {
+      const months = {
+        'января': '01', 'февраля': '02', 'марта': '03',
+        'апреля': '04', 'мая': '05', 'июня': '06',
+        'июля': '07', 'августа': '08', 'сентября': '09',
+        'октября': '10', 'ноября': '11', 'декабря': '12'
+      };
+
+      const parts = raw.split(' ');
+      if (parts.length !== 3) return '';
+
+      const day = parts[0].padStart(2, '0');
+      const month = months[parts[1]];
+      const year = parts[2];
+
+      return `${year}-${month}-${day}`;
+    }
+
+
   // Используем useEffect для выполнения запроса при монтировании компонента
   useEffect(() => {
     // Асинхронная функция для запроса
@@ -18,8 +37,15 @@ export default function GetEvents({ itemsPerPage = 10, children }) {
         if (!response.ok) {
           throw new Error('Ошибка при загрузке данных');
         }
-        const result = await response.json();
-        setData(result); // Сохраняем данные в состоянии
+       const result = await response.json();
+        console.log("Полученные мероприятия:", result);
+
+        const normalized = result.map(event => ({
+          ...event,
+          date: normalizeDate(event.date)
+        }));
+
+        setData(normalized);
       } catch (error) {
         setError(error.message); // Обрабатываем ошибку, если что-то пошло не так
       } finally {

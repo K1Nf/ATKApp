@@ -1945,7 +1945,7 @@ const [descriptions, setDescriptions] = useState({
                     setNamePlaceholder={setNamePlaceholder}
                     descriptionTitle={descriptionTitle}
                     setDescriptionTitle={setDescriptionTitle}
-                    hideLink={selectedTopic === "1.1.3"}
+                    // hideLink={selectedTopic === "1.1.3"}
                     link={link}
                     setLink={setLink}
                   />

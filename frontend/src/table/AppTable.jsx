@@ -14,9 +14,6 @@ function App() {
     <div className="App">
       {/* Боковое меню */}
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-
-      {/* Панель управления */}
-      <ControlPanel />
       
       {/* Таблица с мероприятиями */}
       <EventTable />
