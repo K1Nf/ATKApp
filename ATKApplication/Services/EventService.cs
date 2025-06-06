@@ -17,7 +17,6 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ATKApplication.Services
 {
-
     public class EventService(DataBaseContext _dB, ILogger<EventService> _logger)
     {
         public async Task<object?> Get(Guid id)

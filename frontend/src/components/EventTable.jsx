@@ -26,7 +26,6 @@ const EventTable = () => {
         (!filters.funding || event.funding === true) &&
         (!filters.theme || event.themeCode === filters.theme) &&
         (!filters.dateFrom || new Date(event.date) >= new Date(filters.dateFrom))
-
       );
     });
 

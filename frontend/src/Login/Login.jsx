@@ -1,20 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../components/EventForm.css";
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
 const Login = () => {
-  const [organizationId, setOrganizationId] = useState('');
+  const [selectedOrganization, setSelectedOrganization] = useState('');
   const [password, setPassword] = useState('');
 
+  const [municipaslOrganizations, setMunicipaslOrganizations] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   // 🔧 Заглушка: список организаций (в будущем придёт с сервера)
-  const organizations = [
-    { id: 'org1', name: 'Администрация города' },
-    { id: 'org2', name: 'Школа №12' },
-    { id: 'org3', name: 'Центр молодёжи' },
-    { id: 'org4', name: 'Краевой театр' },
-    { id: 'org5', name: 'Университет ЮГУ' },
-  ];
+  // const organizations = [
+  //   { id: 'org1', name: 'Администрация города' },
+  //   { id: 'org2', name: 'Школа №12' },
+  //   { id: 'org3', name: 'Центр молодёжи' },
+  //   { id: 'org4', name: 'Краевой театр' },
+  //   { id: 'org5', name: 'Университет ЮГУ' },
+  // ];
+
+  useEffect(() => {
+      // Асинхронная функция для запроса
+      const fetchData = async () => {
+        const urlBack = "/api/ref/auth/organizations";
+        try {
+          const response = await fetch(urlBack); // Пример URL
+          if (!response.ok) {
+            throw new Error('Ошибка при загрузке данных');
+          }
+          const result = await response.json();
+          console.log("Полученные организации:", result);
+  
+          // const normalized = result.map(event => ({
+          //   ...event,
+          //   date: normalizeDate(event.date)
+          // }));
+  
+          setMunicipaslOrganizations(result);
+        } catch (error) {
+          setError(error.message); // Обрабатываем ошибку, если что-то пошло не так
+        } finally {
+          setLoading(false); // Завершаем процесс загрузки
+        }
+      };
+  
+      fetchData(); // Выполняем запрос
+    }, []); // Пустой массив означает, что эффект сработает только при монтировании компонента
+
 
   // ❗ Включить позже при наличии API
   /*
@@ -33,10 +66,19 @@ const Login = () => {
   }, []);
   */
 
+  if (loading) {
+    return loading;
+  }
+
+  // Если возникла ошибка — сообщаем об этом
+  if (error) {
+    return error;
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!organizationId || !password.trim()) {
+    if (!selectedOrganization || !password.trim()) {
       toastr.error('Выберите организацию и введите пароль', 'Ошибка');
       return;
     }
@@ -46,27 +88,38 @@ const Login = () => {
       return;
     }
 
+    console.log("Пользователь выбрал организацию: " + selectedOrganization);
+    console.log("Пользователь ввел пароль: " + password);
+
+
+
     try {
-      const response = await fetch('/api/auth/login', {
+      const response = await fetch('/api/ref/auth/authorize', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ organizationId, password })
+        body: JSON.stringify({ selectedOrganization, password })
       });
 
       if (!response.ok) {
         throw new Error('Неверные данные для входа');
       }
 
-      const data = await response.json();
-      localStorage.setItem('token', data.token);
+      const data = await response.text();
+
+      alert(data);
+      // localStorage.setItem('token', data.token);
       toastr.success('Успешный вход!', 'Добро пожаловать');
       window.location.href = '/events';
     } catch (err) {
       toastr.error(err.message || 'Ошибка входа', 'Ошибка');
     }
   };
+
+
+
+
 
   return (
     <div className="login-page">
@@ -83,17 +136,17 @@ const Login = () => {
           <label htmlFor="organization">Организация</label>
           <select
             id="organization"
-            value={organizationId}
-            onChange={(e) => setOrganizationId(e.target.value)}
+            value={selectedOrganization}
+            onChange={(e) => setSelectedOrganization(e.target.value)}
           >
             <option value="">-- Выберите организацию --</option>
-            {organizations.map((org) => (
-              <option key={org.id} value={org.id}>
-                {org.name}
+            {municipaslOrganizations.map((org) => (
+              <option value={org}> {/* key={org.id} */}
+                {org}
               </option>
             ))}
           </select>
-
+            
           <input
             type="password"
             placeholder="Пароль"

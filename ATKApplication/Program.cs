@@ -10,7 +10,7 @@ using ATKApplication.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 
-//builder.Services.AddScoped<JwtProvider>();
+builder.Services.AddScoped<JwtProvider>();
 
 builder.Services.AddDbContext<DataBaseContext>();
 builder.Services.AddHttpContextAccessor();

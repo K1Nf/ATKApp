@@ -1,16 +1,20 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\EventForm-CoMxQe3V.css",
-      "PackagePath": "staticwebassets\\assets\\css\\EventForm-CoMxQe3V.css"
+      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\EventForm-BC9PFl2f.css",
+      "PackagePath": "staticwebassets\\assets\\css\\EventForm-BC9PFl2f.css"
     },
     {
       "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\events-BPyNfkQN.css",
       "PackagePath": "staticwebassets\\assets\\css\\events-BPyNfkQN.css"
     },
     {
-      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-PcHlmDLb.css",
-      "PackagePath": "staticwebassets\\assets\\css\\toastr-PcHlmDLb.css"
+      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\indexForm-Dtn62Xmo.css",
+      "PackagePath": "staticwebassets\\assets\\css\\indexForm-Dtn62Xmo.css"
+    },
+    {
+      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\css\\toastr-DPlFYqzU.css",
+      "PackagePath": "staticwebassets\\assets\\css\\toastr-DPlFYqzU.css"
     },
     {
       "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\images\\hanty-mansijskogo-BB2EWD9-.png",
@@ -35,6 +39,10 @@
     {
       "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\events.js",
       "PackagePath": "staticwebassets\\assets\\js\\events.js"
+    },
+    {
+      "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\loginPage.js",
+      "PackagePath": "staticwebassets\\assets\\js\\loginPage.js"
     },
     {
       "Id": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\wwwroot\\assets\\js\\toastr.min-chunk.js",

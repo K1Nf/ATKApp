@@ -1,22 +1,22 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-CoMxQe3V.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-BC9PFl2f.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ATKApplication</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ATKApplication</BasePath>
-      <RelativePath>assets/css/EventForm-CoMxQe3V.css</RelativePath>
+      <RelativePath>assets/css/EventForm-BC9PFl2f.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pyc4ouufhs</Fingerprint>
-      <Integrity>oQo0D0zgBOE7Sj3i9dnpcrGwvHYwG76s5rGBSmFskzM=</Integrity>
+      <Fingerprint>cq7lfrw05j</Fingerprint>
+      <Integrity>ZNUxUKf8jKMVPFd5xAwaBvVgPwSF5NVitwie8n7cfUk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-CoMxQe3V.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-BC9PFl2f.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-BPyNfkQN.css'))">
       <SourceType>Package</SourceType>
@@ -36,23 +36,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-BPyNfkQN.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\toastr-PcHlmDLb.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\indexForm-Dtn62Xmo.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ATKApplication</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ATKApplication</BasePath>
-      <RelativePath>assets/css/toastr-PcHlmDLb.css</RelativePath>
+      <RelativePath>assets/css/indexForm-Dtn62Xmo.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>738usrmbe9</Fingerprint>
-      <Integrity>jXPTexp0dZ6RE6WFjZVuExYOkquie8YZQiVa47yGFks=</Integrity>
+      <Fingerprint>0l5irq59t7</Fingerprint>
+      <Integrity>xB+Kg1WPzwdG/MVY1eF9R9d3+rAu2ffDhcLkXCBOKmA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\toastr-PcHlmDLb.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\indexForm-Dtn62Xmo.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\toastr-DPlFYqzU.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ATKApplication</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ATKApplication</BasePath>
+      <RelativePath>assets/css/toastr-DPlFYqzU.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>glowfkt83q</Fingerprint>
+      <Integrity>hFNe/S/FwWgI9vjaMVRlJyNs4XS3HMMVF9Pr481JpBg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\toastr-DPlFYqzU.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\hanty-mansijskogo-BB2EWD9-.png'))">
       <SourceType>Package</SourceType>
@@ -84,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fvt8zi402d</Fingerprint>
-      <Integrity>OxS5azvENDQO09GZlIcGWKGTEMtVdpXoM3ELU6Z8fqQ=</Integrity>
+      <Fingerprint>99a1a3s059</Fingerprint>
+      <Integrity>0x+Qylo7EWDGk9ooZZzShRJLAoIUotSl/ZaF5spl4AE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\createEvent.js'))</OriginalItemSpec>
@@ -102,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q1k6aiqs95</Fingerprint>
-      <Integrity>AuPH9eFZ7Xbc8Ecb6mA3NRTr6KJYFxiOOsotOvY8Pmo=</Integrity>
+      <Fingerprint>rnntzg8qv4</Fingerprint>
+      <Integrity>+Z/FOOsZAqnKcYm3Zxo7DnFkn2Ue5IhNqR042Cvwk0s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\eventCard.js'))</OriginalItemSpec>
@@ -120,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0hd46a8pik</Fingerprint>
-      <Integrity>NAvWGiUQFyQLJAbakeo+2twCoJItl1aF+idjkAnLzK0=</Integrity>
+      <Fingerprint>ca4vyehopb</Fingerprint>
+      <Integrity>dJHtVWiT8hU9dPZz0kw0SivVkUHudWyKzCwojA2Gqaw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\EventForm-chunk.js'))</OriginalItemSpec>
@@ -138,11 +156,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>npj6lrrqbs</Fingerprint>
-      <Integrity>S1rS9bdZohc7/szrGwYBgQMZw2fbYufWW7FzTVmtnhc=</Integrity>
+      <Fingerprint>ycvji2hiub</Fingerprint>
+      <Integrity>gk+L9rp8dFFkT5zfTSMT2/lKVwdlz2n0qBSEmu9Xvx0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\events.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\loginPage.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ATKApplication</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ATKApplication</BasePath>
+      <RelativePath>assets/js/loginPage.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ffzyt4jahv</Fingerprint>
+      <Integrity>22QkGk4xrSZM9xdaImzVb29CIrVv2sZXkCx/AqiyYtw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\loginPage.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\Sidebar-chunk.js'))">
       <SourceType>Package</SourceType>
@@ -156,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ox5iah9ubg</Fingerprint>
-      <Integrity>jCwguP4axbFuzCGCVWRAnkS4mi4tloGZO2AQeWhXc3w=</Integrity>
+      <Fingerprint>1dsu905yye</Fingerprint>
+      <Integrity>FWSmaQ8WSLsqkO1pGndd3bPein8FqBMCDUbv++uFKlM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\Sidebar-chunk.js'))</OriginalItemSpec>
@@ -228,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jhtm7unax8</Fingerprint>
-      <Integrity>x818jjFSKaZJ+NJ4uHawLdNJyYd0seWNX1Z+2/sOk2I=</Integrity>
+      <Fingerprint>r06gn4d7ya</Fingerprint>
+      <Integrity>heaq3/t02nGekbyur9dCV+XMFTLxOIc6MsE7GYGTngE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -246,8 +282,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8v2scermsd</Fingerprint>
-      <Integrity>hLGMTd53inU4ISYUawmYeGtHG2r053ljQ0NCHKxg7kw=</Integrity>
+      <Fingerprint>wcjaq0zpd9</Fingerprint>
+      <Integrity>gEo2TSMTUaceDVOL0s30Rr2Wyfk1Y9F6hfyvApIgkEI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\eventCard\eventCard.html'))</OriginalItemSpec>
@@ -264,8 +300,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mnhi00hkpn</Fingerprint>
-      <Integrity>HsZgMrSiilX80MQsIpxuN/ptkIV57Ez89DtgHteN2pI=</Integrity>
+      <Fingerprint>0jsqhv4pj1</Fingerprint>
+      <Integrity>7B/YyGTuDLVhUj+QbQHa56Wq06ueJ5BKrEqRDlUtzGI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\Login\LoginPage.html'))</OriginalItemSpec>
@@ -282,8 +318,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2mqqixdmsz</Fingerprint>
-      <Integrity>xjCLHNvVHMWfXptucguo1lDHe/el5OjV2GT17dH0q14=</Integrity>
+      <Fingerprint>pwu7pjkf2p</Fingerprint>
+      <Integrity>OX3Z/95Mb6dheWjyr84BZC6waBnax7PwXFWoO2SfFNY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\table\indexTable.html'))</OriginalItemSpec>

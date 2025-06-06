@@ -2,6 +2,6 @@
 {
     public interface IJwtProvider
     {
-        public string? CreateNewToken(int userId);
+        public string? CreateNewToken(Guid userId);
     }
 }

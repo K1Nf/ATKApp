@@ -26,6 +26,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ATKApplication.Controllers.AuthController",
+    "Method": "Authorize",
+    "RelativePath": "api/ref/Auth/authorize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorizeRequest",
+        "Type": "ATKApplication.Contracts.Request.AuthorizeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.AuthController",
+    "Method": "GetOrganizations",
+    "RelativePath": "api/ref/Auth/organizations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ATKApplication.Controllers.EventsController",
     "Method": "GetAll",
     "RelativePath": "api/ref/Events",
@@ -278,7 +304,7 @@
     ]
   },
   {
-    "ContainingType": "ATKApplication.Controllers.PagesController",
+    "ContainingType": "ATKApplication.Controllers.AuthController",
     "Method": "GetLoginPage",
     "RelativePath": "login",
     "HttpMethod": "GET",
