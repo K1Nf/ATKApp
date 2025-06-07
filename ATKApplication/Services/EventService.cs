@@ -84,7 +84,7 @@ namespace ATKApplication.Services
                     Name = x.Name,
                     ParticipantsCount = x.Categories!.Sum(x => x.Count),
                     Content = x.Content,
-                    OrganizerName = x.Organizer!.Name,
+                    OrganizerName = x.Organizer!.Name.ToString(),
                     
                     Date = x.Date == null ? 
                         string.Empty : 

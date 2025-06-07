@@ -1,4 +1,4 @@
-wwwroot\assets\css\EventForm-BC9PFl2f.css
+wwwroot\assets\css\EventForm-cxAyH0FP.css
 wwwroot\assets\css\events-BPyNfkQN.css
 wwwroot\assets\css\indexForm-Dtn62Xmo.css
 wwwroot\assets\css\toastr-DPlFYqzU.css

@@ -4,21 +4,27 @@ import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
 const Login = () => {
-  const [selectedOrganization, setSelectedOrganization] = useState('');
+  const [organizationName, setOrganizationName] = useState('');
   const [password, setPassword] = useState('');
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const [municipalsOrganizations, setMunicipalsOrganizations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // 🔧 Заглушка: список организаций (в будущем придёт с сервера)
-  // const organizations = [
-  //   { id: 'org1', name: 'Администрация города' },
-  //   { id: 'org2', name: 'Школа №12' },
-  //   { id: 'org3', name: 'Центр молодёжи' },
-  //   { id: 'org4', name: 'Краевой театр' },
-  //   { id: 'org5', name: 'Университет ЮГУ' },
-  // ];
+  const filteredOrgs = municipalsOrganizations.filter((org) =>
+    org.toLowerCase().includes(organizationName.toLowerCase())
+  );
+
+  const handleOrgChange = (e) => {
+    setOrganizationName(e.target.value);
+    setShowDropdown(true);
+  };
+
+  const handleOrgSelect = (name) => {
+    setOrganizationName(name);
+    setShowDropdown(false);
+  };
 
   useEffect(() => {
       // Асинхронная функция для запроса
@@ -32,10 +38,6 @@ const Login = () => {
           const result = await response.json();
           console.log("Полученные организации:", result);
   
-          // const normalized = result.map(event => ({
-          //   ...event,
-          //   date: normalizeDate(event.date)
-          // }));
   
           setMunicipalsOrganizations(result);
         } catch (error) {
@@ -43,54 +45,35 @@ const Login = () => {
         } finally {
           setLoading(false); // Завершаем процесс загрузки
         }
-      };
-  
-      fetchData(); // Выполняем запрос
-    }, []); // Пустой массив означает, что эффект сработает только при монтировании компонента
-
-
-  // ❗ Включить позже при наличии API
-  /*
-  useEffect(() => {
-    const fetchOrganizations = async () => {
-      try {
-        const response = await fetch('/api/ref/organizations');
-        if (!response.ok) throw new Error('Ошибка загрузки организаций');
-        const data = await response.json();
-        setOrganizations(data);
-      } catch (err) {
-        toastr.error(err.message, 'Ошибка загрузки');
-      }
     };
-    fetchOrganizations();
-  }, []);
-  */
+
+    fetchData(); // Выполняем запрос
+  }, []); // Пустой массив означает, что эффект сработает только при монтировании компонента
+
 
   if (loading) {
     return loading;
   }
 
-  // Если возникла ошибка — сообщаем об этом
   if (error) {
     return error;
   }
 
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!selectedOrganization || !password.trim()) {
-      toastr.error('Выберите организацию и введите пароль', 'Ошибка');
+    if (!organizationName || !password.trim()) {
+      toastr.error('Введите организацию и пароль', 'Ошибка');
       return;
     }
 
-    if (password.length < 4) {
-      toastr.error('Пароль должен содержать минимум 4 символа', 'Ошибка');
-      return;
-    }
-
-    console.log("Пользователь выбрал организацию: " + selectedOrganization);
+    const selectedOrg = municipalsOrganizations.find(org => org === organizationName);
+    //const orgIdToSend = selectedOrg ? selectedOrg.id : organizationName; // если нет в списке — отправим текст
+    console.log("Пользователь выбрал организацию: " + organizationName);
     console.log("Пользователь ввел пароль: " + password);
-
 
 
     try {
@@ -99,11 +82,11 @@ const Login = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ selectedOrganization, password })
+        body: JSON.stringify({ organizationName, password })
       });
 
       if (!response.ok) {
-        throw new Error('Неверные данные для входа');
+        throw new Error(await response.text());
       }
 
       const data = await response.text();
@@ -111,15 +94,11 @@ const Login = () => {
       alert(data);
       // localStorage.setItem('token', data.token);
       toastr.success('Успешный вход!', 'Добро пожаловать');
-      window.location.href = '/events';
+      //window.location.href = '/events';
     } catch (err) {
       toastr.error(err.message || 'Ошибка входа', 'Ошибка');
     }
-  };
-
-
-
-
+  }
 
   return (
     <div className="login-page">
@@ -130,23 +109,34 @@ const Login = () => {
             Ваш браузер не поддерживает видео.
           </video>
         </div>
-        <form className="login-form" onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit} autoComplete="off">
           <h2>Авторизация</h2>
 
           <label htmlFor="organization">Организация</label>
-          <select
-            id="organization"
-            value={selectedOrganization}
-            onChange={(e) => setSelectedOrganization(e.target.value)}
-          >
-            <option value="">-- Выберите организацию --</option>
-            {municipalsOrganizations.map((org) => (
-              <option value={org}> {/* key={org.id} */}
-                {org}
-              </option>
-            ))}
-          </select>
-            
+          <div style={{ position: 'relative' }}>
+            <input
+              type="text"
+              id="organization"
+              value={organizationName}
+              onChange={handleOrgChange}
+              onFocus={() => setShowDropdown(true)}
+              placeholder="Введите или выберите из списка"
+            />
+            {showDropdown && filteredOrgs.length > 0 && (
+              <ul className="autocomplete-list">
+                {filteredOrgs.map((org) => (
+                  <li
+                    key={org}
+                    onClick={() => handleOrgSelect(org)}
+                    className="autocomplete-item"
+                  >
+                    {org}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           <input
             type="password"
             placeholder="Пароль"

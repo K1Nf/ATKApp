@@ -51,6 +51,7 @@ namespace ATKApplication.DataBase
             modelBuilder.ApplyConfiguration(new EventForm4Configuration());
             modelBuilder.ApplyConfiguration(new InterAgencyCooperationConfiguration());
             modelBuilder.ApplyConfiguration(new ThemeConfiguration());
+            modelBuilder.ApplyConfiguration(new OrganizationConfiguration());
 
             modelBuilder.Entity<EventBase>().ToTable("EventsBase");
             modelBuilder.Entity<EventForm1>().ToTable("EventsForm1");

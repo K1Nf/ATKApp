@@ -512,6 +512,7 @@ C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8
 C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8.0\ATKApplication.runtimeconfig.json
 C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8.0\ATKApplication.dll
 C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8.0\ATKApplication.pdb
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8.0\BenchmarkDotNet.dll
 C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll
 C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication\bin\Debug\net8.0\CommandLine.dll

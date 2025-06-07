@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "F4xwsPk0vsM=",
+  "dgSpecHash": "REczgIO6+x8=",
   "success": true,
   "projectFilePath": "C:\\Users\\1\\OneDrive\\Рабочий стол\\AtkApp\\ATKApplication\\ATKApplication.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\1\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\benchmarkdotnet\\0.14.0\\benchmarkdotnet.0.14.0.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\benchmarkdotnet.annotations\\0.14.0\\benchmarkdotnet.annotations.0.14.0.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",

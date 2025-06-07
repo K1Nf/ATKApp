@@ -10,7 +10,8 @@ using ATKApplication.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddScoped<JwtProvider>();
+builder.Services.AddScoped<IJwtProvider, JwtProvider>();
+builder.Services.AddScoped<IPasswordHash, PasswordHasher>();
 
 builder.Services.AddDbContext<DataBaseContext>();
 builder.Services.AddHttpContextAccessor();
@@ -77,6 +78,7 @@ builder.Services.AddControllers()
 
 
 builder.Services.AddScoped<EventService>();
+builder.Services.AddScoped<AuthService>();
 
 
 
@@ -95,7 +97,7 @@ app.UseStatusCodePages(async context => {
 
     if (response.StatusCode == (int)HttpStatusCode.Unauthorized)
     {
-        response.Redirect("/authorize/login");
+        response.Redirect("/login");
     }
 
     if (response.StatusCode == (int)HttpStatusCode.NotFound)
@@ -129,6 +131,11 @@ app.UseStatusCodePages(async context => {
         response.ContentType = "text/plain; charset=utf-8";
         await response.WriteAsync("Unexpected error with code: " + response.StatusCode);
     }
+
+    //if (response.StatusCode == (int)HttpStatusCode.Redirect)
+    //{
+    //    response.StatusCode = 403;
+    //}
 });
 
 
@@ -136,8 +143,8 @@ app.UseStaticFiles();
 app.UseDefaultFiles();
 
 
-//app.UseAuthentication();
-//app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 
 app.MapControllers();

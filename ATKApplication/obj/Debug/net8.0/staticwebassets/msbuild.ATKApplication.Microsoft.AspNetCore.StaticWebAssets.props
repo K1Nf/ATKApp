@@ -1,22 +1,22 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-BC9PFl2f.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-cxAyH0FP.css'))">
       <SourceType>Package</SourceType>
       <SourceId>ATKApplication</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ATKApplication</BasePath>
-      <RelativePath>assets/css/EventForm-BC9PFl2f.css</RelativePath>
+      <RelativePath>assets/css/EventForm-cxAyH0FP.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cq7lfrw05j</Fingerprint>
-      <Integrity>ZNUxUKf8jKMVPFd5xAwaBvVgPwSF5NVitwie8n7cfUk=</Integrity>
+      <Fingerprint>gkoku3tyr6</Fingerprint>
+      <Integrity>oCw0bSFy6Q7hevL7NxqvoJ2GHKFutd4D74HkyYiX8Is=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-BC9PFl2f.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\EventForm-cxAyH0FP.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\events-BPyNfkQN.css'))">
       <SourceType>Package</SourceType>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vr10kxycel</Fingerprint>
-      <Integrity>BR+DBX84gAycCFjUnddti9FfvTiql0DX66t2NO0p3G0=</Integrity>
+      <Fingerprint>xwag2lq29p</Fingerprint>
+      <Integrity>v44QKG855O+0BwB9p7N+lHgObB5L0KmqMxUAQfwqVBI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\loginPage.js'))</OriginalItemSpec>
@@ -264,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r06gn4d7ya</Fingerprint>
-      <Integrity>heaq3/t02nGekbyur9dCV+XMFTLxOIc6MsE7GYGTngE=</Integrity>
+      <Fingerprint>afest4dyxx</Fingerprint>
+      <Integrity>BlUDZP6w1v9UbZLdvC3pPQI2ZI0Ngw2MqalCfcS+YNQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -282,8 +282,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wcjaq0zpd9</Fingerprint>
-      <Integrity>gEo2TSMTUaceDVOL0s30Rr2Wyfk1Y9F6hfyvApIgkEI=</Integrity>
+      <Fingerprint>gvs8lybnhk</Fingerprint>
+      <Integrity>1E7nW2BiZx6xithUzmH4w5DaJSAtcgOJAzIhZxg430o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\eventCard\eventCard.html'))</OriginalItemSpec>
@@ -300,8 +300,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0jsqhv4pj1</Fingerprint>
-      <Integrity>7B/YyGTuDLVhUj+QbQHa56Wq06ueJ5BKrEqRDlUtzGI=</Integrity>
+      <Fingerprint>cbrg0e32yl</Fingerprint>
+      <Integrity>uGn/DvyClE3G+hW8CRaiabWWz1z67ii3tCtTR5UMFQY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\Login\LoginPage.html'))</OriginalItemSpec>
@@ -318,8 +318,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pwu7pjkf2p</Fingerprint>
-      <Integrity>OX3Z/95Mb6dheWjyr84BZC6waBnax7PwXFWoO2SfFNY=</Integrity>
+      <Fingerprint>fjrium2dwd</Fingerprint>
+      <Integrity>67GDAoRdp3cVyspwTW8kOxeGm4bQBdUnGG94iEAf9XE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\src\table\indexTable.html'))</OriginalItemSpec>

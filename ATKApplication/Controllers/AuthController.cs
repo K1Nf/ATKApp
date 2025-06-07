@@ -1,4 +1,5 @@
 ﻿using ATKApplication.Contracts.Request;
+using ATKApplication.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -7,7 +8,7 @@ namespace ATKApplication.Controllers
 {
     [Route("api/ref/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class AuthController(AuthService _authService) : ControllerBase
     {
         [HttpGet("/login")]
         public async Task GetLoginPage()
@@ -17,12 +18,20 @@ namespace ATKApplication.Controllers
         }
 
 
+
         [HttpPost("authorize")]
         public async Task<IActionResult> Authorize([FromBody] AuthorizeRequest authorizeRequest)
         {
-            await Task.Delay(500);
-            return Ok("Красавчик! Ты выбрал: '" + authorizeRequest.SelectedOrganization + "'. И ввел пароль: '" + authorizeRequest.Password + "'!!!");    
+            var result = _authService.Authorize(authorizeRequest);
+
+            if (result.IsFailure)
+            {
+                return NotFound(result.Error);
+
+            }
+            return Ok("Красавчик! Ты выбрал: '" + authorizeRequest.OrganizationName + "' и прошел авторизацию!");    
         }
+
 
 
         [HttpGet("organizations")]
@@ -30,7 +39,7 @@ namespace ATKApplication.Controllers
         {
             await Task.Delay(500);
 
-            MunicipalOrganizations[] orgs = (MunicipalOrganizations[])Enum.GetValues(typeof(MunicipalOrganizations));
+            AllMunicipalityOrganizations[] orgs = (AllMunicipalityOrganizations[])Enum.GetValues(typeof(AllMunicipalityOrganizations));
             return Ok(orgs);
         }
     }
