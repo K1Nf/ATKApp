@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ffzyt4jahv</Fingerprint>
-      <Integrity>22QkGk4xrSZM9xdaImzVb29CIrVv2sZXkCx/AqiyYtw=</Integrity>
+      <Fingerprint>vr10kxycel</Fingerprint>
+      <Integrity>BR+DBX84gAycCFjUnddti9FfvTiql0DX66t2NO0p3G0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\loginPage.js'))</OriginalItemSpec>

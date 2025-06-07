@@ -7,7 +7,7 @@ const Login = () => {
   const [selectedOrganization, setSelectedOrganization] = useState('');
   const [password, setPassword] = useState('');
 
-  const [municipaslOrganizations, setMunicipaslOrganizations] = useState([]);
+  const [municipalsOrganizations, setMunicipalsOrganizations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -37,7 +37,7 @@ const Login = () => {
           //   date: normalizeDate(event.date)
           // }));
   
-          setMunicipaslOrganizations(result);
+          setMunicipalsOrganizations(result);
         } catch (error) {
           setError(error.message); // Обрабатываем ошибку, если что-то пошло не так
         } finally {
@@ -140,7 +140,7 @@ const Login = () => {
             onChange={(e) => setSelectedOrganization(e.target.value)}
           >
             <option value="">-- Выберите организацию --</option>
-            {municipaslOrganizations.map((org) => (
+            {municipalsOrganizations.map((org) => (
               <option value={org}> {/* key={org.id} */}
                 {org}
               </option>
