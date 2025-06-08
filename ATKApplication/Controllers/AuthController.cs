@@ -1,4 +1,5 @@
 ﻿using ATKApplication.Contracts.Request;
+using ATKApplication.Enums;
 using ATKApplication.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -39,7 +40,7 @@ namespace ATKApplication.Controllers
         {
             await Task.Delay(500);
 
-            AllMunicipalityOrganizations[] orgs = (AllMunicipalityOrganizations[])Enum.GetValues(typeof(AllMunicipalityOrganizations));
+            StructuredOrganizations[] orgs = (StructuredOrganizations[])Enum.GetValues(typeof(StructuredOrganizations));
             return Ok(orgs);
         }
     }

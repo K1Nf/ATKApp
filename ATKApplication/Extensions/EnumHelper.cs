@@ -41,5 +41,19 @@ namespace ATKApplication.Extensions
             var attr = member.GetCustomAttribute<EnumMemberAttribute>();
             return attr?.Value;
         }
+
+
+        public static TEnum? GetEnumValueFromEnumMember<TEnum>(string value) where TEnum : struct, Enum
+        {
+            foreach (var field in typeof(TEnum).GetFields(BindingFlags.Public | BindingFlags.Static))
+            {
+                var attr = field.GetCustomAttribute<EnumMemberAttribute>();
+                if (attr?.Value == value)
+                    return Enum.Parse<TEnum>(field.Name);
+            }
+
+            return null;
+        }
+
     }
 }

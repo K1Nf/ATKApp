@@ -19,7 +19,8 @@ namespace ATKApplication.Configurations
             
 
             builder.HasOne(e => e.Organizer)
-                .WithMany(e => e.Events);
+                .WithMany(e => e.Events)
+                .HasForeignKey(e => e.OrganizerId);
             
             builder.HasOne(e => e.Theme)
                 .WithMany(e => e.Events);

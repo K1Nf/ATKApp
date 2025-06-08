@@ -1,4 +1,4 @@
-﻿using ATKApplication.Contracts.Request;
+﻿using ATKApplication.Enums;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -7,7 +7,7 @@ namespace ATKApplication.Models
 {
     public class Organization
     {
-        private Organization(AllMunicipalityOrganizations name, string password, Municipalities municipality)
+        private Organization(StructuredOrganizations name, string password, Municipalities municipality)
         {
             Id = Guid.NewGuid();
             Name = name;
@@ -21,7 +21,7 @@ namespace ATKApplication.Models
 
 
         public Guid Id { get; init; }
-        public AllMunicipalityOrganizations Name { get; set; }
+        public StructuredOrganizations Name { get; set; }
 
         [PasswordPropertyText]
         public string Password { get; set; }
@@ -38,7 +38,7 @@ namespace ATKApplication.Models
         
 
 
-        public static Organization Create(AllMunicipalityOrganizations name, string password, Municipalities municipality)
+        public static Organization Create(StructuredOrganizations name, string password, Municipalities municipality)
         {
             //Console.WriteLine("Новая организация \"" + name + "\" добавлена в систему!");
             return new Organization(name, password, municipality);

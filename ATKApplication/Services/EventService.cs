@@ -341,6 +341,7 @@ namespace ATKApplication.Services
 
         public async Task<List<ShortEventResponse>> GetSortedAndFiltered(FilterEntity filter, int? page, int? pageSize)
         {
+
             IQueryable<EventForm1> eventsQuery = _dB.EventForm1s
                 .Include(x => x.Finance)
                 .Include(x => x.FeedBack)
@@ -353,11 +354,17 @@ namespace ATKApplication.Services
 
             if (filter.Municipality != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.Organizer!.Municipality == filter.Municipality);
+                Municipalities? municipality = EnumHelper
+                                                .GetEnumValueFromEnumMember<Municipalities>(filter.Municipality);
+
+                eventsQuery = eventsQuery.Where(x => x.Organizer!.Municipality == municipality);
             }
             if (filter.Organization != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.Organizer!.Name == filter.Organization);
+                StructuredOrganizations? organization = EnumHelper
+                                                .GetEnumValueFromEnumMember<StructuredOrganizations>(filter.Organization);
+                
+                eventsQuery = eventsQuery.Where(x => x.Organizer!.Name == organization);
             }
             if (filter.Theme != null)
             {
@@ -368,7 +375,9 @@ namespace ATKApplication.Services
 
             if (filter.Level != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.LevelType == filter.Level);
+                LevelType? levelType = EnumHelper.GetEnumValueFromEnumMember<LevelType>(filter.Level);
+
+                eventsQuery = eventsQuery.Where(x => x.LevelType == levelType);
             }
             if (filter.BestPractice != null)
             {

@@ -3,10 +3,48 @@ import { useEffect, useState } from 'react';
 import './EventForm.css';
 
 const ControlPanel = ({ onFilter }) => {
+
+  const [municipalityList, setMunicipalityList] = useState('');
+  const [municipality, setMunicipality] = useState('');
+
+  const [organizationList, setOrganizationList] = useState([]);
+  const [organization, setOrganization] = useState("");
+
+
+  useEffect(() => {
+    const fetchMunicipalities = async () => {
+      try {
+        const res = await fetch("/api/ref/organizations/municipalities"); // или другой URL
+        const data = await res.json();
+        setMunicipalityList(data);
+
+      } catch (error) {
+        console.error("Ошибка при загрузке муниципалитетов: ", error);
+      }
+    };
+
+    fetchMunicipalities();
+  }, []);
+
+
+
+  useEffect(() => {
+    if (!municipality) {
+      setOrganizationList([]);
+      return;
+    }
+
+    fetch(`/api/ref/organizations/departments?municipality=${municipality}`)
+      .then((res) => res.json())
+      .then(setOrganizationList)
+      .catch((err) => console.error("Ошибка при загрузке департаментов", err));
+  }, [municipality]);
+
+
+
+
   const [showFilters, setShowFilters] = useState(false);
   const [search, setSearch] = useState('');
-  const [municipality, setMunicipality] = useState('');
-  const [organization, setOrganization] = useState('');
   const [level, setLevel] = useState('');
   const [important, setImportant] = useState(false);
   const [peerFormat, setPeerFormat] = useState(false);
@@ -111,23 +149,28 @@ const ControlPanel = ({ onFilter }) => {
       {showFilters && (
         <div className="filters">
           <div className="row">
-            <select value={municipality} onChange={e => setMunicipality(e.target.value)}>
+            <select
+              id="municipality"
+              value={municipality}
+              onChange={(e) => setMunicipality(e.target.value)}
+            >
               <option value="">Выбор муниципалитета</option>
-              <option value="Муниципалитет 1">Муниципалитет 1</option>
-              <option value="Муниципалитет 2">Муниципалитет 2</option>
-              <option value="Муниципалитет 3">Муниципалитет 3</option>
-              <option value="Муниципалитет 4">Муниципалитет 4</option>
-              <option value="Муниципалитет 5">Муниципалитет 5</option>
+              {municipalityList.map((mun) => (
+                <option key={mun} value={mun}>
+                  {mun}
+                </option>
+              ))}
             </select>
 
-            <select value={organization} onChange={e => setOrganization(e.target.value)}>
-              <option value="">Выбор организации</option>
-              <option value="Организация А">Организация А</option>
-              <option value="Организация Б">Организация Б</option>
-              <option value="Организация В">Организация В</option>
-              <option value="Организация Г">Организация Г</option>
-              <option value="Организация Д">Организация Д</option>
+            <select value={organization} onChange={(e) => setOrganization(e.target.value)} disabled={!organizationList.length}>
+              <option value="">-- Выберите департамент --</option>
+              {organizationList.map((dep) => (
+                <option key={dep} value={dep}>
+                  {dep}
+                </option>
+              ))}
             </select>
+
 
             <select value={level} onChange={e => setLevel(e.target.value)}>
               <option value="">Уровень мероприятия</option>

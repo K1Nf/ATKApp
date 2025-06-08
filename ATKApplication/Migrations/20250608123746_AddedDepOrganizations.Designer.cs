@@ -3,6 +3,7 @@ using System;
 using ATKApplication.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ATKApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250608123746_AddedDepOrganizations")]
+    partial class AddedDepOrganizations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -305,98 +308,34 @@ namespace ATKApplication.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6f318c5e-5800-4a35-b73a-1d66332427ce"),
+                            Id = new Guid("16d61372-15bb-467a-9339-d2166eb70b40"),
                             Municipality = "Khanty_mansiysk",
                             Name = "khanty_mansiysk_dep_culture",
-                            Password = "$2a$11$S6qUfm6Ebe59gsEFglyZG.62YLlXmbfV2UQVGZAsC2QCFgAOLb.iy",
+                            Password = "$2a$11$fwT0rA4JYNQ8TUvAhRr.leOp25zJZ5JRJd4RURaDk4K4JQ3WIGQiS",
                             Rating = 0
                         },
                         new
                         {
-                            Id = new Guid("f9ed09be-2067-4915-9c56-b8d829089ec4"),
+                            Id = new Guid("1458af80-3acb-4e89-a2c0-f1703fd6ae33"),
                             Municipality = "Khanty_mansiysk",
                             Name = "khanty_mansiysk_dep_education",
-                            Password = "$2a$11$WiBuwZvfbr5VYT58dxFgmeDWaHHs9TAFb5SAzOR7RMIPNQCzNRVi.",
+                            Password = "$2a$11$wPnd.Y8sxkwDuYjwE7FVvufi/ZZXDnKL1fn6Noy0VbI4/HaXk9Xbi",
                             Rating = 0
                         },
                         new
                         {
-                            Id = new Guid("24154842-4b88-4e32-b1b1-55bca1328187"),
+                            Id = new Guid("94677569-272b-47c8-a77f-16f516f2a0c8"),
                             Municipality = "Khanty_mansiysk",
                             Name = "khanty_mansiysk_dep_young",
-                            Password = "$2a$11$4TGXIGVJeAFQZrrS16Pt/O7mz0LE0X8xc6gnnRYlk5s1iOiNYCOfO",
+                            Password = "$2a$11$HoYxxRB7z.vRIk5aBpTDZ.BVmn2r9Joy/l51WyOAF4nESdkAzbS3S",
                             Rating = 0
                         },
                         new
                         {
-                            Id = new Guid("87f2e33b-5fec-4304-807f-fff592846ea7"),
+                            Id = new Guid("f2d3116a-c17f-4a0f-ae31-b9f34dede6f8"),
                             Municipality = "Khanty_mansiysk",
                             Name = "khanty_mansiysk_dep_sport",
-                            Password = "$2a$11$BaqJBaP/80oqNbHfrKFl7.Ckxh7yEJVOQq8I.BISsowXZBeXA.UM2",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("4ac4c21b-33d6-4770-9979-ae3339d9dc27"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_culture",
-                            Password = "$2a$11$VK475lPT9irjskZP9pjB7OjCSCOKCC8tQscUHDDi3tpvxDw9rmAkO",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("fe3f5500-8432-41cb-80b7-24098231b455"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_education",
-                            Password = "$2a$11$Xol8Cj8oUI.GVu5VTZ9UPePyA1ZF7gB06j9rfkNiFeu2b.r6pgUJe",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("6855f310-60e6-4102-8e76-579bb6804a84"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_young",
-                            Password = "$2a$11$fOaqISL6G3Op73nrA4uwMeedz1fbKPVlMNqJgjBAmZp.A6a7eP/46",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("899178e2-fdaf-4ed1-ba58-ec53f443956e"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_sport",
-                            Password = "$2a$11$ImjyHGzG950o3Azw2dD80eIWWZdrZo3yu1GxfjpfzoqAy9aEy684K",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("fc858a1f-760c-4e55-815e-b51a8f2e6997"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_culture",
-                            Password = "$2a$11$ofrP6zCXwuKf6GsroIaTFeeeBVJQlwFWA7EXP2WWpZnd12PnzM6t2",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("dcdc2b4c-7fc5-4422-ba42-9d302adec76f"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_education",
-                            Password = "$2a$11$GsgmFnKCwaZpra3f8BufYe313RA9RsP9iZdqQYhLHfC1nLbKdgfPK",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("1ee4b89f-67ed-43e5-8772-da74ca83ab41"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_young",
-                            Password = "$2a$11$RfRtpjbsu3li/z/Tx8nOWOoJhv2CFAQxCV0OfKv.Y/qH/3h98y0rq",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("010d3e4b-13ca-44de-9c5b-c711de58cb23"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_sport",
-                            Password = "$2a$11$NMISmGQm26JkVgNVpgh6xOFsOjLWKC2O0L97TsYQJqio9lLkd65AW",
+                            Password = "$2a$11$SLtgf9sPIf7NsZHKy1ni/uBC1LehywyskkAZxjipwF70y/KorABHm",
                             Rating = 0
                         });
                 });
@@ -603,7 +542,7 @@ namespace ATKApplication.Migrations
                     b.HasOne("ATKApplication.Models.Organization", "Organizer")
                         .WithMany("Events")
                         .HasForeignKey("OrganizerId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ATKApplication.Models.Theme", "Theme")

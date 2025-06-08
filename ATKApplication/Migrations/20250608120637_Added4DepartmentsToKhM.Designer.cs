@@ -3,6 +3,7 @@ using System;
 using ATKApplication.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ATKApplication.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250608120637_Added4DepartmentsToKhM")]
+    partial class Added4DepartmentsToKhM
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -305,98 +308,218 @@ namespace ATKApplication.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6f318c5e-5800-4a35-b73a-1d66332427ce"),
+                            Id = new Guid("98d16169-aec6-4821-b838-85968ba1192e"),
+                            Municipality = "noMunicipality",
+                            Name = "atk_khmao",
+                            Password = "$2a$11$tTqR4AStpnEHvXhaop3//uIaFVFaR9V4osvIaYgwUmNRhk/Oge.F2",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("730eda47-9a25-44ab-b78e-4fe3e60de058"),
+                            Municipality = "Beloyarskiy_rayon",
+                            Name = "atk_beloyarskiy_rayon",
+                            Password = "$2a$11$uJeyxp62bxfrW5Wqeitzz.mh1ahV3A7DE3h.2Ci9fSyi2jrPsj8/G",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("f25aee54-8726-4af7-83e6-06748debd9fb"),
+                            Municipality = "Berezovskiy_rayon",
+                            Name = "atk_berezovskiy_rayon",
+                            Password = "$2a$11$PCwwGQ4IWyreaEQjL9wK4OO55seLM7efimP0m.VHRMGM9w3FrTNxy",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("57b5522d-7777-4826-83cb-5fbad059f31c"),
+                            Municipality = "Condinskiy_rayon",
+                            Name = "atk_condinskiy_rayon",
+                            Password = "$2a$11$/GHG8ho9d5ohJO0DJE4sKuDiGgFE25fi1gslAY8svNuS2PTrdm1nW",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("9cb131f6-e751-430f-bff9-5725e69fb975"),
                             Municipality = "Khanty_mansiysk",
-                            Name = "khanty_mansiysk_dep_culture",
-                            Password = "$2a$11$S6qUfm6Ebe59gsEFglyZG.62YLlXmbfV2UQVGZAsC2QCFgAOLb.iy",
+                            Name = "atk_khanty_mansiysk",
+                            Password = "$2a$11$oKoehVAtMkcgBRrXObbmXuJWSbRFK8K3W2rVTzlEVpBzuqxK5pIlq",
                             Rating = 0
                         },
                         new
                         {
-                            Id = new Guid("f9ed09be-2067-4915-9c56-b8d829089ec4"),
+                            Id = new Guid("e97e047b-8bba-4858-8bc7-7d3e1ef879a1"),
+                            Municipality = "Khanty_mansiyskiy_rayon",
+                            Name = "atk_khanty_mansiyskiy_rayon",
+                            Password = "$2a$11$yMyUDty6APJmaLBtB9KM6uNXG.xjqjpkcll64oQPlf6humIyJiJJi",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("5d537486-2d4e-479d-ad8c-67731eb381e4"),
+                            Municipality = "Kogalym",
+                            Name = "atk_kogalym",
+                            Password = "$2a$11$DqMiYWQrPqrZbX.PWepKwOaoT.CkQzZBNsr4qphtblDgylKxRQ7Ne",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("927c6079-3130-46ea-a168-2c4362927ff4"),
+                            Municipality = "Langepas",
+                            Name = "atk_langepas",
+                            Password = "$2a$11$vYYi2r/eY/cvIxwYNiJbx.bd0ZDQFUrr6iqDkRmJUbsndpDSBxRQe",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("a8019561-3cfe-4326-b72b-d27a652fbf20"),
+                            Municipality = "Megion",
+                            Name = "atk_megion",
+                            Password = "$2a$11$1sdQFdbFtdLGrhg102fOuOx0l.uI1wIhacSKLiBgZ3TEKagWIZuhS",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("a59e3050-ec4a-46f2-a6e3-243dea47cc6b"),
+                            Municipality = "Nefteyugansk",
+                            Name = "atk_nefteyugansk",
+                            Password = "$2a$11$kZW0crXo2SgGxg46pP4REeN5zM7RqX2rSCVMYX8DVMdFbRJxnwgh2",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("f8f95e9b-1b07-468e-b72a-701431bd48e6"),
+                            Municipality = "Nefteyuganskiy_rayon",
+                            Name = "atk_nefteyuganskiy_rayon",
+                            Password = "$2a$11$qhxOgRFtIAJDkHckhtrtZOSiyep/WOMQ57m9Qd0UAoHGsnWB4SlhK",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("8d5ccab9-69b0-46b4-ac1f-1ce95866e2df"),
+                            Municipality = "Nizhnevartovsk",
+                            Name = "atk_nizhnevartovsk",
+                            Password = "$2a$11$pyR.tbnABcqnWcoc9KdUYOpB.Wuhjtf24yMJPRYUUk/8EkkrxXtnS",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("15579234-a515-4cb9-8a0c-b7ed5eb8ce41"),
+                            Municipality = "Nizhnevartovskiy_rayon",
+                            Name = "atk_nizhnevartovskiy_rayon",
+                            Password = "$2a$11$wxsxKLge9/Ikdi9ZQ6VlxOTIUy/gMusKEPialFkgCFf4gLvEkrOE2",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("86d6ea84-6f58-4201-8e9a-5159bab09612"),
+                            Municipality = "Nyagan",
+                            Name = "atk_nyagan",
+                            Password = "$2a$11$KgOYwpYrlBqRFanvbVSFOeS7s.mWKniiPzU9smzkpKFywQhtl0t56",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("f14b0ec2-0580-4a9e-b5f8-b0554e29ec33"),
+                            Municipality = "Oktyabrskiy_rayon",
+                            Name = "atk_oktyabrskiy_rayon",
+                            Password = "$2a$11$zT0sraa2clkrQCH9.KRcKOWaLovO9DbAvI.KA0yXUaVpWjW8.djdG",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("9a61c105-92fd-4b8b-bd7e-87bdbb811281"),
+                            Municipality = "Pokachi",
+                            Name = "atk_pokachi",
+                            Password = "$2a$11$RM1XGT1EOM/LK8aBdE6.kOdEn8UGjx.XDrq9WP9lAMcxM108JsaAa",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("1f507d40-fe24-499c-8df3-c43f610544ca"),
+                            Municipality = "Pyth_yach",
+                            Name = "atk_pyth_yach",
+                            Password = "$2a$11$.ZKGpvqyRECJFHM7JR7GP.4tdvkflJv4X4l1e5WDhZ/qEP8MFhTh2",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("691df7fe-525e-4f2d-99a5-635ec2d782fd"),
+                            Municipality = "Raduzhnyi",
+                            Name = "atk_raduzhnyi",
+                            Password = "$2a$11$p8Y9u3s.s84DVYpWOKyBDu1B31U2obL0RNibS3dr1JkjVdH/Cgidi",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("2c63ca17-d56e-418d-9f04-89863b240ecd"),
+                            Municipality = "Sovietskiy_rayon",
+                            Name = "atk_sovietskiy_rayon",
+                            Password = "$2a$11$tMg/gBhGfaJcLsQHeKw7t.CdsuTIKPck8us1SEZ2daoEpaTKuvRAy",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("80447420-65a9-4355-a811-6a21f0699930"),
+                            Municipality = "Surgut",
+                            Name = "atk_surgut",
+                            Password = "$2a$11$VfJ2MA8v1FvPSLkQ6y92H./Oyjqc7iGQ7piXjKgx4Or6xPnGWMdpS",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("0faf9353-06d7-4d83-bb72-36cc77f5f9fc"),
+                            Municipality = "Surgutskiy_rayon",
+                            Name = "atk_surgutskiy_rayon",
+                            Password = "$2a$11$YOendxtAs9vdta2c05NRC.b/WHmKDVbl6dT16zD.IRmtKHDeX6sqK",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("811ed12f-6d7b-4dd6-be5f-3abe06e71c64"),
+                            Municipality = "Urai",
+                            Name = "atk_urai",
+                            Password = "$2a$11$YOkNng2XS/W5wlUqXu2kL.UMo6Ys/rhu0itAvZlgqjPlTgdkRVEhq",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("35ae5afe-4f81-41b7-85ac-d89e1c853f2d"),
+                            Municipality = "Yugorsk",
+                            Name = "atk_yugorsk",
+                            Password = "$2a$11$.YR8wGTPP.OWQmlHR5HQCefCUVaL9AjOJ6j2ic6qlGfwN1lXT6.WW",
+                            Rating = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("44c63e81-9449-44be-bdf5-02a15e07df82"),
                             Municipality = "Khanty_mansiysk",
-                            Name = "khanty_mansiysk_dep_education",
-                            Password = "$2a$11$WiBuwZvfbr5VYT58dxFgmeDWaHHs9TAFb5SAzOR7RMIPNQCzNRVi.",
+                            Name = "atk_surgut",
+                            Password = "$2a$11$r7mx7JR27QNkNrFdIJC4MuXoRu0GFKZnt2S2tRww0vW3TSHx.QrrO",
                             Rating = 0
                         },
                         new
                         {
-                            Id = new Guid("24154842-4b88-4e32-b1b1-55bca1328187"),
+                            Id = new Guid("4dbe5794-f0cb-4ff7-905a-ff1fe08cf3f9"),
                             Municipality = "Khanty_mansiysk",
-                            Name = "khanty_mansiysk_dep_young",
-                            Password = "$2a$11$4TGXIGVJeAFQZrrS16Pt/O7mz0LE0X8xc6gnnRYlk5s1iOiNYCOfO",
+                            Name = "atk_khanty_mansiysk",
+                            Password = "$2a$11$yBSJO99d7pgOyRJl8ds5AeLFx2IboIr7L3.8Ns7kYbgWE.hbbkbJG",
                             Rating = 0
                         },
                         new
                         {
-                            Id = new Guid("87f2e33b-5fec-4304-807f-fff592846ea7"),
+                            Id = new Guid("11de291a-6a3b-462b-9b5c-bfd231f9152b"),
                             Municipality = "Khanty_mansiysk",
-                            Name = "khanty_mansiysk_dep_sport",
-                            Password = "$2a$11$BaqJBaP/80oqNbHfrKFl7.Ckxh7yEJVOQq8I.BISsowXZBeXA.UM2",
+                            Name = "atk_urai",
+                            Password = "$2a$11$Kr7XF4EezWHdG4rASUuYEuGlA5q7gK1mbShnCYTDAEHJOszPF4gJ2",
                             Rating = 0
                         },
                         new
                         {
-                            Id = new Guid("4ac4c21b-33d6-4770-9979-ae3339d9dc27"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_culture",
-                            Password = "$2a$11$VK475lPT9irjskZP9pjB7OjCSCOKCC8tQscUHDDi3tpvxDw9rmAkO",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("fe3f5500-8432-41cb-80b7-24098231b455"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_education",
-                            Password = "$2a$11$Xol8Cj8oUI.GVu5VTZ9UPePyA1ZF7gB06j9rfkNiFeu2b.r6pgUJe",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("6855f310-60e6-4102-8e76-579bb6804a84"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_young",
-                            Password = "$2a$11$fOaqISL6G3Op73nrA4uwMeedz1fbKPVlMNqJgjBAmZp.A6a7eP/46",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("899178e2-fdaf-4ed1-ba58-ec53f443956e"),
-                            Municipality = "Surgut",
-                            Name = "surgut_dep_sport",
-                            Password = "$2a$11$ImjyHGzG950o3Azw2dD80eIWWZdrZo3yu1GxfjpfzoqAy9aEy684K",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("fc858a1f-760c-4e55-815e-b51a8f2e6997"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_culture",
-                            Password = "$2a$11$ofrP6zCXwuKf6GsroIaTFeeeBVJQlwFWA7EXP2WWpZnd12PnzM6t2",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("dcdc2b4c-7fc5-4422-ba42-9d302adec76f"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_education",
-                            Password = "$2a$11$GsgmFnKCwaZpra3f8BufYe313RA9RsP9iZdqQYhLHfC1nLbKdgfPK",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("1ee4b89f-67ed-43e5-8772-da74ca83ab41"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_young",
-                            Password = "$2a$11$RfRtpjbsu3li/z/Tx8nOWOoJhv2CFAQxCV0OfKv.Y/qH/3h98y0rq",
-                            Rating = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("010d3e4b-13ca-44de-9c5b-c711de58cb23"),
-                            Municipality = "Nefteyugansk",
-                            Name = "nefteyugansk_dep_sport",
-                            Password = "$2a$11$NMISmGQm26JkVgNVpgh6xOFsOjLWKC2O0L97TsYQJqio9lLkd65AW",
+                            Id = new Guid("61edd380-824b-4667-8268-754f9d438232"),
+                            Municipality = "Khanty_mansiysk",
+                            Name = "atk_yugorsk",
+                            Password = "$2a$11$Wj9iI5h4HnLQfDL.rWvsUujO56HaElkn56ujgUPykyvZhmMhJfWyS",
                             Rating = 0
                         });
                 });
@@ -603,7 +726,7 @@ namespace ATKApplication.Migrations
                     b.HasOne("ATKApplication.Models.Organization", "Organizer")
                         .WithMany("Events")
                         .HasForeignKey("OrganizerId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ATKApplication.Models.Theme", "Theme")

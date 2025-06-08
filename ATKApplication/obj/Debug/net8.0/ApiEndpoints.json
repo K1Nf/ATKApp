@@ -260,6 +260,42 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ATKApplication.Controllers.OrganizationsController",
+    "Method": "GetOrgnanizations",
+    "RelativePath": "api/ref/Organizations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.OrganizationsController",
+    "Method": "GetDepartaments",
+    "RelativePath": "api/ref/Organizations/departments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "municipality",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ATKApplication.Controllers.OrganizationsController",
+    "Method": "GetMunicipalities",
+    "RelativePath": "api/ref/Organizations/municipalities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ATKApplication.Controllers.EventsController",
     "Method": "GetThemes",
     "RelativePath": "api/ref/themes",
