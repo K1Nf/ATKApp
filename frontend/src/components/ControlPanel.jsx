@@ -13,7 +13,7 @@ const ControlPanel = ({ onFilter }) => {
   const [bestPractice, setBestPractice] = useState(false);
   const [interagency, setInteragency] = useState(false);
   const [feedback, setFeedback] = useState(false);
-  const [funding, setFunding] = useState(false);
+  const [financing, setFinancing] = useState(false);
 
   const [theme, setTheme] = useState('');
   const [themes, setThemes] = useState([]);
@@ -22,18 +22,54 @@ const ControlPanel = ({ onFilter }) => {
   const [dateTo, setDateTo] = useState('');
 
 
-useEffect(() => {
-  fetch('/api/ref/themes')
-    .then(res => res.json())
-    .then(data => setThemes(data))
-    .catch(err => console.error("Ошибка загрузки тем:", err));
-}, []);
+  useEffect(() => {
+    fetch('/api/ref/themes')
+      .then(res => res.json())
+      .then(data => setThemes(data))
+      .catch(err => console.error("Ошибка загрузки тем:", err));
+  }, []);
 
   const toggleFilters = () => setShowFilters(!showFilters);
 
+
+
+
+
+
   const handleSubmit = () => {
-    onFilter({
-      search,
+
+    // console.log("" + search);
+    // console.log("Муниципалитет: " + municipality);
+    // console.log("Организация: " + organization);
+    // console.log("Уровень: " + level);
+    // console.log("Важное: " + important);
+    // console.log("Равныйравному: " + peerFormat);
+    // console.log("Лучшиепрактики: " + bestPractice);
+    // console.log("Взаимодействие: " + interagency);
+    // console.log("Обратнаясвязь: " + feedback);
+    // console.log("Тема: " + theme);
+    // console.log("Финансирование: " + financing);
+    // console.log("Датаот: " + dateFrom);
+    // console.log("Датадо: " + dateTo);
+
+    function buildQueryParams(filters) {
+      const params = new URLSearchParams();
+
+      Object.entries(filters).forEach(([key, value]) => {
+        if (typeof value === "string" && value.trim() !== "") {
+          params.append(key, value.trim());
+        } else if (typeof value === "number" && !isNaN(value)) {
+          params.append(key, value.toString());
+        } else if (typeof value === "boolean" && value === true) {
+          params.append(key, "true");
+        }
+        // Пропускаем false, null, undefined, пустые строки
+      });
+
+      return params.toString();
+    }
+
+    const query = buildQueryParams({
       municipality,
       organization,
       level,
@@ -43,11 +79,21 @@ useEffect(() => {
       interagency,
       feedback,
       theme,
-      funding,
+      financing,
       dateFrom,
-      dateTo
+      dateTo,
     });
+
+    if (onFilter) {
+      onFilter(query); // <-- передаём строку запроса в EventTable
+    }
+
+
+    // let utlToSort = `api/ref/events/sort?${query}`;
+    // fetch(utlToSort);
+    // console.log(utlToSort);
   };
+
 
   return (
     <div className="control-panel-wrapper">
@@ -92,7 +138,7 @@ useEffect(() => {
             </select>
           </div>
 
-      
+
 
           <select
             value={theme}
@@ -109,7 +155,7 @@ useEffect(() => {
 
 
 
-           <div className="date-filter">
+          <div className="date-filter">
             <label>Дата от:</label>
             <input type="date" value={dateFrom} onChange={(e) => setDateFrom(e.target.value)} />
           </div>
@@ -126,30 +172,30 @@ useEffect(() => {
             <label><input type="checkbox" checked={bestPractice} onChange={e => setBestPractice(e.target.checked)} /> Лучшие практики</label>
             <label><input type="checkbox" checked={interagency} onChange={e => setInteragency(e.target.checked)} /> Межведомственное взаимодействие</label>
             <label><input type="checkbox" checked={feedback} onChange={e => setFeedback(e.target.checked)} /> Обратная связь</label>
-            <label><input type="checkbox" checked={funding} onChange={e => setFunding(e.target.checked)} /> Есть финансирование</label>
+            <label><input type="checkbox" checked={financing} onChange={e => setFinancing(e.target.checked)} /> Есть финансирование</label>
           </div>
 
           <button className="filter-submit" onClick={handleSubmit}>Фильтровать</button>
           <button type="button" className="filter-reset" onClick={() => {
-              setSearch('');
-              setMunicipality('');
-              setOrganization('');
-              setLevel('');
-              setTheme('');
-              setImportant(false);
-              setPeerFormat(false);
-              setBestPractice(false);
-              setInteragency(false);
-              setFeedback(false);
-              setFunding(false);
-              setDateFrom('');
-              setDateTo('');
-              onFilter({}, []); // сбросить фильтрацию
-            }}>
+            setSearch('');
+            setMunicipality('');
+            setOrganization('');
+            setLevel('');
+            setTheme('');
+            setImportant(false);
+            setPeerFormat(false);
+            setBestPractice(false);
+            setInteragency(false);
+            setFeedback(false);
+            setFinancing(false);
+            setDateFrom('');
+            setDateTo('');
+            //onFilter({}, []); // сбросить фильтрацию
+          }}>
 
             Сбросить фильтры
-            
-            </button>
+
+          </button>
 
         </div>
       )}

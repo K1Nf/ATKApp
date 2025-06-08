@@ -20,7 +20,7 @@ namespace ATKApplication.Controllers
 
 
         [HttpPost("authorize")]
-        public async Task<IActionResult> Authorize([FromBody] AuthorizeRequest authorizeRequest)
+        public IActionResult Authorize([FromBody] AuthorizeRequest authorizeRequest)
         {
             var result = _authService.Authorize(authorizeRequest);
 

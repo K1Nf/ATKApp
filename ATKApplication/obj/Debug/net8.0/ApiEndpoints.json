@@ -182,23 +182,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Name",
+        "Name": "Municipality",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Content",
+        "Name": "Organization",
         "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ThemeCode",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "OrganizerId",
-        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
@@ -207,18 +197,48 @@
         "IsRequired": false
       },
       {
-        "Name": "Form",
+        "Name": "Important",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PeerFormat",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BestPractice",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Interagency",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Feedback",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Theme",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "IsValuable",
+        "Name": "Financing",
         "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
-        "Name": "IsBestPractice",
-        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "DateFrom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateTo",
+        "Type": "System.String",
         "IsRequired": false
       },
       {

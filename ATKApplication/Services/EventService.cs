@@ -31,7 +31,7 @@ namespace ATKApplication.Services
                 .Include(x => x.Audiences)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
-            if(eventForm1 != null)
+            if (eventForm1 != null)
                 return eventForm1;
 
 
@@ -85,11 +85,11 @@ namespace ATKApplication.Services
                     ParticipantsCount = x.Categories!.Sum(x => x.Count),
                     Content = x.Content,
                     OrganizerName = x.Organizer!.Name.ToString(),
-                    
-                    Date = x.Date == null ? 
-                        string.Empty : 
+
+                    Date = x.Date == null ?
+                        string.Empty :
                         $"{x.Date.Value.Day} {GetMonth(x.Date.Value.Month)} {x.Date.Value.Year}",
-                    
+
                     Links = x.MediaLinks
                         .Select(x => x.Content)
                         .ToArray(),
@@ -158,7 +158,7 @@ namespace ATKApplication.Services
                 await CreateFinanceAsync(createEventForm1Request.CreateFinanceRequest, eventForm1.Id);
                 await CreateFeedBackAsync(createEventForm1Request.CreateFeedBackRequest, eventForm1.Id);
                 await CreateInterAgencyCoopAsync(createEventForm1Request.CreateInterAgencyCooperationRequest, eventForm1.Id);
-                
+
                 await CreateSupportAsync(createEventForm1Request.CreateSupportRequest, eventForm1.Id);
                 await CreateAudienceAsync(createEventForm1Request.CreateAudienceRequest, eventForm1.Id);
 
@@ -242,14 +242,14 @@ namespace ATKApplication.Services
             var eventForm3 = EventForm3.Create(createEventForm3Request.Actor, createEventForm3Request.Name,
                                         createEventForm3Request.Content, eventDate, tokenId,
                                         themeId, sendMaterialsTotal, blockedMaterialsTotal);
-            
+
 
             if (eventForm3 == null)
                 return Result.Failure<EventForm3>("Количество заблокированных материалов не может быть больше отправленных");
 
 
             using var transaction = await _dB.Database.BeginTransactionAsync();
-            
+
             try
             {
                 await CreateViolationAsync(createViolationsRequest, eventForm3.Id);
@@ -323,7 +323,7 @@ namespace ATKApplication.Services
                 var @event = await _dB.EventsBase
                     .FirstOrDefaultAsync(x => x.Id == eventId);
 
-                if(@event != null)
+                if (@event != null)
                     _dB.Remove(@event);
 
                 await transaction.CommitAsync();
@@ -339,69 +339,116 @@ namespace ATKApplication.Services
 
 
 
-        public async Task<List<EventBase>> GetSortedAndFiltered(FilterEntity filter, int? page, int? pageSize)
+        public async Task<List<ShortEventResponse>> GetSortedAndFiltered(FilterEntity filter, int? page, int? pageSize)
         {
-            IQueryable<EventBase> eventsQuery = _dB.EventsBase
+            IQueryable<EventForm1> eventsQuery = _dB.EventForm1s
+                .Include(x => x.Finance)
+                .Include(x => x.FeedBack)
+                .Include(x => x.InterAgencyCooperations)
+                .Include(x => x.Theme)
+                .Include(x => x.Organizer)
                 .AsQueryable();
 
-            //if (filter.Level != null)
-            //{
-            //    eventsQuery = eventsQuery.Where(x => x.LevelType == filter.Level);
-            //}
-            //if (filter.Form != null)
-            //{
-            //    eventsQuery = eventsQuery.Where(x => x.EventType == filter.Form);
-            //}
-            //if (filter.Content != null)
-            //{
-            //    eventsQuery = eventsQuery.Where(x => x.Content.Contains(filter.Content, StringComparison.CurrentCultureIgnoreCase));
-            //}
-            //if (filter.IsBestPractice != null)
-            //{
-            //    eventsQuery = eventsQuery.Where(x => x.IsBestPractice == filter.IsBestPractice);
-            //}
-            //if (filter.IsValuable != null)
-            //{
-            //    eventsQuery = eventsQuery.Where(x => x.IsValuable == filter.IsValuable);
-            //}
-            //if (filter.Name != null)
-            //{
-            //    eventsQuery = eventsQuery.Where(x => x.Name.Contains(filter.Name, StringComparison.CurrentCultureIgnoreCase));
-            //}
-            //if (filter.ThemeCode != null)
-            //{
-            //#pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
-            //    eventsQuery = eventsQuery.Where(x => x.Theme.Code.Equals(filter.ThemeCode, StringComparison.CurrentCultureIgnoreCase));
-            //#pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
-            //}
+
+
+            if (filter.Municipality != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Organizer!.Municipality == filter.Municipality);
+            }
+            if (filter.Organization != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Organizer!.Name == filter.Organization);
+            }
+            if (filter.Theme != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Theme!.Code == filter.Theme);
+            }
+
+
+
+            if (filter.Level != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.LevelType == filter.Level);
+            }
+            if (filter.BestPractice != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.IsBestPractice == filter.BestPractice);
+            }
+            if (filter.Important != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.IsValuable == filter.Important);
+            }
+
+
+
+
+            if (filter.PeerFormat != null)
+            {
+                eventsQuery = eventsQuery.Where(x => !string.IsNullOrWhiteSpace(x.EqualToEqualDescription));
+            }
+
+            bool hasDateFrom = DateOnly.TryParse(filter.DateFrom, out DateOnly dateFrom);
+            bool hasDateTo = DateOnly.TryParse(filter.DateTo, out DateOnly dateTo);
+
+
+
+            if (hasDateFrom)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Date > dateFrom);
+            }
+            if (hasDateTo)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Date < dateTo);
+            }
+
+
+
+            // ?????????????????????????????
+            if (filter.Interagency != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.InterAgencyCooperations.Count > 0);
+            }
+
+            if (filter.Feedback != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.FeedBack != null);
+            }
+            if (filter.Financing != null)
+            {
+                eventsQuery = eventsQuery.Where(x => x.Finance != null);
+            }
+
+
+
+            
 
 
             // Apply sorting
-            if (filter.Orders.Count != 0)
-            {
-                // sort
-                IOrderedQueryable<EventBase>? eventsOrdered = null; //eventsQuery.OrderBy(x => x.Id);
-                bool isFirst = true;
+            /*if (filter.Orders?.Count != 0)
+            //{
+            //    // sort
+            //    IOrderedQueryable<EventBase>? eventsOrdered = null; //eventsQuery.OrderBy(x => x.Id);
+            //    bool isFirst = true;
 
-                foreach (var order in filter.Orders)
-                {
-                    if (isFirst)
-                        eventsOrdered = null;
+            //    foreach (var order in filter.Orders)
+            //    {
+            //        if (isFirst)
+            //            eventsOrdered = null;
 
-                    if (string.Equals(order!.Key, "Date", StringComparison.CurrentCultureIgnoreCase))
-                    {
-                        Expression<Func<EventBase, dynamic>> expression = ev => ev.Date!;
-                        eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
-                    }
-                    else if (string.Equals(order.Key, "Organizer", StringComparison.CurrentCultureIgnoreCase))
-                    {
-                        Expression<Func<EventBase, dynamic>> expression = ev => ev.OrganizerId;
-                        eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
-                    }
+            //        if (string.Equals(order!.Key, "Date", StringComparison.CurrentCultureIgnoreCase))
+            //        {
+            //            Expression<Func<EventBase, dynamic>> expression = ev => ev.Date!;
+            //            eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
+            //        }
+            //        else if (string.Equals(order.Key, "Organizer", StringComparison.CurrentCultureIgnoreCase))
+            //        {
+            //            Expression<Func<EventBase, dynamic>> expression = ev => ev.OrganizerId;
+            //            eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
+            //        }
 
-                }
-                eventsQuery = eventsOrdered!.AsQueryable();
-            }
+            //    }
+            //    eventsQuery = eventsOrdered!.AsQueryable();
+            //}*/
 
 
 
@@ -411,9 +458,28 @@ namespace ATKApplication.Services
 
 
             var result = await eventsQuery
-                .Skip(entitiesToSkip)
-                .Take(entitesCount)
-                .ToListAsync();
+            //    .Skip(entitiesToSkip)
+            //    .Take(entitesCount)
+            .Select(x => new ShortEventResponse
+            {
+                Id = x.Id,
+                ThemeCode = x.Theme!.Code,
+                Name = x.Name,
+                ParticipantsCount = x.Categories!.Sum(x => x.Count),
+                Content = x.Content,
+                OrganizerName = x.Organizer!.Name.ToString(),
+
+                Date = x.Date == null ?
+                        string.Empty :
+                        $"{x.Date.Value.Day} {GetMonth(x.Date.Value.Month)} {x.Date.Value.Year}",
+
+                Links = x.MediaLinks
+                        .Select(x => x.Content)
+                        .ToArray(),
+
+            })
+            .OrderBy(x => x.ThemeCode)
+            .ToListAsync();
 
 
             return result;

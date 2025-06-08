@@ -1,84 +1,98 @@
 import React, { useState, useEffect } from 'react';
 
-export default function GetEvents({ itemsPerPage = 10, children }) {
+
+export default function GetEvents({ data, error, loading }){
+  
   // Состояние для хранения данных и состояния загрузки
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1); // Текущая страница
-
-  function normalizeDate(raw) {
-      const months = {
-        'января': '01', 'февраля': '02', 'марта': '03',
-        'апреля': '04', 'мая': '05', 'июня': '06',
-        'июля': '07', 'августа': '08', 'сентября': '09',
-        'октября': '10', 'ноября': '11', 'декабря': '12'
-      };
-
-      const parts = raw.split(' ');
-      if (parts.length !== 3) return '';
-
-      const day = parts[0].padStart(2, '0');
-      const month = months[parts[1]];
-      const year = parts[2];
-
-      return `${year}-${month}-${day}`;
-    }
+  //const [data, setData] = useState([]);
+  //const [loading, setLoading] = useState(true);
+  //const [error, setError] = useState(null);
+if (!data || data.length === 0) {
+    return (
+      <tr>
+        <td colSpan="10">Нет данных для отображения</td>
+      </tr>
+    );
+  }
 
 
-  // Используем useEffect для выполнения запроса при монтировании компонента
-  useEffect(() => {
-    // Асинхронная функция для запроса
-    const fetchData = async () => {
-      const urlFront = "https://localhost:5237/api/ref/events";
-      const urlBack = "/api/ref/events";
-      try {
-        const response = await fetch(urlBack); // Пример URL
-        if (!response.ok) {
-          throw new Error('Ошибка при загрузке данных');
-        }
-       const result = await response.json();
-        console.log("Полученные мероприятия:", result);
+// Используем useEffect для выполнения запроса при монтировании компонента
+// useEffect(() => {
+//     // Асинхронная функция для запроса
+//     const fetchData = async () => {
 
-        const normalized = result.map(event => ({
-          ...event,
-          date: normalizeDate(event.date)
-        }));
+//     const urlBack = "/api/ref/events";
+//       try {
+//         const response = await fetch(urlBack); // Пример URL
+//         if (!response.ok) {
+//           throw new Error('Ошибка при загрузке данных');
+//         }
+//         const result = await response.json();
 
-        setData(normalized);
-      } catch (error) {
-        setError(error.message); // Обрабатываем ошибку, если что-то пошло не так
-      } finally {
-        setLoading(false); // Завершаем процесс загрузки
-      }
-    };
+//         setData(result); // Сохраняем данные в состоянии
+//       }
 
-    fetchData(); // Выполняем запрос
-  }, []); // Пустой массив означает, что эффект сработает только при монтировании компонента
+//       catch (error) {
+//         setError(error.message); // Обрабатываем ошибку, если что-то пошло не так
+//       }
 
-  // Вычисляем страницы
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+//       finally {
+//         setLoading(false); // Завершаем процесс загрузки
+//       }
+//     };
 
-  // Если данные еще загружаются, показываем индикатор загрузки
+//     fetchData(); // Выполняем запрос
+//   }, []); // Пустой массив означает, что эффект сработает только при монтировании компонента
+//
+
+
   if (loading) {
-    return children({ loading: true });
+    return (
+      <tr>
+        <td colSpan="10">Загрузка данных c сервера...</td>
+      </tr>
+    );
   }
 
-  // Если возникла ошибка — сообщаем об этом
   if (error) {
-    return children({ error });
+    return (
+      <tr>
+        <td colSpan="10">Ошибка: {error}</td>
+      </tr>
+    );
   }
 
-  // Отдаём отфильтрованные данные через render-props
-  return children({
-    events: currentItems,
-    currentPage,
-    setCurrentPage,
-    totalPages,
-    loading: false,
-    error: null,
-  });
+
+
+  // Отображаем полученные данные
+  return (
+    <>
+      {data.map((event) => (
+        <tr key={event.id}>
+          <td>{event.themeCode ?? '—'}</td>
+          <td>{event.name ?? '—'}</td>
+          <td>{event.content ?? '—'}</td>
+          <td>{event.date ?? '—'}</td>
+          <td>{event.participantsCount ?? 0}</td>
+          <td>
+            {event.links?.length > 0 ? (
+              event.links.map((link, i) => (
+                <div key={i}>
+                  <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+                </div>
+              ))
+            ) : '—'}
+          </td>
+          <td>
+            <button
+              className="details-btn"
+              onClick={() => window.location.href = `/events/${event.id}`}
+            >
+              Подробнее
+            </button>
+          </td>
+        </tr>
+      ))}
+    </>
+  );
 }

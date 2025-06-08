@@ -72,8 +72,8 @@ const Login = () => {
 
     const selectedOrg = municipalsOrganizations.find(org => org === organizationName);
     //const orgIdToSend = selectedOrg ? selectedOrg.id : organizationName; // если нет в списке — отправим текст
-    console.log("Пользователь выбрал организацию: " + organizationName);
-    console.log("Пользователь ввел пароль: " + password);
+    //console.log("Пользователь выбрал организацию: " + organizationName);
+    //console.log("Пользователь ввел пароль: " + password);
 
 
     try {

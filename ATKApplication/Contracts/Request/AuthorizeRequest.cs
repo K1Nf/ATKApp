@@ -80,7 +80,7 @@ namespace ATKApplication.Contracts.Request
     public enum Municipalities
     {
         [EnumMember(Value = "ATK-ХМАО")]
-        noMunicipality = 1, // for atk_khmao
+        noMunicipality = 0, // for atk_khmao
 
         [EnumMember(Value = "Белоярский район")]
         Beloyarskiy_rayon = 1,                                               //khanty_mansiysk
