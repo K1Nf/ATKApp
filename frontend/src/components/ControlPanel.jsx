@@ -218,7 +218,6 @@ const ControlPanel = ({ onFilter }) => {
             <label><input type="checkbox" checked={financing} onChange={e => setFinancing(e.target.checked)} /> Есть финансирование</label>
           </div>
 
-          <button className="filter-submit" onClick={handleSubmit}>Фильтровать</button>
           <button type="button" className="filter-reset" onClick={() => {
             setSearch('');
             setMunicipality('');
@@ -240,6 +239,8 @@ const ControlPanel = ({ onFilter }) => {
 
           </button>
 
+          <button className="filter-submit" onClick={handleSubmit}>Фильтровать</button>
+        
         </div>
       )}
     </div>

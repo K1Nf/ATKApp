@@ -24,6 +24,7 @@ namespace ATKApplication.Models
         public StructuredOrganizations Name { get; set; }
 
         [PasswordPropertyText]
+        [Newtonsoft.Json.JsonIgnore]
         public string Password { get; set; }
 
         [Range(0, 10)]
@@ -32,7 +33,7 @@ namespace ATKApplication.Models
 
 
 
-        [JsonIgnore]
+        
         [Newtonsoft.Json.JsonIgnore]
         public List<EventBase> Events { get; set; } = [];
         

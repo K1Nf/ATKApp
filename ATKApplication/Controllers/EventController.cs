@@ -3,13 +3,17 @@ using ATKApplication.Extensions;
 using ATKApplication.Models;
 using ATKApplication.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace ATKApplication.Controllers
 {
     [Route("api/ref/[controller]")]
     [ApiController]
-    public class EventsController(EventService _eventService) : ControllerBase
+    public class EventsController(EventService _eventService, IOptions<JWTConfiguration> options) : ControllerBase
     {
+        private readonly JWTConfiguration jwtConfiguration = options.Value;
+
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -37,7 +41,8 @@ namespace ATKApplication.Controllers
         [HttpPost("Createbase")]
         public async Task<IActionResult> Create([FromBody] CreateEventBaseRequest createEventBaseRequest)
         {
-            Guid tokenId = Guid.Parse("17cd8a76-05f4-46a5-977e-a7866293a6fd");
+            Guid tokenId = Guid.Parse(User.FindFirst(jwtConfiguration.OrganizationId)!.Value);
+
             var result = await _eventService.CreateBase(tokenId, createEventBaseRequest);
 
             if (result.IsSuccess)
@@ -52,7 +57,7 @@ namespace ATKApplication.Controllers
         [HttpPost("Createform1")]
         public async Task<IActionResult> Create1([FromBody] CreateEventForm1Request createEventForm1Request)
         {
-            Guid tokenId = Guid.Parse("17cd8a76-05f4-46a5-977e-a7866293a6fd");
+            Guid tokenId = Guid.Parse(User.FindFirst(jwtConfiguration.OrganizationId)!.Value);
             var result = await _eventService.CreateEventForm1(tokenId, createEventForm1Request);
 
             if (result.IsSuccess)
@@ -67,7 +72,7 @@ namespace ATKApplication.Controllers
         [HttpPost("Createform2")]
         public async Task<IActionResult> Create2([FromBody] CreateEventForm2Request createEventForm2Request)
         {
-            Guid tokenId = Guid.Parse("17cd8a76-05f4-46a5-977e-a7866293a6fd");
+            Guid tokenId = Guid.Parse(User.FindFirst(jwtConfiguration.OrganizationId)!.Value);
             var result = await _eventService.CreateEventForm2(tokenId, createEventForm2Request);
 
             if (result.IsSuccess)
@@ -82,7 +87,7 @@ namespace ATKApplication.Controllers
         [HttpPost("Createform3")]
         public async Task<IActionResult> Create3([FromBody] CreateEventForm3Request createEventForm3Request)
         {
-            Guid tokenId = Guid.Parse("17cd8a76-05f4-46a5-977e-a7866293a6fd");
+            Guid tokenId = Guid.Parse(User.FindFirst(jwtConfiguration.OrganizationId)!.Value);
             var result = await _eventService.CreateEventForm3(tokenId, createEventForm3Request);
 
             if (result.IsSuccess)
@@ -97,7 +102,7 @@ namespace ATKApplication.Controllers
         [HttpPost("Createform4")]
         public async Task<IActionResult> Create4([FromBody] CreateEventForm4Request createEventForm4Request)
         {
-            Guid tokenId = Guid.Parse("17cd8a76-05f4-46a5-977e-a7866293a6fd");
+            Guid tokenId = Guid.Parse(User.FindFirst(jwtConfiguration.OrganizationId)!.Value);
             var result = await _eventService.CreateEventForm4(tokenId, createEventForm4Request);
 
             if (result.IsSuccess)

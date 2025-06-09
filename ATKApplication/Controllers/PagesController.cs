@@ -6,6 +6,7 @@ using System.Net.Mime;
 namespace ATKApplication.Controllers
 {
     [ApiController]
+    [Authorize]
     public class PagesController : ControllerBase
     {
         [HttpGet("/create")]

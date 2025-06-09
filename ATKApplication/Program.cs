@@ -47,23 +47,23 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
 
 
-        //o.Events = new JwtBearerEvents
-        //{
-        //    OnMessageReceived = context =>
-        //    {
-        //        string? token = context.Request.Cookies["NeToken"] ?? 
-        //        context.Request.Headers.Authorization
-        //        .ToString()
-        //        .Replace("Bearer ", "");
+        o.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                string? token = context.Request.Cookies["tokenATK"] ??
+                context.Request.Headers.Authorization
+                .ToString()
+                .Replace("Bearer ", "");
 
-        //        if (!string.IsNullOrWhiteSpace(token))
-        //        {
-        //            context.Token = token.Replace("Bearer ", "");
-        //        }
+                if (!string.IsNullOrWhiteSpace(token))
+                {
+                    context.Token = token.Replace("Bearer ", "");
+                }
 
-        //        return Task.CompletedTask;
-        //    }
-        //};
+                return Task.CompletedTask;
+            }
+        };
     });
 
 

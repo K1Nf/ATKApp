@@ -88,7 +88,8 @@ const EventCard = () => {
   return (
     <div className="container">
       <div className="event-card">
-        <h2>Основная информация о мероприятии {data.name ?? ""}</h2>
+        <h2>Основная информация о мероприятии «{data.name ?? ""}» </h2>
+        <h2>Организатор: {data.organizer.name} ({data.organizer.municipality})</h2>
         <section>
           <label>Номер темы: {data.theme.code}</label>
           {/* <p></p> */}
@@ -97,6 +98,12 @@ const EventCard = () => {
         <section>
           <label>Описание темы</label>
           <p>{data.theme.description}</p>
+        </section>
+
+
+        <section>
+          <label>Структурная организация</label>
+          <p>{data.organizer.name} ({data.organizer.municipality})</p>
         </section>
 
 

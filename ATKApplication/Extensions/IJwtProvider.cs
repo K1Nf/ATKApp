@@ -1,7 +1,9 @@
-﻿namespace ATKApplication.Extensions
+﻿using ATKApplication.Enums;
+
+namespace ATKApplication.Extensions
 {
     public interface IJwtProvider
     {
-        public string? CreateNewToken(Guid userId);
+        public string CreateNewToken(Guid userId);
     }
 }

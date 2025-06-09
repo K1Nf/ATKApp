@@ -13,6 +13,6 @@ namespace ATKApplication.Contracts.Response
         public string? Content { get; init; }
         public string[]? Links { get; init; }
         //public string Actor { get; init; }
-        public string OrganizerName { get; init; }
+        public StructuredOrganizations OrganizerName { get; init; }
     }
 }

@@ -92,9 +92,9 @@ const Login = () => {
       const data = await response.text();
 
       alert(data);
-      // localStorage.setItem('token', data.token);
+      localStorage.setItem('tokenATK', data.token);
       toastr.success('Успешный вход!', 'Добро пожаловать');
-      //window.location.href = '/events';
+      window.location.href = '/events';
     } catch (err) {
       toastr.error(err.message || 'Ошибка входа', 'Ошибка');
     }

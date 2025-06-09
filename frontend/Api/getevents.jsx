@@ -69,6 +69,7 @@ if (!data || data.length === 0) {
     <>
       {data.map((event) => (
         <tr key={event.id}>
+          <td>{event.organizerName ?? '—'}</td>
           <td>{event.themeCode ?? '—'}</td>
           <td>{event.name ?? '—'}</td>
           <td>{event.content ?? '—'}</td>

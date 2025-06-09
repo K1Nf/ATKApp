@@ -28,8 +28,9 @@ namespace ATKApplication.Controllers
             if (result.IsFailure)
             {
                 return NotFound(result.Error);
-
             }
+
+            Response.Cookies.Append("tokenATK", result.Value);
             return Ok("Красавчик! Ты выбрал: '" + authorizeRequest.OrganizationName + "' и прошел авторизацию!");    
         }
 

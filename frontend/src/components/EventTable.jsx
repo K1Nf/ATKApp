@@ -46,6 +46,7 @@ const EventTable = () => {
       <table>
         <thead>
           <tr>
+            <th>Организатор</th>
             <th>№ темы</th>
             <th>Наименование</th>
             <th>Описание</th>

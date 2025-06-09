@@ -84,7 +84,7 @@ namespace ATKApplication.Services
                     Name = x.Name,
                     ParticipantsCount = x.Categories!.Sum(x => x.Count),
                     Content = x.Content,
-                    OrganizerName = x.Organizer!.Name.ToString(),
+                    OrganizerName = x.Organizer!.Name,
 
                     Date = x.Date == null ?
                         string.Empty :
@@ -342,12 +342,12 @@ namespace ATKApplication.Services
         public async Task<List<ShortEventResponse>> GetSortedAndFiltered(FilterEntity filter, int? page, int? pageSize)
         {
 
-            IQueryable<EventForm1> eventsQuery = _dB.EventForm1s
-                .Include(x => x.Finance)
-                .Include(x => x.FeedBack)
-                .Include(x => x.InterAgencyCooperations)
-                .Include(x => x.Theme)
-                .Include(x => x.Organizer)
+            IQueryable<EventBase> eventsQuery = _dB.EventsBase
+                //.Include(x => x.Finance)
+                //.Include(x => x.FeedBack)
+                //.Include(x => x.InterAgencyCooperations)
+                //.Include(x => x.Theme)
+                //.Include(x => x.Organizer)
                 .AsQueryable();
 
 
@@ -373,19 +373,29 @@ namespace ATKApplication.Services
 
 
 
+
+
             if (filter.Level != null)
             {
                 LevelType? levelType = EnumHelper.GetEnumValueFromEnumMember<LevelType>(filter.Level);
 
-                eventsQuery = eventsQuery.Where(x => x.LevelType == levelType);
+                eventsQuery = eventsQuery
+                    .OfType<EventForm1>()
+                    .Where(x => x.LevelType == levelType);
             }
+
             if (filter.BestPractice != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.IsBestPractice == filter.BestPractice);
+                eventsQuery = eventsQuery
+                    .OfType<EventForm1>()
+                    .Where(x => x.IsBestPractice == filter.BestPractice);
             }
+
             if (filter.Important != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.IsValuable == filter.Important);
+                eventsQuery = eventsQuery
+                    .OfType<EventForm1>()
+                    .Where(x => x.IsValuable == filter.Important);
             }
 
 
@@ -393,7 +403,9 @@ namespace ATKApplication.Services
 
             if (filter.PeerFormat != null)
             {
-                eventsQuery = eventsQuery.Where(x => !string.IsNullOrWhiteSpace(x.EqualToEqualDescription));
+                eventsQuery = eventsQuery
+                    .OfType<EventForm1>()
+                    .Where(x => !string.IsNullOrWhiteSpace(x.EqualToEqualDescription));
             }
 
             bool hasDateFrom = DateOnly.TryParse(filter.DateFrom, out DateOnly dateFrom);
@@ -412,19 +424,24 @@ namespace ATKApplication.Services
 
 
 
-            // ?????????????????????????????
             if (filter.Interagency != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.InterAgencyCooperations.Count > 0);
+                eventsQuery = eventsQuery
+                    .OfType<EventForm1>()
+                    .Where(x => x.InterAgencyCooperations.Count > 0);
             }
 
             if (filter.Feedback != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.FeedBack != null);
+                eventsQuery = eventsQuery
+                    .OfType<EventForm1>()
+                    .Where(x => x.FeedBack != null);
             }
             if (filter.Financing != null)
             {
-                eventsQuery = eventsQuery.Where(x => x.Finance != null);
+                eventsQuery = eventsQuery
+                    .OfType<EventForm1>()
+                    .Where(x => x.Finance != null);
             }
 
 
@@ -476,7 +493,7 @@ namespace ATKApplication.Services
                 Name = x.Name,
                 ParticipantsCount = x.Categories!.Sum(x => x.Count),
                 Content = x.Content,
-                OrganizerName = x.Organizer!.Name.ToString(),
+                OrganizerName = x.Organizer!.Name,
 
                 Date = x.Date == null ?
                         string.Empty :
