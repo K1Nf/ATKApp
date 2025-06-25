@@ -1,0 +1,13 @@
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\bin\Debug\net8.0\ATKApplication.Domain.deps.json
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\bin\Debug\net8.0\ATKApplication.Domain.dll
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\bin\Debug\net8.0\ATKApplication.Domain.pdb
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.csproj.AssemblyReference.cache
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.AssemblyInfoInputs.cache
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.AssemblyInfo.cs
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.csproj.CoreCompileInputs.cache
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.sourcelink.json
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.dll
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\refint\ATKApplication.Domain.dll
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ATKApplication.Domain.pdb
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Domain\obj\Debug\net8.0\ref\ATKApplication.Domain.dll

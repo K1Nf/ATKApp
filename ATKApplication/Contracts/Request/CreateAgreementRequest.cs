@@ -1,4 +1,4 @@
-﻿using ATKApplication.Enums;
+﻿using ATKApplication.Domain.Enums;
 
 namespace ATKApplication.Contracts.Request
 {

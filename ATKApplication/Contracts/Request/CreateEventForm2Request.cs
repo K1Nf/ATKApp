@@ -1,5 +1,5 @@
-﻿using ATKApplication.Enums;
-using ATKApplication.Models;
+﻿using ATKApplication.Domain.Enums;
+using ATKApplication.Domain.Models;
 using System.Diagnostics.Eventing.Reader;
 
 namespace ATKApplication.Contracts.Request

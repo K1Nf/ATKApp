@@ -9,35 +9,43 @@ const EventTable = () => {
   const [error, setError] = useState(null);
   const [queryString, setQueryString] = useState('');
 
-  const fetchEvents = async (query = '') => {
-    const url = query ? `/api/ref/events/sort?${query}` : `/api/ref/events`;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPagesReal, setTotalPagesReal] = useState(1); // важно!
 
-    try{
 
+  const fetchEvents = async (page = 1, query = '') => {
+    setLoading(true);
+
+    // добавляем page к queryString
+    const params = new URLSearchParams(query);
+    params.set("page", page);
+    const url = `/api/ref/events/sort?${params.toString()}`;
+
+    try {
       const res = await fetch(url);
-      if (!res.ok) {
-           throw new Error('Ошибка при загрузке данных');
-         }
-
+      if (!res.ok) throw new Error('Ошибка при загрузке данных');
       const data = await res.json();
-      setEvents(data);
-    }
-    catch (error) {
-        setError(error.message); // Обрабатываем ошибку, если что-то пошло не так
-      }
 
-      finally {
-        setLoading(false); // Завершаем процесс загрузки
-      }
+      setEvents(data.items || data); // в зависимости от структуры ответа
+      setTotalPagesReal(data.totalPages || 1); // если приходит с сервера
+      setCurrentPage(page);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
+  // Обновление при изменении фильтров
   useEffect(() => {
-    fetchEvents(queryString);
+    setCurrentPage(1); // сброс текущей страницы до 1
+    fetchEvents(1, queryString); // сбрасываем на первую страницу при новом фильтре
   }, [queryString]);
 
-
-
-  
+  const handlePageChange = (pageNumber) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // автоскролл вверх
+    fetchEvents(pageNumber, queryString);
+  };
 
   return (
     <>
@@ -57,9 +65,55 @@ const EventTable = () => {
           </tr>
         </thead>
         <tbody>
-          <GetEvents data={events} error = {error} loading={loading} />
+          <GetEvents data={events.data} error={error} loading={loading} />
         </tbody>
       </table>
+
+      <div className="pagination">
+        <button
+          onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          ◀
+        </button>
+
+        {currentPage > 2 && (
+          <>
+            <button onClick={() => handlePageChange(1)}>1</button>
+            {currentPage > 3 && <span>...</span>}
+          </>
+        )}
+
+        {currentPage > 1 && (
+          <button onClick={() => handlePageChange(currentPage - 1)}>
+            {currentPage - 1}
+          </button>
+        )}
+
+        <button className="active">{currentPage}</button>
+
+        {currentPage < totalPagesReal && (
+          <button onClick={() => handlePageChange(currentPage + 1)}>
+            {currentPage + 1}
+          </button>
+        )}
+
+        {currentPage < totalPagesReal - 1 && (
+          <>
+            {currentPage < totalPagesReal - 2 && <span>...</span>}
+            <button onClick={() => handlePageChange(totalPagesReal)}>
+              {totalPagesReal}
+            </button>
+          </>
+        )}
+
+        <button
+          onClick={() => handlePageChange(Math.min(currentPage + 1, totalPagesReal))}
+          disabled={currentPage === totalPagesReal}
+        >
+          ▶
+        </button>
+      </div>
     </>
   );
 };

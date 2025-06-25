@@ -153,6 +153,19 @@ const EventCard = () => {
           </section>
         )}
 
+        {data.decision && (
+          <section>
+            <label>Необходимые управленческие решения</label>
+            <p>{data.decision}</p>
+          </section>
+        )}
+
+        {data.result && (
+          <section>
+            <label>Результат мероприятия</label>
+            <p>{data.result}</p>
+          </section>
+        )}
 
         {data.mediaLinks && data.mediaLinks.length > 0 && (
           <section>
@@ -239,6 +252,9 @@ const EventCard = () => {
           <section>
             
             <h2>Поддержка</h2>
+
+            <p><strong>Получатель поддержки: </strong>{data.supports[0].receiver}</p>
+
             {data.supports.map((support) => (
               <tr key={support.id}>
                 <p><strong>{support.supportType}: </strong>{support.description}</p>
@@ -311,15 +327,14 @@ const EventCard = () => {
         )}
 
 
-        {/* СДЕЛАТЬ ЧТОБЫ ПОКАЗЫВАЛОСЬ ТОЛЬКО ТАМ, ГДЕ ПРИХОДИТ В API, ДАЖЕ ЕСЛИ FALSE ИЛИ NULL */}
-        {data.isValuable !== null || data.isValuable && (
+        {/* {data.isValuable !== null || data.isBestPractice !== null && ( */}
           <section>
             <h2>Дополнительные характеристики</h2>
               <p><strong>Значимое мероприятие: </strong> {data.isValuable ? "Да" : "Нет"}</p>
               <p><strong>Включено в сборник лучших практик: </strong> {data.isBestPractice ? "Да" : "Нет"}</p>
               <p><strong>Формат равный равному: </strong> {data.equalToEqualDescription ?? "Нет"}</p>
           </section>
-        )}
+        {/* )} */}
 
 
         <button className="delete" type="button" onClick={() => setShowModal(true)}>Удалить</button>

@@ -1,5 +1,5 @@
-﻿using ATKApplication.DataBase;
-using ATKApplication.Enums;
+﻿using ATKApplication.Infrastructure.DataBase;
+using ATKApplication.Domain.Enums;
 using ATKApplication.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

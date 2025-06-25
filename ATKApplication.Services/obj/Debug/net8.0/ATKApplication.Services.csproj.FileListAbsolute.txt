@@ -1,0 +1,12 @@
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\bin\Debug\net8.0\ATKApplication.Services.deps.json
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\bin\Debug\net8.0\ATKApplication.Services.dll
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\bin\Debug\net8.0\ATKApplication.Services.pdb
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ATKApplication.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ATKApplication.Services.AssemblyInfoInputs.cache
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ATKApplication.Services.AssemblyInfo.cs
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ATKApplication.Services.csproj.CoreCompileInputs.cache
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ATKApplication.Services.sourcelink.json
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ATKApplication.Services.dll
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\refint\ATKApplication.Services.dll
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ATKApplication.Services.pdb
+C:\Users\1\OneDrive\Рабочий стол\AtkApp\ATKApplication.Services\obj\Debug\net8.0\ref\ATKApplication.Services.dll

@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5p1ma0iliq</Fingerprint>
-      <Integrity>GVzUCaGjqq1f0gYvZs4evZwzHvjXx77aTF8kdk0hXTw=</Integrity>
+      <Fingerprint>xzeco15n5p</Fingerprint>
+      <Integrity>7aJmsKcxi7N5fK7l1bMVH9Gt6aiMx2H3jOmlo1kFu+M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\eventCard.js'))</OriginalItemSpec>
@@ -156,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3xb8dyjanq</Fingerprint>
-      <Integrity>qWznG7FbqlmXIuK6jq5JEKvrJAtYbr5w4SGzhAu7wTU=</Integrity>
+      <Fingerprint>t1sxu4pa1h</Fingerprint>
+      <Integrity>v3UwoI1z2FiBJmczyT2hCyzCLOEnhz6ENKIDth7Ba5I=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\events.js'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>i5519lqxhb</Fingerprint>
-      <Integrity>Vs1BhYdbKvBNB+hFCGaDQF3C03Bix7BiAORdDqZz8pA=</Integrity>
+      <Fingerprint>eezyfleq93</Fingerprint>
+      <Integrity>StVshyYvLi/7VhsYNmFb+Gsgw/9mQjbG4Fnl2hfNy1Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\loginPage.js'))</OriginalItemSpec>

@@ -1,4 +1,4 @@
-﻿using ATKApplication.Enums;
+﻿using ATKApplication.Domain.Enums;
 using System.Runtime.Serialization;
 
 namespace ATKApplication.Contracts.Request

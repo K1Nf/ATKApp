@@ -1,5 +1,5 @@
 ﻿using ATKApplication.Contracts.Request;
-using ATKApplication.Enums;
+using ATKApplication.Domain.Enums;
 using ATKApplication.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

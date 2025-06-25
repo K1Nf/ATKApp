@@ -1,9 +1,9 @@
 ﻿using ATKApplication.Contracts.Request;
 using ATKApplication.Contracts.Response;
-using ATKApplication.DataBase;
-using ATKApplication.Enums;
+using ATKApplication.Infrastructure.DataBase;
+using ATKApplication.Domain.Enums;
 using ATKApplication.Extensions;
-using ATKApplication.Models;
+using ATKApplication.Domain.Models;
 using CSharpFunctionalExtensions;
 using Microsoft.Diagnostics.Tracing.Parsers.Clr;
 using Microsoft.EntityFrameworkCore;
@@ -339,7 +339,7 @@ namespace ATKApplication.Services
 
 
 
-        public async Task<List<ShortEventResponse>> GetSortedAndFiltered(FilterEntity filter, int? page, int? pageSize)
+        public async Task<object> GetSortedAndFiltered(FilterEntity filter, int? page)
         {
 
             IQueryable<EventBase> eventsQuery = _dB.EventsBase
@@ -446,46 +446,16 @@ namespace ATKApplication.Services
 
 
 
-            
-
-
-            // Apply sorting
-            /*if (filter.Orders?.Count != 0)
-            //{
-            //    // sort
-            //    IOrderedQueryable<EventBase>? eventsOrdered = null; //eventsQuery.OrderBy(x => x.Id);
-            //    bool isFirst = true;
-
-            //    foreach (var order in filter.Orders)
-            //    {
-            //        if (isFirst)
-            //            eventsOrdered = null;
-
-            //        if (string.Equals(order!.Key, "Date", StringComparison.CurrentCultureIgnoreCase))
-            //        {
-            //            Expression<Func<EventBase, dynamic>> expression = ev => ev.Date!;
-            //            eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
-            //        }
-            //        else if (string.Equals(order.Key, "Organizer", StringComparison.CurrentCultureIgnoreCase))
-            //        {
-            //            Expression<Func<EventBase, dynamic>> expression = ev => ev.OrganizerId;
-            //            eventsOrdered = ApplyOrdering(eventsQuery, eventsOrdered, expression, order.OrderBy, ref isFirst);
-            //        }
-
-            //    }
-            //    eventsQuery = eventsOrdered!.AsQueryable();
-            //}*/
-
-
-
-            int entitesCount = pageSize ?? 15;
             int pageNumber = page ?? 1;
-            int entitiesToSkip = (pageNumber - 1) * entitesCount;
+            int entitiesToSkip = (pageNumber - 1) * 10;
+
+
+            double totalEntitiesCount = await eventsQuery.CountAsync();
 
 
             var result = await eventsQuery
-            //    .Skip(entitiesToSkip)
-            //    .Take(entitesCount)
+                .Skip(entitiesToSkip)
+                .Take(10)
             .Select(x => new ShortEventResponse
             {
                 Id = x.Id,
@@ -507,8 +477,8 @@ namespace ATKApplication.Services
             .OrderBy(x => x.ThemeCode)
             .ToListAsync();
 
-
-            return result;
+            //new { data = events, totalPages = events.Count }
+            return new { data = result, totalPages = Math.Ceiling(totalEntitiesCount / 10) };
         }
 
 
@@ -519,20 +489,20 @@ namespace ATKApplication.Services
 
 
 
-        private static IOrderedQueryable<EventBase> ApplyOrdering(IQueryable<EventBase> query, IOrderedQueryable<EventBase>? orderedQuery, Expression<Func<EventBase, dynamic>> expression, bool orderBy, ref bool isFirst)
-        {
-            if (isFirst)
-            {
-                orderedQuery = orderBy ? query.OrderBy(expression) : query.OrderByDescending(expression);
-                isFirst = false;
-            }
-            else
-            {
-                orderedQuery = orderBy ? orderedQuery!.ThenBy(expression) : orderedQuery!.ThenByDescending(expression);
-            }
+        //private static IOrderedQueryable<EventBase> ApplyOrdering(IQueryable<EventBase> query, IOrderedQueryable<EventBase>? orderedQuery, Expression<Func<EventBase, dynamic>> expression, bool orderBy, ref bool isFirst)
+        //{
+        //    if (isFirst)
+        //    {
+        //        orderedQuery = orderBy ? query.OrderBy(expression) : query.OrderByDescending(expression);
+        //        isFirst = false;
+        //    }
+        //    else
+        //    {
+        //        orderedQuery = orderBy ? orderedQuery!.ThenBy(expression) : orderedQuery!.ThenByDescending(expression);
+        //    }
 
-            return orderedQuery!;
-        }
+        //    return orderedQuery!;
+        //}
 
 
 

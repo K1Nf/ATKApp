@@ -1,6 +1,6 @@
 ﻿using ATKApplication.Contracts.Request;
-using ATKApplication.Extensions;
-using ATKApplication.Models;
+using ATKApplication.Infrastructure.Extensions;
+using ATKApplication.Domain.Models;
 using ATKApplication.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -33,7 +33,7 @@ namespace ATKApplication.Controllers
                 return Ok(@event);
             }
 
-            return NotFound("Не найдено такое мероприятие");
+            return NotFound("Не найдено такое мероприятие с Id: " + id);
         }
 
 
@@ -130,9 +130,9 @@ namespace ATKApplication.Controllers
 
 
         [HttpGet("sort")]
-        public async Task<IActionResult> GetSortedAndFiltered([FromQuery] FilterEntity filterEntity, int? page, int? pageSize)
+        public async Task<IActionResult> GetSortedAndFiltered([FromQuery] FilterEntity filterEntity, int? page)
         {
-            var events = await _eventService.GetSortedAndFiltered(filterEntity, page, pageSize);
+            var events = await _eventService.GetSortedAndFiltered(filterEntity, page);
             return Ok(events);
         }
 
