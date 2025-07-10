@@ -31,7 +31,7 @@ namespace ATKApplication.Controllers
             }
 
             Response.Cookies.Append("tokenATK", result.Value);
-            return Ok("Красавчик! Ты выбрал: '" + authorizeRequest.OrganizationName + "' и прошел авторизацию!");    
+            return Ok("Вы успешно авторизовались как '" + authorizeRequest.OrganizationName + "'!");    
         }
 
 

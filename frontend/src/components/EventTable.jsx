@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GetEvents from '../../Api/getevents'; // Путь к компоненту загрузки событий
 import ControlPanel from './ControlPanel';
 
+
 const EventTable = () => {
 
   const [events, setEvents] = useState([]);
@@ -49,8 +50,9 @@ const EventTable = () => {
 
   return (
     <>
+     
       <ControlPanel onFilter={(query) => setQueryString(query)} />
-
+        <div className="filters" >
       <table>
         <thead>
           <tr>
@@ -68,6 +70,7 @@ const EventTable = () => {
           <GetEvents data={events.data} error={error} loading={loading} />
         </tbody>
       </table>
+      </div>
 
       <div className="pagination">
         <button
